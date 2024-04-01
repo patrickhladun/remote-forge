@@ -20,7 +20,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sites',
 
-    'base.apps.BaseConfig',
+    'apps.base',
+    'apps.user',
 ]
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
