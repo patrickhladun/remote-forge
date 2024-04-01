@@ -49,6 +49,7 @@ TEMPLATES = [
         },
     },
 ]
+SITE_ID = 1
 WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
