@@ -18,11 +18,6 @@ Welcome to Remote Forge, my creation and your gateway to the world of remote wor
 - [Agile Methodology in Project Development](#agile-methodology-in-project-development)
   - [Epics](#epics)
 - [Five Planes of UX](#five-planes-of-ux)
-  - [Strategy](#strategy)
-  - [Scope](#scope)
-  - [Structure](#structure)
-  - [Skeleton](#skeleton)
-  - [Surface](#surface)
 - [Wireframes](#wireframes)
 - [Mobile Wireframes](#mobile-wireframes)
 - [Desktop Wireframes](#desktop-wireframes)
@@ -242,15 +237,33 @@ By adopting agile methodology and utilizing GitHub's robust project management t
 
 ## Five Planes of UX
 
-### Strategy
+[Back to Top](#table-of-contents)
 
-### Scope
+The 5 Planes of User Experience (UX) provide a framework for understanding the layers involved in creating a user-centered design. This model, conceptualized by Jesse James Garrett in his book "The Elements of User Experience," outlines how UX designers can move from abstract to concrete in the process of designing digital products. Here’s how these planes can be applied to the development of Remote Forge:
 
-### Structure
+1. Strategy Plane
 
-### Skeleton
+- User Needs: For Remote Forge, understanding the needs of two primary user groups—Talents seeking remote work and Employers looking to hire remote talent—is crucial. Talents desire easy access to job listings, straightforward application processes, and the ability to showcase their skills. Employers need to efficiently post jobs, manage applications, and find suitable candidates.
+- Site Objectives: The main objective is to create a platform that facilitates the connection between remote job seekers and employers, offering a streamlined experience for both parties to find and fill remote work opportunities.
 
-### Surface
+2. Scope Plane
+
+- Functional Specifications: Key functionalities include user registration and authentication, job listing creation and management by Employers, profile creation and job application for Talents, and search and filter capabilities for job listings.
+- Content Requirements: Content such as job descriptions, company profiles, talent bios, educational articles on remote work, and FAQs will be developed to engage users and provide valuable resources.
+
+3. Structure Plane
+
+- Interaction Design: The interaction design will focus on how users interact with Remote Forge, including navigating the site, filling out forms, and managing profiles or job listings. The goal is to ensure intuitive, seamless interactions that guide users through their journey on the platform.
+- Information Architecture: The information architecture will organize and structure content and functionalities in a way that makes sense to the users, ensuring they can find information and perform tasks with ease.
+
+4. Skeleton Plane
+
+- Interface Design: This involves designing the layout of web pages and user interfaces for Remote Forge, ensuring that elements such as buttons, forms, and navigation menus are laid out in a user-friendly manner. Navigation Design: The navigation system will be designed to allow users to easily move between different parts of the site, with clear labels and logical grouping of site sections.
+- Information Design: The presentation of information, such as job listings and profiles, will be structured for clarity and ease of understanding, making use of headings, lists, and visual cues to guide the user’s eye.
+
+5. Surface Plane
+
+- Visual Design: The final layer involves choosing colors, typography, and imagery that align with the Remote Forge brand and appeal to the target audience. The visual design will enhance the usability of the platform while making it aesthetically pleasing, aiming to create a positive first impression and engaging user experience.
 
 ## Wireframes
 
