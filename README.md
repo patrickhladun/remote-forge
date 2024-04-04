@@ -5,7 +5,16 @@ Welcome to Remote Forge, my creation and your gateway to the world of remote wor
 ![GitHub contributors](https://img.shields.io/github/issues/patrickhladun/remote-forge?style=flat) ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/patrickhladun/remote-forge/main?style=flat) ![GitHub language count](https://img.shields.io/github/languages/count/patrickhladun/remote-forge?style=flat) ![GitHub top language](https://img.shields.io/github/languages/top/patrickhladun/remote-forge?style=flat)
 
 ## Project Scope and Objectives
+
+The core objective of Remote Forge is to develop a comprehensive Full-Stack MVP that serves as a robust platform for remote work opportunities. This project is designed with the specific goal of connecting talented professionals seeking remote work with employers looking to hire for remote roles. By focusing solely on 100% remote opportunities, Remote Forge aims to become a specialized hub for those passionate about flexible working arrangements, thereby addressing the growing demand for remote work in various industries.
+
 ### Website Objectives
+
+- Create a dynamic environment where employers can easily find and connect with skilled professionals ready to embrace remote work opportunities.
+- Provide an intuitive platform for job seekers to discover job listings that match their skills and preferences, enabling straightforward applications to their chosen roles.
+- Offer employers a user-friendly interface for creating, managing, and tracking job postings, ensuring a smooth recruitment process.
+- Allow talents to showcase their skills, experience, and work preferences through detailed profiles, increasing their visibility to potential employers.
+
 ### Key components of the website include
 ## User Experience
 ### Audience Persona ...:
