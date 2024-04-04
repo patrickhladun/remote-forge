@@ -5,7 +5,6 @@ class UserManager(BaseUserManager):
     """
     Custom user manager to allow email login and creation of users with the `hide_email` field.
     """
-
     def _create_user(self, email, password, **extra_fields):
         """
         Create a user with the given email and password.
