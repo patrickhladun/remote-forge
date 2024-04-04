@@ -26,15 +26,26 @@ The core objective of Remote Forge is to develop a comprehensive Full-Stack MVP 
 
 ## User Experience
 
-### Audience Persona ...:
+### Audience Persona: Talent - Siobhan O'Neill
+
+#### Demographics:
+- Location: Cork, Ireland
+- Age: 29
+- Education: Bachelor's Degree in Digital Marketing
+- Occupation: Freelance Digital Marketer
+- Income Level: Mid-level, primarily project-based earnings
 
 #### Psychographics:
+Siobhan values flexibility and autonomy over her work schedule and environment. She is driven by opportunities to grow her skill set and seeks roles that challenge her creatively. Sustainability and work-life balance are important to her, influencing her job selection process.
 
 #### Behavioral Traits:
+Siobhan actively seeks out remote work opportunities that allow her to blend her professional ambitions with her personal lifestyle. She prefers long-term contracts or permanent remote positions that offer stability. Siobhan is proactive in networking and continuously learning new skills relevant to her field.
 
 #### Online Habits:
+Frequently uses LinkedIn and Twitter for networking and industry news. Siobhan relies on specialized job boards focused on remote work and digital marketing forums to find new opportunities. She attends webinars and online courses to enhance her skills and is active in several online communities related to digital marketing and remote work.
 
-#### How Remot Forge... Needs:
+#### How Remote Forge Meets Siobhan's Needs:
+Remote Forge provides Siobhan with access to a curated list of remote job opportunities in her field, allowing her to apply her skills in roles that value creativity and strategic thinking. The platform's focus on remote roles aligns with her desire for work-life balance and professional growth. With features for networking and profile visibility, Siobhan can showcase her portfolio and connect with potential employers in Ireland and beyond, who are looking for her unique skill set.
 
 ## User Goals
 
