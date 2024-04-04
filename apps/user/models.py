@@ -12,7 +12,7 @@ class Talent(models.Model):
 
 
 
-class Company(models.Model):
+class Employer(models.Model):
     """Model definition for Company."""
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     company_name = models.CharField(max_length=255)
