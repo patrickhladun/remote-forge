@@ -16,88 +16,166 @@ The core objective of Remote Forge is to develop a comprehensive Full-Stack MVP 
 - Allow talents to showcase their skills, experience, and work preferences through detailed profiles, increasing their visibility to potential employers.
 
 ### Key components of the website include
+
+- **User Authentication System:** A secure login and registration process for two distinct user types: Employers and Talents, with role-specific access to features and functionalities.
+- **Dynamic Job Board:** A central repository for job listings, offering search and filter capabilities to help Talent users find suitable job opportunities.
+- **Employer and Talent Profiles:** Dedicated sections for users to create and manage their professional profiles, including the ability to post comprehensive job descriptions for Employers and detailed resumes for Talents.
+- **CRUD Operations for Job Listings:** A set of functionalities that allows Employers to create, read, update, and delete job postings as their hiring needs evolve.
+- **Content Pages:** Static pages such as Home, About, and Contact, providing users with information about Remote Forge, its mission, and how to get in touch.
+- **Application and Applicant Management (optional):** For Employers, an optional feature to track and manage applications received for their job listings; for Talents, the ability to apply directly to jobs or through external links provided by Employers.
+
 ## User Experience
+
 ### Audience Persona ...:
+
 #### Psychographics:
+
 #### Behavioral Traits:
+
 #### Online Habits:
+
 #### How Remot Forge... Needs:
 
 ## User Goals
+
 ## User Stories (all user stories are created in github issues)
 
 ## Agile Metodology
 
 ## Five Planes of UX
+
 ### Strategy
+
 ### Scope
+
 ### Structure
+
 ### Skeleton
+
 ### Surface
 
 ## Wireframes
+
 ## Mobile Wireframes
+
 ## Desktop Wireframes
+
 ## Design
+
 ## Colours Scheme
+
 ## Fonts
+
 ## Visuals
+
 ## Logo
+
 ## Images
+
 ## Icons
+
 ## Pages and Features
+
 ### Front end pages
+
 #### Website Header Design
+
 #### Website Footer Design
+
 #### Home Page
+
 #### About Page
+
 #### Contact Page
+
 #### Jobs List Page
+
 #### Job Single Page
+
 #### Talent List Page
+
 #### Talent Single Page
+
 #### Talent Signup Page
+
 #### Employer Signup Page
+
 #### Thank you pages
+
 #### 404 Page
+
 #### Legal Pages
+
 ### Backend (admin) Pages
+
 #### Talent Dashboard Page
+
 #### Talent Account Page
+
 #### Talent Profile Edit Page
+
 #### Employer Dashboard Page
+
 #### Employer Account Page
+
 #### Employer Profile Edit Page
+
 #### Employer Add Job Page
+
 #### Employer Edit Job Page
+
 #### Employer Jobs List Page
+
 #### Employer Applicants List Page
 
-
 ## Technology used
+
 ## Development and Deployment
+
 ## Issues
+
 ## Unresolved Issues
+
 ## Resolved Issues
+
 ## Testing and Validation
+
 ## Functional testing
+
 ### Website Header on Desktop
+
 ### Website Header on Mobile
+
 ### Website Footer
+
 ### Home Page
+
 ### About Page
+
 ### Contact Page
+
 ### Thank You and 404 Error Pages
+
 ## Google Page Insights Tests:
+
 ### Home Page
+
 ### About Page
+
 ### Contact Page
+
 ### Thank You Contact Page
+
 ### Thank You Newsletter Page
+
 ### 404 Error Page
+
 ### HTML Validation
+
 ### CSS Validation
 
 ## Further Improvements
+
 ## Credits
+
 ## Acknowledgments
