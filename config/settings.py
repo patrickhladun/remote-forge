@@ -66,6 +66,10 @@ ACCOUNT_EMAIL_VERIFICATION = 'none'
 ACCOUNT_USERNAME_MIN_LENGTH = 4
 LOGIN_URL = '/accounts/login'
 LOGIN_REDIRECT_URL = '/'
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.AllowAllUsersModelBackend',
+    'apps.user.backends.CaseInsensitiveModelBackend',
+]
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
