@@ -15,8 +15,8 @@ Welcome to Remote Forge, my creation and your gateway to the world of remote wor
 - [User Goals](#user-goals)
   - [Talent - Siobhan O'Neill's Goals:](#talent---siobhan-oneills-goals)
   - [Employer - Eoin McCarthy's Goals:](#employer---eoin-mccarthys-goals)
-- [User Stories (all user stories are created in github issues)](#user-stories-all-user-stories-are-created-in-github-issues)
-- [Agile Metodology](#agile-metodology)
+- [Agile Methodology in Project Development](#agile-methodology-in-project-development)
+  - [Epics](#epics)
 - [Five Planes of UX](#five-planes-of-ux)
   - [Strategy](#strategy)
   - [Scope](#scope)
@@ -213,9 +213,32 @@ Remote Forge offers Eoin a specialized platform to reach a broad pool of candida
 - Build a Diverse and Dynamic Team: He seeks to recruit from a diverse pool of candidates to foster innovation and agility within the team.
 - Ensure Quality and Fit: Eoin's goal is to use platforms like Remote Forge to not only find candidates with the right skills but also to ensure they align with the startup's dynamic and innovative work environment.
 
-## User Stories (all user stories are created in github issues)
+## Agile Methodology in Project Development
 
-## Agile Metodology
+[Back to Top](#table-of-contents)
+
+In developing Remote Forge, I've embraced agile methodology to ensure flexibility, continuous improvement, and responsiveness to user feedback. This approach allows me to quickly adapt to changes and prioritize tasks effectively, focusing on delivering value at every stage of development.
+
+To manage the project efficiently, I utilize GitHub Issues and Projects alongside a Kanban board. This setup is crucial for organizing my workflow and keeping track of progress.
+
+My Approach Using GitHub: Epics and User Stories: I break down the development into Epics and User Stories, making the project manageable and ensuring each feature closely aligns with user needs, such as enabling talents to discover remote jobs and employers to manage job listings.
+
+Kanban Board: My Kanban board features columns for Backlog, In Progress, Paused/on Hold, Verification/Testing and Done, offering a clear visual guide to the project's status and allowing me to efficiently manage tasks from conception to completion.
+
+Collaboration and Transparency: Even as a solo developer, GitHub fosters a transparent approach to project management, making it easier to track progress and adjustments needed throughout the development process.
+
+Feedback Loop: Leveraging agile principles, I incorporate user feedback directly into the development cycle, using GitHub to track and address feedback related to specific User Stories or Epics, ensuring Remote Forge evolves in response to real user needs.
+
+By adopting agile methodology and utilizing GitHub's robust project management tools, I navigate the development of Remote Forge with agility, keeping the project aligned with its core mission of connecting the remote work community.
+
+[Github Remote Forge Project](https://github.com/users/patrickhladun/projects/5)
+
+### Epics
+
+- [Epic 1: Project setup and planning](https://github.com/patrickhladun/remote-forge/issues/1)
+- [Epic 2: Design and assets development](https://github.com/patrickhladun/remote-forge/issues/19)
+- [Epic 3: Frontend and backend development for 'Remote Forge' MVP](https://github.com/patrickhladun/remote-forge/issues/3)
+- [Epic 4: Testing deployment and documentation](https://github.com/patrickhladun/remote-forge/issues/9)
 
 ## Five Planes of UX
 
