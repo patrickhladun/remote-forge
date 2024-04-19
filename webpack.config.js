@@ -58,7 +58,7 @@ module.exports = {
             ignore: ["**/*.!(png|svg|jpg|jpeg|gif|webp)"],
           },
           noErrorOnMissing: true,
-        },b
+        },
       ],
     }),
   ],
