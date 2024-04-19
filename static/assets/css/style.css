@@ -8068,7 +8068,7 @@ textarea.form-control-lg {
   padding: 0.25rem !important;
 }
 
-.p-2 {
+.p-2, .city-list span {
   padding: 0.5rem !important;
 }
 
@@ -8926,7 +8926,7 @@ textarea.form-control-lg {
   pointer-events: auto !important;
 }
 
-.rounded {
+.rounded, .city-list span {
   border-radius: var(--bs-border-radius) !important;
 }
 
@@ -12277,7 +12277,7 @@ h6,
   background-color: var(--color-brand-50);
 }
 
-.bg-brand-100 {
+.bg-brand-100, .city-list span {
   background-color: var(--color-brand-100);
 }
 
@@ -12295,7 +12295,7 @@ h6,
 
 /* Hero Section */
 .hero-home {
-  padding: 90px 0;
+  padding: 90px 0; /* Use Bootsrap */
 }
 
 .left-01,
@@ -12342,12 +12342,41 @@ h6,
 .how-it-works svg {
   width: 68px;
   height: 68px;
-  fill: var(--color-brand-500);
-  padding: 4px;
+  fill: var(--color-brand-500); /* Add Fills Variables */
+  padding: 4px; /* Use Bootsrap */
 }
 
 .shape {
-  fill: var(--color-brand-500);
+  fill: var(--color-brand-500); /* Add Fills Variables */
+}
+
+/* Featured Cities */
+.city-list {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 16px; /* Use Bootsrap */
+}
+.city-list .city-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  background-size: cover;
+  background-position: center center;
+  border-radius: 0.5rem;
+  min-height: 120px; /* Use Bootsrap */
+  padding: 16px; /* Use Bootsrap */
+  text-decoration: none;
+  grid-column: span 6;
+  grid-row: span 1;
+}
+.city-list span {
+  color: var(--color-brand-500); /* Add Fills Variables */
+  line-height: 1;
+  font-size: 14px; /* Use Bootsrap */
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (min-width: 576px) {
@@ -12369,9 +12398,35 @@ h6,
     width: 46px;
   }
 }
+@media (min-width: 768px) {
+  /* Featured Cities */
+  .city-list {
+    gap: 32px; /* Use Bootsrap */
+  }
+  .city-list .city-item:nth-child(1) {
+    grid-column: 1/span 3;
+    grid-row: 1/span 4;
+  }
+  .city-list .city-item:nth-child(2) {
+    min-height: 240px;
+    grid-column: 4/span 3;
+    grid-row: 1/span 2;
+  }
+  .city-list .city-item:nth-child(3) {
+    min-height: 240px;
+    grid-column: 4/span 3;
+    grid-row: 3/span 2;
+  }
+  .city-list .city-item:nth-child(4),
+  .city-list .city-item:nth-child(5),
+  .city-list .city-item:nth-child(6) {
+    grid-column: span 2;
+    grid-row: 5/span 2;
+  }
+}
 @media (min-width: 992px) {
   .hero-home {
-    padding: 160px 0;
+    padding: 160px 0; /* Use Bootsrap */
   }
   .left-01 {
     transform: translate(-50%, -140%);
@@ -12410,7 +12465,7 @@ h6,
 }
 @media (min-width: 1200px) {
   .hero-home {
-    padding: 210px 0;
+    padding: 210px 0; /* Use Bootsrap */
   }
 }
 

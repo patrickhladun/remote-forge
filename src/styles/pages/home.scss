@@ -1,6 +1,6 @@
 /* Hero Section */
 .hero-home {
-  padding: 90px 0;
+  padding: 90px 0; /* Use Bootsrap */
 }
 .left-01,
 .left-02,
@@ -42,12 +42,47 @@
   svg {
     width: 68px;
     height: 68px;
-    fill: var(--color-brand-500);
-    padding: 4px;
+    fill: var(--color-brand-500); /* Add Fills Variables */
+    padding: 4px; /* Use Bootsrap */
   }
 }
 .shape {
-  fill: var(--color-brand-500);
+  fill: var(--color-brand-500); /* Add Fills Variables */
+}
+
+/* Featured Cities */
+.city-list {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 16px; /* Use Bootsrap */
+
+  .city-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    background-size: cover;
+    background-position: center center;
+    border-radius: $border-radius-lg;
+    min-height: 120px; /* Use Bootsrap */
+    padding: 16px; /* Use Bootsrap */
+    text-decoration: none;
+
+    grid-column: span 6;
+    grid-row: span 1;
+  }
+
+  span {
+    @extend .p-2;
+    @extend .bg-brand-100;
+    @extend .rounded;
+    color: var(--color-brand-500); /* Add Fills Variables */
+    line-height: 1;
+    font-size: 14px; /* Use Bootsrap */
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 @media (min-width: 576px) {
@@ -71,11 +106,36 @@
 }
 
 @media (min-width: 768px) {
+  /* Featured Cities */
+  .city-list {
+    gap: 32px; /* Use Bootsrap */
+
+    .city-item:nth-child(1) {
+      grid-column: 1 / span 3;
+      grid-row: 1 / span 4;
+    }
+    .city-item:nth-child(2) {
+      min-height: 240px;
+      grid-column: 4 / span 3;
+      grid-row: 1 / span 2;
+    }
+    .city-item:nth-child(3) {
+      min-height: 240px;
+      grid-column: 4 / span 3;
+      grid-row: 3 / span 2;
+    }
+    .city-item:nth-child(4),
+    .city-item:nth-child(5),
+    .city-item:nth-child(6) {
+      grid-column: span 2;
+      grid-row: 5 / span 2;
+    }
+  }
 }
 
 @media (min-width: 992px) {
   .hero-home {
-    padding: 160px 0;
+    padding: 160px 0; /* Use Bootsrap */
   }
   .left-01 {
     transform: translate(-50%, -140%);
@@ -115,7 +175,7 @@
 
 @media (min-width: 1200px) {
   .hero-home {
-    padding: 210px 0;
+    padding: 210px 0; /* Use Bootsrap */
   }
 }
 
