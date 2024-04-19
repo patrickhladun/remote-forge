@@ -1,3 +1,4 @@
+/* Hero Section */
 .hero-home {
   padding: 90px 0;
 }
@@ -33,6 +34,22 @@
   transform: translate(80%, -100%);
   width: 46px;
 }
+
+/* How it Works Section */
+
+.how-it-works {
+  text-align: center;
+  svg {
+    width: 68px;
+    height: 68px;
+    fill: var(--color-brand-500);
+    padding: 4px;
+  }
+}
+.shape {
+  fill: var(--color-brand-500);
+}
+
 @media (min-width: 576px) {
   .left-01 {
     transform: translate(320%, -20%);
