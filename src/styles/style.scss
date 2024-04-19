@@ -1,1 +1,4 @@
-@import "bootstrap/scss/bootstrap";
+@import "bootstrap-overides.scss";
+@import "~bootstrap/scss/bootstrap";
+
+@import "pages/home";
