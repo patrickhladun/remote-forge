@@ -12519,5 +12519,13 @@ h6,
     margin-right: 0;
   }
 }
+.page {
+  margin-top: 80px;
+}
+
+.navbar-brand {
+  width: 120px;
+  fill: var(--color-brand-500);
+}
 
 /*# sourceMappingURL=style.css.map*/
