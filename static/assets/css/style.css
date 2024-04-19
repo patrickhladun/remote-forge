@@ -8012,7 +8012,7 @@ textarea.form-control-lg {
   margin-bottom: 1rem !important;
 }
 
-.mb-4 {
+.mb-4, .talent-box {
   margin-bottom: 1.5rem !important;
 }
 
@@ -8072,7 +8072,7 @@ textarea.form-control-lg {
   padding: 0.5rem !important;
 }
 
-.p-3 {
+.p-3, .talent-box {
   padding: 1rem !important;
 }
 
@@ -8926,7 +8926,7 @@ textarea.form-control-lg {
   pointer-events: auto !important;
 }
 
-.rounded, .city-list span {
+.rounded, .talent-box, .city-list span {
   border-radius: var(--bs-border-radius) !important;
 }
 
@@ -12379,6 +12379,7 @@ h6,
   align-items: center;
 }
 
+/* Talent List */
 @media (min-width: 576px) {
   .left-01 {
     transform: translate(320%, -20%);
@@ -12466,6 +12467,56 @@ h6,
 @media (min-width: 1200px) {
   .hero-home {
     padding: 210px 0; /* Use Bootsrap */
+  }
+}
+.talent-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.talent-box {
+  background-color: var(--color-brand-200);
+}
+
+.card {
+  border: none;
+  flex: 0 0 calc(100% - 8px);
+  margin: 8px;
+}
+.card .card__header {
+  color: var(--color-brand-700);
+  padding: 0 16px;
+  border-radius: 3px 3px 0 0;
+}
+
+.card .image {
+  border-radius: 100%;
+}
+
+.skills {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: 0 16px;
+  margin-top: 4px;
+}
+.skills .skills__item {
+  background-color: var(--color-brand-100);
+  color: var(--color-brand-700);
+  padding: 4px 8px;
+  border-radius: 3px;
+  font-size: 0.7rem;
+}
+
+@media (min-width: 768px) {
+  .card {
+    flex: 0 0 calc(50% - 8px);
+  }
+  .card:nth-child(odd) {
+    margin-left: 0;
+  }
+  .card:nth-child(even) {
+    margin-right: 0;
   }
 }
 
