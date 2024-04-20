@@ -1,0 +1,52 @@
+.talent-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.talent-box {
+  @extend .p-3;
+  @extend .mb-4;
+  @extend .rounded;
+  background-color: var(--color-brand-200);
+}
+.card {
+  border: none;
+  flex: 0 0 calc(100% - 8px);
+  margin: 8px;
+
+  .card__header {
+    color: var(--color-brand-700);
+    padding: 0 16px;
+    border-radius: 3px 3px 0 0;
+  }
+}
+.card .image {
+  border-radius: 100%;
+}
+.skills {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: 0 16px;
+  margin-top: 4px;
+
+  .skills__item {
+    background-color: var(--color-brand-100);
+    color: var(--color-brand-700);
+    padding: 4px 8px;
+    border-radius: 3px;
+    font-size: 0.7rem;
+  }
+}
+@media (min-width: 768px) {
+  .card {
+    flex: 0 0 calc(50% - 8px);
+
+    &:nth-child(odd) {
+      margin-left: 0;
+    }
+
+    &:nth-child(even) {
+      margin-right: 0;
+    }
+  }
+}
