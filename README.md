@@ -19,9 +19,7 @@ Welcome to Remote Forge, my creation and your gateway to the world of remote wor
   - [Epics](#epics)
 - [Five Planes of UX](#five-planes-of-ux)
 - [Wireframes](#wireframes)
-- [Mobile Wireframes](#mobile-wireframes)
-- [Desktop Wireframes](#desktop-wireframes)
-- [Design](#design)
+- [Mockups](#mockups)
 - [Colours Scheme](#colours-scheme)
 - [Fonts](#fonts)
 - [Visuals](#visuals)
@@ -267,11 +265,141 @@ The 5 Planes of User Experience (UX) provide a framework for understanding the l
 
 ## Wireframes
 
-## Mobile Wireframes
+[Back to Top](#table-of-contents)
 
-## Desktop Wireframes
+For the initial design phase of Remote Forge, I used Figma to create the wireframes. Figma's versatility makes it ideal for developing both wireframes and mockups in the same environment. In this section, I'll showcase the wireframes that laid the groundwork for all key pages of the platform.
 
-## Design
+<details><summary>Wireframe Home</summary>
+
+![Home Page](./docs/wireframe-home.webp)
+
+</details>
+
+<details><summary>Wireframe About</summary>
+
+![About Page](./docs/wireframe-about.webp)
+
+</details>
+
+<details><summary>Wireframe Contact</summary>
+
+![Contact Page](./docs/wireframe-contact.webp)
+
+</details>
+
+<details><summary>Wireframe Feed Pages</summary>
+
+![Feed Pages](./docs/wireframe-feed-pages.webp)
+
+</details>
+
+<details><summary>Wireframe Single Job</summary>
+
+![Single Job](./docs/wireframe-single-job.webp)
+
+</details>
+
+<details><summary>Wireframe Talent Profile</summary>
+
+![Talent Profile](./docs/wireframe-talent-profile.webp)
+
+</details>
+
+<details><summary>Wireframe Employer Profile</summary>
+
+![Employer Profile](./docs/wireframe-employer-profile.webp)
+
+</details>
+
+<details><summary>Wireframe Account Forms</summary>
+
+![Account Forms](./docs/wireframe-account-forms.webp)
+
+</details>
+
+## Mockups
+
+[Back to Top](#table-of-contents)
+
+Building on the foundational wireframes, I progressed to designing detailed mockups for Remote Forge using Figma. These mockups are refined visual representations of the website, incorporating color schemes, typography, and imagery to bring the initial wireframe structures to life.
+
+<details><summary>Mockup Home Page</summary>
+
+![Home Page](./docs/mockup-home.webp)
+
+</details>
+
+<details><summary>Mockup About Page</summary>
+
+![About Page](./docs/mockup-about.webp)
+
+</details>
+
+<details><summary>Mockup Contact Page</summary>
+
+![Contact Page](./docs/mockup-contact.webp)
+
+</details>
+
+<details><summary>Mockup Job Feed Page</summary>
+
+![Job Feed Page](./docs/mockup-job-feed.webp)
+
+</details>
+
+<details><summary>Mockup Job Page</summary>
+
+![Job Page](./docs/mockup-job.webp)
+
+</details>
+
+<details><summary>Mockup Talent Feed Page</summary>
+
+![Talent Feed Page](./docs/mockup-talent-feed.webp)
+
+</details>
+
+<details><summary>Mockup Talent Profile Page</summary>
+
+![Talent Profile Page](./docs/mockup-talent-profile.webp)
+
+</details>
+
+<details><summary>Mockup Employer Profile Page</summary>
+
+![Employer Profile Page](./docs/mockup-employer-profile.webp)
+
+</details>
+
+<details><summary>Mockup User Details Page</summary>
+
+![User Details Page](./docs/mockup-user-details.webp)
+
+</details>
+
+<details><summary>Mockup Talent Profile Edit Page</summary>
+
+![Talent Profile Edit Page](./docs/mockup-talent-profile-edit.webp)
+
+</details>
+
+<details><summary>Mockup Employer Profile Edit Page</summary>
+
+![Employer Profile Edit Page](./docs/mockup-employer-profile-edit.webp)
+
+</details>
+
+<details><summary>Mockup Employer Job List Page</summary>
+
+![Employer Job List Page](./docs/mockup-employer-job-list.webp)
+
+</details>
+
+<details><summary>Mockup Employer Job Edit Page</summary>
+
+![Employer Job Edit Page](./docs/mockup-employer-job-edit.webp)
+
+</details>
 
 ## Colours Scheme
 
