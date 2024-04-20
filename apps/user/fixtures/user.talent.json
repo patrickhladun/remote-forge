@@ -1,0 +1,363 @@
+[
+  {
+    "model": "user.user",
+    "pk": "c7d5687d-afb7-4945-8cb5-14e20a70b276",
+    "fields": {
+      "email": "alex.johnson@example.com",
+      "username": "alex_johnson",
+      "password": "password",
+      "is_admin": false,
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "date_joined": "2023-08-20 15:30:45.123456",
+      "last_login": "2023-08-25 10:20:30.654321",
+      "user_type": "talent"
+    }
+  },
+  {
+    "model": "user.talent",
+    "pk": "f40faef6-33f8-4a69-89d2-cf6e173e64c9",
+    "fields": {
+      "user": "c7d5687d-afb7-4945-8cb5-14e20a70b276",
+      "fname": "Alex",
+      "lname": "Johnson",
+      "phone": "0987654321",
+      "city": "San Francisco",
+      "country": "United States",
+      "title": "Software Engineer",
+      "image": "talent/profile/alex_johnson.webp",
+      "bio": "As a self-taught software engineer, I am passionate about creating innovative solutions to complex problems. With a strong foundation in programming acquired through self-study and hands-on projects, I thrive in dynamic environments and enjoy collaborating with cross-functional teams to deliver high-quality software.",
+      "resume": "talent/resumes/alex_johnson_resume.pdf",
+      "website": "https://alex-johnson.dev/",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/alexjohnson/"
+      },
+      "experience": [
+        {
+          "company_name": "Tech Innovations Inc.",
+          "position": "Software Engineer",
+          "start_date": "2019-07-01",
+          "end_date": null,
+          "still_on": true,
+          "responsibilities": "Designed and implemented scalable software solutions, participated in code reviews and technical discussions, and collaborated with product and design teams to deliver user-centric features."
+        },
+        {
+          "company_name": "Startup XYZ",
+          "position": "Full Stack Developer",
+          "start_date": "2018-01-15",
+          "end_date": "2019-06-30",
+          "still_on": false,
+          "responsibilities": "Developed and maintained web applications, designed and implemented database schemas, and optimized application performance for scalability."
+        },
+        {
+          "company_name": "Freelance Projects",
+          "position": "Freelance Developer",
+          "start_date": "2016-05-01",
+          "end_date": "2017-12-31",
+          "still_on": false,
+          "responsibilities": "Worked on various freelance projects, developed custom web solutions, and provided technical consultation to clients."
+        }
+      ],
+      "education": [
+        {
+          "level": "Udacity Nanodegree in Full Stack Web Development",
+          "status": "Completed",
+          "start_date": "2017-09-01",
+          "end_date": "2018-06-30",
+          "still_on": false,
+          "expected_end_date": ""
+        },
+        {
+          "level": "Udemy Course: Advanced JavaScript",
+          "status": "Completed",
+          "start_date": "2016-03-01",
+          "end_date": "2016-06-30",
+          "still_on": false,
+          "expected_end_date": ""
+        },
+        {
+          "level": "Development Diploma in Web Development",
+          "status": "Completed",
+          "start_date": "2015-01-01",
+          "end_date": "2015-12-31",
+          "still_on": false,
+          "expected_end_date": ""
+        }
+      ],
+      "interests": "Open Source Projects, Cloud Computing, Machine Learning",
+      "skills": ["JavaScript", "HTML", "CSS", "Python"],
+      "created_at": "2023-08-20 15:30:45.123456",
+      "updated_at": "2023-08-25 10:20:30.654321",
+      "is_published": false
+    }
+  },
+  {
+    "model": "user.user",
+    "pk": "22d19d16-5f1d-4e2c-8a25-d3704175f2f7",
+    "fields": {
+      "email": "adam.kowalski@example.com",
+      "username": "adam_kowalski",
+      "password": "password",
+      "is_admin": false,
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "date_joined": "2023-11-15 08:00:00.000000",
+      "last_login": "2023-11-20 10:30:00.000000",
+      "user_type": "talent"
+    }
+  },
+  {
+    "model": "user.talent",
+    "pk": "0d5e1b11-03e1-4d2b-827a-7e4f4e0d4231",
+    "fields": {
+      "user": "22d19d16-5f1d-4e2c-8a25-d3704175f2f7",
+      "fname": "Adam",
+      "lname": "Kowalski",
+      "phone": "0487654321",
+      "city": "Warsaw",
+      "country": "Poland",
+      "title": "Frontend Lead",
+      "image": "talent/profile/adam_kowalski.png",
+      "bio": "I am a dedicated frontend developer with extensive experience in leading teams and delivering high-quality web solutions. With a passion for clean and maintainable code, I excel in creating user-friendly interfaces that drive engagement and enhance the overall user experience.",
+      "resume": "talent/resumes/adam_kowalski_resume.pdf",
+      "website": "",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/adamkowalski/",
+        "github": "https://github.com/adamkowalski",
+        "twitter": "https://twitter.com/adam_kowalski"
+      },
+      "experience": [
+        {
+          "company_name": "Tech Solutions Inc.",
+          "position": "Frontend Intern",
+          "start_date": "2018-05-01",
+          "end_date": "2019-04-30",
+          "still_on": false,
+          "responsibilities": "<p>Assisted in frontend development tasks, implemented UI designs, and participated in code reviews.</p>"
+        },
+        {
+          "company_name": "Web Development Agency",
+          "position": "Senior Frontend Developer",
+          "start_date": "2019-06-01",
+          "end_date": "2021-12-31",
+          "still_on": false,
+          "responsibilities": "<p>Led frontend development efforts, collaborated with design and backend teams to implement features, and mentored junior developers.</p>"
+        },
+        {
+          "company_name": "Digital Solutions Ltd.",
+          "position": "Frontend Lead",
+          "start_date": "2022-01-01",
+          "end_date": null,
+          "still_on": true,
+          "responsibilities": "<p>Lead a team of frontend developers, defined technical standards and best practices, and contributed to architectural decisions.</p>"
+        }
+      ],
+      "education": [
+        {
+          "level": "Self-Taught Frontend Development",
+          "status": "Completed",
+          "start_date": "2016-01-01",
+          "end_date": "2017-12-31",
+          "still_on": false,
+          "expected_end_date": ""
+        },
+        {
+          "level": "Bachelor's Degree in Computer Science",
+          "status": "Completed",
+          "start_date": "2017-09-01",
+          "end_date": "2021-06-30",
+          "still_on": false,
+          "expected_end_date": ""
+        },
+        {
+          "level": "Udemy Course: Advanced React",
+          "status": "Completed",
+          "start_date": "2022-03-01",
+          "end_date": "2022-06-30",
+          "still_on": false,
+          "expected_end_date": ""
+        }
+      ],
+      "interests": "Web Development, UI/UX Design, Open Source Projects",
+      "skills": ["HTML", "CSS", "JavaScript", "React"],
+      "created_at": "2023-11-15 08:00:00.000000",
+      "updated_at": "2023-11-20 10:30:00.000000",
+      "is_published": false
+    }
+  },
+  {
+    "model": "user.user",
+    "pk": "17fd54c1-f894-4a78-8325-0b28d36cc95c",
+    "fields": {
+      "email": "sarah.smith@example.com",
+      "username": "sarah_smith",
+      "password": "password",
+      "is_admin": false,
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "date_joined": "2023-09-10 12:00:00.000000",
+      "last_login": "2023-09-15 15:30:00.000000",
+      "user_type": "talent"
+    }
+  },
+  {
+    "model": "user.talent",
+    "pk": "20b61d12-4622-44d9-b698-18c7e6ffdc26",
+    "fields": {
+      "user": "17fd54c1-f894-4a78-8325-0b28d36cc95c",
+      "fname": "Sarah",
+      "lname": "Smith",
+      "phone": "0312345678",
+      "city": "Amsterdam",
+      "country": "Netherlands",
+      "title": "Accountant",
+      "image": "talent/profile/sarah_smith.webp",
+      "bio": "I am a detail-oriented accountant with a proven track record of accuracy and efficiency in financial management. With a strong foundation in accounting principles and experience working with various industries, I am committed to delivering reliable financial insights to support business growth and decision-making.",
+      "resume": "talent/resumes/sarah_smith_resume.pdf",
+      "website": "",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/sarahsmith/",
+        "twitter": "https://twitter.com/sarah_smith"
+      },
+      "experience": [
+        {
+          "company_name": "Greenway Consulting",
+          "position": "Junior Accountant",
+          "start_date": "2019-03-01",
+          "end_date": "2020-05-31",
+          "still_on": false,
+          "responsibilities": "<p>Assisted in preparing financial statements, reconciled accounts, and conducted audits.</p>"
+        },
+        {
+          "company_name": "Summit Investments",
+          "position": "Senior Accountant",
+          "start_date": "2020-06-01",
+          "end_date": "2022-08-31",
+          "still_on": false,
+          "responsibilities": "<p>Managed financial reporting processes, analyzed financial data, and provided strategic financial guidance to management.</p>"
+        },
+        {
+          "company_name": "Financial Dynamics",
+          "position": "Accounting Manager",
+          "start_date": "2022-09-01",
+          "end_date": null,
+          "still_on": true,
+          "responsibilities": "<p>Lead the accounting team, implemented financial controls, and optimized accounting procedures to enhance efficiency.</p>"
+        }
+      ],
+      "education": [
+        {
+          "level": "Bachelor's Degree in Accounting",
+          "status": "Completed",
+          "start_date": "2017-09-01",
+          "end_date": "2021-06-30",
+          "still_on": false,
+          "expected_end_date": ""
+        },
+        {
+          "level": "Master's Degree in Finance",
+          "status": "Completed",
+          "start_date": "2021-09-01",
+          "end_date": "2023-06-30",
+          "still_on": false,
+          "expected_end_date": ""
+        }
+      ],
+      "interests": "Financial Analysis, Budgeting, Taxation",
+      "skills": ["Accounting", "Financial Reporting", "Auditing"],
+      "created_at": "2023-09-10 12:00:00.000000",
+      "updated_at": "2023-09-15 15:30:00.000000",
+      "is_published": false
+    }
+  },
+  {
+    "model": "user.user",
+    "pk": "f1fd07a2-39d2-4691-b7a3-693d0f70c1b9",
+    "fields": {
+      "email": "jing.li@example.com",
+      "username": "jing_li",
+      "password": "password",
+      "is_admin": false,
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "date_joined": "2023-07-20 10:00:00.000000",
+      "last_login": "2023-07-25 14:45:00.000000",
+      "user_type": "talent"
+    }
+  },
+  {
+    "model": "user.talent",
+    "pk": "1f6f5871-66df-4957-b007-61a308bc2ae1",
+    "fields": {
+      "user": "f1fd07a2-39d2-4691-b7a3-693d0f70c1b9",
+      "fname": "Jing",
+      "lname": "Li",
+      "phone": "8612345678901",
+      "city": "Beijing",
+      "country": "China",
+      "title": "DevOps Engineer",
+      "image": "talent/profile/jing_li.webp",
+      "bio": "As a DevOps engineer, I specialize in automating and streamlining the software development processes to ensure efficient and reliable deployment pipelines. With a strong background in both development and operations, I leverage cutting-edge technologies to optimize system performance, enhance scalability, and minimize downtime.",
+      "resume": "talent/resumes/jing_li_resume.pdf",
+      "website": "",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/jingli/",
+        "github": "https://github.com/jing_li",
+        "twitter": "https://twitter.com/jing_li"
+      },
+      "experience": [
+        {
+          "company_name": "CloudSolutions",
+          "position": "DevOps Engineer",
+          "start_date": "2019-08-01",
+          "end_date": "2022-09-30",
+          "still_on": false,
+          "responsibilities": "<p>Implemented CI/CD pipelines, managed infrastructure as code, and optimized system monitoring and alerting.</p>"
+        },
+        {
+          "company_name": "TechInnovate",
+          "position": "Senior DevOps Engineer",
+          "start_date": "2022-10-01",
+          "end_date": null,
+          "still_on": true,
+          "responsibilities": "<p>Lead DevOps initiatives, collaborated with cross-functional teams, and introduced containerization and orchestration solutions.</p>"
+        }
+      ],
+      "education": [
+        {
+          "level": "Bachelor's Degree in Computer Science",
+          "status": "Completed",
+          "start_date": "2016-09-01",
+          "end_date": "2020-06-30",
+          "still_on": false,
+          "expected_end_date": ""
+        },
+        {
+          "level": "Master's Degree in Information Technology",
+          "status": "Completed",
+          "start_date": "2020-09-01",
+          "end_date": "2022-06-30",
+          "still_on": false,
+          "expected_end_date": ""
+        },
+        {
+          "level": "Certification in DevOps Practices",
+          "status": "Completed",
+          "start_date": "2023-01-01",
+          "end_date": "2023-03-31",
+          "still_on": false,
+          "expected_end_date": ""
+        }
+      ],
+      "interests": "Automation, Cloud Computing, Containerization",
+      "skills": ["Docker", "Kubernetes", "Terraform", "Jenkins"],
+      "created_at": "2023-07-20 10:00:00.000000",
+      "updated_at": "2023-07-25 14:45:00.000000",
+      "is_published": false
+    }
+  }
+]
