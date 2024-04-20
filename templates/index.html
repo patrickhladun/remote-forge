@@ -19,7 +19,9 @@
 
 <body>
     {% include './partials/header.html' %}
-    {% block content %}{% endblock %}
+    <div class="page">
+        {% block content %}{% endblock %}
+    </div>
     {% include './partials/footer.html' %}
 </body>
 

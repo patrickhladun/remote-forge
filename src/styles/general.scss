@@ -1,0 +1,38 @@
+:root {
+  --color-brand-50: #f6f9f4;
+  --color-brand-100: #ecf3e8;
+  --color-brand-200: #d6e4ce;
+  --color-brand-500: #6a9255;
+  --color-brand-700: #455e37;
+  --color-brand-800: #394c2f;
+  --color-neutral-50: #f9f9f9;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Josefin Sans", sans-serif !important;
+  color: var(--color-brand-700);
+}
+
+.bg-neutral-50 {
+  background-color: var(--color-neutral-50);
+}
+.bg-brand-50 {
+  background-color: var(--color-brand-50);
+}
+.bg-brand-100 {
+  background-color: var(--color-brand-100);
+}
+.bg-brand-200 {
+  background-color: var(--color-brand-200);
+}
+.bg-brand-500 {
+  background-color: var(--color-brand-500);
+}
+.bg-brand-800 {
+  background-color: var(--color-brand-800);
+}

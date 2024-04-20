@@ -1,0 +1,44 @@
+{% load static %}
+<!-- Desktop Navigation -->
+<nav class="d-none d-lg-flex navbar navbar-expand-lg bg-light fixed-top">
+  <div class="container-fluid">
+    {% include './brand.html' %}
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+      <ul class="navbar-nav align-items-center">
+        {% include './site-links.html' %}
+        {% if request.user.is_authenticated %}
+        <li class="nav-item bg-red-100 dropdown align-items-center justify-content-center">
+          <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <span class="profile-menu">
+              {% if request.user.is_superuser %}
+              <img class="no-headshot" src="{% static 'assets/images/avatar.png' %}" />
+              {% else %}
+              <img src="media/{{ user.talent.image }}" />
+              {% endif %}
+            </span>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><a class="dropdown-item" href="#">Account</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="#">Logout</a></li>
+          </ul>
+        </li>
+        {% else %}
+        <li class="nav-item">
+          <a class="btn btn-primary" aria-current="page" href="#">Login/Sign in</a>
+        </li>
+        <li class="nav-item">
+          <a class="btn btn-outline-primary" aria-current="page" href="#">Post a Job</a>
+        </li>
+        {% endif %}
+      </ul>
+    </div>
+  </div>
+</nav>
