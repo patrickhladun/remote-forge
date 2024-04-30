@@ -1,10 +1,10 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Talent
 
-def talent(request):
-    """View function for talent list."""
+def talents_view(request):
+    """View function for talents list."""
     talents = Talent.objects.all()
-    return render(request, 'user/talent.html', {'talents': talents})
+    return render(request, 'user/talents.html', {'talents': talents})
 
 
 def talent_profile(request, id):
