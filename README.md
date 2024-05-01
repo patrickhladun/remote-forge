@@ -20,6 +20,7 @@ Welcome to Remote Forge, my creation and your gateway to the world of remote wor
 - [Five Planes of UX](#five-planes-of-ux)
 - [Wireframes](#wireframes)
 - [Mockups](#mockups)
+- [Database Design](#database-design)
 - [Colours Scheme](#colours-scheme)
 - [Fonts](#fonts)
 - [Visuals](#visuals)
@@ -401,6 +402,14 @@ Building on the foundational wireframes, I progressed to designing detailed mock
 
 </details>
 
+## Database Design
+
+In the development of Remote Forge, I have meticulously crafted the database architecture to support a dynamic and scalable user model. To accommodate various user roles, I introduced a user_type field in the user model. This flexibility allows me to define distinct profiles and functionalities for different user types, initially implementing two primary roles: Talent and Employer.
+
+Employers have the capability to create job listings, forming the core interaction of the platform. Each listing is directly linked to an employer, facilitating a streamlined management process. On the other side, Talents, equipped with comprehensive profile features including resumes and social links, can present a detailed professional persona.
+
+![Database Design](./docs/db-design.webp)
+
 ## Colours Scheme
 
 ## Fonts
@@ -468,6 +477,8 @@ Building on the foundational wireframes, I progressed to designing detailed mock
 #### Employer Applicants List Page
 
 ## Technology used
+
+- [DB Diagram](https://dbdiagram.io/) - used for Database Design
 
 ## Development and Deployment
 
