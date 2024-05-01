@@ -42,14 +42,4 @@ def profile_view(request):
 
 
 def account_view(request):
-    if request.method == 'POST':
-        account_form = UpdateAccountForm(request.POST, instance=request.user)
-
-        if account_form.is_valid():
-            account_form.save()
-            messages.success(request, 'Your details were updated successfully')
-            return redirect(to='account')
-    else:
-        account_form = UpdateAccountForm(instance=request.user)
-
-    return render(request, 'user/admin/user_account.html', {'account_form': account_form})
+    return render(request, 'user/admin/account.html')
