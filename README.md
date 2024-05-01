@@ -414,6 +414,18 @@ Employers have the capability to create job listings, forming the core interacti
 
 ## Fonts
 
+For "Remote Forge," I have carefully selected fonts that align with the aesthetic and functional needs of the platform. Understanding the importance of readability and design harmony, I chose two specific fonts to enhance the user interface.
+
+- **Nunito Sans:** This font is utilized for the body text and paragraphs across the site. Nunito Sans is known for its readability and friendly appearance, making it an excellent choice for ensuring that the content is approachable and easy to digest. Its clean and balanced structure helps maintain clarity and ease of reading in longer texts, which is crucial for the detailed descriptions and information presented on the platform.
+
+![Nunito Sans](./docs/font-nunito.webp)
+
+- **Josefin Sans:** I selected Josefin Sans for all headings to add a touch of elegance and distinctiveness to the page layouts. Josefin Sans, with its vintage geometry and modern sensibility, provides a stylish contrast to the more rounded forms of Nunito Sans. This font is particularly effective in making headings stand out and capturing users' attention, thereby structuring content in a visually appealing and organized manner.
+
+![Josefin Sans](./docs/font-josefin.webp)
+
+These font choices are integral to the overall user experience, contributing not only to the visual impact of the site but also to its functionality and accessibility. By pairing Nunito Sans with Josefin Sans, I aim to create a cohesive and engaging environment that enhances both the aesthetic appeal and the usability of "Remote Forge."
+
 ## Visuals
 
 ## Logo
