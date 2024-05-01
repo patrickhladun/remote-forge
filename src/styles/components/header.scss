@@ -1,0 +1,22 @@
+.profile-menu {
+  @extend .bg-brand-200;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  width: 42px;
+  height: 42px;
+  overflow: hidden;
+  margin-left: 16px;
+
+  img {
+    width: 42px;
+    height: 42px;
+  }
+
+  .no-headshot {
+    width: 32px;
+    height: 32px;
+    font-size: 18px;
+  }
+}
