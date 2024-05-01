@@ -1,10 +1,12 @@
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
+import uuid
 
-class UserManager(BaseUserManager):
+class CustomUserManager(BaseUserManager):
     """
     Custom user manager to allow email login and creation of users with the `hide_email` field.
     """
+
     def _create_user(self, email, password, **extra_fields):
         """
         Create a user with the given email and password.
@@ -38,6 +40,7 @@ class UserManager(BaseUserManager):
 
 
 class User(AbstractBaseUser):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     email = models.EmailField(verbose_name="email", unique=True)
     username = models.CharField(max_length=30, unique=True)
     date_joined = models.DateTimeField(
@@ -48,8 +51,9 @@ class User(AbstractBaseUser):
     is_staff = models.BooleanField(default=False)
     is_superuser = models.BooleanField(default=False)
     hide_email = models.BooleanField(default=True)
+    user_type = models.CharField(max_length=10)
 
-    objects = UserManager()
+    objects = CustomUserManager()
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['username']
@@ -65,13 +69,35 @@ class User(AbstractBaseUser):
     def __str__(self):
         return self.username
 
-
 class Talent(models.Model):
     """Model definition for Talent."""
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    bio = models.TextField()
-    skills = models.CharField(max_length=255)
+    fname = models.CharField(max_length=30, null=True, blank=True)
+    lname = models.CharField(max_length=30, null=True, blank=True)
+    phone = models.CharField(max_length=30, null=True, blank=True)
+    city = models.CharField(max_length=75, null=True, blank=True)
+    country = models.CharField(max_length=56, null=True, blank=True)
+    image = models.ImageField(upload_to='media/talent/profile/', null=True, blank=True)
+    bio = models.TextField(null=True, blank=True)
+    title = models.CharField(max_length=100, null=True, blank=True)
+    resume = models.FileField(upload_to='media/talent/resumes/', null=True, blank=True)
+    website = models.URLField(max_length=200, null=True, blank=True)
+    social = models.JSONField(default=dict, null=True, blank=True)
+    experience = models.JSONField(default=list, null=True, blank=True)
+    education = models.JSONField(default=list, null=True, blank=True)
+    interests = models.CharField(max_length=255, null=True, blank=True)
+    skills = models.JSONField(default=list, null=True, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True) 
+    is_published = models.BooleanField(default=False)
+    
+    class Meta:
+        verbose_name = 'Talent'
+        verbose_name_plural = 'Talents'
 
+    def __str__(self) -> str:
+        return self.user.username
 
 
 class Employer(models.Model):
