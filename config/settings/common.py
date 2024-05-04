@@ -21,6 +21,7 @@ EXTERNAL_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'storages'
 ]
 APPS = [
     'apps.base',
