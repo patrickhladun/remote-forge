@@ -20,7 +20,7 @@ DJANGO_APPS = [
 EXTERNAL_APPS = [
     'allauth',
     'allauth.account',
-    'allauth.socialaccount'
+    'allauth.socialaccount',
 ]
 APPS = [
     'apps.base',
@@ -93,7 +93,3 @@ TIME_ZONE = 'Europe/London'
 USE_I18N = True
 USE_TZ = True
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-STATIC_URL = 'static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-MEDIA_URL = 'media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
