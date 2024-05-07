@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from apps.user.models import Talent
 
 
 def home(request):
@@ -6,4 +7,5 @@ def home(request):
 
 
 def about(request):
-    return render(request, 'base/about.html')
+    talents = Talent.objects.all()
+    return render(request, "base/about.html", {"talents": talents})
