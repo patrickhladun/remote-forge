@@ -3,7 +3,8 @@ from apps.user.models import Talent
 
 
 def home(request):
-    return render(request, 'base/home.html')
+    talents = Talent.objects.all()
+    return render(request, 'base/home.html', {"talents": talents})
 
 
 def about(request):
