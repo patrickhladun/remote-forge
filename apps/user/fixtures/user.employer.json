@@ -1,0 +1,146 @@
+[
+  {
+    "model": "user.user",
+    "pk": "8d83b12b-0e13-4a6b-92c1-26a3d7bf92f3",
+    "fields": {
+      "email": "aoife.ryan@example.com",
+      "username": "aoife_ryan",
+      "password": "pbkdf2_sha256$720000$d9nahLFNnDl5Yr9A3ewMgx$igf567La3i6LuPJRwaGH05bRs8CHgq8os+4nYh/PbdQ=",
+      "is_admin": false,
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "date_joined": "2023-07-20 10:00:00.000000",
+      "last_login": "2023-07-25 14:45:00.000000",
+      "user_type": "employer"
+    }
+  },
+  {
+    "model": "user.employer",
+    "pk": "a25eac3e-4b95-41b2-af8d-10f7923f7c20",
+    "fields": {
+      "user": "8d83b12b-0e13-4a6b-92c1-26a3d7bf92f3",
+      "first_name": "Aoife",
+      "last_name": "Ryan",
+      "email": "aoife.ryan@example.com",
+      "phone": "+353871234567",
+      "company": "EmeraldTech Solutions",
+      "about": "EmeraldTech Solutions specializes in providing innovative software solutions for e-commerce analytics, helping businesses thrive in the digital marketplace.",
+      "website": "https://www.emeraldtech.ie",
+      "city": "Dublin",
+      "country": "Ireland",
+      "social": {},
+      "created_at": "2023-07-20 10:00:00.000000",
+      "updated_at": "2023-07-20 10:00:00.000000",
+      "is_published": true
+    }
+  },
+  {
+    "model": "user.user",
+    "pk": "5ae5b91b-0d3b-4d84-8f48-73523b9d77c0",
+    "fields": {
+      "email": "liam.obrien@example.com",
+      "username": "liam_obrien",
+      "password": "pbkdf2_sha256$720000$d9nahLFNnDl5Yr9A3ewMgx$igf567La3i6LuPJRwaGH05bRs8CHgq8os+4nYh/PbdQ=",
+      "is_admin": false,
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "date_joined": "2023-07-20 10:00:00.000000",
+      "last_login": "2023-07-25 14:45:00.000000",
+      "user_type": "employer"
+    }
+  },
+  {
+    "model": "user.employer",
+    "pk": "fd4351d1-3ad3-42c1-9379-1d09733e02ae",
+    "fields": {
+      "user": "5ae5b91b-0d3b-4d84-8f48-73523b9d77c0",
+      "first_name": "Liam",
+      "last_name": "O'Brien",
+      "email": "liam.obrien@example.com",
+      "phone": "+353871234567",
+      "company": "PixelForge Games",
+      "about": "PixelForge Games is a leading game production company, crafting immersive experiences for players worldwide. We specialize in creating captivating gameplay and stunning visuals.",
+      "website": "https://www.pixelforgegames.ie",
+      "city": "Dublin",
+      "country": "Ireland",
+      "social": {},
+      "created_at": "2023-07-20 10:00:00.000000",
+      "updated_at": "2023-07-20 10:00:00.000000",
+      "is_published": true
+    }
+  },
+  {
+    "model": "user.user",
+    "pk": "9a12c4bf-22f1-41a0-aabe-fa4c632d408e",
+    "fields": {
+      "email": "juha.korhonen@example.com",
+      "username": "juha_korhonen",
+      "password": "pbkdf2_sha256$720000$d9nahLFNnDl5Yr9A3ewMgx$igf567La3i6LuPJRwaGH05bRs8CHgq8os+4nYh/PbdQ=",
+      "is_admin": false,
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "date_joined": "2023-07-20 10:00:00.000000",
+      "last_login": "2023-07-25 14:45:00.000000",
+      "user_type": "employer"
+    }
+  },
+  {
+    "model": "user.employer",
+    "pk": "4fe14a97-2cc9-4426-83d7-fc37037b0b52",
+    "fields": {
+      "user": "9a12c4bf-22f1-41a0-aabe-fa4c632d408e",
+      "first_name": "Juha",
+      "last_name": "Korhonen",
+      "email": "juha.korhonen@example.com",
+      "phone": "+358401234567",
+      "company": "NordicComms",
+      "about": "NordicComms is a leading provider of communication software solutions, offering secure and reliable platforms for businesses to connect and collaborate seamlessly.",
+      "website": "https://www.nordiccomms.fi",
+      "city": "Helsinki",
+      "country": "Finland",
+      "social": {},
+      "created_at": "2023-07-20 10:00:00.000000",
+      "updated_at": "2023-07-20 10:00:00.000000",
+      "is_published": true
+    }
+  },
+  {
+    "model": "user.user",
+    "pk": "fcd36b6a-b6af-4534-9f2a-5e77b6f44a30",
+    "fields": {
+      "email": "max.mueller@example.com",
+      "username": "max_mueller",
+      "password": "pbkdf2_sha256$720000$d9nahLFNnDl5Yr9A3ewMgx$igf567La3i6LuPJRwaGH05bRs8CHgq8os+4nYh/PbdQ=",
+      "is_admin": false,
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "date_joined": "2023-07-20 10:00:00.000000",
+      "last_login": "2023-07-25 14:45:00.000000",
+      "user_type": "employer"
+    }
+  },
+  {
+    "model": "user.employer",
+    "pk": "b16e721b-c4f2-4b78-bccd-90e7431e1da5",
+    "fields": {
+      "user": "fcd36b6a-b6af-4534-9f2a-5e77b6f44a30",
+      "first_name": "Max",
+      "last_name": "Müller",
+      "email": "max.mueller@example.com",
+      "phone": "+491234567890",
+      "company": "TechGmbH",
+      "about": "TechGmbH is a leading software company based in Germany, specializing in developing innovative solutions to address complex business challenges.",
+      "website": "https://www.techgmbh.de",
+      "city": "Berlin",
+      "country": "Germany",
+      "social": {},
+      "created_at": "2023-07-20 10:00:00.000000",
+      "updated_at": "2023-07-20 10:00:00.000000",
+      "is_published": true
+    }
+  }
+]
