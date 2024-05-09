@@ -15,19 +15,13 @@ class UserAdmin(admin.ModelAdmin):
 
 class TalentAdmin(admin.ModelAdmin):
     list_display = ('image_display', 'talent', 'user', 'first_name','last_name', 'is_published', 'created_at')
-    search_fields = ('fname',)
+    search_fields = ('first_name',)
     
     def image_display(self, obj):
         return mark_safe('<img src="%s" width="28" />' % obj.image.url)
     
     image_display.allow_tags = True
     image_display.short_description = 'Image'
-    
-    def first_name(self, obj):
-        return obj.fname
-
-    def last_name(self, obj):
-        return obj.lname
     
     def talent(self, obj):
         url = reverse("admin:%s_%s_change" % (obj._meta.app_label,  obj._meta.model_name),  args=[obj.id])

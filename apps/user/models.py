@@ -73,8 +73,8 @@ class Talent(models.Model):
     """Model definition for Talent."""
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    fname = models.CharField(max_length=30, null=True, blank=True)
-    lname = models.CharField(max_length=30, null=True, blank=True)
+    first_name = models.CharField(max_length=30, null=True, blank=True)
+    last_name = models.CharField(max_length=30, null=True, blank=True)
     phone = models.CharField(max_length=30, null=True, blank=True)
     city = models.CharField(max_length=75, null=True, blank=True)
     country = models.CharField(max_length=56, null=True, blank=True)
@@ -105,8 +105,8 @@ class Employer(models.Model):
 
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    fname = models.CharField(max_length=30, null=True, blank=True)
-    lname = models.CharField(max_length=30, null=True, blank=True)
+    first_name = models.CharField(max_length=30, null=True, blank=True)
+    last_name = models.CharField(max_length=30, null=True, blank=True)
     email = models.EmailField(null=True, blank=True)
     phone = models.CharField(max_length=30, null=True, blank=True)
     company = models.CharField(max_length=100, null=True, blank=True)
