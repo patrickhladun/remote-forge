@@ -28,7 +28,18 @@ class TalentAdmin(admin.ModelAdmin):
         return mark_safe('<a href="{}">{}</a>'.format(url, obj.title))
     
     
+    
+class EmployerAdmin(admin.ModelAdmin):
+    list_display = ('image', 'user', 'company', 'is_published', 'created_at')
+    search_fields = ('first_name',)
+    
+    def image_display(self, obj):
+        return mark_safe('<img src="%s" width="28" />' % obj.image.url)
+    
+    image_display.allow_tags = True
+    image_display.short_description = 'Image'
+     
 
 admin.site.register(User, UserAdmin)
 admin.site.register(Talent, TalentAdmin)
-admin.site.register(Employer)
+admin.site.register(Employer, EmployerAdmin)
