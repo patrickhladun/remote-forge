@@ -20,8 +20,8 @@
     "pk": "f40faef6-33f8-4a69-89d2-cf6e173e64c9",
     "fields": {
       "user": "c7d5687d-afb7-4945-8cb5-14e20a70b276",
-      "fname": "Alex",
-      "lname": "Johnson",
+      "first_name": "Alex",
+      "last_name": "Johnson",
       "phone": "0987654321",
       "city": "San Francisco",
       "country": "United States",
@@ -113,8 +113,8 @@
     "pk": "0d5e1b11-03e1-4d2b-827a-7e4f4e0d4231",
     "fields": {
       "user": "22d19d16-5f1d-4e2c-8a25-d3704175f2f7",
-      "fname": "Adam",
-      "lname": "Kowalski",
+      "first_name": "Adam",
+      "last_name": "Kowalski",
       "phone": "0487654321",
       "city": "Warsaw",
       "country": "Poland",
@@ -208,8 +208,8 @@
     "pk": "20b61d12-4622-44d9-b698-18c7e6ffdc26",
     "fields": {
       "user": "17fd54c1-f894-4a78-8325-0b28d36cc95c",
-      "fname": "Sarah",
-      "lname": "Smith",
+      "first_name": "Sarah",
+      "last_name": "Smith",
       "phone": "0312345678",
       "city": "Amsterdam",
       "country": "Netherlands",
@@ -294,8 +294,8 @@
     "pk": "1f6f5871-66df-4957-b007-61a308bc2ae1",
     "fields": {
       "user": "f1fd07a2-39d2-4691-b7a3-693d0f70c1b9",
-      "fname": "Jing",
-      "lname": "Li",
+      "first_name": "Jing",
+      "last_name": "Li",
       "phone": "8612345678901",
       "city": "Beijing",
       "country": "China",

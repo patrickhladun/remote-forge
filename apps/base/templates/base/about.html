@@ -1,6 +1,88 @@
 {% extends 'index.html' %}
 
 {% block content %}
-<h1>About</h1>
-<p>Welcome to the about page</p>
+<main class="main">
+  <section class="bg-brand-100">
+    <div class="container py-5">
+      <h1 class="text-center">About</h1>
+    </div>
+  </section>
+  <section class="bg-brand-50">
+    <div class="container py-5">
+      <h2 class="text-center">About Remote Forge</h2>
+      <p>In the heart of the digital era, where boundaries blur and the global workforce redefines its parameters, I
+        envisioned Remote Forge. Conceived as a crucible for opportunity, Remote Forge is where careers are shaped and
+        refined, much like metal in a blacksmith's forge. The transformative power of remote work goes beyond merely
+        working from anywhere—it's about crafting a life of flexibility, freedom, and fulfillment.</p>
+
+      <h3>Our Mission</h3>
+      <p>Remote Forge embodies the spirit of innovation and resilience. It stands as a testament to my belief that great
+        work can happen anywhere and that distance should never be a barrier to talent and opportunity. Our mission is
+        to connect talented individuals with global opportunities, thereby shaping the future of work and fostering a
+        more inclusive, flexible, and connected world.</p>
+
+      <h3>Our Values</h2>
+        <p>At Remote Forge, we are guided by our commitment to diversity, innovation, and user satisfaction. We believe
+          in
+          building a platform that not only serves but also empowers its users to achieve their fullest potential,
+          regardless of their geographical location.</p>
+
+        <h3>Success Stories</h3>
+
+        <div class="d-flex gap-4">
+          <blockquote class="col-6 p-4 bg-brand-100 rounded-3">
+            <p>"Remote Forge has transformed the way I approach my career. Thanks to their extensive network of remote
+              jobs,
+              I've been able to work with innovative companies around the globe without ever leaving my hometown. The
+              flexibility and opportunities I've found here are unparalleled."
+            </p>
+            <cite>– Jane Doe, Freelance Graphic Designer</cite>
+          </blockquote>
+          <blockquote class="col-6 p-4 bg-brand-100 rounded-3">
+            <p>"As a startup owner, finding the right talent was a major challenge for us, especially with our limited
+              resources. Remote Forge gave us access to a pool of talented professionals we might never have found
+              locally.
+              It's been a game-changer for our business."</p>
+            <cite>– John Smith, CEO of Tech Innovations</cite>
+          </blockquote>
+        </div>
+
+        <h3>Why Choose Us?</h3>
+        <p>The design of the About page and the entire Remote Forge platform aligns with our sleek, modern branding. We
+          ensure a cohesive and seamless user experience with intuitive layouts, clear headings, readable text, and
+          engaging visuals that guide visitors through our story and services effortlessly.</p>
+
+
+    </div>
+  </section>
+
+
+  <section class="bg-brand-100 py-5">
+    <div class="container">
+      <h2 class="text-center">Our Best Talent</h2>
+      <div class="talent-list">
+        {% for talent in talents %}
+        <a href="{% url 'talent' talent.id %}" class="card p-3">
+          <div class="d-flex align-items-start">
+            <div class="image">
+              <img src="{{ MEDIA_URL }}{{ talent.image }}" class="rounded-circle" width="120">
+            </div>
+            <div class="ml-3 w-100">
+              <div class="card__header">
+                <h5 class="mb-0 mt-0">{{ talent.first_name }} {{ talent.last_name }}</h5>
+                <span>{{ talent.title }}</span>
+              </div>
+              <div class="skills">
+                {% for skill in talent.skills %}
+                <span class="skills__item">{{ skill }}</span>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+</main>
 {% endblock %}

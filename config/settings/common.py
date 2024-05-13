@@ -25,6 +25,7 @@ EXTERNAL_APPS = [
 ]
 APPS = [
     'apps.base',
+    'apps.job',
     'apps.user',
 ]
 INSTALLED_APPS = DJANGO_APPS + EXTERNAL_APPS + APPS
