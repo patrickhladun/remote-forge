@@ -18,6 +18,6 @@ def job(request, id):
 
 def jobs(request):
     """View function for jobs."""
-    all_jobs = Listing.objects.all()
-    return render(request, "job/jobs.html", {"all_jobs": all_jobs})
+    jobs = Listing.objects.all()
+    return render(request, "job/jobs.html", {"jobs": jobs})
 

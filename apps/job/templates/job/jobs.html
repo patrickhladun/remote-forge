@@ -8,7 +8,7 @@
     </div>
   </section>
   <section class="bg-brand-50">
-    {% for job in all_jobs %}
+    {% for job in jobs %}
     <a href="{% url 'job' job.id %}" class="card p-3">
       <div class="d-flex align-items-start">
         <div class="w-100">
