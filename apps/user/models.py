@@ -73,8 +73,8 @@ class Talent(models.Model):
     """Model definition for Talent."""
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    fname = models.CharField(max_length=30, null=True, blank=True)
-    lname = models.CharField(max_length=30, null=True, blank=True)
+    first_name = models.CharField(max_length=30, null=True, blank=True)
+    last_name = models.CharField(max_length=30, null=True, blank=True)
     phone = models.CharField(max_length=30, null=True, blank=True)
     city = models.CharField(max_length=75, null=True, blank=True)
     country = models.CharField(max_length=56, null=True, blank=True)
@@ -101,9 +101,31 @@ class Talent(models.Model):
 
 
 class Employer(models.Model):
-    """Model definition for Company."""
+    """Model definition for Employer."""
+
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    company_name = models.CharField(max_length=255)
-    industry = models.CharField(max_length=255)
-    description = models.TextField()
+    first_name = models.CharField(max_length=30, null=True, blank=True)
+    last_name = models.CharField(max_length=30, null=True, blank=True)
+    email = models.EmailField(null=True, blank=True)
+    phone = models.CharField(max_length=30, null=True, blank=True)
+    company = models.CharField(max_length=100, null=True, blank=True)
+    about = models.TextField(null=True, blank=True)
+    image = models.ImageField(
+        upload_to="media/employer/profile/", null=True, blank=True
+    )
+    website = models.URLField(max_length=200, null=True, blank=True)
+    city = models.CharField(max_length=75, null=True, blank=True)
+    country = models.CharField(max_length=56, null=True, blank=True)
+    social = models.JSONField(default=dict, null=True, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True, editable=False)
+    updated_at = models.DateTimeField(auto_now=True, editable=False)
+    is_published = models.BooleanField(default=False)
+
+    class Meta:
+        verbose_name = "Employer"
+        verbose_name_plural = "Employers"
+
+    def __str__(self) -> str:
+        return f"{self.user.username} {self.company}"
 
