@@ -8,8 +8,8 @@ class TalentProfileForm(forms.ModelForm):
         model = Talent
         fields = [
             "is_published",
-            "fname",
-            "lname",
+            "first_name",
+            "last_name",
             "phone",
             "city",
             "country",
@@ -24,8 +24,8 @@ class TalentProfileForm(forms.ModelForm):
             "social",
         ]
         labels = {
-            "fname": "First Name",
-            "lname": "Last Name",
+            "first_name": "First Name",
+            "last_name": "Last Name",
             "phone": "Phone",
             "city": "City",
             "country": "Country",
@@ -42,8 +42,8 @@ class TalentProfileForm(forms.ModelForm):
         }
         bio = forms.Textarea()
         is_published = forms.BooleanField()
-        fname = forms.CharField(max_length=30)
-        lname = forms.CharField(max_length=30)
+        first_name = forms.CharField(max_length=30)
+        last_name = forms.CharField(max_length=30)
         phone = forms.CharField(max_length=30)
         city = forms.CharField(max_length=75)
         country = forms.CharField(max_length=56)
