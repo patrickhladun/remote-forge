@@ -60,6 +60,8 @@ Welcome to Remote Forge, my creation and your gateway to the world of remote wor
 - [Unresolved Issues](#unresolved-issues)
 - [Resolved Issues](#resolved-issues)
 - [Testing and Validation](#testing-and-validation)
+  - [Testing with Pytest](#testing-with-pytest)
+    - [Running Tests](#running-tests)
 - [Functional testing](#functional-testing)
   - [Website Header on Desktop](#website-header-on-desktop)
   - [Website Header on Mobile](#website-header-on-mobile)
@@ -501,6 +503,20 @@ These font choices are integral to the overall user experience, contributing not
 ## Resolved Issues
 
 ## Testing and Validation
+
+### Testing with Pytest
+
+For "Remote Forge," I use pytest, a powerful testing framework for Python, to ensure the reliability and efficiency of my code. Pytest simplifies and enhances the testing process through its use of simple, scalable test cases and a suite of advanced features.
+
+#### Running Tests
+
+To run the tests with pytest, you can use the following command in your terminal. This command will discover and run all the test cases in your project:
+
+`pytest -rP`
+
+For a more detailed report, run:
+
+`pytest --cov --cov-report=html`
 
 ## Functional testing
 

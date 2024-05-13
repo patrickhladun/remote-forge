@@ -125,128 +125,28 @@
 
   <section class="bg-brand-100 py-5">
     <div class="container">
+      <h2 class="text-center">Our Best Talent</h2>
       <div class="talent-list">
-
-        <a href="#" class="card p-3">
+        {% for talent in talents %}
+        <a href="{% url 'talent' talent.id %}" class="card p-3">
           <div class="d-flex align-items-start">
             <div class="image">
-              <img src="#" class="rounded-circle" width="120">
+              <img src="{{ MEDIA_URL }}{{ talent.image }}" class="rounded-circle" width="120">
             </div>
             <div class="ml-3 w-100">
               <div class="card__header">
-                <h5 class="mb-0 mt-0">John Doe</h5>
-                <span>Software engineer</span>
+                <h5 class="mb-0 mt-0">{{ talent.first_name }} {{ talent.last_name }}</h5>
+                <span>{{ talent.title }}</span>
               </div>
               <div class="skills">
-                <span class="skills__item">HTML</span>
-                <span class="skills__item">CSS</span>
-                <span class="skills__item">Python</span>
-                <span class="skills__item">Django</span>
+                {% for skill in talent.skills %}
+                <span class="skills__item">{{ skill }}</span>
+                {% endfor %}
               </div>
             </div>
           </div>
         </a>
-
-        <a href="#" class="card p-3">
-          <div class="d-flex align-items-start">
-            <div class="image">
-              <img src="#" class="rounded-circle" width="120">
-            </div>
-            <div class="ml-3 w-100">
-              <div class="card__header">
-                <h5 class="mb-0 mt-0">John Doe</h5>
-                <span>Software engineer</span>
-              </div>
-              <div class="skills">
-                <span class="skills__item">HTML</span>
-                <span class="skills__item">CSS</span>
-                <span class="skills__item">Python</span>
-                <span class="skills__item">Django</span>
-              </div>
-            </div>
-          </div>
-        </a>
-
-        <a href="#" class="card p-3">
-          <div class="d-flex align-items-start">
-            <div class="image">
-              <img src="#" class="rounded-circle" width="120">
-            </div>
-            <div class="ml-3 w-100">
-              <div class="card__header">
-                <h5 class="mb-0 mt-0">John Doe</h5>
-                <span>Software engineer</span>
-              </div>
-              <div class="skills">
-                <span class="skills__item">HTML</span>
-                <span class="skills__item">CSS</span>
-                <span class="skills__item">Python</span>
-                <span class="skills__item">Django</span>
-              </div>
-            </div>
-          </div>
-        </a>
-
-        <a href="#" class="card p-3">
-          <div class="d-flex align-items-start">
-            <div class="image">
-              <img src="#" class="rounded-circle" width="120">
-            </div>
-            <div class="ml-3 w-100">
-              <div class="card__header">
-                <h5 class="mb-0 mt-0">John Doe</h5>
-                <span>Software engineer</span>
-              </div>
-              <div class="skills">
-                <span class="skills__item">HTML</span>
-                <span class="skills__item">CSS</span>
-                <span class="skills__item">Python</span>
-                <span class="skills__item">Django</span>
-              </div>
-            </div>
-          </div>
-        </a>
-
-        <a href="#" class="card p-3">
-          <div class="d-flex align-items-start">
-            <div class="image">
-              <img src="#" class="rounded-circle" width="120">
-            </div>
-            <div class="ml-3 w-100">
-              <div class="card__header">
-                <h5 class="mb-0 mt-0">John Doe</h5>
-                <span>Software engineer</span>
-              </div>
-              <div class="skills">
-                <span class="skills__item">HTML</span>
-                <span class="skills__item">CSS</span>
-                <span class="skills__item">Python</span>
-                <span class="skills__item">Django</span>
-              </div>
-            </div>
-          </div>
-        </a>
-
-        <a href="#" class="card p-3">
-          <div class="d-flex align-items-start">
-            <div class="image">
-              <img src="#" class="rounded-circle" width="120">
-            </div>
-            <div class="ml-3 w-100">
-              <div class="card__header">
-                <h5 class="mb-0 mt-0">John Doe</h5>
-                <span>Software engineer</span>
-              </div>
-              <div class="skills">
-                <span class="skills__item">HTML</span>
-                <span class="skills__item">CSS</span>
-                <span class="skills__item">Python</span>
-                <span class="skills__item">Django</span>
-              </div>
-            </div>
-          </div>
-        </a>
-
+        {% endfor %}
       </div>
     </div>
   </section>
