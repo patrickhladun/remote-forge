@@ -1,6 +1,6 @@
 {
   "name": "remote-forge",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "Welcome to Remote Forge, my creation and your gateway to the world of remote work opportunities. This platform is a result of my vision to connect talented professionals with the freedom and flexibility that remote jobs offer. Remote Forge stands as a testament to my belief that great work isn't confined to an office—it can happen anywhere.",
   "main": "index.js",
   "scripts": {
