@@ -1,3 +1,23 @@
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, render
 
-# Create your views here.
+from .models import Listing
+
+
+def job(request, id):
+    """View function for job."""
+    job_obj = get_object_or_404(Listing, id=id)
+
+    if hasattr(job_obj.user, "employer"):
+        employer = job_obj.user.employer
+        employer_name = employer.company
+
+    job_obj.employer = employer_name
+
+    return render(request, "job/job.html", {"job": job_obj})
+
+
+def jobs(request):
+    """View function for jobs."""
+    all_jobs = Listing.objects.all()
+    return render(request, "job/jobs.html", {"all_jobs": all_jobs})
+
