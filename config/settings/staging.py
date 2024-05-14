@@ -1,8 +1,9 @@
 from .common import *
 import dj_database_url
 from django_on_heroku import settings as heroku_settings
-load_dotenv(BASE_DIR / '.env.staging')
 heroku_settings(locals(), staticfiles=False)
+
+print('staging.py')
 
 DEBUG = True
 ALLOWED_HOSTS = [
@@ -39,4 +40,3 @@ STORAGES = {
         "BACKEND": "storages.backends.s3boto3.S3StaticStorage",
     },
 }
-print('staging.py')
