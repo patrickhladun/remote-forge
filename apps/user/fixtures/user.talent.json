@@ -5,7 +5,7 @@
     "fields": {
       "email": "alex.johnson@example.com",
       "username": "alex_johnson",
-      "password": "password",
+      "password": "pbkdf2_sha256$720000$d9nahLFNnDl5Yr9A3ewMgx$igf567La3i6LuPJRwaGH05bRs8CHgq8os+4nYh/PbdQ=",
       "is_admin": false,
       "is_active": true,
       "is_staff": false,
@@ -98,7 +98,7 @@
     "fields": {
       "email": "adam.kowalski@example.com",
       "username": "adam_kowalski",
-      "password": "password",
+      "password": "pbkdf2_sha256$720000$d9nahLFNnDl5Yr9A3ewMgx$igf567La3i6LuPJRwaGH05bRs8CHgq8os+4nYh/PbdQ=",
       "is_admin": false,
       "is_active": true,
       "is_staff": false,
@@ -193,7 +193,7 @@
     "fields": {
       "email": "sarah.smith@example.com",
       "username": "sarah_smith",
-      "password": "password",
+      "password": "pbkdf2_sha256$720000$d9nahLFNnDl5Yr9A3ewMgx$igf567La3i6LuPJRwaGH05bRs8CHgq8os+4nYh/PbdQ=",
       "is_admin": false,
       "is_active": true,
       "is_staff": false,
@@ -279,7 +279,7 @@
     "fields": {
       "email": "jing.li@example.com",
       "username": "jing_li",
-      "password": "password",
+      "password": "pbkdf2_sha256$720000$d9nahLFNnDl5Yr9A3ewMgx$igf567La3i6LuPJRwaGH05bRs8CHgq8os+4nYh/PbdQ=",
       "is_admin": false,
       "is_active": true,
       "is_staff": false,
