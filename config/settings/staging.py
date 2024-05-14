@@ -1,8 +1,7 @@
 from .common import *
 import dj_database_url
 from django_on_heroku import settings as heroku_settings
-from dotenv import load_dotenv, find_dotenv
-load_dotenv(BASE_DIR / '.env')
+load_dotenv(BASE_DIR / '.env.staging')
 heroku_settings(locals(), staticfiles=False)
 
 DEBUG = True
@@ -40,3 +39,4 @@ STORAGES = {
         "BACKEND": "storages.backends.s3boto3.S3StaticStorage",
     },
 }
+print('staging.py')
