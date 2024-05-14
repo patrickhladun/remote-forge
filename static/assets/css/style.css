@@ -12281,7 +12281,7 @@ h6,
   background-color: var(--color-brand-100);
 }
 
-.bg-brand-200 {
+.bg-brand-200, .profile-menu {
   background-color: var(--color-brand-200);
 }
 
@@ -12469,6 +12469,26 @@ h6,
     padding: 210px 0; /* Use Bootsrap */
   }
 }
+.profile-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  width: 42px;
+  height: 42px;
+  overflow: hidden;
+  margin-left: 16px;
+}
+.profile-menu img {
+  width: 42px;
+  height: 42px;
+}
+.profile-menu .no-headshot {
+  width: 32px;
+  height: 32px;
+  font-size: 18px;
+}
+
 .talent-list {
   display: flex;
   flex-wrap: wrap;
