@@ -6,6 +6,7 @@ from pathlib import Path
 from dotenv import load_dotenv
 
 load_dotenv()
+print('common.py')
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 DJANGO_APPS = [
