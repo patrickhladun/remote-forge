@@ -7,14 +7,14 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-enviroment = os.getenv('ENVIRONMENT')
+environment = os.getenv('ENVIRONMENT')
 
 def main():
     """Run administrative tasks."""
     
-    if enviroment == 'production':
+    if environment == 'production':
         os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings.production')
-    elif enviroment == 'staging':
+    elif environment == 'staging':
         os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings.staging')
     else:
         os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings.development')

@@ -1,18 +1,20 @@
 from .common import *
 import dj_database_url
+from django_on_heroku import settings as heroku_settings
+load_dotenv(BASE_DIR / '.env.production')
+heroku_settings(locals(), staticfiles=False)
 
 DEBUG = False
 ALLOWED_HOSTS = [
     '0.0.0.0', 
     'localhost', 
     '127.0.0.1', 
-    'remote-forge-9e36fbf11ce1.herokuapp.com'
+    'remote-forge-production-9d9d5aefbaa0.herokuapp.com',
 ]
 DATABASES = {
-    'default': dj_database_url.parse(os.environ.get('DATABASE_URL')),
+    'default': dj_database_url.parse(os.environ.get('DATABASE_URL_PRODUCTION')),
 }
 SECRET_KEY = os.getenv('SECRET_KEY', '')
-EXTERNAL_APPS+=['storages']
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static/'),
@@ -37,3 +39,5 @@ STORAGES = {
         "BACKEND": "storages.backends.s3boto3.S3StaticStorage",
     },
 }
+
+print('production.py')
