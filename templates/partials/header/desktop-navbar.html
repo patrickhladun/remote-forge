@@ -23,6 +23,9 @@
           </a>
           <ul class="dropdown-menu dropdown-menu-end">
             <li><a class="dropdown-item" href="{% url 'profile' %}">Profile</a></li>
+            {% if request.user.user_type == 'employer' %}
+            <li><a class="dropdown-item" href="{% url 'my-jobs' %}">My Jobs</a></li>
+            {% endif %}
             <li><a class="dropdown-item" href="{% url 'account' %}">Account</a></li>
             <li>
               <hr class="dropdown-divider">
