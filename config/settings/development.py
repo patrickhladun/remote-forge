@@ -1,4 +1,5 @@
 from .common import *
+load_dotenv(BASE_DIR / '.env')
 
 DEBUG = True
 ALLOWED_HOSTS = []
