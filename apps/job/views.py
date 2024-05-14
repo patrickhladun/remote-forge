@@ -21,3 +21,10 @@ def jobs(request):
     jobs = Listing.objects.all()
     return render(request, "job/jobs.html", {"jobs": jobs})
 
+
+
+def my_jobs(request):
+    """View function for jobs."""
+    jobs = Listing.objects.all()
+    return render(request, "job/admin/my_jobs.html", {"jobs": jobs})
+
