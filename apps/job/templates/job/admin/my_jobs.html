@@ -9,8 +9,22 @@
   </section>
   <section class="bg-brand-50">
     <div class="container py-5">
-      <button>Add a Job</button>
+      <a class="btn btj-primary" href="{% url 'add-job' %}">Add a Job</a>
     </div>
+  </section>
+  <section class="bg-brand-50">
+    {% for job in jobs %}
+    <a href="{% url 'job' job.id %}" class="card p-3">
+      <div class="d-flex align-items-start">
+        <div class="w-100">
+          <div class="card__header">
+            <h5 class="mb-0 mt-0">Job</h5>
+            <span>{{ job.title }}</span>
+          </div>
+        </div>
+      </div>
+    </a>
+    {% endfor %}
   </section>
 </main>
 {% endblock %}
