@@ -24,10 +24,13 @@ def jobs(request):
     return render(request, "job/jobs.html", {"jobs": jobs})
 
 
+@login_required
 def my_jobs(request):
-    """View function for jobs."""
-    jobs = Listing.objects.all()
+    """View function for user-specific job listings."""
+    # Filter the listings to only those created by the logged-in user
+    jobs = Listing.objects.filter(user=request.user)
     return render(request, "job/admin/my_jobs.html", {"jobs": jobs})
+
 
 @login_required
 def add_job(request):
