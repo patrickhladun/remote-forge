@@ -1,7 +1,15 @@
 from django import forms
-from apps.job.models import Listing
+from apps.job.models import Job
 
-class JobListingForm(forms.ModelForm):
+class JobForm(forms.ModelForm):
     class Meta:
-        model = Listing
-        fields = ["is_published","title", "city", "salary", "schedule", "details", "skills"]
+        model = Job
+        fields = [
+            "is_published",
+            "title",
+            "city",
+            "salary",
+            "schedule",
+            "details",
+            "skills"
+            ]
