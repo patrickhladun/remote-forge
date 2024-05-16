@@ -1,6 +1,6 @@
 
 from django import forms
-from .models import Talent
+from .models import Talent, Employer
 
 
 class TalentProfileForm(forms.ModelForm):
@@ -40,21 +40,38 @@ class TalentProfileForm(forms.ModelForm):
             "social": "Social",
             "is_published": "Published",
         }
-        bio = forms.Textarea()
-        is_published = forms.BooleanField()
-        first_name = forms.CharField(max_length=30)
-        last_name = forms.CharField(max_length=30)
-        phone = forms.CharField(max_length=30)
-        city = forms.CharField(max_length=75)
-        country = forms.CharField(max_length=56)
-        title = forms.CharField(max_length=100)
-        resume = forms.FileField()
-        experience = forms.JSONField()
-        education = forms.JSONField()
-        skills = forms.JSONField()
-        interests = forms.CharField(max_length=255)
-        website = forms.URLField(max_length=200)
-        social = forms.JSONField()
+        
+       
+class EmployerProfileForm(forms.ModelForm):
+    class Meta:
+        model = Employer
+        fields = [
+            "is_published",
+            "first_name",
+            "last_name",
+            "email",
+            "phone",
+            "company",
+            "about",
+            "image",
+            "website",
+            "city",
+            "country",
+            "social",
+        ]
+        labels = {
+            "first_name": "First Name",
+            "last_name": "Last Name",
+            "email": "Email",
+            "phone": "Phone",
+            "company": "Company",
+            "about": "About",
+            "image": "Image",
+            "website": "Website",
+            "city": "City",
+            "country": "Country",
+            "social": "Social",
+        }
         
         
 class AccountProfile(forms.ModelForm):
