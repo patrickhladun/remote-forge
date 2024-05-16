@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
+from django.urls import reverse
 from django.contrib.auth.decorators import login_required
 
 from .models import Job
@@ -37,10 +38,8 @@ def user_job_add(request):
     if request.method == 'POST':
         form = JobForm(request.POST)
         if form.is_valid():
-            new_listing = form.save(commit=False)
-            new_listing.user = request.user  # Set the user as the current logged-in user
-            new_listing.save()
-            return redirect('user-job-list')  # Redirect to a confirmation page or listings overview
+            form.save()
+            return redirect('user-job-list') 
     else:
         form = JobForm()
 
@@ -48,6 +47,18 @@ def user_job_add(request):
 
 
 @login_required
-def user_job_update(request):
-    return render(request, 'job/user/job_update.html')
+def user_job_edit(request, id):
+    job = get_object_or_404(Job, id=id, user=request.user)
+    
+    if request.method == 'POST':
+        form = JobForm(request.POST, instance=job)
+        if form.is_valid():
+            form.save()
+            form = JobForm(instance=job)  # Reinitialize the form with the saved job
+            success = "Job listing updated successfully."
+            return render(request, 'job/user/job_edit.html', {'form': form, 'job': job, 'success': success})
+    else:
+        form = JobForm(instance=job)
+
+    return render(request, 'job/user/job_edit.html', {'form': form, 'job': job})
 
