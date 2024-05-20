@@ -1,0 +1,35 @@
+.message {
+  position: fixed;
+  display: flex;
+  bottom: 15px;
+  right: 15px;
+  z-index: 9999;
+  padding: 8px 16px;
+  border-radius: 4px;
+  background-color: #f44336;
+  color: white;
+  text-align: center;
+  font-size: 0.9rem;
+
+  /* TODO:  replace colours with bootstrap ro custom color variables*/
+  &--success {
+    background-color: #4caf50;
+  }
+  &--error {
+    background-color: #f44336;
+  }
+  &--warning {
+    background-color: #ff9800;
+  }
+  &--info {
+    background-color: #2196f3;
+  }
+
+  &__close {
+    border: none;
+    border-radius: 100%;
+    margin-left: 16px;
+    width: 24px;
+    height: 24px;
+  }
+}

@@ -19,9 +19,24 @@
 
 <body>
     {% include './partials/header.html' %}
+    <div class="message-container">
+        {% include 'partials/messages/message-info.html' %}
+        {% include 'partials/messages/message-success.html' %}
+        {% include 'partials/messages/message-warning.html' %}
+        {% include 'partials/messages/message-error.html' %}
+    </div>
     <div class="page">
         {% block content %}{% endblock %}
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    {% if messages %}
+    <script>
+        // TODO: Instead loading full jQuery libreary only for messages, use vanilla JS
+        $(document).ready(function () {
+            $('.message').toast('show');
+        });
+    </script>
+    {% endif %}
     {% include './partials/footer.html' %}
 </body>
 
