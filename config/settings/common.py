@@ -22,7 +22,8 @@ EXTERNAL_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    'storages'
+    'storages',
+    'django_jsonform'
 ]
 APPS = [
     'apps.base',

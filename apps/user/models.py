@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
+from django_jsonform.models.fields import JSONField
 import uuid
 
 class CustomUserManager(BaseUserManager):
@@ -71,6 +72,51 @@ class User(AbstractBaseUser):
 
 class Talent(models.Model):
     """Model definition for Talent."""
+    
+    EDUCATION_SCHEMA = {
+        "type": "array",
+        "items": {
+            "type": "object",
+            "properties": {
+                "level": {"type": "string"},
+                "status": {"type": "string"},
+                "start_date": {"type": "string"},
+                "end_date": {"type": "string"},
+                "still_on": {"type": "boolean"},
+            },
+        },
+    }
+
+    EXPERIENCE_SCHEMA = {
+        "type": "array",
+        "items": {
+            "type": "object",
+            "properties": {
+                "position": {"type": "string"},
+                "company": {"type": "string"},
+                "start_date": {"type": "string"},
+                "end_date": {"type": "string"},
+                "still_on": {"type": "boolean"},
+                "responsibilities": {"type": "textarea"},
+            },
+        },
+    }
+    
+    SOCIAL_SCHEMA = {
+        "type": "array",
+        "items": {
+            "type": "object",
+            "properties": {
+                "social": {
+                    "type": "string",
+                    "choices": ["facebook", "twitter", "linkedin", "instagram", "github", "dribbble", "behance", "youtube", "pinterest"],
+                },
+                "url": {"type": "string"},
+            },
+        },
+    }
+
+    
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     first_name = models.CharField(max_length=30, null=True, blank=True)
@@ -83,11 +129,11 @@ class Talent(models.Model):
     title = models.CharField(max_length=100, null=True, blank=True)
     resume = models.FileField(upload_to='media/talent/resumes/', null=True, blank=True)
     website = models.URLField(max_length=200, null=True, blank=True)
-    social = models.JSONField(default=dict, null=True, blank=True)
-    experience = models.JSONField(default=list, null=True, blank=True)
-    education = models.JSONField(default=list, null=True, blank=True)
+    social = JSONField(schema=SOCIAL_SCHEMA, null=True, blank=True)
+    experience = JSONField(schema=EXPERIENCE_SCHEMA, null=True, blank=True)
+    education = JSONField(schema=EDUCATION_SCHEMA, null=True, blank=True)
     interests = models.CharField(max_length=255, null=True, blank=True)
-    skills = models.JSONField(default=list, null=True, blank=True)
+    skills = models.CharField(max_length=255, null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True) 
     is_published = models.BooleanField(default=False)
