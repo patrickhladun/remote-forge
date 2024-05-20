@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 
 from .models import Job
 from .forms import JobForm
@@ -54,9 +55,9 @@ def user_job_edit(request, id):
         form = JobForm(request.POST, instance=job)
         if form.is_valid():
             form.save()
-            form = JobForm(instance=job)  # Reinitialize the form with the saved job
-            success = "Job listing updated successfully."
-            return render(request, 'job/user/job_edit.html', {'form': form, 'job': job, 'success': success})
+            form = JobForm(instance=job)
+            messages.success(request, "Job listing updated successfully.")
+            return render(request, 'job/user/job_edit.html', {'form': form, 'job': job})
     else:
         form = JobForm(instance=job)
 
