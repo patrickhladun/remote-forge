@@ -30,9 +30,12 @@
       "bio": "As a self-taught software engineer, I am passionate about creating innovative solutions to complex problems. With a strong foundation in programming acquired through self-study and hands-on projects, I thrive in dynamic environments and enjoy collaborating with cross-functional teams to deliver high-quality software.",
       "resume": "talent/resumes/alex_johnson_resume.pdf",
       "website": "https://alex-johnson.dev/",
-      "social": {
-        "linkedin": "https://www.linkedin.com/in/alexjohnson/"
-      },
+      "social": [
+        {
+          "site": "linkedin",
+          "url": "https://www.linkedin.com/in/alexjohnson/"
+        }
+      ],
       "experience": [
         {
           "company_name": "Tech Innovations Inc.",
@@ -123,11 +126,20 @@
       "bio": "I am a dedicated frontend developer with extensive experience in leading teams and delivering high-quality web solutions. With a passion for clean and maintainable code, I excel in creating user-friendly interfaces that drive engagement and enhance the overall user experience.",
       "resume": "talent/resumes/adam_kowalski_resume.pdf",
       "website": "",
-      "social": {
-        "linkedin": "https://www.linkedin.com/in/adamkowalski/",
-        "github": "https://github.com/adamkowalski",
-        "twitter": "https://twitter.com/adam_kowalski"
-      },
+      "social": [
+        {
+          "site": "linkedin",
+          "url": "https://www.linkedin.com/in/adamkowalski/"
+        },
+        {
+          "site": "github",
+          "url": "https://github.com/adamkowalski"
+        },
+        {
+          "site": "twitter",
+          "url": "https://twitter.com/adam_kowalski"
+        }
+      ],
       "experience": [
         {
           "company_name": "Tech Solutions Inc.",
@@ -218,10 +230,16 @@
       "bio": "I am a detail-oriented accountant with a proven track record of accuracy and efficiency in financial management. With a strong foundation in accounting principles and experience working with various industries, I am committed to delivering reliable financial insights to support business growth and decision-making.",
       "resume": "talent/resumes/sarah_smith_resume.pdf",
       "website": "",
-      "social": {
-        "linkedin": "https://www.linkedin.com/in/sarahsmith/",
-        "twitter": "https://twitter.com/sarah_smith"
-      },
+      "social": [
+        {
+          "site": "linkedin",
+          "url": "https://www.linkedin.com/in/sarahsmith/"
+        },
+        {
+          "site": "twitter",
+          "url": "https://twitter.com/sarah_smith"
+        }
+      ],
       "experience": [
         {
           "company_name": "Greenway Consulting",
@@ -304,11 +322,12 @@
       "bio": "As a DevOps engineer, I specialize in automating and streamlining the software development processes to ensure efficient and reliable deployment pipelines. With a strong background in both development and operations, I leverage cutting-edge technologies to optimize system performance, enhance scalability, and minimize downtime.",
       "resume": "talent/resumes/jing_li_resume.pdf",
       "website": "",
-      "social": {
-        "linkedin": "https://www.linkedin.com/in/jingli/",
-        "github": "https://github.com/jing_li",
-        "twitter": "https://twitter.com/jing_li"
-      },
+      "social": [
+        {
+          "site": "github",
+          "url": "https://github.com/jing_li"
+        }
+      ],
       "experience": [
         {
           "company_name": "CloudSolutions",
