@@ -1,6 +1,27 @@
 from django.db import models
 from apps.user.models import User
+from django_jsonform.models.fields import JSONField
 import uuid
+
+DETAILS_SCHEMA = {
+    "type": "array",
+    "items": {
+        "type": "object",
+        "properties": {
+            "heading": {
+                "type": "string", 
+                "choices": [
+                    "Job Description",
+                    "About the Job",
+                    "Benefits", 
+                    "Responsibilities", 
+                    "Requirements",
+                    "Why Us",
+                    "About Us",]},
+            "content": {"type": "textarea"},
+        },
+    },
+}
 
 # Create your models here.
 class Job(models.Model):
@@ -11,7 +32,7 @@ class Job(models.Model):
     city = models.CharField(max_length=56, null=True, blank=True)
     salary = models.CharField(max_length=40, null=True, blank=True)
     schedule = models.CharField(max_length=100, null=True, blank=True)
-    details = models.JSONField(default=list, null=True, blank=True)
+    details = JSONField(schema=DETAILS_SCHEMA, null=True, blank=True)
     skills = models.CharField(max_length=255, null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
