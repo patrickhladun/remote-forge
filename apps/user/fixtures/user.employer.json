@@ -29,7 +29,7 @@
       "website": "https://www.emeraldtech.ie",
       "city": "Dublin",
       "country": "Ireland",
-      "social": {},
+      "social": [{ "site": "Twitter", "url": "https://twitter.com" }],
       "created_at": "2023-07-20 10:00:00.000000",
       "updated_at": "2023-07-20 10:00:00.000000",
       "is_published": true
@@ -65,7 +65,7 @@
       "website": "https://www.pixelforgegames.ie",
       "city": "Dublin",
       "country": "Ireland",
-      "social": {},
+      "social": [{ "site": "Twitter", "url": "https://twitter.com" }],
       "created_at": "2023-07-20 10:00:00.000000",
       "updated_at": "2023-07-20 10:00:00.000000",
       "is_published": true
@@ -101,7 +101,7 @@
       "website": "https://www.nordiccomms.fi",
       "city": "Helsinki",
       "country": "Finland",
-      "social": {},
+      "social": [{ "site": "Twitter", "url": "https://twitter.com" }],
       "created_at": "2023-07-20 10:00:00.000000",
       "updated_at": "2023-07-20 10:00:00.000000",
       "is_published": true
@@ -137,7 +137,7 @@
       "website": "https://www.techgmbh.de",
       "city": "Berlin",
       "country": "Germany",
-      "social": {},
+      "social": [{ "site": "Twitter", "url": "https://twitter.com" }],
       "created_at": "2023-07-20 10:00:00.000000",
       "updated_at": "2023-07-20 10:00:00.000000",
       "is_published": true
