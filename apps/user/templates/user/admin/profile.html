@@ -7,26 +7,6 @@
       <h1 class="text-center">Profile</h1>
     </div>
   </section>
-  <section class="bg-brand-50">
-    <div class="container container-small py-4">
-      {% if success %}
-      <div>
-        <p class="alert alert-success">{{ success }}</p>
-      </div>
-      {% endif %}
-      <form action="/profile/" method="post">
-        {% csrf_token %}
-        {{ form.media }}
-        {% for field in form %}
-        <div class="d-flex flex-column py-2">
-          {{ field.label_tag }}
-          {{ field }}
-          {{ field.errors }}
-        </div>
-        {% endfor %}
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
-    </div>
-  </section>
+  {% include 'partials/forms/form.html' %}
 </main>
 {% endblock %}

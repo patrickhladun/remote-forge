@@ -7,10 +7,6 @@
       <h1 class="text-center">Add Job</h1>
     </div>
   </section>
-  <form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Submit</button>
-  </form>
+  {% include 'partials/forms/form.html' %}
 </main>
 {% endblock %}
