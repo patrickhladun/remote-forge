@@ -7,6 +7,7 @@ django-allauth==0.62.1
 django-jsonform==2.22.0
 django-on-heroku==1.1.2
 django-storages==1.14.2
+django-widget-tweaks==1.5.0
 factory-boy==3.3.0
 Faker==25.1.0
 gunicorn==22.0.0
