@@ -1,7 +1,6 @@
 
 from django import forms
-from .models import Talent, Employer
-
+from .models import User, Talent, Employer
 
 class TalentProfileForm(forms.ModelForm):
     class Meta:
@@ -39,8 +38,7 @@ class TalentProfileForm(forms.ModelForm):
             "website": "Website",
             "social": "Social",
             "is_published": "Published",
-        }
-        
+        }        
        
 class EmployerProfileForm(forms.ModelForm):
     class Meta:
@@ -75,4 +73,15 @@ class EmployerProfileForm(forms.ModelForm):
         
         
 class AccountProfile(forms.ModelForm):
-    pass
+    class Meta:
+        model = User
+        fields = [
+            "username",
+            "hide_email",
+            "email",
+        ]
+        labels = {
+            "username": "Username",
+            "hide_email": "Hide my Email",
+            "email": "Email",
+        }
