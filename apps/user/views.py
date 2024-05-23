@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from .models import Talent, Employer
-from .forms import TalentProfileForm, EmployerProfileForm
+from .forms import AccountProfile, TalentProfileForm, EmployerProfileForm
 
 def talent_view(request, id):
     """View function for talent single page."""
@@ -39,4 +39,12 @@ def profile_view(request):
 
 @login_required
 def account_view(request):
-    return render(request, 'user/admin/account.html')
+    if request.method == "POST":
+        form = AccountProfile(request.POST, instance=request.user)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Account updated successfully.")
+            return redirect("account")
+    else:
+        form = AccountProfile(instance=request.user)
+    return render(request, 'user/admin/account.html', {"form": form})
