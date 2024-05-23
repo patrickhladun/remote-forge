@@ -2,6 +2,11 @@
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/style.scss ***!
   \**********************************************************************************************************************************************************/
 @charset "UTF-8";
+@media (min-width: 992px) {
+  body .container-sm {
+    max-width: 768px !important;
+  }
+}
 /*!
  * Bootstrap  v5.3.3 (https://getbootstrap.com/)
  * Copyright 2011-2024 The Bootstrap Authors
@@ -12469,6 +12474,73 @@ h6,
     padding: 210px 0; /* Use Bootsrap */
   }
 }
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+.field__text input,
+.field__text textarea {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  margin: 10px 0;
+}
+.field__checkbox {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 12px;
+  margin: 8px 0;
+}
+.field__checkbox .form-check-input {
+  margin: 0;
+  padding: 0;
+}
+.field__file {
+  display: block;
+}
+
+input {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+body .rjf-form-group-wrapper {
+  max-width: 100%;
+}
+body .rjf-form-group-wrapper select {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  margin: 10px 0;
+}
+body .rjf-form-group-wrapper .rjf-form-row .rjf-form-row-inner div {
+  display: flex;
+}
+body .rjf-form-group-wrapper .rjf-form-row .rjf-form-row-inner div .rjf-input-group {
+  flex: 1;
+  margin-right: 10px;
+}
+body .rjf-form-group-wrapper .rjf-form-group-inner {
+  background-color: var(--color-brand-100);
+}
+body .rjf-form-group-wrapper .rjf-form-row-controls {
+  top: 8px;
+}
+
 .profile-menu {
   display: flex;
   justify-content: center;
