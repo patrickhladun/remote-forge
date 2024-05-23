@@ -22,7 +22,9 @@ EXTERNAL_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    'storages'
+    'storages',
+    'django_jsonform',
+    'widget_tweaks',
 ]
 APPS = [
     'apps.base',
@@ -96,3 +98,4 @@ TIME_ZONE = 'Europe/London'
 USE_I18N = True
 USE_TZ = True
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+STATIC_URL = "/static/"

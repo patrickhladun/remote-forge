@@ -16,8 +16,8 @@
 
         <h2>Details</h2>
         {% for detail in job.details %}
-        <p>{{ detail.title }}</p>
-        <p>{{ detail.description | safe }}</p>
+        <h3>{{ detail.heading }}</h3>
+        <p>{{ detail.content | safe }}</p>
         {% endfor %}
 
         <h4>Skills</h4>

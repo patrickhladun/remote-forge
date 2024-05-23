@@ -1,7 +1,8 @@
 from django.shortcuts import render, redirect, get_object_or_404
+from django.contrib.auth.decorators import login_required
 from django.contrib import messages
-from .models import Talent
-from .forms import TalentProfileForm
+from .models import Talent, Employer
+from .forms import AccountProfile, TalentProfileForm, EmployerProfileForm
 
 def talent_view(request, id):
     """View function for talent single page."""
@@ -14,32 +15,36 @@ def talents_view(request):
     talents = Talent.objects.all()
     return render(request, 'user/talents.html', {'talents': talents})
 
-
+@login_required
 def profile_view(request):
-    if not request.user.is_authenticated:
-        return redirect("login")  # Ensure the user is authenticated
+    if request.user.user_type == "talent":
+        profile = get_object_or_404(Talent, user=request.user)
+        form_class = TalentProfileForm
+    elif request.user.user_type == "employer":
+        profile = get_object_or_404(Employer, user=request.user)
+        form_class = EmployerProfileForm
+    else:
+        return redirect("error")  # Redirect or handle the error
 
     if request.method == "POST":
-        if request.user.user_type == "talent":
-            talent = get_object_or_404(Talent, user=request.user)
-            form = TalentProfileForm(request.POST, request.FILES, instance=talent)
-            template_name = "user/admin/talent_profile.html"
-        else:
-            return redirect("error")
-
+        form = form_class(request.POST, request.FILES, instance=profile)
         if form.is_valid():
             form.save()
-            return redirect("profile")  # Redirect to a success page
+            messages.success(request, "Profile updated successfully.")
+            return redirect("profile")
     else:
-        if request.user.user_type == "talent":
-            talent = get_object_or_404(Talent, user=request.user)
-            form = TalentProfileForm(instance=talent)
-            template_name = "user/admin/talent_profile.html"
-        else:
-            return redirect("error")  # Redirect or handle the error
+        form = form_class(instance=profile)
 
-    return render(request, template_name, {"form": form})
+    return render(request, 'user/admin/profile.html', {"form": form})
 
-
+@login_required
 def account_view(request):
-    return render(request, 'user/admin/account.html')
+    if request.method == "POST":
+        form = AccountProfile(request.POST, instance=request.user)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Account updated successfully.")
+            return redirect("account")
+    else:
+        form = AccountProfile(instance=request.user)
+    return render(request, 'user/admin/account.html', {"form": form})

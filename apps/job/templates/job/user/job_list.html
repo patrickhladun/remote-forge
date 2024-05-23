@@ -1,0 +1,36 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<main class="main">
+  <section class="bg-brand-100">
+    <div class="container py-5">
+      <h1 class="text-center">My Jobs</h1>
+    </div>
+  </section>
+  <section class="bg-brand-50">
+    <div class="container py-5 d-flex flex-wrap">
+      {% for job in jobs %}
+      <div class="card p-3">
+        <div class="align-items-start">
+          <div class="w-100">
+            <div class="card__header">
+              <h5>{{ job.title }}</h5>
+            </div>
+            <div class="card__buttons">
+              <a class="btn btn-primary btn-sm" href="{% url 'job' job.id %}">View</a>
+              <a class="btn btn-secondary btn-sm" href="{% url 'user-job-edit' job.id %}">Edit</a>
+              <a class="btn btn-danger btn-sm" href="#">Delete</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  <section class="bg-brand-50">
+    <div class="container pb-5">
+      <a class="btn btn-primary" href="{% url 'user-job-add' %}">Add a Job</a>
+    </div>
+  </section>
+</main>
+{% endblock %}
