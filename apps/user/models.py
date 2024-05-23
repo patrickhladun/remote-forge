@@ -3,6 +3,49 @@ from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
 from django_jsonform.models.fields import JSONField
 import uuid
 
+SOCIAL_SCHEMA = {
+    "type": "array",
+    "items": {
+        "type": "object",
+        "properties": {
+            "site": {
+                "type": "string",
+                "choices": ["facebook", "twitter", "linkedin", "instagram", "github", "dribbble", "behance", "youtube", "pinterest"],
+            },
+            "url": {"type": "string"},
+        },
+    },
+}
+
+EDUCATION_SCHEMA = {
+    "type": "array",
+    "items": {
+        "type": "object",
+        "properties": {
+            "level": {"type": "string"},
+            "status": {"type": "string"},
+            "start_date": {"type": "string"},
+            "end_date": {"type": "string"},
+            "still_on": {"type": "boolean"},
+        },
+    },
+}
+
+EXPERIENCE_SCHEMA = {
+    "type": "array",
+    "items": {
+        "type": "object",
+        "properties": {
+            "position": {"type": "string"},
+            "company": {"type": "string"},
+            "start_date": {"type": "string"},
+            "end_date": {"type": "string"},
+            "still_on": {"type": "boolean"},
+            "responsibilities": {"type": "textarea"},
+        },
+    },
+}
+
 class CustomUserManager(BaseUserManager):
     """
     Custom user manager to allow email login and creation of users with the `hide_email` field.
@@ -39,7 +82,6 @@ class CustomUserManager(BaseUserManager):
 
         return self._create_user(email, password, **extra_fields)
 
-
 class User(AbstractBaseUser):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     email = models.EmailField(verbose_name="email", unique=True)
@@ -71,52 +113,7 @@ class User(AbstractBaseUser):
         return self.username
 
 class Talent(models.Model):
-    """Model definition for Talent."""
-    
-    EDUCATION_SCHEMA = {
-        "type": "array",
-        "items": {
-            "type": "object",
-            "properties": {
-                "level": {"type": "string"},
-                "status": {"type": "string"},
-                "start_date": {"type": "string"},
-                "end_date": {"type": "string"},
-                "still_on": {"type": "boolean"},
-            },
-        },
-    }
-
-    EXPERIENCE_SCHEMA = {
-        "type": "array",
-        "items": {
-            "type": "object",
-            "properties": {
-                "position": {"type": "string"},
-                "company": {"type": "string"},
-                "start_date": {"type": "string"},
-                "end_date": {"type": "string"},
-                "still_on": {"type": "boolean"},
-                "responsibilities": {"type": "textarea"},
-            },
-        },
-    }
-    
-    SOCIAL_SCHEMA = {
-        "type": "array",
-        "items": {
-            "type": "object",
-            "properties": {
-                "social": {
-                    "type": "string",
-                    "choices": ["facebook", "twitter", "linkedin", "instagram", "github", "dribbble", "behance", "youtube", "pinterest"],
-                },
-                "url": {"type": "string"},
-            },
-        },
-    }
-
-    
+    """Model definition for Talent."""    
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     first_name = models.CharField(max_length=30, null=True, blank=True)
@@ -145,7 +142,6 @@ class Talent(models.Model):
     def __str__(self) -> str:
         return self.user.username
 
-
 class Employer(models.Model):
     """Model definition for Employer."""
 
@@ -163,7 +159,7 @@ class Employer(models.Model):
     website = models.URLField(max_length=200, null=True, blank=True)
     city = models.CharField(max_length=75, null=True, blank=True)
     country = models.CharField(max_length=56, null=True, blank=True)
-    social = models.JSONField(default=dict, null=True, blank=True)
+    social = JSONField(schema=SOCIAL_SCHEMA, null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True, editable=False)
     updated_at = models.DateTimeField(auto_now=True, editable=False)
     is_published = models.BooleanField(default=False)
