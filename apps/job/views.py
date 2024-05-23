@@ -22,7 +22,7 @@ def job(request, id):
 
 def job_list(request):
     """View function for jobs."""
-    jobs = Job.objects.all()
+    jobs = Job.objects.filter(is_published=True)
     return render(request, "job/job_list.html", {"jobs": jobs})
 
 
