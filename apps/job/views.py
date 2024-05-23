@@ -39,7 +39,9 @@ def user_job_add(request):
     if request.method == 'POST':
         form = JobForm(request.POST)
         if form.is_valid():
-            form.save()
+            job = form.save(commit=False)
+            job.user = request.user
+            job.save()
             return redirect('user-job-list') 
     else:
         form = JobForm()
