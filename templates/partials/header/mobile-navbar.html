@@ -7,10 +7,10 @@
       data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
       {% if request.user.is_authenticated %}
       <span class="profile-menu">
-        {% if request.user.is_superuser %}
-        <img class="no-headshot" src="{% static 'assets/images/avatar.png' %}" />
+        {% if profile.image %}
+        <img src="{{ MEDIA_URL }}{{ profile.image }}" />
         {% else %}
-        <img src="media/{{ user.talent.image }}" />
+        <img class="no-headshot" src="{% static '/assets/images/avatar.png' %}" />
         {% endif %}
       </span>
       {% else %}
