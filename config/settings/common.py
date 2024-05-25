@@ -10,6 +10,7 @@ print('common.py')
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 DJANGO_APPS = [
+    'livereload',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -42,6 +43,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     "allauth.account.middleware.AccountMiddleware",
     'whitenoise.middleware.WhiteNoiseMiddleware',
+    'livereload.middleware.LiveReloadScript',
 ]
 ROOT_URLCONF = 'config.urls'
 TEMPLATES = [
