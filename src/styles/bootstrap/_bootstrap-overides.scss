@@ -1,0 +1,10 @@
+.btn-primary {
+  @include button-variant(
+    $color-brand-500,
+    $color-brand-500,
+    $color-brand-50,
+    lighten($color-brand-500, 10%),
+    lighten($color-brand-500, 10%),
+    $color-brand-50
+  );
+}
