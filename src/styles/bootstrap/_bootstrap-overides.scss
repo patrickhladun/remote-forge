@@ -8,3 +8,11 @@
     $color-brand-50
   );
 }
+
+.card {
+  transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 0 20px rgba($color-brand-500, 0.3);
+  }
+}
