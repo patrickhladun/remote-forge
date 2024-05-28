@@ -20,7 +20,7 @@ def talent_view(request, id):
 
 def talents_view(request):
     """View function for talents list."""
-    talents = Talent.objects.all()
+    talents = Talent.objects.filter(is_published=True)
     return render(request, 'user/talents.html', {'talents': talents})
 
 
