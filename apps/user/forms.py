@@ -1,4 +1,5 @@
 
+from allauth.account.forms import SignupForm
 from django import forms
 from .models import User, Talent, Employer
 
@@ -10,6 +11,17 @@ class TalentSignupForm(SignupForm):
         user.save()
         talent = Talent.objects.create(user=user)
         talent.save()
+        return user
+
+
+class EmployerSignupForm(SignupForm):
+    consent = forms.BooleanField(required=True, label="I agree to the terms and conditions")
+    def save(self, request):
+        user = super(EmployerSignupForm, self).save(request)
+        user.user_type = "employer"
+        user.save()
+        employer = Employer.objects.create(user=user)
+        employer.save()
         return user
 
 class TalentProfileForm(forms.ModelForm):
