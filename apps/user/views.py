@@ -23,6 +23,12 @@ def talents_view(request):
     talents = Talent.objects.all()
     return render(request, 'user/talents.html', {'talents': talents})
 
+
+def employer_view(request, id):
+    """View function for employer single page."""
+    employer = get_object_or_404(Employer, id=id)
+    return render(request, "user/employer.html", {"employer": employer})
+
 def talent_signup_view(request):
     """View function for talent signup."""
     if request.method == 'POST':
