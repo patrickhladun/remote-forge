@@ -9,6 +9,10 @@
   );
 }
 
+.btn-outline-primary {
+  @include button-outline-variant($color-brand-500, $color-brand-50);
+}
+
 .card {
   transition: all 0.3s ease;
 
