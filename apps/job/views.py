@@ -4,26 +4,44 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 
 from .models import Job
+from apps.user.models import Employer
 from .forms import JobForm
 
 
 def job(request, id):
     """View function for job."""
     job_obj = get_object_or_404(Job, id=id)
+    employer = get_object_or_404(Employer, user=job_obj.user)
+    jobs = Job.objects.filter(user=job_obj.user, is_published=True)
 
-    if hasattr(job_obj.user, "employer"):
-        employer = job_obj.user.employer
-        employer_name = employer.company
-
-    job_obj.employer = employer_name
-
-    return render(request, "job/job.html", {"job": job_obj})
+    return render(request, "job/job.html", {
+        "job": job_obj,
+        "employer": employer,
+        "jobs": jobs
+    })
 
 
 def job_list(request):
     """View function for jobs."""
+    city = request.GET.get('city')
     jobs = Job.objects.filter(is_published=True)
-    return render(request, "job/job_list.html", {"jobs": jobs})
+    data = []
+    
+    for job in jobs:
+        employer = get_object_or_404(Employer, user=job.user)
+        if city:
+            if employer.city.lower() == city.lower():
+                data.append({
+                    'job': job,
+                    'employer': employer
+                })
+        else:
+            data.append({
+                'job': job,
+                'employer': employer
+            })
+    
+    return render(request, "job/job_list.html", {"data": data})
 
 
 @login_required
