@@ -33,7 +33,6 @@ class Job(models.Model):
     salary = models.CharField(max_length=40, null=True, blank=True)
     schedule = models.CharField(max_length=100, null=True, blank=True)
     details = JSONField(schema=DETAILS_SCHEMA, null=True, blank=True)
-    skills = models.CharField(max_length=255, null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     is_published = models.BooleanField(default=False)
