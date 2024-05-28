@@ -42,6 +42,21 @@ def talent_signup_view(request):
         form = TalentSignupForm()
     return render(request, 'allauth/account/signup_talent.html', {'form': form})
 
+
+def employer_signup_view(request):
+    """View function for employer signup."""
+    if request.method == 'POST':
+        form = EmployerSignupForm(request.POST)
+        if form.is_valid():
+            user = form.save(request)
+            backend = get_backend_name()
+            login(request, user, backend=backend)
+            return redirect(reverse('profile'))
+    else:
+        form = EmployerSignupForm()
+    return render(request, 'allauth/account/signup_employer.html', {'form': form})
+
+
 @login_required
 def profile_view(request):
     
