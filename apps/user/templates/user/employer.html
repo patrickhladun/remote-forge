@@ -1,0 +1,43 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<section class="bg-brand-100">
+  <div class="container py-5">
+    <div class="employer-header bg-brand-200 rounded p-4">
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="d-flex justify-content-between align-items-center py-3 gap-2">
+          <p>{{ employer.first_name }} {{ employer.last_name }}<br />
+            <span>{{ employer.title }}</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container py-5">
+  <div class="row">
+
+    <!-- Main Content -->
+    <div class="col-md-8">
+      <!-- About Section -->
+      <div class="about">
+        <p>{{ employer.about }}</p>
+      </div>
+
+    </div>
+
+    <!-- Sidebar -->
+    <div class="col-md-4">
+      <!-- Details Section -->
+      <div class="employer-box">
+        <h3>Details</h3>
+        <div>
+          <h5>Location</h5>
+          <p>{{ employer.city }}, {{ employer.country }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
