@@ -29,6 +29,13 @@ def employer_view(request, id):
     employer = get_object_or_404(Employer, id=id)
     return render(request, "user/employer.html", {"employer": employer})
 
+
+def employers_view(request):
+    """View function for employers list."""
+    employers = Employer.objects.filter(is_published=True)
+    return render(request, 'user/employers.html', {'employers': employers})
+
+
 def talent_signup_view(request):
     """View function for talent signup."""
     if request.method == 'POST':
