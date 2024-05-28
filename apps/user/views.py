@@ -1,8 +1,16 @@
+from django.contrib.auth import login, get_backends
+from django.urls import reverse
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from .models import Talent, Employer
-from .forms import AccountProfile, TalentProfileForm, EmployerProfileForm
+from .forms import AccountProfile, TalentProfileForm, EmployerProfileForm, TalentSignupForm, EmployerSignupForm
+
+
+def get_backend_name():
+    # Get the backend and return its dotted import path string
+    backend = get_backends()[0]
+    return f"{backend.__module__}.{backend.__class__.__name__}"
 
 def talent_view(request, id):
     """View function for talent single page."""
@@ -15,8 +23,22 @@ def talents_view(request):
     talents = Talent.objects.all()
     return render(request, 'user/talents.html', {'talents': talents})
 
+def talent_signup_view(request):
+    """View function for talent signup."""
+    if request.method == 'POST':
+        form = TalentSignupForm(request.POST)
+        if form.is_valid():
+            user = form.save(request)
+            backend = get_backend_name()
+            login(request, user, backend=backend)
+            return redirect(reverse('profile'))
+    else:
+        form = TalentSignupForm()
+    return render(request, 'allauth/account/signup_talent.html', {'form': form})
+
 @login_required
 def profile_view(request):
+    
     if request.user.user_type == "talent":
         profile = get_object_or_404(Talent, user=request.user)
         form_class = TalentProfileForm

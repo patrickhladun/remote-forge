@@ -2,6 +2,16 @@
 from django import forms
 from .models import User, Talent, Employer
 
+class TalentSignupForm(SignupForm):
+    consent = forms.BooleanField(required=True, label="I agree to the terms and conditions")
+    def save(self, request):
+        user = super(TalentSignupForm, self).save(request)
+        user.user_type = "talent"
+        user.save()
+        talent = Talent.objects.create(user=user)
+        talent.save()
+        return user
+
 class TalentProfileForm(forms.ModelForm):
     class Meta:
         model = Talent
@@ -77,11 +87,11 @@ class AccountProfile(forms.ModelForm):
         model = User
         fields = [
             "username",
-            "hide_email",
             "email",
+            "hide_email",
         ]
         labels = {
             "username": "Username",
-            "hide_email": "Hide my Email",
             "email": "Email",
+            "hide_email": "Hide my Email",
         }
