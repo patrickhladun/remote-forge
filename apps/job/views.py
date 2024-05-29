@@ -83,3 +83,12 @@ def user_job_edit(request, id):
 
     return render(request, 'job/user/job_edit.html', {'form': form, 'job': job})
 
+
+@login_required
+def delete_job(request, id):
+    job = get_object_or_404(Job, id=id)
+    if request.method == 'POST':
+        job.delete()
+        messages.success(request, 'Job deleted successfully.')
+        return redirect('user-job-list')
+    return render(request, 'job/user/job_delete_confirm.html', {'job': job})
