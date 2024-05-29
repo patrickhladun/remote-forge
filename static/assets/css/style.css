@@ -11148,6 +11148,17 @@ textarea.form-control-lg {
   box-shadow: 0 0 20px rgba(106, 146, 85, 0.3);
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+footer {
+  margin-top: auto;
+}
+
 h1, .h1,
 h2,
 .h2,
