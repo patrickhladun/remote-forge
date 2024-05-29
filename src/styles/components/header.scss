@@ -1,13 +1,13 @@
 .profile-menu {
-  @extend .bg-brand-200;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 100%;
+  border: none;
   width: 42px;
   height: 42px;
   overflow: hidden;
-  margin-left: 16px;
+  padding: 0;
 
   img {
     width: 42px;
@@ -19,4 +19,28 @@
     height: 32px;
     font-size: 18px;
   }
+}
+
+.navbar-toggler:focus {
+  text-decoration: none;
+  outline: 0;
+  box-shadow: none;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: relative;
+  width: 32px;
+  height: 32px;
+}
+
+.hamburger span {
+  display: block;
+  background: var(--color-brand-500);
+  width: 100%;
+  height: 5px;
+  transform-origin: center;
+  transition: all 0.2s ease-in-out;
 }

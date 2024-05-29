@@ -11,5 +11,4 @@ class JobForm(forms.ModelForm):
             "salary",
             "schedule",
             "details",
-            "skills"
             ]

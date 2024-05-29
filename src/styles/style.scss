@@ -1,17 +1,11 @@
-@import "bootstrap-overides.scss";
-@import "~bootstrap/scss/bootstrap";
+@import "variables";
+@import "bootstrap/bootstrap";
 
 @import "general";
 @import "pages/home";
+@import "pages/job";
 @import "components/forms";
 @import "components/header";
+@import "components/icon";
 @import "components/messages";
 @import "components/talent_list";
-
-.page {
-  margin-top: 80px;
-}
-.navbar-brand {
-  width: 120px;
-  fill: var(--color-brand-500);
-}

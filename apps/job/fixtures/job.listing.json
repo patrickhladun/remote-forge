@@ -1,6 +1,6 @@
 [
   {
-    "model": "job.listing",
+    "model": "job.job",
     "pk": "8d83b12b-0e13-4a6b-92c1-26a3d7bf92f3",
     "fields": {
       "user": "8d83b12b-0e13-4a6b-92c1-26a3d7bf92f3",
@@ -9,21 +9,1815 @@
       "schedule": "Full-time",
       "details": [
         {
-          "title": "Job Description",
-          "description": "<ul><li>We are looking for a skilled Front End Engineer to join our dynamic team. Your primary responsibility will be to develop user-facing features and ensure a seamless user experience.</li></ul>"
+          "heading": "Job Description",
+          "content": "We are looking for a skilled Front End Engineer to join our dynamic team. Your primary responsibility will be to develop user-facing features and ensure a seamless user experience."
         },
         {
-          "title": "Requirements",
-          "description": "<ul><li>Bachelor's degree in Computer Science or related field.</li><li>3-4 years of experience as a Front End Engineer.</li><li>Proficiency in JavaScript, TypeScript, React.js, and other front-end technologies.</li><li>Strong understanding of responsive design principles.</li></ul>"
+          "heading": "Requirements",
+          "content": "Bachelor's degree in Computer Science or related field. 3-4 years of experience as a Front End Engineer. Proficiency in JavaScript, TypeScript, React.js, and other front-end technologies. Strong understanding of responsive design principles. "
         },
         {
-          "title": "Benefits",
-          "description": "<ul><li>Competitive salary and benefits package.</li><li>Remote work options.</li><li>Health and wellness programs.</li><li>Opportunities for career advancement.</li></ul>"
+          "heading": "Benefits",
+          "content": "Competitive salary and benefits package. Remote work options. Health and wellness programs. Opportunities for career advancement."
         }
       ],
-      "skills": "JavaScript, TypeScript, React.js",
-      "created_at": "2024-04-23T00:00:00Z",
-      "updated_at": "2024-04-23T00:00:00Z",
+      "created_at": "2023-04-23T00:00:00Z",
+      "updated_at": "2023-04-23T00:00:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "model": "job.job",
+    "pk": "a12b34cd-5678-9ef0-1234-56789abcdef0",
+    "fields": {
+      "user": "8d83b12b-0e13-4a6b-92c1-26a3d7bf92f3",
+      "title": "Team Lead",
+      "salary": "Competitive",
+      "schedule": "Full-time",
+      "details": [
+        {
+          "heading": "Job Description",
+          "content": "We are seeking an experienced Team Lead to oversee our development team. You will be responsible for guiding the team, ensuring project milestones are met, and fostering a collaborative environment."
+        },
+        {
+          "heading": "Requirements",
+          "content": "Bachelor's degree in Computer Science or related field. 5+ years of experience in software development with at least 2 years in a leadership role. Strong leadership and communication skills. Proficiency in Agile methodologies."
+        },
+        {
+          "heading": "Benefits",
+          "content": "Competitive salary and benefits package. Remote work options. Health and wellness programs. Opportunities for career advancement."
+        }
+      ],
+      "created_at": "2023-04-23T00:00:00Z",
+      "updated_at": "2023-04-23T00:00:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "model": "job.job",
+    "pk": "b23c45de-6789-0f12-3456-789abcdef012",
+    "fields": {
+      "user": "8d83b12b-0e13-4a6b-92c1-26a3d7bf92f3",
+      "title": "UX/UI Designer",
+      "salary": "Competitive",
+      "schedule": "Full-time",
+      "details": [
+        {
+          "heading": "Job Description",
+          "content": "We are looking for a talented UX/UI Designer to create engaging and user-friendly interfaces. Your role will involve working closely with the development team to design intuitive and visually appealing user experiences."
+        },
+        {
+          "heading": "Requirements",
+          "content": "Bachelor's degree in Design, HCI, or related field. 3-4 years of experience in UX/UI design. Proficiency in design tools such as Adobe XD, Sketch, or Figma. Strong portfolio demonstrating design skills and problem-solving abilities."
+        },
+        {
+          "heading": "Benefits",
+          "content": "Competitive salary and benefits package. Remote work options. Health and wellness programs. Opportunities for career advancement."
+        }
+      ],
+      "created_at": "2023-04-23T00:00:00Z",
+      "updated_at": "2023-04-23T00:00:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "model": "job.job",
+    "pk": "c34d56ef-7890-1f23-4567-89abcdef0123",
+    "fields": {
+      "user": "8d83b12b-0e13-4a6b-92c1-26a3d7bf92f3",
+      "title": "DevOps Engineer",
+      "salary": "Competitive",
+      "schedule": "Full-time",
+      "details": [
+        {
+          "heading": "Job Description",
+          "content": "We are seeking a skilled DevOps Engineer to manage our deployment pipelines and ensure the reliability of our infrastructure. You will work closely with the development team to streamline our CI/CD processes."
+        },
+        {
+          "heading": "Requirements",
+          "content": "Bachelor's degree in Computer Science or related field. 3-4 years of experience as a DevOps Engineer. Proficiency in tools like Docker, Kubernetes, Jenkins, and cloud platforms such as AWS or Azure. Strong scripting skills in Bash, Python, or similar languages."
+        },
+        {
+          "heading": "Benefits",
+          "content": "Competitive salary and benefits package. Remote work options. Health and wellness programs. Opportunities for career advancement."
+        }
+      ],
+      "created_at": "2023-04-23T00:00:00Z",
+      "updated_at": "2023-04-23T00:00:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "model": "job.job",
+    "pk": "d45e67f0-8901-2f34-5678-9abcdef01234",
+    "fields": {
+      "user": "8d83b12b-0e13-4a6b-92c1-26a3d7bf92f3",
+      "title": "Backend Developer",
+      "salary": "Competitive",
+      "schedule": "Full-time",
+      "details": [
+        {
+          "heading": "Job Description",
+          "content": "We are seeking a proficient Backend Developer to join our team. Your primary responsibility will be to develop and maintain server-side logic, ensuring high performance and responsiveness to requests from the front-end."
+        },
+        {
+          "heading": "Requirements",
+          "content": "Bachelor's degree in Computer Science or related field. 3-4 years of experience as a Backend Developer. Proficiency in server-side languages such as Python, Ruby, Java, or Node.js. Strong understanding of database management and API design."
+        },
+        {
+          "heading": "Benefits",
+          "content": "Competitive salary and benefits package. Remote work options. Health and wellness programs. Opportunities for career advancement."
+        }
+      ],
+      "created_at": "2023-04-23T00:00:00Z",
+      "updated_at": "2023-04-23T00:00:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "model": "job.job",
+    "pk": "e56f78a1-9012-3f45-6789-abcd0e12345f",
+    "fields": {
+      "user": "8d83b12b-0e13-4a6b-92c1-26a3d7bf92f3",
+      "title": "Software Engineer",
+      "salary": "Competitive",
+      "schedule": "Full-time",
+      "details": [
+        {
+          "heading": "Job Description",
+          "content": "We are looking for a versatile Software Engineer to develop high-quality software solutions. You will work on various projects, collaborating with cross-functional teams to deliver robust and scalable software."
+        },
+        {
+          "heading": "Requirements",
+          "content": "Bachelor's degree in Computer Science or related field. 3-4 years of experience as a Software Engineer. Proficiency in multiple programming languages such as Java, C++, Python, or JavaScript. Strong problem-solving skills and attention to detail."
+        },
+        {
+          "heading": "Benefits",
+          "content": "Competitive salary and benefits package. Remote work options. Health and wellness programs. Opportunities for career advancement."
+        }
+      ],
+      "created_at": "2023-04-23T00:00:00Z",
+      "updated_at": "2023-04-23T00:00:00Z",
+      "is_published": true
+    }
+  },
+
+  {
+    "model": "job.job",
+    "pk": "d1e7d5e2-4a5b-4d6c-b2d7-1234567890ab",
+    "fields": {
+      "user": "456e7890-b12d-34e5-a678-901234567890",
+      "title": "Senior Audio Engineer",
+      "salary": "£70,000 - £90,000",
+      "schedule": "Full-time",
+      "details": [
+        {
+          "heading": "Job Description",
+          "content": "We are seeking a highly skilled Senior Audio Engineer to join our team. Your primary responsibility will be to design and develop innovative audio technologies and solutions."
+        },
+        {
+          "heading": "Requirements",
+          "content": "Bachelor's degree in Audio Engineering or related field. 5+ years of experience in audio engineering. Proficiency in digital signal processing and sound design. Strong understanding of acoustics and audio production."
+        },
+        {
+          "heading": "Benefits",
+          "content": "Competitive salary and benefits package. Remote work options. Health and wellness programs. Opportunities for career advancement."
+        }
+      ],
+      "created_at": "2023-01-15T00:00:00Z",
+      "updated_at": "2023-01-15T00:00:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "model": "job.job",
+    "pk": "d2f8d7e5-5a6c-4b8d-a9b7-1234567890bc",
+    "fields": {
+      "user": "456e7890-b12d-34e5-a678-901234567890",
+      "title": "Product Manager",
+      "salary": "£60,000 - £80,000",
+      "schedule": "Full-time",
+      "details": [
+        {
+          "heading": "Job Description",
+          "content": "We are looking for an experienced Product Manager to lead the development of our audio technology products. You will be responsible for overseeing the product lifecycle from conception to launch."
+        },
+        {
+          "heading": "Requirements",
+          "content": "Bachelor's degree in Business, Engineering, or related field. 4+ years of experience in product management. Strong understanding of the audio technology market. Excellent project management and communication skills."
+        },
+        {
+          "heading": "Benefits",
+          "content": "Competitive salary and benefits package. Remote work options. Health and wellness programs. Opportunities for career advancement."
+        }
+      ],
+      "created_at": "2023-02-10T00:00:00Z",
+      "updated_at": "2023-02-10T00:00:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "model": "job.job",
+    "pk": "d3a9f6b4-6b7c-4d9e-b8a7-1234567890cd",
+    "fields": {
+      "user": "456e7890-b12d-34e5-a678-901234567890",
+      "title": "Software Developer",
+      "salary": "£50,000 - £70,000",
+      "schedule": "Full-time",
+      "details": [
+        {
+          "heading": "Job Description",
+          "content": "We are seeking a talented Software Developer to join our team. Your primary responsibility will be to develop and maintain our audio technology software applications."
+        },
+        {
+          "heading": "Requirements",
+          "content": "Bachelor's degree in Computer Science or related field. 3-4 years of experience in software development. Proficiency in C++, Python, or Java. Strong problem-solving skills and attention to detail."
+        },
+        {
+          "heading": "Benefits",
+          "content": "Competitive salary and benefits package. Remote work options. Health and wellness programs. Opportunities for career advancement."
+        }
+      ],
+      "created_at": "2023-03-05T00:00:00Z",
+      "updated_at": "2023-03-05T00:00:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "model": "job.job",
+    "pk": "d4b8c7f5-7a8b-4e9d-a7b6-1234567890de",
+    "fields": {
+      "user": "456e7890-b12d-34e5-a678-901234567890",
+      "title": "Marketing Specialist",
+      "salary": "£40,000 - £60,000",
+      "schedule": "Full-time",
+      "details": [
+        {
+          "heading": "Job Description",
+          "content": "We are looking for a creative Marketing Specialist to join our team. Your primary responsibility will be to develop and implement marketing strategies to promote our audio technology products."
+        },
+        {
+          "heading": "Requirements",
+          "content": "Bachelor's degree in Marketing, Business, or related field. 3-4 years of experience in marketing. Strong understanding of digital marketing strategies. Excellent communication and analytical skills."
+        },
+        {
+          "heading": "Benefits",
+          "content": "Competitive salary and benefits package. Remote work options. Health and wellness programs. Opportunities for career advancement."
+        }
+      ],
+      "created_at": "2023-04-01T00:00:00Z",
+      "updated_at": "2023-04-01T00:00:00Z",
+      "is_published": true
+    }
+  },
+
+  {
+    "model": "job.job",
+    "pk": "456e7890-b12d-34e5-a678-901234567891",
+    "fields": {
+      "user": "123e4567-e89b-12d3-a456-426614174000",
+      "title": "Property Manager",
+      "salary": "AED 15,000 - AED 20,000",
+      "schedule": "Full-time",
+      "details": [
+        {
+          "heading": "Job Description",
+          "content": "We are looking for an experienced Property Manager to oversee and manage our property portfolio. Your responsibilities will include coordinating maintenance, managing tenant relations, and ensuring compliance with property regulations."
+        },
+        {
+          "heading": "Requirements",
+          "content": "Bachelor's degree in Real Estate, Business Administration, or related field. 5+ years of experience in property management. Excellent communication and organizational skills. Knowledge of property management software."
+        },
+        {
+          "heading": "Benefits",
+          "content": "Competitive salary and benefits package. Health insurance. Opportunities for career advancement."
+        }
+      ],
+      "created_at": "2023-05-01T00:00:00Z",
+      "updated_at": "2023-05-01T00:00:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "model": "job.job",
+    "pk": "456e7890-b12d-34e5-a678-901234567892",
+    "fields": {
+      "user": "123e4567-e89b-12d3-a456-426614174000",
+      "title": "Sales Executive",
+      "salary": "AED 12,000 - AED 18,000",
+      "schedule": "Full-time",
+      "details": [
+        {
+          "heading": "Job Description",
+          "content": "We are seeking a dynamic Sales Executive to join our team. Your primary responsibility will be to drive sales and grow our client base by promoting our property solutions."
+        },
+        {
+          "heading": "Requirements",
+          "content": "Bachelor's degree in Sales, Marketing, or related field. 3+ years of experience in sales. Strong negotiation and communication skills. Proven track record in meeting sales targets."
+        },
+        {
+          "heading": "Benefits",
+          "content": "Competitive salary and commission structure. Health insurance. Opportunities for career advancement."
+        }
+      ],
+      "created_at": "2023-06-01T00:00:00Z",
+      "updated_at": "2023-06-01T00:00:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "model": "job.job",
+    "pk": "456e7890-b12d-34e5-a678-901234567893",
+    "fields": {
+      "user": "123e4567-e89b-12d3-a456-426614174000",
+      "title": "Marketing Coordinator",
+      "salary": "AED 10,000 - AED 15,000",
+      "schedule": "Full-time",
+      "details": [
+        {
+          "heading": "Job Description",
+          "content": "We are looking for a creative Marketing Coordinator to support our marketing efforts. Your role will involve developing marketing materials, coordinating campaigns, and managing social media presence."
+        },
+        {
+          "heading": "Requirements",
+          "content": "Bachelor's degree in Marketing, Communications, or related field. 2+ years of experience in marketing. Strong writing and communication skills. Proficiency in digital marketing tools and platforms."
+        },
+        {
+          "heading": "Benefits",
+          "content": "Competitive salary and benefits package. Health insurance. Opportunities for career advancement."
+        }
+      ],
+      "created_at": "2023-07-01T00:00:00Z",
+      "updated_at": "2023-07-01T00:00:00Z",
+      "is_published": true
+    }
+  },
+
+  {
+    "model": "job.job",
+    "pk": "123e4567-e89b-12d3-a456-426614174002",
+    "fields": {
+      "user": "c9e8d7a6-4b3f-2a5d-6f8a-9b8d7a6c9e8d",
+      "title": "Mobile App Developer",
+      "salary": "PLN 15,000 - PLN 20,000",
+      "schedule": "Full-time",
+      "details": [
+        {
+          "heading": "Job Description",
+          "content": "We are looking for a talented Mobile App Developer to join our team. Your primary responsibility will be to develop and maintain our fitness app for both iOS and Android platforms."
+        },
+        {
+          "heading": "Requirements",
+          "content": "Bachelor's degree in Computer Science or related field. 3+ years of experience in mobile app development. Proficiency in Swift, Kotlin, and Flutter. Strong understanding of mobile UX/UI design principles."
+        },
+        {
+          "heading": "Benefits",
+          "content": "Competitive salary and benefits package. Remote work options. Health and wellness programs. Opportunities for career advancement."
+        }
+      ],
+      "created_at": "2023-04-01T00:00:00Z",
+      "updated_at": "2023-04-01T00:00:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "model": "job.job",
+    "pk": "123e4567-e89b-12d3-a456-426614174003",
+    "fields": {
+      "user": "c9e8d7a6-4b3f-2a5d-6f8a-9b8d7a6c9e8d",
+      "title": "Data Scientist",
+      "salary": "PLN 18,000 - PLN 25,000",
+      "schedule": "Full-time",
+      "details": [
+        {
+          "heading": "Job Description",
+          "content": "We are seeking a skilled Data Scientist to analyze and interpret complex data to help improve our fitness app. Your role will involve data mining, statistical analysis, and machine learning model development."
+        },
+        {
+          "heading": "Requirements",
+          "content": "Master's degree in Data Science, Statistics, or related field. 4+ years of experience in data science. Proficiency in Python, R, and SQL. Experience with machine learning frameworks such as TensorFlow or PyTorch."
+        },
+        {
+          "heading": "Benefits",
+          "content": "Competitive salary and benefits package. Remote work options. Health and wellness programs. Opportunities for career advancement."
+        }
+      ],
+      "created_at": "2023-04-10T00:00:00Z",
+      "updated_at": "2023-04-10T00:00:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "model": "job.job",
+    "pk": "123e4567-e89b-12d3-a456-426614174004",
+    "fields": {
+      "user": "c9e8d7a6-4b3f-2a5d-6f8a-9b8d7a6c9e8d",
+      "title": "UX/UI Designer",
+      "salary": "PLN 14,000 - PLN 18,000",
+      "schedule": "Full-time",
+      "details": [
+        {
+          "heading": "Job Description",
+          "content": "We are looking for a creative UX/UI Designer to enhance the user experience of our fitness app. You will work closely with our development team to design intuitive and visually appealing interfaces."
+        },
+        {
+          "heading": "Requirements",
+          "content": "Bachelor's degree in Design, HCI, or related field. 3+ years of experience in UX/UI design. Proficiency in design tools such as Sketch, Figma, and Adobe XD. Strong portfolio demonstrating design skills."
+        },
+        {
+          "heading": "Benefits",
+          "content": "Competitive salary and benefits package. Remote work options. Health and wellness programs. Opportunities for career advancement."
+        }
+      ],
+      "created_at": "2023-04-20T00:00:00Z",
+      "updated_at": "2023-04-20T00:00:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "model": "job.job",
+    "pk": "123e4567-e89b-12d3-a456-426614174005",
+    "fields": {
+      "user": "c9e8d7a6-4b3f-2a5d-6f8a-9b8d7a6c9e8d",
+      "title": "Backend Developer",
+      "salary": "PLN 16,000 - PLN 22,000",
+      "schedule": "Full-time",
+      "details": [
+        {
+          "heading": "Job Description",
+          "content": "We are seeking an experienced Backend Developer to join our team. Your primary responsibility will be to develop and maintain the server-side logic of our fitness app, ensuring high performance and responsiveness."
+        },
+        {
+          "heading": "Requirements",
+          "content": "Bachelor's degree in Computer Science or related field. 4+ years of experience in backend development. Proficiency in Node.js, Python, or Java. Strong understanding of database management and API design."
+        },
+        {
+          "heading": "Benefits",
+          "content": "Competitive salary and benefits package. Remote work options. Health and wellness programs. Opportunities for career advancement."
+        }
+      ],
+      "created_at": "2023-05-01T00:00:00Z",
+      "updated_at": "2023-05-01T00:00:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "model": "job.job",
+    "pk": "123e4567-e89b-12d3-a456-426614174006",
+    "fields": {
+      "user": "c9e8d7a6-4b3f-2a5d-6f8a-9b8d7a6c9e8d",
+      "title": "Product Manager",
+      "salary": "PLN 20,000 - PLN 28,000",
+      "schedule": "Full-time",
+      "details": [
+        {
+          "heading": "Job Description",
+          "content": "We are looking for an experienced Product Manager to oversee the development and launch of new features for our fitness app. You will work closely with cross-functional teams to ensure the success of our products."
+        },
+        {
+          "heading": "Requirements",
+          "content": "Bachelor's degree in Business, Engineering, or related field. 5+ years of experience in product management. Strong understanding of the fitness technology market. Excellent project management and communication skills."
+        },
+        {
+          "heading": "Benefits",
+          "content": "Competitive salary and benefits package. Remote work options. Health and wellness programs. Opportunities for career advancement."
+        }
+      ],
+      "created_at": "2023-05-10T00:00:00Z",
+      "updated_at": "2023-05-10T00:00:00Z",
+      "is_published": true
+    }
+  },
+
+  {
+    "model": "job.job",
+    "pk": "123e4567-e89b-12d3-a456-426614174007",
+    "fields": {
+      "user": "b7a1f1b8-8d5f-4a7e-b46d-8b5d7a1f1b80",
+      "title": "Software Engineer",
+      "salary": "€55,000 - €75,000",
+      "schedule": "Full-time",
+      "details": [
+        {
+          "heading": "Job Description",
+          "content": "We are looking for a skilled Software Engineer to join our team. Your primary responsibility will be to develop and maintain our booking systems, ensuring high performance and reliability."
+        },
+        {
+          "heading": "Requirements",
+          "content": "Bachelor's degree in Computer Science or related field. 3+ years of experience in software development. Proficiency in Java, Python, or C#. Strong problem-solving skills and attention to detail."
+        },
+        {
+          "heading": "Benefits",
+          "content": "Competitive salary and benefits package. Remote work options. Health and wellness programs. Opportunities for career advancement."
+        }
+      ],
+      "created_at": "2023-06-01T00:00:00Z",
+      "updated_at": "2023-06-01T00:00:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "model": "job.job",
+    "pk": "123e4567-e89b-12d3-a456-426614174008",
+    "fields": {
+      "user": "b7a1f1b8-8d5f-4a7e-b46d-8b5d7a1f1b80",
+      "title": "Front End Developer",
+      "salary": "€50,000 - €70,000",
+      "schedule": "Full-time",
+      "details": [
+        {
+          "heading": "Job Description",
+          "content": "We are seeking a talented Front End Developer to create user-friendly web interfaces for our booking systems. Your role will involve working closely with our design team to implement innovative features."
+        },
+        {
+          "heading": "Requirements",
+          "content": "Bachelor's degree in Computer Science or related field. 3+ years of experience in front-end development. Proficiency in HTML, CSS, JavaScript, and frameworks like React or Angular. Strong understanding of responsive design principles."
+        },
+        {
+          "heading": "Benefits",
+          "content": "Competitive salary and benefits package. Remote work options. Health and wellness programs. Opportunities for career advancement."
+        }
+      ],
+      "created_at": "2023-07-01T00:00:00Z",
+      "updated_at": "2023-07-01T00:00:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "model": "job.job",
+    "pk": "123e4567-e89b-12d3-a456-426614174009",
+    "fields": {
+      "user": "b7a1f1b8-8d5f-4a7e-b46d-8b5d7a1f1b80",
+      "title": "Project Manager",
+      "salary": "€60,000 - €80,000",
+      "schedule": "Full-time",
+      "details": [
+        {
+          "heading": "Job Description",
+          "content": "We are looking for an experienced Project Manager to oversee the development and implementation of our booking systems projects. You will be responsible for coordinating with clients and internal teams to ensure project success."
+        },
+        {
+          "heading": "Requirements",
+          "content": "Bachelor's degree in Business, Engineering, or related field. 4+ years of experience in project management. Strong leadership and communication skills. Proven track record in delivering projects on time and within budget."
+        },
+        {
+          "heading": "Benefits",
+          "content": "Competitive salary and benefits package. Remote work options. Health and wellness programs. Opportunities for career advancement."
+        }
+      ],
+      "created_at": "2023-08-01T00:00:00Z",
+      "updated_at": "2023-08-01T00:00:00Z",
+      "is_published": true
+    }
+  },
+
+  {
+    "model": "job.job",
+    "pk": "b16e721b-c4f2-4b78-bccd-90e7431e1da6",
+    "fields": {
+      "user": "fcd36b6a-b6af-4534-9f2a-5e77b6f44a30",
+      "title": "Cloud Engineer",
+      "salary": "€70,000 - €90,000",
+      "schedule": "Full-time",
+      "details": [
+        {
+          "heading": "Job Description",
+          "content": "We are looking for a skilled Cloud Engineer to join our team. Your primary responsibility will be to design, implement, and maintain cloud infrastructure solutions to support our applications."
+        },
+        {
+          "heading": "Requirements",
+          "content": "Bachelor's degree in Computer Science or related field. 3+ years of experience in cloud engineering. Proficiency in AWS, Azure, or Google Cloud. Strong understanding of cloud security and best practices."
+        },
+        {
+          "heading": "Benefits",
+          "content": "Competitive salary and benefits package. Remote work options. Health and wellness programs. Opportunities for career advancement."
+        }
+      ],
+      "created_at": "2023-07-01T00:00:00Z",
+      "updated_at": "2023-07-01T00:00:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "model": "job.job",
+    "pk": "b16e721b-c4f2-4b78-bccd-90e7431e1da7",
+    "fields": {
+      "user": "fcd36b6a-b6af-4534-9f2a-5e77b6f44a30",
+      "title": "Data Engineer",
+      "salary": "€65,000 - €85,000",
+      "schedule": "Full-time",
+      "details": [
+        {
+          "heading": "Job Description",
+          "content": "We are seeking a talented Data Engineer to join our team. Your primary responsibility will be to design, develop, and maintain our data infrastructure, ensuring efficient data flow and access."
+        },
+        {
+          "heading": "Requirements",
+          "content": "Bachelor's degree in Computer Science, Data Science, or related field. 3+ years of experience in data engineering. Proficiency in SQL, Python, and data pipeline tools like Apache Kafka or Apache Spark. Strong understanding of ETL processes."
+        },
+        {
+          "heading": "Benefits",
+          "content": "Competitive salary and benefits package. Remote work options. Health and wellness programs. Opportunities for career advancement."
+        }
+      ],
+      "created_at": "2023-08-01T00:00:00Z",
+      "updated_at": "2023-08-01T00:00:00Z",
+      "is_published": true
+    }
+  },
+
+  {
+    "model": "job.job",
+    "pk": "4fe14a97-2cc9-4426-83d7-fc37037b0b53",
+    "fields": {
+      "user": "9a12c4bf-22f1-41a0-aabe-fa4c632d408e",
+      "title": "Full Stack Developer",
+      "salary": "€60,000 - €80,000",
+      "schedule": "Full-time",
+      "details": [
+        {
+          "heading": "Job Description",
+          "content": "We are looking for a versatile Full Stack Developer to join our team. Your primary responsibility will be to develop and maintain our communication software solutions, ensuring high performance and scalability."
+        },
+        {
+          "heading": "Requirements",
+          "content": "Bachelor's degree in Computer Science or related field. 3+ years of experience in full stack development. Proficiency in JavaScript, Node.js, and React. Strong understanding of database management and API design."
+        },
+        {
+          "heading": "Benefits",
+          "content": "Competitive salary and benefits package. Remote work options. Health and wellness programs. Opportunities for career advancement."
+        }
+      ],
+      "created_at": "2023-08-01T00:00:00Z",
+      "updated_at": "2023-08-01T00:00:00Z",
+      "is_published": true
+    }
+  },
+
+  {
+    "model": "job.job",
+    "pk": "fd4351d1-3ad3-42c1-9379-1d09733e02af",
+    "fields": {
+      "user": "5ae5b91b-0d3b-4d84-8f48-73523b9d77c0",
+      "title": "Game Designer",
+      "salary": "€50,000 - €70,000",
+      "schedule": "Full-time",
+      "details": [
+        {
+          "heading": "Job Description",
+          "content": "We are looking for a creative Game Designer to join our team. Your primary responsibility will be to develop innovative game concepts and ensure they are engaging and fun for players."
+        },
+        {
+          "heading": "Requirements",
+          "content": "Bachelor's degree in Game Design, Computer Science, or related field. 3+ years of experience in game design. Strong understanding of gameplay mechanics and level design. Proficiency in game development tools like Unity or Unreal Engine."
+        },
+        {
+          "heading": "Benefits",
+          "content": "Competitive salary and benefits package. Remote work options. Health and wellness programs. Opportunities for career advancement."
+        }
+      ],
+      "created_at": "2023-01-01T00:00:00Z",
+      "updated_at": "2023-01-01T00:00:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "model": "job.job",
+    "pk": "fd4351d1-3ad3-42c1-9379-1d09733e02b0",
+    "fields": {
+      "user": "5ae5b91b-0d3b-4d84-8f48-73523b9d77c0",
+      "title": "3D Artist",
+      "salary": "€45,000 - €65,000",
+      "schedule": "Full-time",
+      "details": [
+        {
+          "heading": "Job Description",
+          "content": "We are seeking a talented 3D Artist to create stunning visuals for our games. Your role will involve creating detailed models, textures, and animations that bring our game worlds to life."
+        },
+        {
+          "heading": "Requirements",
+          "content": "Bachelor's degree in Art, Animation, or related field. 3+ years of experience in 3D art for games. Proficiency in 3D modeling software like Maya or Blender. Strong portfolio showcasing your work."
+        },
+        {
+          "heading": "Benefits",
+          "content": "Competitive salary and benefits package. Remote work options. Health and wellness programs. Opportunities for career advancement."
+        }
+      ],
+      "created_at": "2023-02-01T00:00:00Z",
+      "updated_at": "2023-02-01T00:00:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "model": "job.job",
+    "pk": "fd4351d1-3ad3-42c1-9379-1d09733e02b1",
+    "fields": {
+      "user": "5ae5b91b-0d3b-4d84-8f48-73523b9d77c0",
+      "title": "Level Designer",
+      "salary": "€50,000 - €70,000",
+      "schedule": "Full-time",
+      "details": [
+        {
+          "heading": "Job Description",
+          "content": "We are looking for a skilled Level Designer to create engaging and immersive levels for our games. You will work closely with our design and art teams to ensure each level is fun and challenging."
+        },
+        {
+          "heading": "Requirements",
+          "content": "Bachelor's degree in Game Design, Computer Science, or related field. 3+ years of experience in level design. Proficiency in level design tools like Unity or Unreal Engine. Strong understanding of gameplay mechanics and player experience."
+        },
+        {
+          "heading": "Benefits",
+          "content": "Competitive salary and benefits package. Remote work options. Health and wellness programs. Opportunities for career advancement."
+        }
+      ],
+      "created_at": "2023-03-01T00:00:00Z",
+      "updated_at": "2023-03-01T00:00:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "model": "job.job",
+    "pk": "fd4351d1-3ad3-42c1-9379-1d09733e02b2",
+    "fields": {
+      "user": "5ae5b91b-0d3b-4d84-8f48-73523b9d77c0",
+      "title": "Gameplay Programmer",
+      "salary": "€55,000 - €75,000",
+      "schedule": "Full-time",
+      "details": [
+        {
+          "heading": "Job Description",
+          "content": "We are seeking a talented Gameplay Programmer to join our development team. Your primary responsibility will be to implement gameplay mechanics and ensure they are polished and bug-free."
+        },
+        {
+          "heading": "Requirements",
+          "content": "Bachelor's degree in Computer Science or related field. 3+ years of experience in gameplay programming. Proficiency in C++ and game development tools like Unity or Unreal Engine. Strong problem-solving skills and attention to detail."
+        },
+        {
+          "heading": "Benefits",
+          "content": "Competitive salary and benefits package. Remote work options. Health and wellness programs. Opportunities for career advancement."
+        }
+      ],
+      "created_at": "2023-04-01T00:00:00Z",
+      "updated_at": "2023-04-01T00:00:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "model": "job.job",
+    "pk": "fd4351d1-3ad3-42c1-9379-1d09733e02b3",
+    "fields": {
+      "user": "5ae5b91b-0d3b-4d84-8f48-73523b9d77c0",
+      "title": "Sound Designer",
+      "salary": "€45,000 - €65,000",
+      "schedule": "Full-time",
+      "details": [
+        {
+          "heading": "Job Description",
+          "content": "We are looking for a creative Sound Designer to join our team. Your primary responsibility will be to create and implement high-quality sound effects and audio for our games."
+        },
+        {
+          "heading": "Requirements",
+          "content": "Bachelor's degree in Sound Design, Audio Engineering, or related field. 3+ years of experience in sound design for games. Proficiency in sound design tools like Pro Tools or Reaper. Strong portfolio showcasing your work."
+        },
+        {
+          "heading": "Benefits",
+          "content": "Competitive salary and benefits package. Remote work options. Health and wellness programs. Opportunities for career advancement."
+        }
+      ],
+      "created_at": "2023-05-01T00:00:00Z",
+      "updated_at": "2023-05-01T00:00:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "model": "job.job",
+    "pk": "fd4351d1-3ad3-42c1-9379-1d09733e02b4",
+    "fields": {
+      "user": "5ae5b91b-0d3b-4d84-8f48-73523b9d77c0",
+      "title": "QA Tester",
+      "salary": "€40,000 - €60,000",
+      "schedule": "Full-time",
+      "details": [
+        {
+          "heading": "Job Description",
+          "content": "We are seeking a detail-oriented QA Tester to join our team. Your primary responsibility will be to test our games and ensure they are free of bugs and issues before release."
+        },
+        {
+          "heading": "Requirements",
+          "content": "Bachelor's degree in Computer Science or related field. 3+ years of experience in game testing. Strong understanding of game development and QA processes. Excellent problem-solving skills and attention to detail."
+        },
+        {
+          "heading": "Benefits",
+          "content": "Competitive salary and benefits package. Remote work options. Health and wellness programs. Opportunities for career advancement."
+        }
+      ],
+      "created_at": "2023-06-01T00:00:00Z",
+      "updated_at": "2023-06-01T00:00:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "model": "job.job",
+    "pk": "fd4351d1-3ad3-42c1-9379-1d09733e02b5",
+    "fields": {
+      "user": "5ae5b91b-0d3b-4d84-8f48-73523b9d77c0",
+      "title": "Producer",
+      "salary": "€60,000 - €80,000",
+      "schedule": "Full-time",
+      "details": [
+        {
+          "heading": "Job Description",
+          "content": "We are looking for an experienced Producer to oversee the development of our games. You will be responsible for managing the development team and ensuring projects are completed on time and within budget."
+        },
+        {
+          "heading": "Requirements",
+          "content": "Bachelor's degree in Business, Project Management, or related field. 4+ years of experience in game production. Strong leadership and communication skills. Proven track record in managing game development projects."
+        },
+        {
+          "heading": "Benefits",
+          "content": "Competitive salary and benefits package. Remote work options. Health and wellness programs. Opportunities for career advancement."
+        }
+      ],
+      "created_at": "2023-07-01T00:00:00Z",
+      "updated_at": "2023-07-01T00:00:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "model": "job.job",
+    "pk": "fd4351d1-3ad3-42c1-9379-1d09733e02b6",
+    "fields": {
+      "user": "5ae5b91b-0d3b-4d84-8f48-73523b9d77c0",
+      "title": "Technical Artist",
+      "salary": "€55,000 - €75,000",
+      "schedule": "Full-time",
+      "details": [
+        {
+          "heading": "Job Description",
+          "content": "We are seeking a talented Technical Artist to bridge the gap between art and technology in our game development process. Your primary responsibility will be to optimize and implement art assets into the game engine."
+        },
+        {
+          "heading": "Requirements",
+          "content": "Bachelor's degree in Art, Computer Science, or related field. 3+ years of experience in technical art. Proficiency in game development tools like Unity or Unreal Engine. Strong problem-solving skills and attention to detail."
+        },
+        {
+          "heading": "Benefits",
+          "content": "Competitive salary and benefits package. Remote work options. Health and wellness programs. Opportunities for career advancement."
+        }
+      ],
+      "created_at": "2023-08-01T00:00:00Z",
+      "updated_at": "2023-08-01T00:00:00Z",
+      "is_published": true
+    }
+  },
+
+  {
+    "model": "job.job",
+    "pk": "a25eac3e-4b95-41b2-af8d-10f7923f7c21",
+    "fields": {
+      "user": "8d83b12b-0e13-4a6b-92c1-26a3d7bf92f3",
+      "title": "Data Analyst",
+      "salary": "€50,000 - €70,000",
+      "schedule": "Full-time",
+      "details": [
+        {
+          "heading": "Job Description",
+          "content": "We are looking for a skilled Data Analyst to join our team. Your primary responsibility will be to analyze e-commerce data and provide actionable insights to help our clients optimize their online businesses."
+        },
+        {
+          "heading": "Requirements",
+          "content": "Bachelor's degree in Data Science, Statistics, or related field. 3+ years of experience in data analysis. Proficiency in SQL, Python, and data visualization tools like Tableau or Power BI. Strong analytical and problem-solving skills."
+        },
+        {
+          "heading": "Benefits",
+          "content": "Competitive salary and benefits package. Remote work options. Health and wellness programs. Opportunities for career advancement."
+        }
+      ],
+      "created_at": "2023-01-01T00:00:00Z",
+      "updated_at": "2023-01-01T00:00:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "model": "job.job",
+    "pk": "a25eac3e-4b95-41b2-af8d-10f7923f7c22",
+    "fields": {
+      "user": "8d83b12b-0e13-4a6b-92c1-26a3d7bf92f3",
+      "title": "Product Manager",
+      "salary": "€70,000 - €90,000",
+      "schedule": "Full-time",
+      "details": [
+        {
+          "heading": "Job Description",
+          "content": "We are seeking an experienced Product Manager to oversee the development and launch of new features for our e-commerce analytics platform. You will work closely with cross-functional teams to ensure the success of our products."
+        },
+        {
+          "heading": "Requirements",
+          "content": "Bachelor's degree in Business, Engineering, or related field. 4+ years of experience in product management. Strong understanding of e-commerce and analytics. Excellent project management and communication skills."
+        },
+        {
+          "heading": "Benefits",
+          "content": "Competitive salary and benefits package. Remote work options. Health and wellness programs. Opportunities for career advancement."
+        }
+      ],
+      "created_at": "2023-02-01T00:00:00Z",
+      "updated_at": "2023-02-01T00:00:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "model": "job.job",
+    "pk": "a25eac3e-4b95-41b2-af8d-10f7923f7c23",
+    "fields": {
+      "user": "8d83b12b-0e13-4a6b-92c1-26a3d7bf92f3",
+      "title": "Marketing Specialist",
+      "salary": "€45,000 - €65,000",
+      "schedule": "Full-time",
+      "details": [
+        {
+          "heading": "Job Description",
+          "content": "We are looking for a creative Marketing Specialist to join our team. Your primary responsibility will be to develop and execute marketing campaigns to promote our e-commerce analytics platform and attract new clients."
+        },
+        {
+          "heading": "Requirements",
+          "content": "Bachelor's degree in Marketing, Communications, or related field. 3+ years of experience in marketing. Proficiency in digital marketing tools and platforms. Strong writing and communication skills."
+        },
+        {
+          "heading": "Benefits",
+          "content": "Competitive salary and benefits package. Remote work options. Health and wellness programs. Opportunities for career advancement."
+        }
+      ],
+      "created_at": "2023-03-01T00:00:00Z",
+      "updated_at": "2023-03-01T00:00:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "model": "job.job",
+    "pk": "a25eac3e-4b95-41b2-af8d-10f7923f7c24",
+    "fields": {
+      "user": "8d83b12b-0e13-4a6b-92c1-26a3d7bf92f3",
+      "title": "Customer Success Manager",
+      "salary": "€60,000 - €80,000",
+      "schedule": "Full-time",
+      "details": [
+        {
+          "heading": "Job Description",
+          "content": "We are seeking a dedicated Customer Success Manager to join our team. Your primary responsibility will be to ensure our clients achieve their business goals using our e-commerce analytics platform."
+        },
+        {
+          "heading": "Requirements",
+          "content": "Bachelor's degree in Business, Marketing, or related field. 3+ years of experience in customer success or account management. Strong communication and relationship-building skills. Proficiency in CRM software."
+        },
+        {
+          "heading": "Benefits",
+          "content": "Competitive salary and benefits package. Remote work options. Health and wellness programs. Opportunities for career advancement."
+        }
+      ],
+      "created_at": "2023-04-01T00:00:00Z",
+      "updated_at": "2023-04-01T00:00:00Z",
+      "is_published": true
+    }
+  },
+
+  {
+    "model": "job.job",
+    "pk": "d2a1f3e7-5c9b-4d6f-a1b3-8c4d7a1f3e8c",
+    "fields": {
+      "user": "b3a6e1f5-9c8d-4f2b-a3d5-1f7e8a6b9c4f",
+      "title": "Product Designer",
+      "salary": "PLN 60,000 - PLN 80,000",
+      "schedule": "Full-time",
+      "details": [
+        {
+          "heading": "Job Description",
+          "content": "We are looking for a creative Product Designer to join our team. Your primary responsibility will be to design innovative sportswear products that combine functionality and style."
+        },
+        {
+          "heading": "Requirements",
+          "content": "Bachelor's degree in Fashion Design, Industrial Design, or related field. 3+ years of experience in product design. Proficiency in design software like Adobe Illustrator and Photoshop. Strong portfolio showcasing your work."
+        },
+        {
+          "heading": "Benefits",
+          "content": "Competitive salary and benefits package. Opportunities for career advancement. Employee discounts on SportWear Polska products."
+        }
+      ],
+      "created_at": "2023-01-01T00:00:00Z",
+      "updated_at": "2023-01-01T00:00:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "model": "job.job",
+    "pk": "d2a1f3e7-5c9b-4d6f-a1b3-8c4d7a1f3e8d",
+    "fields": {
+      "user": "b3a6e1f5-9c8d-4f2b-a3d5-1f7e8a6b9c4f",
+      "title": "Marketing Manager",
+      "salary": "PLN 70,000 - PLN 90,000",
+      "schedule": "Full-time",
+      "details": [
+        {
+          "heading": "Job Description",
+          "content": "We are seeking an experienced Marketing Manager to develop and execute marketing strategies that increase brand awareness and drive sales for our sportswear products."
+        },
+        {
+          "heading": "Requirements",
+          "content": "Bachelor's degree in Marketing, Business, or related field. 4+ years of experience in marketing management. Proficiency in digital marketing tools and platforms. Strong leadership and communication skills."
+        },
+        {
+          "heading": "Benefits",
+          "content": "Competitive salary and benefits package. Opportunities for career advancement. Employee discounts on SportWear Polska products."
+        }
+      ],
+      "created_at": "2023-02-01T00:00:00Z",
+      "updated_at": "2023-02-01T00:00:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "model": "job.job",
+    "pk": "d2a1f3e7-5c9b-4d6f-a1b3-8c4d7a1f3e8e",
+    "fields": {
+      "user": "b3a6e1f5-9c8d-4f2b-a3d5-1f7e8a6b9c4f",
+      "title": "Sales Representative",
+      "salary": "PLN 50,000 - PLN 70,000",
+      "schedule": "Full-time",
+      "details": [
+        {
+          "heading": "Job Description",
+          "content": "We are looking for a motivated Sales Representative to join our team. Your primary responsibility will be to drive sales of our sportswear products through building relationships with clients and meeting sales targets."
+        },
+        {
+          "heading": "Requirements",
+          "content": "Bachelor's degree in Business, Marketing, or related field. 2+ years of experience in sales. Strong interpersonal and communication skills. Proven track record of meeting or exceeding sales targets."
+        },
+        {
+          "heading": "Benefits",
+          "content": "Competitive salary and commission structure. Opportunities for career advancement. Employee discounts on SportWear Polska products."
+        }
+      ],
+      "created_at": "2023-03-01T00:00:00Z",
+      "updated_at": "2023-03-01T00:00:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "model": "job.job",
+    "pk": "d2a1f3e7-5c9b-4d6f-a1b3-8c4d7a1f3e8f",
+    "fields": {
+      "user": "b3a6e1f5-9c8d-4f2b-a3d5-1f7e8a6b9c4f",
+      "title": "Supply Chain Manager",
+      "salary": "PLN 80,000 - PLN 100,000",
+      "schedule": "Full-time",
+      "details": [
+        {
+          "heading": "Job Description",
+          "content": "We are seeking a detail-oriented Supply Chain Manager to oversee our supply chain operations. Your primary responsibility will be to ensure the efficient and cost-effective flow of goods from suppliers to customers."
+        },
+        {
+          "heading": "Requirements",
+          "content": "Bachelor's degree in Supply Chain Management, Logistics, or related field. 5+ years of experience in supply chain management. Strong analytical and problem-solving skills. Proficiency in supply chain management software."
+        },
+        {
+          "heading": "Benefits",
+          "content": "Competitive salary and benefits package. Opportunities for career advancement. Employee discounts on SportWear Polska products."
+        }
+      ],
+      "created_at": "2023-04-01T00:00:00Z",
+      "updated_at": "2023-04-01T00:00:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "model": "job.job",
+    "pk": "d2a1f3e7-5c9b-4d6f-a1b3-8c4d7a1f3e90",
+    "fields": {
+      "user": "b3a6e1f5-9c8d-4f2b-a3d5-1f7e8a6b9c4f",
+      "title": "E-commerce Specialist",
+      "salary": "PLN 55,000 - PLN 75,000",
+      "schedule": "Full-time",
+      "details": [
+        {
+          "heading": "Job Description",
+          "content": "We are looking for a skilled E-commerce Specialist to manage our online store. Your primary responsibility will be to optimize our e-commerce platform and increase online sales of our sportswear products."
+        },
+        {
+          "heading": "Requirements",
+          "content": "Bachelor's degree in E-commerce, Business, or related field. 3+ years of experience in e-commerce. Proficiency in e-commerce platforms like Shopify or Magento. Strong analytical and problem-solving skills."
+        },
+        {
+          "heading": "Benefits",
+          "content": "Competitive salary and benefits package. Opportunities for career advancement. Employee discounts on SportWear Polska products."
+        }
+      ],
+      "created_at": "2023-05-01T00:00:00Z",
+      "updated_at": "2023-05-01T00:00:00Z",
+      "is_published": true
+    }
+  },
+
+  {
+    "model": "job.job",
+    "pk": "f2a1e3d6-4b5c-4a7e-b1c3-9d6f7a1e3b5b",
+    "fields": {
+      "user": "e1f6b7a9-3c8d-4f1e-a5d6-9a7b6c5e4f3d",
+      "title": "Travel Consultant",
+      "salary": "€30,000 - €40,000",
+      "schedule": "Full-time",
+      "details": [
+        {
+          "heading": "Job Description",
+          "content": "We are looking for an enthusiastic Travel Consultant to join our team. Your primary responsibility will be to assist clients in planning and booking their travel arrangements, ensuring a seamless and enjoyable experience."
+        },
+        {
+          "heading": "Requirements",
+          "content": "Bachelor's degree in Tourism, Hospitality, or related field. 2+ years of experience in travel consulting. Excellent communication and customer service skills. Proficiency in travel booking software."
+        },
+        {
+          "heading": "Benefits",
+          "content": "Competitive salary and benefits package. Opportunities for career advancement. Employee discounts on travel packages."
+        }
+      ],
+      "created_at": "2023-01-01T00:00:00Z",
+      "updated_at": "2023-01-01T00:00:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "model": "job.job",
+    "pk": "f2a1e3d6-4b5c-4a7e-b1c3-9d6f7a1e3b5c",
+    "fields": {
+      "user": "e1f6b7a9-3c8d-4f1e-a5d6-9a7b6c5e4f3d",
+      "title": "Marketing Coordinator",
+      "salary": "€35,000 - €45,000",
+      "schedule": "Full-time",
+      "details": [
+        {
+          "heading": "Job Description",
+          "content": "We are seeking a creative Marketing Coordinator to develop and implement marketing strategies to promote our travel services. You will be responsible for managing our social media presence and creating engaging content."
+        },
+        {
+          "heading": "Requirements",
+          "content": "Bachelor's degree in Marketing, Communications, or related field. 3+ years of experience in marketing. Proficiency in social media management and content creation. Strong writing and communication skills."
+        },
+        {
+          "heading": "Benefits",
+          "content": "Competitive salary and benefits package. Opportunities for career advancement. Employee discounts on travel packages."
+        }
+      ],
+      "created_at": "2023-02-01T00:00:00Z",
+      "updated_at": "2023-02-01T00:00:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "model": "job.job",
+    "pk": "f2a1e3d6-4b5c-4a7e-b1c3-9d6f7a1e3b5d",
+    "fields": {
+      "user": "e1f6b7a9-3c8d-4f1e-a5d6-9a7b6c5e4f3d",
+      "title": "Tour Guide",
+      "salary": "€25,000 - €35,000",
+      "schedule": "Full-time",
+      "details": [
+        {
+          "heading": "Job Description",
+          "content": "We are looking for a knowledgeable Tour Guide to join our team. Your primary responsibility will be to lead guided tours, providing visitors with interesting and informative insights about various destinations."
+        },
+        {
+          "heading": "Requirements",
+          "content": "Bachelor's degree in History, Tourism, or related field. 2+ years of experience as a tour guide. Excellent communication and storytelling skills. Proficiency in multiple languages is a plus."
+        },
+        {
+          "heading": "Benefits",
+          "content": "Competitive salary and benefits package. Opportunities for career advancement. Employee discounts on travel packages."
+        }
+      ],
+      "created_at": "2023-03-01T00:00:00Z",
+      "updated_at": "2023-03-01T00:00:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "model": "job.job",
+    "pk": "f2a1e3d6-4b5c-4a7e-b1c3-9d6f7a1e3b5e",
+    "fields": {
+      "user": "e1f6b7a9-3c8d-4f1e-a5d6-9a7b6c5e4f3d",
+      "title": "Customer Service Representative",
+      "salary": "€30,000 - €40,000",
+      "schedule": "Full-time",
+      "details": [
+        {
+          "heading": "Job Description",
+          "content": "We are seeking a friendly Customer Service Representative to join our team. Your primary responsibility will be to handle customer inquiries and resolve issues to ensure customer satisfaction."
+        },
+        {
+          "heading": "Requirements",
+          "content": "Bachelor's degree in Business, Communications, or related field. 2+ years of experience in customer service. Excellent communication and problem-solving skills. Proficiency in CRM software."
+        },
+        {
+          "heading": "Benefits",
+          "content": "Competitive salary and benefits package. Opportunities for career advancement. Employee discounts on travel packages."
+        }
+      ],
+      "created_at": "2023-04-01T00:00:00Z",
+      "updated_at": "2023-04-01T00:00:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "model": "job.job",
+    "pk": "f2a1e3d6-4b5c-4a7e-b1c3-9d6f7a1e3b5f",
+    "fields": {
+      "user": "e1f6b7a9-3c8d-4f1e-a5d6-9a7b6c5e4f3d",
+      "title": "Operations Manager",
+      "salary": "€45,000 - €55,000",
+      "schedule": "Full-time",
+      "details": [
+        {
+          "heading": "Job Description",
+          "content": "We are looking for an experienced Operations Manager to oversee our day-to-day operations. Your primary responsibility will be to ensure smooth and efficient operations across all departments."
+        },
+        {
+          "heading": "Requirements",
+          "content": "Bachelor's degree in Business, Management, or related field. 4+ years of experience in operations management. Strong leadership and organizational skills. Proficiency in operations management software."
+        },
+        {
+          "heading": "Benefits",
+          "content": "Competitive salary and benefits package. Opportunities for career advancement. Employee discounts on travel packages."
+        }
+      ],
+      "created_at": "2023-05-01T00:00:00Z",
+      "updated_at": "2023-05-01T00:00:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "model": "job.job",
+    "pk": "f2a1e3d6-4b5c-4a7e-b1c3-9d6f7a1e3b60",
+    "fields": {
+      "user": "e1f6b7a9-3c8d-4f1e-a5d6-9a7b6c5e4f3d",
+      "title": "Travel Agent",
+      "salary": "€35,000 - €45,000",
+      "schedule": "Full-time",
+      "details": [
+        {
+          "heading": "Job Description",
+          "content": "We are looking for a dedicated Travel Agent to join our team. Your primary responsibility will be to assist clients in booking travel arrangements and provide exceptional customer service."
+        },
+        {
+          "heading": "Requirements",
+          "content": "Bachelor's degree in Tourism, Hospitality, or related field. 3+ years of experience as a travel agent. Excellent communication and customer service skills. Proficiency in travel booking software."
+        },
+        {
+          "heading": "Benefits",
+          "content": "Competitive salary and benefits package. Opportunities for career advancement. Employee discounts on travel packages."
+        }
+      ],
+      "created_at": "2023-06-01T00:00:00Z",
+      "updated_at": "2023-06-01T00:00:00Z",
+      "is_published": true
+    }
+  },
+
+  {
+    "model": "job.job",
+    "pk": "f2a1e3d6-4b5c-4a7e-b1c3-9d6f7a1e3b61",
+    "fields": {
+      "user": "e1f6b7a9-3c8d-4f1e-a5d6-9a7b6c5e4f3d",
+      "title": "UX/UI Designer",
+      "salary": "€50,000 - €70,000",
+      "schedule": "Full-time",
+      "details": [
+        {
+          "heading": "Job Description",
+          "content": "We are seeking a creative UX/UI Designer to join our team. Your primary responsibility will be to design user-friendly interfaces and enhance the overall user experience of our travel booking platform."
+        },
+        {
+          "heading": "Requirements",
+          "content": "Bachelor's degree in Design, Human-Computer Interaction, or related field. 3+ years of experience in UX/UI design. Proficiency in design tools like Sketch, Figma, and Adobe Creative Suite. Strong portfolio showcasing your design work."
+        },
+        {
+          "heading": "Benefits",
+          "content": "Competitive salary and benefits package. Opportunities for career advancement. Employee discounts on travel packages."
+        }
+      ],
+      "created_at": "2023-01-01T00:00:00Z",
+      "updated_at": "2023-01-01T00:00:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "model": "job.job",
+    "pk": "f2a1e3d6-4b5c-4a7e-b1c3-9d6f7a1e3b62",
+    "fields": {
+      "user": "e1f6b7a9-3c8d-4f1e-a5d6-9a7b6c5e4f3d",
+      "title": "Frontend Engineer",
+      "salary": "€60,000 - €80,000",
+      "schedule": "Full-time",
+      "details": [
+        {
+          "heading": "Job Description",
+          "content": "We are looking for a skilled Frontend Engineer to join our development team. Your primary responsibility will be to implement user-facing features and ensure a seamless user experience on our travel booking platform."
+        },
+        {
+          "heading": "Requirements",
+          "content": "Bachelor's degree in Computer Science, Engineering, or related field. 3+ years of experience in frontend development. Proficiency in JavaScript, React.js, HTML, and CSS. Strong understanding of responsive design principles."
+        },
+        {
+          "heading": "Benefits",
+          "content": "Competitive salary and benefits package. Opportunities for career advancement. Employee discounts on travel packages."
+        }
+      ],
+      "created_at": "2023-02-01T00:00:00Z",
+      "updated_at": "2023-02-01T00:00:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "model": "job.job",
+    "pk": "f2a1e3d6-4b5c-4a7e-b1c3-9d6f7a1e3b63",
+    "fields": {
+      "user": "e1f6b7a9-3c8d-4f1e-a5d6-9a7b6c5e4f3d",
+      "title": "Backend Developer",
+      "salary": "€65,000 - €85,000",
+      "schedule": "Full-time",
+      "details": [
+        {
+          "heading": "Job Description",
+          "content": "We are seeking a talented Backend Developer to join our development team. Your primary responsibility will be to develop and maintain the server-side logic and databases for our travel booking platform."
+        },
+        {
+          "heading": "Requirements",
+          "content": "Bachelor's degree in Computer Science, Engineering, or related field. 3+ years of experience in backend development. Proficiency in Python, Django, and database management. Strong problem-solving and analytical skills."
+        },
+        {
+          "heading": "Benefits",
+          "content": "Competitive salary and benefits package. Opportunities for career advancement. Employee discounts on travel packages."
+        }
+      ],
+      "created_at": "2023-03-01T00:00:00Z",
+      "updated_at": "2023-03-01T00:00:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "model": "job.job",
+    "pk": "f2a1e3d6-4b5c-4a7e-b1c3-9d6f7a1e3b64",
+    "fields": {
+      "user": "e1f6b7a9-3c8d-4f1e-a5d6-9a7b6c5e4f3d",
+      "title": "DevOps Engineer",
+      "salary": "€70,000 - €90,000",
+      "schedule": "Full-time",
+      "details": [
+        {
+          "heading": "Job Description",
+          "content": "We are looking for a skilled DevOps Engineer to join our team. Your primary responsibility will be to implement and manage the infrastructure and deployment processes for our travel booking platform."
+        },
+        {
+          "heading": "Requirements",
+          "content": "Bachelor's degree in Computer Science, Engineering, or related field. 3+ years of experience in DevOps. Proficiency in CI/CD tools, cloud platforms, and infrastructure as code. Strong problem-solving and analytical skills."
+        },
+        {
+          "heading": "Benefits",
+          "content": "Competitive salary and benefits package. Opportunities for career advancement. Employee discounts on travel packages."
+        }
+      ],
+      "created_at": "2023-04-01T00:00:00Z",
+      "updated_at": "2023-04-01T00:00:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "model": "job.job",
+    "pk": "f2a1e3d6-4b5c-4a7e-b1c3-9d6f7a1e3b65",
+    "fields": {
+      "user": "e1f6b7a9-3c8d-4f1e-a5d6-9a7b6c5e4f3d",
+      "title": "Data Scientist",
+      "salary": "€75,000 - €95,000",
+      "schedule": "Full-time",
+      "details": [
+        {
+          "heading": "Job Description",
+          "content": "We are seeking a talented Data Scientist to join our team. Your primary responsibility will be to analyze large datasets and provide actionable insights to improve our travel booking platform and customer experience."
+        },
+        {
+          "heading": "Requirements",
+          "content": "Bachelor's degree in Data Science, Statistics, or related field. 3+ years of experience in data science. Proficiency in Python, R, and data visualization tools. Strong analytical and problem-solving skills."
+        },
+        {
+          "heading": "Benefits",
+          "content": "Competitive salary and benefits package. Opportunities for career advancement. Employee discounts on travel packages."
+        }
+      ],
+      "created_at": "2023-05-01T00:00:00Z",
+      "updated_at": "2023-05-01T00:00:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "model": "job.job",
+    "pk": "f2a1e3d6-4b5c-4a7e-b1c3-9d6f7a1e3b66",
+    "fields": {
+      "user": "e1f6b7a9-3c8d-4f1e-a5d6-9a7b6c5e4f3d",
+      "title": "Mobile App Developer",
+      "salary": "€65,000 - €85,000",
+      "schedule": "Full-time",
+      "details": [
+        {
+          "heading": "Job Description",
+          "content": "We are looking for an experienced Mobile App Developer to join our team. Your primary responsibility will be to develop and maintain mobile applications for our travel booking platform."
+        },
+        {
+          "heading": "Requirements",
+          "content": "Bachelor's degree in Computer Science, Engineering, or related field. 3+ years of experience in mobile app development. Proficiency in iOS and Android development. Strong understanding of mobile UI/UX design principles."
+        },
+        {
+          "heading": "Benefits",
+          "content": "Competitive salary and benefits package. Opportunities for career advancement. Employee discounts on travel packages."
+        }
+      ],
+      "created_at": "2023-06-01T00:00:00Z",
+      "updated_at": "2023-06-01T00:00:00Z",
+      "is_published": true
+    }
+  },
+
+  {
+    "model": "job.job",
+    "pk": "f3a1e2b5-4c7d-4a6e-b2c3-9d7f8a1e2b5b",
+    "fields": {
+      "user": "e7b6d5c4-a3f2-4b1e-a2d5-7a6b8c9f1e3d",
+      "title": "Frontend Developer",
+      "salary": "SEK 450,000 - SEK 550,000",
+      "schedule": "Full-time",
+      "details": [
+        {
+          "heading": "Job Description",
+          "content": "We are looking for a skilled Frontend Developer to join our team. Your primary responsibility will be to develop and maintain the user interface of our task management app."
+        },
+        {
+          "heading": "Requirements",
+          "content": "Bachelor's degree in Computer Science or related field. 3+ years of experience in frontend development. Proficiency in JavaScript, React.js, HTML, and CSS. Strong understanding of responsive design principles."
+        },
+        {
+          "heading": "Benefits",
+          "content": "Competitive salary and benefits package. Opportunities for career advancement. Flexible working hours."
+        }
+      ],
+      "created_at": "2023-01-01T00:00:00Z",
+      "updated_at": "2023-01-01T00:00:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "model": "job.job",
+    "pk": "f3a1e2b5-4c7d-4a6e-b2c3-9d7f8a1e2b5c",
+    "fields": {
+      "user": "e7b6d5c4-a3f2-4b1e-a2d5-7a6b8c9f1e3d",
+      "title": "Backend Developer",
+      "salary": "SEK 500,000 - SEK 600,000",
+      "schedule": "Full-time",
+      "details": [
+        {
+          "heading": "Job Description",
+          "content": "We are seeking a talented Backend Developer to join our team. Your primary responsibility will be to develop and maintain the server-side logic and databases for our task management app."
+        },
+        {
+          "heading": "Requirements",
+          "content": "Bachelor's degree in Computer Science or related field. 3+ years of experience in backend development. Proficiency in Python, Django, and database management. Strong problem-solving and analytical skills."
+        },
+        {
+          "heading": "Benefits",
+          "content": "Competitive salary and benefits package. Opportunities for career advancement. Flexible working hours."
+        }
+      ],
+      "created_at": "2023-02-01T00:00:00Z",
+      "updated_at": "2023-02-01T00:00:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "model": "job.job",
+    "pk": "f3a1e2b5-4c7d-4a6e-b2c3-9d7f8a1e2b5d",
+    "fields": {
+      "user": "e7b6d5c4-a3f2-4b1e-a2d5-7a6b8c9f1e3d",
+      "title": "Mobile App Developer",
+      "salary": "SEK 500,000 - SEK 600,000",
+      "schedule": "Full-time",
+      "details": [
+        {
+          "heading": "Job Description",
+          "content": "We are looking for an experienced Mobile App Developer to join our team. Your primary responsibility will be to develop and maintain mobile applications for our task management app."
+        },
+        {
+          "heading": "Requirements",
+          "content": "Bachelor's degree in Computer Science or related field. 3+ years of experience in mobile app development. Proficiency in iOS and Android development. Strong understanding of mobile UI/UX design principles."
+        },
+        {
+          "heading": "Benefits",
+          "content": "Competitive salary and benefits package. Opportunities for career advancement. Flexible working hours."
+        }
+      ],
+      "created_at": "2023-03-01T00:00:00Z",
+      "updated_at": "2023-03-01T00:00:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "model": "job.job",
+    "pk": "f3a1e2b5-4c7d-4a6e-b2c3-9d7f8a1e2b5e",
+    "fields": {
+      "user": "e7b6d5c4-a3f2-4b1e-a2d5-7a6b8c9f1e3d",
+      "title": "DevOps Engineer",
+      "salary": "SEK 550,000 - SEK 650,000",
+      "schedule": "Full-time",
+      "details": [
+        {
+          "heading": "Job Description",
+          "content": "We are seeking a skilled DevOps Engineer to join our team. Your primary responsibility will be to implement and manage the infrastructure and deployment processes for our task management app."
+        },
+        {
+          "heading": "Requirements",
+          "content": "Bachelor's degree in Computer Science or related field. 3+ years of experience in DevOps. Proficiency in CI/CD tools, cloud platforms, and infrastructure as code. Strong problem-solving and analytical skills."
+        },
+        {
+          "heading": "Benefits",
+          "content": "Competitive salary and benefits package. Opportunities for career advancement. Flexible working hours."
+        }
+      ],
+      "created_at": "2023-04-01T00:00:00Z",
+      "updated_at": "2023-04-01T00:00:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "model": "job.job",
+    "pk": "f3a1e2b5-4c7d-4a6e-b2c3-9d7f8a1e2b5f",
+    "fields": {
+      "user": "e7b6d5c4-a3f2-4b1e-a2d5-7a6b8c9f1e3d",
+      "title": "Product Manager",
+      "salary": "SEK 600,000 - SEK 700,000",
+      "schedule": "Full-time",
+      "details": [
+        {
+          "heading": "Job Description",
+          "content": "We are looking for an experienced Product Manager to join our team. Your primary responsibility will be to oversee the development and launch of new features for our task management app."
+        },
+        {
+          "heading": "Requirements",
+          "content": "Bachelor's degree in Business, Engineering, or related field. 4+ years of experience in product management. Strong understanding of the software development lifecycle. Excellent communication and leadership skills."
+        },
+        {
+          "heading": "Benefits",
+          "content": "Competitive salary and benefits package. Opportunities for career advancement. Flexible working hours."
+        }
+      ],
+      "created_at": "2023-05-01T00:00:00Z",
+      "updated_at": "2023-05-01T00:00:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "model": "job.job",
+    "pk": "f3a1e2b5-4c7d-4a6e-b2c3-9d7f8a1e2b60",
+    "fields": {
+      "user": "e7b6d5c4-a3f2-4b1e-a2d5-7a6b8c9f1e3d",
+      "title": "Data Analyst",
+      "salary": "SEK 500,000 - SEK 600,000",
+      "schedule": "Full-time",
+      "details": [
+        {
+          "heading": "Job Description",
+          "content": "We are seeking a talented Data Analyst to join our team. Your primary responsibility will be to analyze large datasets and provide actionable insights to improve our task management app."
+        },
+        {
+          "heading": "Requirements",
+          "content": "Bachelor's degree in Data Science, Statistics, or related field. 3+ years of experience in data analysis. Proficiency in Python, R, and data visualization tools. Strong analytical and problem-solving skills."
+        },
+        {
+          "heading": "Benefits",
+          "content": "Competitive salary and benefits package. Opportunities for career advancement. Flexible working hours."
+        }
+      ],
+      "created_at": "2023-06-01T00:00:00Z",
+      "updated_at": "2023-06-01T00:00:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "model": "job.job",
+    "pk": "f3a1e2b5-4c7d-4a6e-b2c3-9d7f8a1e2b61",
+    "fields": {
+      "user": "e7b6d5c4-a3f2-4b1e-a2d5-7a6b8c9f1e3d",
+      "title": "QA Engineer",
+      "salary": "SEK 450,000 - SEK 550,000",
+      "schedule": "Full-time",
+      "details": [
+        {
+          "heading": "Job Description",
+          "content": "We are looking for a detail-oriented QA Engineer to join our team. Your primary responsibility will be to ensure the quality and reliability of our task management app through rigorous testing."
+        },
+        {
+          "heading": "Requirements",
+          "content": "Bachelor's degree in Computer Science or related field. 3+ years of experience in QA engineering. Proficiency in automated testing tools and frameworks. Strong attention to detail and problem-solving skills."
+        },
+        {
+          "heading": "Benefits",
+          "content": "Competitive salary and benefits package. Opportunities for career advancement. Flexible working hours."
+        }
+      ],
+      "created_at": "2023-07-01T00:00:00Z",
+      "updated_at": "2023-07-01T00:00:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "model": "job.job",
+    "pk": "f3a1e2b5-4c7d-4a6e-b2c3-9d7f8a1e2b62",
+    "fields": {
+      "user": "e7b6d5c4-a3f2-4b1e-a2d5-7a6b8c9f1e3d",
+      "title": "System Administrator",
+      "salary": "SEK 550,000 - SEK 650,000",
+      "schedule": "Full-time",
+      "details": [
+        {
+          "heading": "Job Description",
+          "content": "We are seeking a skilled System Administrator to join our team. Your primary responsibility will be to manage and maintain our IT infrastructure, ensuring smooth and secure operations."
+        },
+        {
+          "heading": "Requirements",
+          "content": "Bachelor's degree in Computer Science or related field. 3+ years of experience in system administration. Proficiency in Linux and Windows server management. Strong problem-solving and analytical skills."
+        },
+        {
+          "heading": "Benefits",
+          "content": "Competitive salary and benefits package. Opportunities for career advancement. Flexible working hours."
+        }
+      ],
+      "created_at": "2023-08-01T00:00:00Z",
+      "updated_at": "2023-08-01T00:00:00Z",
+      "is_published": true
+    }
+  },
+
+  {
+    "model": "job.job",
+    "pk": "1f3d4b6c-8e7f-4a9b-8c1f-9d8e7b6a1c2f",
+    "fields": {
+      "user": "d56b1c8e-4f47-4a8b-8a6f-8b6e0b1d2c3e",
+      "title": "Ale-gorithm Engineer",
+      "salary": "€55,000 - €75,000",
+      "schedule": "Full-time",
+      "details": [
+        {
+          "heading": "Job Description",
+          "content": "We are looking for an Ale-gorithm Engineer to join our remote team. Your primary responsibility will be to develop and optimize algorithms for our brewing software, ensuring the perfect pint every time."
+        },
+        {
+          "heading": "Requirements",
+          "content": "Bachelor's degree in Computer Science or related field. 3+ years of experience in algorithm development. Proficiency in Python, R, and machine learning. Must enjoy the occasional pint while coding."
+        },
+        {
+          "heading": "Benefits",
+          "content": "Competitive salary and benefits package. Opportunities for career advancement. Flexible remote working options."
+        }
+      ],
+      "created_at": "2023-05-01T00:00:00Z",
+      "updated_at": "2023-05-01T00:00:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "model": "job.job",
+    "pk": "2f4e5c7d-9f8b-4a1d-8c1e-9d8e7b6b2c3f",
+    "fields": {
+      "user": "d56b1c8e-4f47-4a8b-8a6f-8b6e0b1d2c3e",
+      "title": "Foam Architect",
+      "salary": "€60,000 - €80,000",
+      "schedule": "Full-time",
+      "details": [
+        {
+          "heading": "Job Description",
+          "content": "We are seeking a creative Foam Architect to design and implement user interfaces for our brewing software. Your work will ensure that our users have a smooth and frothy experience. This is a remote role."
+        },
+        {
+          "heading": "Requirements",
+          "content": "Bachelor's degree in Design, Human-Computer Interaction, or related field. 3+ years of experience in UI/UX design. Proficiency in Sketch, Figma, and Adobe Creative Suite. Must love good design and great beer."
+        },
+        {
+          "heading": "Benefits",
+          "content": "Competitive salary and benefits package. Opportunities for career advancement. Flexible remote working options."
+        }
+      ],
+      "created_at": "2023-06-01T00:00:00Z",
+      "updated_at": "2023-06-01T00:00:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "model": "job.job",
+    "pk": "3f5d6e7f-0a9b-4b2d-8c1f-9d8e7b6c3d4f",
+    "fields": {
+      "user": "d56b1c8e-4f47-4a8b-8a6f-8b6e0b1d2c3e",
+      "title": "Hop-Stack Developer",
+      "salary": "€55,000 - €75,000",
+      "schedule": "Full-time",
+      "details": [
+        {
+          "heading": "Job Description",
+          "content": "We are looking for a Hop-Stack Developer to join our remote team. Your primary responsibility will be to work on both frontend and backend development of our brewing software."
+        },
+        {
+          "heading": "Requirements",
+          "content": "Bachelor's degree in Computer Science or related field. 3+ years of experience in full-stack development. Proficiency in JavaScript, Node.js, React, and SQL. Must enjoy the occasional pint while coding."
+        },
+        {
+          "heading": "Benefits",
+          "content": "Competitive salary and benefits package. Opportunities for career advancement. Flexible remote working options."
+        }
+      ],
+      "created_at": "2023-07-01T00:00:00Z",
+      "updated_at": "2023-07-01T00:00:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "model": "job.job",
+    "pk": "4f6d7e8f-1b9c-4b3e-9d2f-0a9e8b7c4d5f",
+    "fields": {
+      "user": "d56b1c8e-4f47-4a8b-8a6f-8b6e0b1d2c3e",
+      "title": "Yeast Wrangler",
+      "salary": "€65,000 - €85,000",
+      "schedule": "Full-time",
+      "details": [
+        {
+          "heading": "Job Description",
+          "content": "We are seeking a skilled Yeast Wrangler to join our remote team. Your primary responsibility will be to manage our DevOps processes and infrastructure, ensuring our systems run as smoothly as a well-poured pint."
+        },
+        {
+          "heading": "Requirements",
+          "content": "Bachelor's degree in Computer Science or related field. 3+ years of experience in DevOps. Proficiency in CI/CD tools, cloud platforms, and infrastructure as code. Must enjoy a good pint while wrangling yeast."
+        },
+        {
+          "heading": "Benefits",
+          "content": "Competitive salary and benefits package. Opportunities for career advancement. Flexible remote working options."
+        }
+      ],
+      "created_at": "2023-08-01T00:00:00Z",
+      "updated_at": "2023-08-01T00:00:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "model": "job.job",
+    "pk": "5f7d8e9f-2b9d-4c4f-9d3f-1a9e8b8d5d6f",
+    "fields": {
+      "user": "d56b1c8e-4f47-4a8b-8a6f-8b6e0b1d2c3e",
+      "title": "Stout Security Specialist",
+      "salary": "€70,000 - €90,000",
+      "schedule": "Full-time",
+      "details": [
+        {
+          "heading": "Job Description",
+          "content": "We are looking for a Stout Security Specialist to ensure our brewing software and systems are secure from any threats. Your expertise will help us keep our software as safe as a leprechaun’s pot of gold. This is a remote role."
+        },
+        {
+          "heading": "Requirements",
+          "content": "Bachelor's degree in Cybersecurity or related field. 3+ years of experience in cybersecurity. Proficiency in security tools and frameworks. Must enjoy safeguarding software and sipping stout."
+        },
+        {
+          "heading": "Benefits",
+          "content": "Competitive salary and benefits package. Opportunities for career advancement. Flexible remote working options."
+        }
+      ],
+      "created_at": "2023-09-01T00:00:00Z",
+      "updated_at": "2023-09-01T00:00:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "model": "job.job",
+    "pk": "6f8d9e0f-3b9e-4d5f-9e4f-2a9e8c9d6e7f",
+    "fields": {
+      "user": "d56b1c8e-4f47-4a8b-8a6f-8b6e0b1d2c3e",
+      "title": "Pint-Sized Product Manager",
+      "salary": "€65,000 - €85,000",
+      "schedule": "Full-time",
+      "details": [
+        {
+          "heading": "Job Description",
+          "content": "We are seeking a Pint-Sized Product Manager to lead the development and launch of new features for our brewing software. Your leadership will help us create products that delight our users as much as a perfect pint. This is a remote role."
+        },
+        {
+          "heading": "Requirements",
+          "content": "Bachelor's degree in Business, Engineering, or related field. 4+ years of experience in product management. Strong understanding of the software development lifecycle. Must enjoy leading projects and pints."
+        },
+        {
+          "heading": "Benefits",
+          "content": "Competitive salary and benefits package. Opportunities for career advancement. Flexible remote working options."
+        }
+      ],
+      "created_at": "2023-10-01T00:00:00Z",
+      "updated_at": "2023-10-01T00:00:00Z",
       "is_published": true
     }
   }

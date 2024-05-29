@@ -6,23 +6,21 @@
   z-index: 9999;
   padding: 8px 16px;
   border-radius: 4px;
-  background-color: #f44336;
   color: white;
   text-align: center;
   font-size: 0.9rem;
 
-  /* TODO:  replace colours with bootstrap ro custom color variables*/
   &--success {
-    background-color: #4caf50;
+    background-color: $success;
   }
-  &--error {
-    background-color: #f44336;
+  &--danger {
+    background-color: $danger;
   }
   &--warning {
-    background-color: #ff9800;
+    background-color: $warning;
   }
   &--info {
-    background-color: #2196f3;
+    background-color: $info;
   }
 
   &__close {

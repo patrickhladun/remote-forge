@@ -1,11 +1,12 @@
-:root {
-  --color-brand-50: #f6f9f4;
-  --color-brand-100: #ecf3e8;
-  --color-brand-200: #d6e4ce;
-  --color-brand-500: #6a9255;
-  --color-brand-700: #455e37;
-  --color-brand-800: #394c2f;
-  --color-neutral-50: #f9f9f9;
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+footer {
+  margin-top: auto;
 }
 
 h1,
@@ -35,4 +36,18 @@ h6 {
 }
 .bg-brand-800 {
   background-color: var(--color-brand-800);
+}
+
+.page {
+  margin-top: 80px;
+}
+.navbar-brand {
+  width: 120px;
+  fill: var(--color-brand-500);
+}
+
+@media (min-width: 992px) {
+  body .container-sm {
+    max-width: 768px !important;
+  }
 }

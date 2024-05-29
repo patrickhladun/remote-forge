@@ -1,6 +1,28 @@
 
+from allauth.account.forms import SignupForm
 from django import forms
 from .models import User, Talent, Employer
+
+class TalentSignupForm(SignupForm):
+    consent = forms.BooleanField(required=True, label="I agree to the terms and conditions")
+    def save(self, request):
+        user = super(TalentSignupForm, self).save(request)
+        user.user_type = "talent"
+        user.save()
+        talent = Talent.objects.create(user=user)
+        talent.save()
+        return user
+
+
+class EmployerSignupForm(SignupForm):
+    consent = forms.BooleanField(required=True, label="I agree to the terms and conditions")
+    def save(self, request):
+        user = super(EmployerSignupForm, self).save(request)
+        user.user_type = "employer"
+        user.save()
+        employer = Employer.objects.create(user=user)
+        employer.save()
+        return user
 
 class TalentProfileForm(forms.ModelForm):
     class Meta:
@@ -77,11 +99,11 @@ class AccountProfile(forms.ModelForm):
         model = User
         fields = [
             "username",
-            "hide_email",
             "email",
+            "hide_email",
         ]
         labels = {
             "username": "Username",
-            "hide_email": "Hide my Email",
             "email": "Email",
+            "hide_email": "Hide my Email",
         }
