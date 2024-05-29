@@ -11582,6 +11582,9 @@ body .rjf-form-group-wrapper .rjf-form-row-controls {
   display: flex;
   flex-wrap: wrap;
 }
+.talent-list a {
+  text-decoration: none;
+}
 
 .talent-box {
   background-color: var(--color-brand-200);
@@ -11602,19 +11605,17 @@ body .rjf-form-group-wrapper .rjf-form-row-controls {
   border-radius: 100%;
 }
 
-.skills {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  padding: 0 16px;
-  margin-top: 4px;
-}
 .skills .skills__item {
-  background-color: var(--color-brand-100);
+  font-size: 0.8rem;
   color: var(--color-brand-700);
-  padding: 4px 8px;
   border-radius: 3px;
-  font-size: 0.7rem;
+  text-transform: uppercase;
+}
+.skills .skills__item:after {
+  content: ", ";
+}
+.skills .skills__item:last-child:after {
+  content: "";
 }
 
 @media (min-width: 768px) {
