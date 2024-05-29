@@ -17,6 +17,14 @@ SOCIAL_SCHEMA = {
     },
 }
 
+SKILLS_SCHEMA = {
+    "type": "array",
+    "items": {
+        "type": "string",
+    },
+
+}
+
 EDUCATION_SCHEMA = {
     "type": "array",
     "items": {
@@ -130,7 +138,7 @@ class Talent(models.Model):
     experience = JSONField(schema=EXPERIENCE_SCHEMA, null=True, blank=True)
     education = JSONField(schema=EDUCATION_SCHEMA, null=True, blank=True)
     interests = models.CharField(max_length=255, null=True, blank=True)
-    skills = models.CharField(max_length=255, null=True, blank=True)
+    skills = JSONField(schema=SKILLS_SCHEMA, null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True) 
     is_published = models.BooleanField(default=False)
@@ -139,7 +147,7 @@ class Talent(models.Model):
         verbose_name = 'Talent'
         verbose_name_plural = 'Talents'
 
-    def __str__(self) -> str:
+    def __str__(self) -> str: 
         return self.user.username
 
 class Employer(models.Model):

@@ -6,7 +6,7 @@ from django.core.mail import send_mail
 
 
 def home(request):
-    talents = Talent.objects.all()
+    talents = Talent.objects.filter(is_published=True)
     return render(request, 'base/home.html', {"talents": talents})
 
 def about(request):

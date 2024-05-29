@@ -1,0 +1,30 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<div class="container my-4">
+  <h1 class="text-center">Best employer on the Market</h1>
+</div>
+
+<section class="bg-brand-100 py-5">
+  <div class="container">
+    <div class="employer-list">
+      {% for employer in employers %}
+      <a href="{% url 'employer' employer.id %}" class="card p-3">
+        <div class="d-flex align-items-start">
+          <div class="image">
+            <img src="{{ MEDIA_URL }}{{ employer.image }}" class="rounded-circle border" width="60">
+          </div>
+          <div class="ml-3 w-100">
+            <div class="card__header">
+              <h5 class="mb-0 mt-0">{{ employer.company }}</h5>
+            </div>
+          </div>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% endblock %}

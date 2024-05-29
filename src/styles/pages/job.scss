@@ -1,0 +1,34 @@
+.icon-text {
+  background-color: var(--color-brand-50);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 32px;
+
+  .icon-text-item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 16px;
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .icon-text {
+    .icon-text-item {
+      width: 50%;
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .icon-text {
+    .icon-text-item {
+      width: 25%;
+    }
+  }
+}

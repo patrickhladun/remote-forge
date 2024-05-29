@@ -34,11 +34,11 @@
           </ul>
         </li>
         {% else %}
-        <li class="nav-item">
+        <li class="nav-item ms-2">
           <a class="btn btn-primary" aria-current="page" href="{% url 'account_login' %}">Login/Sign in</a>
         </li>
-        <li class="nav-item">
-          <a class="btn btn-outline-primary" aria-current="page" href="#">Post a Job</a>
+        <li class="nav-item ms-2">
+          <a class="btn btn-outline-primary" aria-current="page" href="{% url 'employer_signup' %}">Post a Job</a>
         </li>
         {% endif %}
       </ul>
