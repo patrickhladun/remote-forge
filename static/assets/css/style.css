@@ -11124,6 +11124,30 @@ textarea.form-control-lg {
   --bs-btn-disabled-border-color: #6a9255;
 }
 
+.btn-outline-primary {
+  --bs-btn-color: #6a9255;
+  --bs-btn-border-color: #6a9255;
+  --bs-btn-hover-color: #f6f9f4;
+  --bs-btn-hover-bg: #6a9255;
+  --bs-btn-hover-border-color: #6a9255;
+  --bs-btn-focus-shadow-rgb: 106, 146, 85;
+  --bs-btn-active-color: #000;
+  --bs-btn-active-bg: #6a9255;
+  --bs-btn-active-border-color: #6a9255;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #6a9255;
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: #6a9255;
+  --bs-gradient: none;
+}
+
+.card {
+  transition: all 0.3s ease;
+}
+.card:hover {
+  box-shadow: 0 0 20px rgba(106, 146, 85, 0.3);
+}
+
 h1, .h1,
 h2,
 .h2,
@@ -11151,7 +11175,7 @@ h6,
   background-color: var(--color-brand-100);
 }
 
-.bg-brand-200, .profile-menu {
+.bg-brand-200 {
   background-color: var(--color-brand-200);
 }
 
@@ -11360,7 +11384,6 @@ h6,
   justify-content: center;
   align-items: center;
   margin-top: 32px;
-  border-radius: 8px;
 }
 .icon-text .icon-text-item {
   width: 100%;
@@ -11454,10 +11477,11 @@ body .rjf-form-group-wrapper .rjf-form-row-controls {
   justify-content: center;
   align-items: center;
   border-radius: 100%;
+  border: none;
   width: 42px;
   height: 42px;
   overflow: hidden;
-  margin-left: 16px;
+  padding: 0;
 }
 .profile-menu img {
   width: 42px;
@@ -11469,10 +11493,46 @@ body .rjf-form-group-wrapper .rjf-form-row-controls {
   font-size: 18px;
 }
 
+.navbar-toggler:focus {
+  text-decoration: none;
+  outline: 0;
+  box-shadow: none;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: relative;
+  width: 32px;
+  height: 32px;
+}
+
+.hamburger span {
+  display: block;
+  background: var(--color-brand-500);
+  width: 100%;
+  height: 5px;
+  transform-origin: center;
+  transition: all 0.2s ease-in-out;
+}
+
 .icon {
-  width: 48px;
-  height: 48px;
+  width: 32px;
+  height: 32px;
   fill: var(--color-brand-500);
+}
+.icon.icon--sm {
+  width: 24px;
+  height: 24px;
+}
+.icon.icon--md {
+  width: 42px;
+  height: 42px;
+}
+.icon.icon--lg {
+  width: 56px;
+  height: 56px;
 }
 
 .message {
@@ -11483,23 +11543,21 @@ body .rjf-form-group-wrapper .rjf-form-row-controls {
   z-index: 9999;
   padding: 8px 16px;
   border-radius: 4px;
-  background-color: #f44336;
   color: white;
   text-align: center;
   font-size: 0.9rem;
-  /* TODO:  replace colours with bootstrap ro custom color variables*/
 }
 .message--success {
-  background-color: #4caf50;
+  background-color: #198754;
 }
-.message--error {
-  background-color: #f44336;
+.message--danger {
+  background-color: #dc3545;
 }
 .message--warning {
-  background-color: #ff9800;
+  background-color: #ffc107;
 }
 .message--info {
-  background-color: #2196f3;
+  background-color: #0dcaf0;
 }
 .message__close {
   border: none;
@@ -11509,8 +11567,7 @@ body .rjf-form-group-wrapper .rjf-form-row-controls {
   height: 24px;
 }
 
-.talent-list,
-.employer-list {
+.talent-list {
   display: flex;
   flex-wrap: wrap;
 }
