@@ -4,6 +4,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from .models import Talent, Employer
+from apps.job.models import Job
 from .forms import AccountProfile, TalentProfileForm, EmployerProfileForm, TalentSignupForm, EmployerSignupForm
 
 
@@ -27,7 +28,8 @@ def talents_view(request):
 def employer_view(request, id):
     """View function for employer single page."""
     employer = get_object_or_404(Employer, id=id)
-    return render(request, "user/employer.html", {"employer": employer})
+    jobs = Job.objects.filter(user=employer.user, is_published=True)
+    return render(request, "user/employer.html", {"employer": employer, "jobs": jobs})
 
 
 def employers_view(request):
