@@ -4,16 +4,16 @@
 {% block content %}
 
 <section class="bg-brand-100">
-  <div class="container py-5">
+  <div class="container py-sm">
     <h1 class="text-center">Best Talent on the Market</h1>
   </div>
 </section>
 
 <section class="bg-brand-50 py-5">
   <div class="container">
-    <div class="talent-list">
+    <div class="d-flex flex-wrap">
       {% for talent in talents %}
-      <a href="{% url 'talent' talent.id %}" class="card p-3">
+      <a href="{% url 'talent' talent.id %}" class="card p-3 text-decoration-none">
         <div class="d-flex align-items-start">
           <div class="image">
             {% if talent.image %}
