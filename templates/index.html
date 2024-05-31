@@ -19,7 +19,7 @@
     {% livereload_script %}
 </head>
 
-<body>
+<body class="{{ page_slug }}{% if body_class %} {{ body_class }}{% endif %}">
     {% include './partials/header.html' %}
     <div class="message-container">
         {% include 'partials/messages/message-info.html' %}
@@ -27,7 +27,7 @@
         {% include 'partials/messages/message-warning.html' %}
         {% include 'partials/messages/message-error.html' %}
     </div>
-    <div class="page">
+    <div class="page {% if page_class %}{{ page_class }}{% endif %}">
         {% block content %}{% endblock %}
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
