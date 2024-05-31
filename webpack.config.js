@@ -59,6 +59,14 @@ module.exports = {
           },
           noErrorOnMissing: true,
         },
+        {
+          from: "src/icons",
+          to: "assets/icons",
+          globOptions: {
+            ignore: ["**/*.!(png|svg|jpg|jpeg|gif|webp)"],
+          },
+          noErrorOnMissing: true,
+        },
       ],
     }),
   ],
