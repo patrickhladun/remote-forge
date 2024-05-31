@@ -1,13 +1,28 @@
 from django.shortcuts import render, redirect
+from django.urls import reverse
 from django.template import RequestContext
 from apps.user.models import Talent
-from .forms import ContactForm
+from .forms import ContactForm, JobSearchForm
 from django.core.mail import send_mail
 
 
 def home(request):
     talents = Talent.objects.filter(is_published=True)
-    return render(request, 'base/home.html', {"talents": talents})
+    form = JobSearchForm()
+    
+    if request.GET:
+        form = JobSearchForm(request.GET)
+        if form.is_valid():
+            keyword = form.cleaned_data['keyword']
+            location = form.cleaned_data['location']
+            query_string = '?'
+            if keyword:
+                query_string += f'keyword={keyword}&'
+            if location:
+                query_string += f'location={location}&'
+            return redirect(reverse('job-list') + query_string)
+    
+    return render(request, 'base/home.html', {"talents": talents, "form": form})
 
 def about(request):
     talents = Talent.objects.all()
