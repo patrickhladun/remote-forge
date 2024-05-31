@@ -1,5 +1,6 @@
 {% extends 'index.html' %}
 {% load static %}
+{% load icon_tags %}
 
 {% block content %}
 <section class="bg-brand-100">
@@ -79,6 +80,22 @@
         <h3>Interests</h3>
         <div class="interests">
           {{ talent.interests }}
+        </div>
+      </div>
+
+      <!-- Social Section -->
+      <div class="talent-box">
+        <h3>Social</h3>
+        <div class="skills">
+          <div class="d-flex gap-2 py-2">
+            {% for link in talent.social %}
+              {% with icon_name="icon-"|add:link.site %}
+                <a class="p-2 bg-brand-100 rounded-1" href="{{link.url}}">
+                  {% icon icon_name 'sm' %}
+                </a>
+              {% endwith %}
+            {% endfor %}
+          </div>
         </div>
       </div>
     </div>
