@@ -1,4 +1,12 @@
 from apps.user.models import Talent, Employer
+from django.utils.text import slugify
+
+def page_slug(request):
+    path = request.path.strip('/').replace('/', '-')
+    slug = slugify(path) if path else 'home'
+    return {
+        'page_slug': slug
+    }
 
 def site_data(request):
     profile = None
