@@ -7,7 +7,7 @@
   <section class="bg-neutral-50">
     <div class="container hero-home">
       <div class="row">
-        <div class="col-lg-4 position-relative">
+        <div class="col-lg-3 position-relative">
           <img src="{% static 'assets/images/pages/home/oguz-yagiz-kara-MZf0mI14RI0.webp' %}" alt="Web Developer"
             class="left-01 mask img-fluid">
           <img src="{% static 'assets/images/pages/home/biel-morro-bsSIk3LV_NE.webp' %}" alt="Web Developer"
@@ -21,13 +21,25 @@
           <img src="{% static 'assets/images/pages/home/toa-heftiba-O3ymvT7Wf9U.webp' %}" alt="Web Developer"
             class="left-04 mask img-fluid">
         </div>
-        <div class="col-lg-4 d-flex flex-column justify-content-center">
+        <div class="col-lg-6 d-flex flex-column justify-content-center">
           <h1 class="text-center">Find and hire</h1>
-          <p class="text-center">Great website has a significant impact to the success of any business. We’ll turn your
-            idea
-            into a reality.</p>
+
+          <div class="d-flex justify-content-center">
+            <form method="GET" action="{% url 'job-list' %}" class="search-form">
+              <div class="search-form__group">
+                <div class="search-form__field">
+                  <input type="text" id="keyword" name="keyword" value="{{ keyword }}" placeholder="keyword">
+                </div>
+                <div class="search-form__field">
+                  <input type="text" id="location" name="location" value="{{ location }}" placeholder="location">
+                </div>
+                <button type="submit" class="search-form__submit">{% icon 'icon-search' 'sm' %}</button>
+              </div>
+            </form>
+          </div>
+
         </div>
-        <div class="col-lg-4 position-relative d-none d-lg-block">
+        <div class="col-lg-3 position-relative d-none d-lg-block">
           <img src="{% static 'assets/images/pages/home/charlesdeluvio-K4mSJ7kc0As.webp' %}" alt="Web Developer"
             class="right-01 mask img-fluid">
           <img src="{% static 'assets/images/pages/home/michael-dam-mEZ3PoFGs_k.webp' %}" alt="Web Developer"
@@ -44,6 +56,7 @@
       </div>
     </div>
   </section>
+
   <section class="bg-brand-100 py-5">
     <div class="container how-it-works">
       <h2 class="pb-5">How it Works</h2>
@@ -68,32 +81,33 @@
       </div>
     </div>
   </section>
+
   <section class="py-5">
     <div class="container">
       <h2 class="text-center pb-5">Featured Cities</h2>
       <div>
         <div class="city-list">
-          <a href="{% url 'job-list' %}?city=dublin" class="city-item"
+          <a href="{% url 'job-list' %}?location=dublin" class="city-item"
             style="background-image: url('{% static 'assets/images/pages/home/dublin-jLi7xbYnYro.webp' %}')">
             <span>Dublin</span>
           </a>
-          <a href="{% url 'job-list' %}?city=warsaw" class="city-item"
+          <a href="{% url 'job-list' %}?location=warsaw" class="city-item"
             style="background-image: url('{% static 'assets/images/pages/home/warsaw-xcPw1-5OHTk.webp' %}')">
             <span>Warsaw</span>
           </a>
-          <a href="{% url 'job-list' %}?city=stockholm" class="city-item"
+          <a href="{% url 'job-list' %}?location=stockholm" class="city-item"
             style="background-image: url('{% static 'assets/images/pages/home/stockholm-uF4PfwZPOR8.webp' %}')">
             <span>Stockholm</span>
           </a>
-          <a href="{% url 'job-list' %}?city=rome" class="city-item"
+          <a href="{% url 'job-list' %}?location=rome" class="city-item"
             style="background-image: url('{% static 'assets/images/pages/home/rome-7ybKmhDTcz0.webp' %}')">
             <span>Rome</span>
           </a>
-          <a href="{% url 'job-list' %}?city=berlin" class="city-item"
+          <a href="{% url 'job-list' %}?location=berlin" class="city-item"
             style="background-image: url('{% static 'assets/images/pages/home/berlin-1uWanmgkd5g.webp' %}')">
             <span>Berlin</span>
           </a>
-          <a href="{% url 'job-list' %}?city=london" class="city-item"
+          <a href="{% url 'job-list' %}?location=london" class="city-item"
             style="background-image: url('{% static 'assets/images/pages/home/london-Oja2ty_9ZLM.webp' %}')">
             <span>London</span>
           </a>

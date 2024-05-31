@@ -1,16 +1,29 @@
 {% extends 'index.html' %}
+{% load icon_tags %}
 
 {% block content %}
 <main class="main">
-
   <section class="bg-brand-100">
     <div class="container py-sm">
       <h1 class="text-center">Jobs</h1>
+      <div class="d-flex justify-content-center">
+        <form method="GET" action="{% url 'job-list' %}" class="search-form">
+          <div class="search-form__group">
+            <div class="search-form__field">
+              <input type="text" id="keyword" name="keyword" value="{{ keyword }}" placeholder="keyword">
+            </div>
+            <div class="search-form__field">
+              <input type="text" id="location" name="location" value="{{ location }}" placeholder="location">
+            </div>
+            <button type="submit" class="search-form__submit">{% icon 'icon-search' 'sm' %}</button>
+        </form>
+      </div>
+    </div>
     </div>
   </section>
 
   <section class="bg-brand-50">
-    <div class="container py-5 ">
+    <div class="container py-5">
       <div class="d-flex flex-wrap">
         {% for item in data %}
         <a href="{% url 'job' item.job.id %}" class="card p-3 text-decoration-none">

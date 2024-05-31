@@ -2,10 +2,11 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
+from django.utils.dateparse import parse_date
 
 from .models import Job
 from apps.user.models import Employer
-from .forms import JobForm
+from .forms import JobForm, JobsFilterForm
 
 
 def job(request, id):
@@ -23,14 +24,19 @@ def job(request, id):
 
 def job_list(request):
     """View function for jobs."""
-    city = request.GET.get('city')
+    keyword = request.GET.get('keyword', '')
+    location = request.GET.get('location', '')
     jobs = Job.objects.filter(is_published=True)
+    jobs_filter_form = JobsFilterForm(request.GET)
     data = []
+    
+    if keyword:
+        jobs = jobs.filter(title__icontains=keyword)
     
     for job in jobs:
         employer = get_object_or_404(Employer, user=job.user)
-        if city:
-            if employer.city.lower() == city.lower():
+        if location:
+            if employer.city.lower() == location.lower() or employer.country.lower() == location.lower():
                 data.append({
                     'job': job,
                     'employer': employer
@@ -41,7 +47,12 @@ def job_list(request):
                 'employer': employer
             })
     
-    return render(request, "job/job_list.html", {"data": data})
+    return render(request, "job/job_list.html", {
+                    "data": data, 
+                    "jobs_filter_form": jobs_filter_form,
+                    "keyword": keyword,
+                    "location": location,
+                    })
 
 
 @login_required
