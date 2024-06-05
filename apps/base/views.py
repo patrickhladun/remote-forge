@@ -8,7 +8,7 @@ from django.core.mail import send_mail
 from common.utils.metadata import make_metadata
 
 def home(request):
-    talents = Talent.objects.filter(is_published=True)
+    talents = Talent.objects.filter(is_published=True)[:6]
     form = JobSearchForm()
     
     metadata = make_metadata(request, {
@@ -41,7 +41,7 @@ def home(request):
     return render(request, 'base/home.html', data)
 
 def about(request):
-    talents = Talent.objects.all()
+    talents = Talent.objects.filter(is_published=True)[:6]
     
     metadata = make_metadata(request, {
         'title': 'About | Your Gateway to Remote Job Opportunities',
