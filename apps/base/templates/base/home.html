@@ -4,13 +4,15 @@
 
 {% block content %}
 <main class="main">
+
+  <!-- Hero -->
   <section class="bg-neutral-50">
     <div class="container hero-home">
       <div class="row">
         <div class="col-lg-3 position-relative">
-          <img src="{% static 'assets/images/pages/home/oguz-yagiz-kara-MZf0mI14RI0.webp' %}" alt="Web Developer"
+          <img src="{% static 'assets/images/pages/home/oguz-yagiz-kara-MZf0mI14RI0.webp' %}" alt="Man with Hat"
             class="left-01 mask img-fluid">
-          <img src="{% static 'assets/images/pages/home/biel-morro-bsSIk3LV_NE.webp' %}" alt="Web Developer"
+          <img src="{% static 'assets/images/pages/home/biel-morro-bsSIk3LV_NE.webp' %}" alt="Cat Developer"
             class="left-02 mask img-fluid">
           <span class="left-03 d-block shape">
             <svg xmlns="http://www.w3.org/2000/svg" class="rotating noise" viewBox="0 0 32 32">
@@ -18,7 +20,7 @@
                 d="M16,1.72c.45,0,.89.12,1.28.35l9.98,5.83c.8.47,1.3,1.34,1.3,2.28v11.65c0,.94-.5,1.81-1.3,2.28l-9.98,5.83c-.39.23-.83.35-1.28.35s-.89-.12-1.28-.35l-9.98-5.83c-.8-.47-1.3-1.34-1.3-2.28v-11.65c0-.94.5-1.81,1.3-2.28L14.72,2.07c.39-.23.83-.35,1.28-.35M16,.32c-.69,0-1.37.18-1.99.54L4.03,6.69c-1.23.72-1.99,2.05-1.99,3.49v11.65c0,1.44.76,2.77,1.99,3.49l9.98,5.83c.62.36,1.3.54,1.99.54s1.37-.18,1.99-.54l9.98-5.83c1.23-.72,1.99-2.05,1.99-3.49v-11.65c0-1.44-.76-2.77-1.99-3.49L17.99.86c-.62-.36-1.3-.54-1.99-.54h0Z" />
             </svg>
           </span>
-          <img src="{% static 'assets/images/pages/home/toa-heftiba-O3ymvT7Wf9U.webp' %}" alt="Web Developer"
+          <img src="{% static 'assets/images/pages/home/toa-heftiba-O3ymvT7Wf9U.webp' %}" alt="Blue Woman"
             class="left-04 mask img-fluid">
         </div>
         <div class="col-lg-6 d-flex flex-column justify-content-center">
@@ -28,21 +30,25 @@
             <form method="GET" action="{% url 'job-list' %}" class="search-form">
               <div class="search-form__group">
                 <div class="search-form__field">
-                  <input type="text" id="keyword" name="keyword" value="{{ keyword }}" placeholder="keyword">
+                  <input type="text" id="keyword" name="keyword" value="{{ keyword }}" placeholder="Find a job"
+                    aria-label="Keyword">
                 </div>
                 <div class="search-form__field">
-                  <input type="text" id="location" name="location" value="{{ location }}" placeholder="location">
+                  <input type="text" id="location" name="location" value="{{ location }}" placeholder="Location"
+                    aria-label="Location">
                 </div>
-                <button type="submit" class="search-form__submit">{% icon 'icon-search' 'sm' %}</button>
+                <button type="submit" class="search-form__submit" aria-label="Search Jobs">
+                  {% icon 'icon-search' 'sm' %}
+                </button>
               </div>
             </form>
           </div>
 
         </div>
         <div class="col-lg-3 position-relative d-none d-lg-block">
-          <img src="{% static 'assets/images/pages/home/charlesdeluvio-K4mSJ7kc0As.webp' %}" alt="Web Developer"
+          <img src="{% static 'assets/images/pages/home/charlesdeluvio-K4mSJ7kc0As.webp' %}" alt="French Buldog"
             class="right-01 mask img-fluid">
-          <img src="{% static 'assets/images/pages/home/michael-dam-mEZ3PoFGs_k.webp' %}" alt="Web Developer"
+          <img src="{% static 'assets/images/pages/home/michael-dam-mEZ3PoFGs_k.webp' %}" alt="Happy Developer"
             class="right-02 mask img-fluid">
           <span class="right-03 d-block shape">
             <svg xmlns="http://www.w3.org/2000/svg" class="rotating" viewBox="0 0 32 32">
@@ -50,13 +56,14 @@
                 d="M16,1.72c.45,0,.89.12,1.28.35l9.98,5.83c.8.47,1.3,1.34,1.3,2.28v11.65c0,.94-.5,1.81-1.3,2.28l-9.98,5.83c-.39.23-.83.35-1.28.35s-.89-.12-1.28-.35l-9.98-5.83c-.8-.47-1.3-1.34-1.3-2.28v-11.65c0-.94.5-1.81,1.3-2.28L14.72,2.07c.39-.23.83-.35,1.28-.35M16,.32c-.69,0-1.37.18-1.99.54L4.03,6.69c-1.23.72-1.99,2.05-1.99,3.49v11.65c0,1.44.76,2.77,1.99,3.49l9.98,5.83c.62.36,1.3.54,1.99.54s1.37-.18,1.99-.54l9.98-5.83c1.23-.72,1.99-2.05,1.99-3.49v-11.65c0-1.44-.76-2.77-1.99-3.49L17.99.86c-.62-.36-1.3-.54-1.99-.54h0Z" />
             </svg>
           </span>
-          <img src="{% static 'assets/images/pages/home/chase-fade-Qk8o8S_PMTY.webp' %}" alt="Web Developer"
+          <img src="{% static 'assets/images/pages/home/chase-fade-Qk8o8S_PMTY.webp' %}" alt="FullStack Developer"
             class="right-04 mask img-fluid">
         </div>
       </div>
     </div>
   </section>
 
+  <!-- How it Works -->
   <section class="bg-brand-100 py-5">
     <div class="container how-it-works">
       <h2 class="pb-5">How it Works</h2>
@@ -82,6 +89,7 @@
     </div>
   </section>
 
+  <!-- Featured Cities -->
   <section class="py-5">
     <div class="container">
       <h2 class="text-center pb-5">Featured Cities</h2>
@@ -116,6 +124,7 @@
     </div>
   </section>
 
+  <!-- List of Talent -->
   <section class="bg-brand-100 py-5">
     <div class="container">
       <h2 class="text-center pb-5">Our Best Talent</h2>
@@ -124,11 +133,12 @@
         <a href="{% url 'talent' talent.id %}" class="card p-3 text-decoration-none">
           <div class="d-flex align-items-start">
             <div class="image">
-              <img src="{{ MEDIA_URL }}{{ talent.image }}" class="rounded-circle" width="80">
+              <img src="{{ MEDIA_URL }}{{ talent.image }}" class="rounded-circle" width="80" height="80"
+                alt="Talent {{ talent.first_name }} {{ talent.last_name }}">
             </div>
             <div class="ms-3 w-100">
               <div class="card__header">
-                <h5 class="mb-0 mt-0">{{ talent.first_name }} {{ talent.last_name }}</h5>
+                <h3 class="mb-0 mt-0 h5">{{ talent.first_name }} {{ talent.last_name }}</h3>
                 <span>{{ talent.title }}</span>
               </div>
               <div class="skills">

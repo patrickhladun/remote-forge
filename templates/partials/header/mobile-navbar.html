@@ -4,7 +4,7 @@
   <div class="container-fluid">
     {% include './brand.html' %}
     <button class="navbar-toggler profile-menu" type="button" data-bs-toggle="offcanvas"
-      data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+      data-bs-target="#off-canvas-menu" aria-controls="off-canvas-menu" aria-label="Menu Toggle">
       {% if request.user.is_authenticated %}
       <span class="profile-menu">
         {% if profile.image %}
@@ -14,16 +14,16 @@
         {% endif %}
       </span>
       {% else %}
-      <label class="hamburger" for="mobile-menu-toggle" aria-label="menu">
+      <div class="hamburger" for="mobile-menu-toggle" aria-label="menu">
         <span></span>
         <span></span>
         <span></span>
-      </label>
+      </div>
       {% endif %}
     </button>
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="off-canvas-menu" aria-labelledby="off-canvas-menu-label">
       <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">REMOTE FORGE</h5>
+        <h5 class="offcanvas-title" id="off-canvas-menu-label">REMOTE FORGE</h5>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
