@@ -1,6 +1,7 @@
 /* Hero Section */
 .hero-home {
-  padding: 90px 0; /* Use Bootsrap */
+  padding-top: map-get($spacers, md);
+  padding-bottom: map-get($spacers, sm);
 }
 .left-01,
 .left-02,
@@ -18,25 +19,26 @@
   margin: auto;
 }
 .left-01 {
-  transform: translate(220%, -20%);
+  transform: translate(360%, -80%);
   width: 56px;
+  display: none;
 }
 .left-02 {
-  transform: translate(-200%, -100%);
+  transform: translate(-350%, -90%);
   width: 56px;
+  display: none;
 }
 .left-03 {
-  transform: translate(-60%, 20%);
+  transform: translate(-80%, -120%);
   width: 68px;
   height: 68px;
 }
 .left-04 {
-  transform: translate(80%, -100%);
+  transform: translate(180%, -140%);
   width: 46px;
 }
 
 /* How it Works Section */
-
 .how-it-works {
   text-align: center;
   svg {
@@ -76,7 +78,7 @@
     @extend .p-2;
     @extend .bg-brand-100;
     @extend .rounded;
-    color: var(--color-brand-500); /* Add Fills Variables */
+    color: var(--color-brand-600);
     line-height: 1;
     font-size: 14px; /* Use Bootsrap */
     display: inline-block;
@@ -87,33 +89,36 @@
 
 /* Talent List */
 
-
-
-
 @media (min-width: 576px) {
   .left-01 {
-    transform: translate(320%, -20%);
+    transform: translate(420%, -80%);
     width: 56px;
+    display: block;
   }
   .left-02 {
-    transform: translate(-300%, -100%);
+    transform: translate(-450%, -90%);
     width: 56px;
+    display: block;
   }
   .left-03 {
-    transform: translate(-160%, 20%);
+    transform: translate(-120%, -120%);
     width: 68px;
     height: 68px;
   }
   .left-04 {
-    transform: translate(180%, -100%);
+    transform: translate(220%, -140%);
     width: 46px;
   }
 }
 
 @media (min-width: 768px) {
+  .hero-home {
+    padding-top: map-get($spacers, md);
+    padding-bottom: map-get($spacers, md);
+  }
   /* Featured Cities */
   .city-list {
-    gap: 32px; /* Use Bootsrap */
+    gap: 32px;
 
     .city-item:nth-child(1) {
       grid-column: 1 / span 3;
@@ -140,7 +145,8 @@
 
 @media (min-width: 992px) {
   .hero-home {
-    padding: 160px 0; /* Use Bootsrap */
+    padding-top: map-get($spacers, lg);
+    padding-bottom: map-get($spacers, lg);
   }
   .left-01 {
     transform: translate(-50%, -140%);
@@ -168,7 +174,7 @@
     width: 126px;
   }
   .right-03 {
-    transform: translate(140%, -70%);
+    transform: translate(80%, -20%);
     width: 90px;
     height: 90px;
   }
@@ -177,11 +183,12 @@
     width: 176px;
   }
 }
-
-@media (min-width: 1200px) {
-  .hero-home {
-    padding: 210px 0; /* Use Bootsrap */
+@media (min-width: 1100px) {
+  .right-03 {
+    transform: translate(120%, -20%);
   }
+}
+@media (min-width: 1200px) {
 }
 
 @media (min-width: 1400px) {

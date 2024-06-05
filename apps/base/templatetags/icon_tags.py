@@ -12,7 +12,7 @@ def icon(name, size='md'):
         'lg': 'icon--lg',
     }
     
-    size = sizes.get(size, 'icon--md')  # Default to 'md' if size is not found
+    size = sizes.get(size, 'icon--md')
 
     try:
         with open(os.path.join('static/assets/icons', f'{name}.svg')) as f:
