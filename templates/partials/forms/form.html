@@ -3,33 +3,29 @@
 <section class="bg-brand-50">
   <div class="container-sm py-4">
     {% if success %}
-    <div>
-      <p class="alert alert-success">{{ success }}</p>
-    </div>
+      <div>
+        <p class="alert alert-success">{{ success }}</p>
+      </div>
     {% endif %}
     <form method="post" enctype="multipart/form-data">
       {% csrf_token %}
       {{ form.media }}
       {% for field in form %}
-      {% if field.field.widget.input_type == "checkbox" %}
-      <div class="field field__checkbox form-check form-switch">
-        {{ field|add_class:"form-check-input"|attr:"role:switch" }}
-        <label class="form-check-label" for="id_is_published">{{ field.label }}</label>
-        {{ field.errors }}
-      </div>
-      {% elif field.field.widget.input_type == "file" %}
-      <div class="field field__file">
-        {{ field.label_tag }}
-        {{ field }}
-        {{ field.errors }}
-      </div>
-      {% else %}
-      <div class="field field__text">
-        {{ field.label_tag }}
-        {{ field }}
-        {{ field.errors }}
-      </div>
-      {% endif %}
+        {% if field.field.widget.input_type == 'checkbox' %}
+          <div class="field field__checkbox form-check form-switch">
+            {{ field|add_class:'form-check-input'|attr:'role:switch' }}
+            <label class="form-check-label" for="id_is_published">{{ field.label }}</label>
+            {{ field.errors }}
+          </div>
+        {% elif field.field.widget.input_type == 'file' %}
+          <div class="field field__file">{{ field.label_tag }}
+            {{ field }}
+            {{ field.errors }}</div>
+        {% else %}
+          <div class="field field__text">{{ field.label_tag }}
+            {{ field }}
+            {{ field.errors }}</div>
+        {% endif %}
       {% endfor %}
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>

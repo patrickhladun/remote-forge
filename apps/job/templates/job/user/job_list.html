@@ -1,76 +1,70 @@
 {% extends 'index.html' %}
 
 {% block content %}
-<main class="main">
-  <section class="bg-brand-100">
-    <div class="container py-5">
-      <h1 class="text-center">My Jobs</h1>
-    </div>
-  </section>
-  <section class="bg-brand-50">
-    <div class="container py-5 d-flex flex-wrap">
-      {% for job in jobs %}
-      <div class="card p-3">
-        <div class="align-items-start">
-          <div class="w-100">
-            <div class="card__header">
-              <h5>{{ job.title }}</h5>
-            </div>
-            <div class="card__buttons">
-              <div>
-                <a class="btn btn-primary btn-sm" href="{% url 'job' job.id %}">View</a>
-                <a class="btn btn-secondary btn-sm" href="{% url 'user-job-edit' job.id %}">Edit</a>
+  <main class="main">
+    <section class="bg-brand-100">
+      <div class="container py-5">
+        <h1 class="text-center">My Jobs</h1>
+      </div>
+    </section>
+    <section class="bg-brand-50">
+      <div class="container py-5 d-flex flex-wrap">
+        {% for job in jobs %}
+          <div class="card p-3">
+            <div class="align-items-start">
+              <div class="w-100">
+                <div class="card__header">
+                  <h5>{{ job.title }}</h5>
+                </div>
+                <div class="card__buttons">
+                  <div>
+                    <a class="btn btn-primary btn-sm" href="{% url 'job' job.id %}">View</a>
+                    <a class="btn btn-secondary btn-sm" href="{% url 'user-job-edit' job.id %}">Edit</a>
+                  </div>
+                  <a class="btn btn-outline-danger btn-sm" href="#" data-toggle="modal" data-target="#confirmDeleteModal" data-job-id="{{ job.id }}">Delete</a>
+                </div>
               </div>
-              <a class="btn btn-outline-danger btn-sm" href="#" data-toggle="modal" data-target="#confirmDeleteModal"
-                data-job-id="{{ job.id }}">Delete</a>
             </div>
+          </div>
+        {% endfor %}
+      </div>
+    </section>
+    <section class="bg-brand-50">
+      <div class="container pb-5">
+        <a class="btn btn-primary" href="{% url 'user-job-add' %}">Add a Job</a>
+      </div>
+    </section>
+    <div class="modal fade" id="confirmDeleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header d-flex justify-content-between">
+            <h5 class="modal-title" id="deleteModalLabel">Confirm Delete</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          </div>
+          <div class="modal-body">Are you sure you want to delete this job?</div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            <form id="deleteForm" method="post" action="">
+              {% csrf_token %}
+              <button type="submit" class="btn btn-danger">Delete</button>
+            </form>
           </div>
         </div>
       </div>
-      {% endfor %}
     </div>
-  </section>
-  <section class="bg-brand-50">
-    <div class="container pb-5">
-      <a class="btn btn-primary" href="{% url 'user-job-add' %}">Add a Job</a>
-    </div>
-  </section>
-  <div class="modal fade" id="confirmDeleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header d-flex justify-content-between">
-          <h5 class="modal-title" id="deleteModalLabel">Confirm Delete</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          Are you sure you want to delete this job?
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-          <form id="deleteForm" method="post" action="">
-            {% csrf_token %}
-            <button type="submit" class="btn btn-danger">Delete</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-</main>
+  </main>
 {% endblock %}
 
 {% block footer_js %}
-<script>
-  $(document).ready(function () {
-    $('#confirmDeleteModal').on('show.bs.modal', function (event) {
-      const button = $(event.relatedTarget);
-      const jobId = button.data('job-id');
-      const actionUrl = "{% url 'delete-job' '00000000-0000-0000-0000-000000000000' %}".replace('00000000-0000-0000-0000-000000000000', jobId);
-      const modal = $(this);
-      modal.find('#deleteForm').attr('action', actionUrl);
-    });
-  });
-</script>
+  <script>
+    $(document).ready(function () {
+      $('#confirmDeleteModal').on('show.bs.modal', function (event) {
+        const button = $(event.relatedTarget)
+        const jobId = button.data('job-id')
+        const actionUrl = "{% url 'delete-job' '00000000-0000-0000-0000-000000000000' %}".replace('00000000-0000-0000-0000-000000000000', jobId)
+        const modal = $(this)
+        modal.find('#deleteForm').attr('action', actionUrl)
+      })
+    })
+  </script>
 {% endblock %}

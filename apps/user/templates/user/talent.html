@@ -3,102 +3,98 @@
 {% load icon_tags %}
 
 {% block content %}
-<section class="bg-brand-100">
-  <div class="container py-5">
-    <div class="talent-header bg-brand-200 rounded p-4">
-      <div class="d-flex justify-content-between align-items-center">
-        <div class="d-flex justify-content-between align-items-center py-3 gap-2">
-          <div class="image">
-            {% if talent.image %}
-            <img src="{{ MEDIA_URL }}{{ talent.image }}" class="rounded-circle" width="80">
-            {% else %}
-            <img src="{% static 'assets/images/avatar.png' %}" class="rounded-circle" width="80">
-            {% endif %}
+  <section class="bg-brand-100">
+    <div class="container py-5">
+      <div class="talent-header bg-brand-200 rounded p-4">
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="d-flex justify-content-between align-items-center py-3 gap-2">
+            <div class="image">
+              {% if talent.image %}
+                <img src="{{ MEDIA_URL }}{{ talent.image }}" class="rounded-circle" width="80" />
+              {% else %}
+                <img src="{% static 'assets/images/avatar.png' %}" class="rounded-circle" width="80" />
+              {% endif %}
+            </div>
+            <p>
+              {{ talent.first_name }} {{ talent.last_name }}<br />
+              <span>{{ talent.title }}</span>
+            </p>
           </div>
-          <p>{{ talent.first_name }} {{ talent.last_name }}<br />
-            <span>{{ talent.title }}</span>
-          </p>
-        </div>
-        <button class="btn btn-primary">Download CV</button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="container py-5">
-  <div class="row">
-
-    <!-- Main Content -->
-    <div class="col-md-8">
-      <!-- BIO Section -->
-      <div class="bio">
-        <p>{{ talent.bio }}</p>
-      </div>
-      <!-- Experience Section -->
-      <div class="experience">
-        <h2>Experience</h2>
-        {% for experience in talent.experience %}
-        <h3>{{ experience.company_name }}</h3>
-        <p>{{ experience.start_date }} - {{ experience.end_date }}</p>
-        <h5>{{ experience.position }}</h5>
-        <h4>Responsibilities</h4>
-        <p>{{ experience.responsibilities }}</p>
-        {% endfor %}
-      </div>
-      <!-- Education Section -->
-      <div class="education">
-        <h2>Education</h2>
-        {% for education in talent.education %}
-        <p>{{ education.level }}</p>
-        <p>{{ education.status }}</p>
-        <p>{{ education.start_date }} - {{ education.end_date }}</p>
-        {% endfor %}
-      </div>
-    </div>
-
-    <!-- Sidebar -->
-    <div class="col-md-4">
-      <!-- Details Section -->
-      <div class="talent-box">
-        <h3>Details</h3>
-        <div>
-          <h5>Location</h5>
-          <p>{{ talent.city }}, {{ talent.country }}</p>
+          <button class="btn btn-primary">Download CV</button>
         </div>
       </div>
-      <!-- Skills Section -->
-      <div class="talent-box">
-        <h3>Skills</h3>
-        <div class="skills">
-          {% for skill in talent.skills %}
-          <span class="skills__item">{{ skill }}</span>
+    </div>
+  </section>
+
+  <section class="container py-5">
+    <div class="row">
+      <!-- Main Content -->
+      <div class="col-md-8">
+        <!-- BIO Section -->
+        <div class="bio">
+          <p>{{ talent.bio }}</p>
+        </div>
+        <!-- Experience Section -->
+        <div class="experience">
+          <h2>Experience</h2>
+          {% for experience in talent.experience %}
+            <h3>{{ experience.company_name }}</h3>
+            <p>{{ experience.start_date }} - {{ experience.end_date }}</p>
+            <h5>{{ experience.position }}</h5>
+            <h4>Responsibilities</h4>
+            <p>{{ experience.responsibilities }}</p>
+          {% endfor %}
+        </div>
+        <!-- Education Section -->
+        <div class="education">
+          <h2>Education</h2>
+          {% for education in talent.education %}
+            <p>{{ education.level }}</p>
+            <p>{{ education.status }}</p>
+            <p>{{ education.start_date }} - {{ education.end_date }}</p>
           {% endfor %}
         </div>
       </div>
-      <!-- Interests Section -->
-      <div class="talent-box">
-        <h3>Interests</h3>
-        <div class="interests">
-          {{ talent.interests }}
-        </div>
-      </div>
 
-      <!-- Social Section -->
-      <div class="talent-box">
-        <h3>Social</h3>
-        <div class="skills">
-          <div class="d-flex gap-2 py-2">
-            {% for link in talent.social %}
-              {% with icon_name="icon-"|add:link.site %}
-                <a class="p-2 bg-brand-100 rounded-1" href="{{link.url}}">
-                  {% icon icon_name 'sm' %}
-                </a>
-              {% endwith %}
+      <!-- Sidebar -->
+      <div class="col-md-4">
+        <!-- Details Section -->
+        <div class="talent-box">
+          <h3>Details</h3>
+          <div>
+            <h5>Location</h5>
+            <p>{{ talent.city }}, {{ talent.country }}</p>
+          </div>
+        </div>
+        <!-- Skills Section -->
+        <div class="talent-box">
+          <h3>Skills</h3>
+          <div class="skills">
+            {% for skill in talent.skills %}
+              <span class="skills__item">{{ skill }}</span>
             {% endfor %}
+          </div>
+        </div>
+        <!-- Interests Section -->
+        <div class="talent-box">
+          <h3>Interests</h3>
+          <div class="interests">{{ talent.interests }}</div>
+        </div>
+
+        <!-- Social Section -->
+        <div class="talent-box">
+          <h3>Social</h3>
+          <div class="skills">
+            <div class="d-flex gap-2 py-2">
+              {% for link in talent.social %}
+                {% with icon_name='icon-'|add:link.site %}
+                  <a class="p-2 bg-brand-100 rounded-1" href="{{ link.url }}">{% icon icon_name 'sm' %}</a>
+                {% endwith %}
+              {% endfor %}
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 {% endblock %}
