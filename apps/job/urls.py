@@ -1,4 +1,5 @@
 from django.urls import path
+
 from . import views
 
 urlpatterns = [
@@ -7,6 +8,5 @@ urlpatterns = [
     path("user-job-list/", views.user_job_list, name="user-job-list"),
     path("user-job-add/", views.user_job_add, name="user-job-add"),
     path("user-job-edit/<uuid:id>", views.user_job_edit, name="user-job-edit"),
-    path('job/delete/<uuid:id>/', views.delete_job, name='delete-job'),   
+    path("job/delete/<uuid:id>/", views.delete_job, name="delete-job"),
 ]
- 
