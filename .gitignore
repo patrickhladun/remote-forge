@@ -164,3 +164,5 @@ cython_debug/
 
 # css and js map files
 *.map
+
+/staticfiles
