@@ -2,6 +2,7 @@ import pytest
 
 pytestmark = pytest.mark.django_db
 
+
 class TestTalentModel:
     def test_create_talent(self, talent_factory):
         """Test creating a new talent object."""
@@ -12,4 +13,3 @@ class TestTalentModel:
         """Test the string representation of a talent object."""
         talent = talent_factory()
         assert talent.__str__() == talent.user.username
-        
