@@ -2,92 +2,87 @@
 {% load icon_tags %}
 
 {% block content %}
-<section class="bg-brand-100">
-  <div class="container py-sm">
-    <div class="employer-header bg-brand-200 rounded p-4">
-      <div class="d-flex justify-content-between align-items-center">
-        <div class="d-flex justify-content-between align-items-center py-3 gap-2">
-          <h1>{{ employer.company }}</h1>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<section class="bg-brand-100">
-  <div class="container pb-5">
-    <div class="row">
-
-      <!-- Main Content -->
-      <div class="col-md-8">
-        <!-- About Section -->
-        <div class="about">
-          <p>{{ employer.about }}</p>
-        </div>
-      </div>
-
-      <!-- Sidebar -->
-      <div class="col-md-4">
-        <!-- Details Section -->
-        <div class="employer-box">
-          <h3>Contact</h3>
-          <div class="d-flex flex-column gap-1">
-            <div class="d-flex align-items-center">
-              {% icon 'icon-location' 'sm' %}
-              <p class="m-0 ps-1">{{ employer.city }}, {{ employer.country }}</p>
-            </div>
-            <div class="d-flex align-items-center">
-              {% icon 'icon-phone' 'sm' %}
-              <p class="m-0 ps-1">{{ employer.phone }}</p>
-            </div>
-            <div class="d-flex align-items-center">
-              {% icon 'icon-envelope' 'sm' %}
-              <p class="m-0 ps-1">{{ employer.email }}</p>
-            </div>
-          </div>
-          <div class="d-flex gap-2 py-2">
-            {% for link in employer.social %}
-            {% with icon_name="icon-"|add:link.site %}
-            <a class="p-2 bg-brand-200 rounded-1" href="{{link.url}}">
-              {% icon icon_name 'sm' %}
-            </a>
-            {% endwith %}
-            {% endfor %}
+  <section class="bg-brand-100">
+    <div class="container py-sm">
+      <div class="employer-header bg-brand-200 rounded p-4">
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="d-flex justify-content-between align-items-center py-3 gap-2">
+            <h1>{{ employer.company }}</h1>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="bg-brand-50">
-  <div class="container py-5 ">
-    <h2 class="mb-5">Open Roles</h2>
-    <div class="d-flex flex-wrap">
-      {% for job in jobs %}
-      <a href="{% url 'job' job.id %}" class="card p-3 text-decoration-none">
-        <div class="d-flex align-items-start">
-          <div class="w-100">
-            <div class="card__header">
-              <h3 class="mb-0 mt-0">{{ job.title }}</h3>
-              <div class="d-flex flex-wrap gap-2">
-                <div class="d-flex align-items-center">
-                  {% icon 'icon-date-check' 'sm' %}
-                  <p class="m-0 ps-1">{{ employer.created_at|date:"d M Y" }}</p>
-                </div>
-                <div class="d-flex align-items-center">
-                  {% icon 'icon-location' 'sm' %}
-                  <p class="m-0 ps-1">{{ employer.city }}, {{ employer.country }}</p>
+  <section class="bg-brand-100">
+    <div class="container pb-5">
+      <div class="row">
+        <!-- Main Content -->
+        <div class="col-md-8">
+          <!-- About Section -->
+          <div class="about">
+            <p>{{ employer.about }}</p>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="col-md-4">
+          <!-- Details Section -->
+          <div class="employer-box">
+            <h3>Contact</h3>
+            <div class="d-flex flex-column gap-1">
+              <div class="d-flex align-items-center">
+                {% icon 'icon-location' 'sm' %}
+                <p class="m-0 ps-1">{{ employer.city }}, {{ employer.country }}</p>
+              </div>
+              <div class="d-flex align-items-center">
+                {% icon 'icon-phone' 'sm' %}
+                <p class="m-0 ps-1">{{ employer.phone }}</p>
+              </div>
+              <div class="d-flex align-items-center">
+                {% icon 'icon-envelope' 'sm' %}
+                <p class="m-0 ps-1">{{ employer.email }}</p>
+              </div>
+            </div>
+            <div class="d-flex gap-2 py-2">
+              {% for link in employer.social %}
+                {% with icon_name='icon-'|add:link.site %}
+                  <a class="p-2 bg-brand-200 rounded-1" href="{{ link.url }}">{% icon icon_name 'sm' %}</a>
+                {% endwith %}
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-brand-50">
+    <div class="container py-5">
+      <h2 class="mb-5">Open Roles</h2>
+      <div class="d-flex flex-wrap">
+        {% for job in jobs %}
+          <a href="{% url 'job' job.id %}" class="card p-3 text-decoration-none">
+            <div class="d-flex align-items-start">
+              <div class="w-100">
+                <div class="card__header">
+                  <h3 class="mb-0 mt-0">{{ job.title }}</h3>
+                  <div class="d-flex flex-wrap gap-2">
+                    <div class="d-flex align-items-center">
+                      {% icon 'icon-date-check' 'sm' %}
+                      <p class="m-0 ps-1">{{ employer.created_at|date:'d M Y' }}</p>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      {% icon 'icon-location' 'sm' %}
+                      <p class="m-0 ps-1">{{ employer.city }}, {{ employer.country }}</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </a>
-      {% endfor %}
+          </a>
+        {% endfor %}
+      </div>
     </div>
-  </div>
-</section>
-
+  </section>
 {% endblock %}

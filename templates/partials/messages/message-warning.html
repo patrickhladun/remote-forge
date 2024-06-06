@@ -1,14 +1,10 @@
 {% if messages %}
-{% for message in messages %}
-{% if message.tags == 'warning' %}
-<div class="message message--warning" role="alert" aria-live="assertive" aria-atomic="false">
-  <div class="message__text">
-    {{ message }}
-  </div>
-  <button class="message__close" type="button" data-dismiss="toast" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-  </button>
-</div>
-{% endif %}
-{% endfor %}
+  {% for message in messages %}
+    {% if message.tags == 'warning' %}
+      <div class="message message--warning" role="alert" aria-live="assertive" aria-atomic="false">
+        <div class="message__text">{{ message }}</div>
+        <button class="message__close" type="button" data-dismiss="toast" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+    {% endif %}
+  {% endfor %}
 {% endif %}

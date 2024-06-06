@@ -2,95 +2,93 @@
 {% load icon_tags %}
 
 {% block content %}
-<main class="main">
-
-  <!-- Job Header -->
-  <section class="bg-brand-100">
-    <div class="container-sm py-5">
-
-      <div class="p-3 d-flex flex-column flex-md-row align-items-center justify-content-between">
-        <div class="d-flex align-items-center">
-          <img src="{{ MEDIA_URL }}{{ employer.image }}" class="rounded-circle border me-4" width="60">
-          <div>
-            <h1 class="h4">{{ job.title }}</h1>
-            <p class="m-0">{{ employer.company }}</p>
-          </div>
-        </div>
-        <button class="btn btn-primary mt-4 mt-md-0">Apply for Job</button>
-      </div>
-
-      <div class="icon-text">
-        <!-- Posted Icon -->
-        <div class="icon-text-item">
-          {% icon 'icon-date-check' 'md' %}
-          <p class="text-center">
-            <span class="h5">Job Posted</span><br>
-            <span>{{ job.created_at|date:"d M Y" }}</span>
-          </p>
-        </div>
-        <!-- Location Icon -->
-        <div class="icon-text-item">
-          {% icon 'icon-location' 'md' %}
-          <p class="text-center">
-            <span class="h5">Location</span><br>
-            <span>{{ employer.city }}</span>
-          </p>
-        </div>
-        <!-- Schedule Icon -->
-        <div class="icon-text-item">
-          {% icon 'icon-time' 'md' %}
-          <p class="text-center">
-            <span class="h5">Schedule</span><br>
-            <span>{{ job.schedule }}</span>
-          </p>
-        </div>
-        <!-- Salary Icon -->
-        <div class="icon-text-item">
-          {% icon 'icon-salary' 'md' %}
-          <p class="text-center">
-            <span class="h5">Salary</span><br>
-            <span>{{ job.salary }}</span>
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Job Details -->
-  <section class="bg-brand-50">
-    <div class="container-sm py-5">
-      <div class="">
-        {% for detail in job.details %}
-        <h3>{{ detail.heading }}</h3>
-        <p>{{ detail.content | safe }}</p>
-        {% endfor %}
-      </div>
-  </section>
-
-  <!-- Other Roles -->
-  <section class="bg-brand-50">
-    <div class="container-sm pb-5 ">
-      <h2>Other Roles</h2>
-      <div class="d-flex flex-wrap">
-        {% for item in jobs %}
-        <a href="{% url 'job' item.id %}" class="card p-3 text-decoration-none">
-          <div class="d-flex align-items-start">
-            <div class="w-100">
-              <div class="card__header">
-                <h3 class="mb-0 mt-0">{{ item.title }}</h3>
-                <p>{{ employer.company }}</p>
-                <span class="d-flex align-items-center gap-1">
-                  {% icon 'icon-date-check' 'sm' %}
-                  <span>{{ job.created_at|date:"d M Y" }}</span>
-                </span>
-
-              </div>
+  <main class="main">
+    <!-- Job Header -->
+    <section class="bg-brand-100">
+      <div class="container-sm py-5">
+        <div class="p-3 d-flex flex-column flex-md-row align-items-center justify-content-between">
+          <div class="d-flex align-items-center">
+            <img src="{{ MEDIA_URL }}{{ employer.image }}" class="rounded-circle border me-4" width="60" />
+            <div>
+              <h1 class="h4">{{ job.title }}</h1>
+              <p class="m-0">{{ employer.company }}</p>
             </div>
           </div>
-        </a>
-        {% endfor %}
+          <button class="btn btn-primary mt-4 mt-md-0">Apply for Job</button>
+        </div>
+
+        <div class="icon-text">
+          <!-- Posted Icon -->
+          <div class="icon-text-item">
+            {% icon 'icon-date-check' 'md' %}
+            <p class="text-center">
+              <span class="h5">Job Posted</span><br />
+              <span>{{ job.created_at|date:'d M Y' }}</span>
+            </p>
+          </div>
+          <!-- Location Icon -->
+          <div class="icon-text-item">
+            {% icon 'icon-location' 'md' %}
+            <p class="text-center">
+              <span class="h5">Location</span><br />
+              <span>{{ employer.city }}</span>
+            </p>
+          </div>
+          <!-- Schedule Icon -->
+          <div class="icon-text-item">
+            {% icon 'icon-time' 'md' %}
+            <p class="text-center">
+              <span class="h5">Schedule</span><br />
+              <span>{{ job.schedule }}</span>
+            </p>
+          </div>
+          <!-- Salary Icon -->
+          <div class="icon-text-item">
+            {% icon 'icon-salary' 'md' %}
+            <p class="text-center">
+              <span class="h5">Salary</span><br />
+              <span>{{ job.salary }}</span>
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
-</main>
+    </section>
+
+    <!-- Job Details -->
+    <section class="bg-brand-50">
+      <div class="container-sm py-5">
+        <div class="">
+          {% for detail in job.details %}
+            <h3>{{ detail.heading }}</h3>
+            <p>{{ detail.content|safe }}</p>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+
+    <!-- Other Roles -->
+    <section class="bg-brand-50">
+      <div class="container-sm pb-5">
+        <h2>Other Roles</h2>
+        <div class="d-flex flex-wrap">
+          {% for item in jobs %}
+            <a href="{% url 'job' item.id %}" class="card p-3 text-decoration-none">
+              <div class="d-flex align-items-start">
+                <div class="w-100">
+                  <div class="card__header">
+                    <h3 class="mb-0 mt-0">{{ item.title }}</h3>
+                    <p>{{ employer.company }}</p>
+                    <span class="d-flex align-items-center gap-1">
+                      {% icon 'icon-date-check' 'sm' %}
+                      <span>{{ job.created_at|date:'d M Y' }}</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+  </main>
 {% endblock %}

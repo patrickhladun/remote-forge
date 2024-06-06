@@ -2,42 +2,40 @@
 {% load static %}
 
 {% block content %}
-
-<section class="bg-brand-100">
-  <div class="container py-sm">
-    <h1 class="text-center">Best Talent on the Market</h1>
-  </div>
-</section>
-
-<section class="bg-brand-50 py-5">
-  <div class="container">
-    <div class="d-flex flex-wrap">
-      {% for talent in talents %}
-      <a href="{% url 'talent' talent.id %}" class="card p-3 text-decoration-none">
-        <div class="d-flex align-items-start">
-          <div class="image">
-            {% if talent.image %}
-            <img src="{{ MEDIA_URL }}{{ talent.image }}" class="rounded-circle" width="80">
-            {% else %}
-            <img src="{% static 'assets/images/avatar.png' %}" class="rounded-circle" width="80">
-            {% endif %}
-          </div>
-          <div class="ms-3 w-100">
-            <div class="card__header">
-              <h5 class="mb-0 mt-0">{{ talent.first_name }} {{ talent.last_name }}</h5>
-              <span>{{ talent.title }}</span>
-            </div>
-            <div class="skills">
-              {% for skill in talent.skills %}
-              <span class="skills__item">{{ skill }}</span>
-              {% endfor %}
-            </div>
-          </div>
-        </div>
-      </a>
-      {% endfor %}
+  <section class="bg-brand-100">
+    <div class="container py-sm">
+      <h1 class="text-center">Best Talent on the Market</h1>
     </div>
-  </div>
-</section>
+  </section>
 
+  <section class="bg-brand-50 py-5">
+    <div class="container">
+      <div class="d-flex flex-wrap">
+        {% for talent in talents %}
+          <a href="{% url 'talent' talent.id %}" class="card p-3 text-decoration-none">
+            <div class="d-flex align-items-start">
+              <div class="image">
+                {% if talent.image %}
+                  <img src="{{ MEDIA_URL }}{{ talent.image }}" class="rounded-circle" width="80" />
+                {% else %}
+                  <img src="{% static 'assets/images/avatar.png' %}" class="rounded-circle" width="80" />
+                {% endif %}
+              </div>
+              <div class="ms-3 w-100">
+                <div class="card__header">
+                  <h5 class="mb-0 mt-0">{{ talent.first_name }} {{ talent.last_name }}</h5>
+                  <span>{{ talent.title }}</span>
+                </div>
+                <div class="skills">
+                  {% for skill in talent.skills %}
+                    <span class="skills__item">{{ skill }}</span>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+          </a>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
 {% endblock %}
