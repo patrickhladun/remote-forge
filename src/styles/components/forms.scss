@@ -1,0 +1,138 @@
+@mixin input {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+
+  &__text {
+    input,
+    textarea {
+      @include input;
+    }
+  }
+  &__checkbox {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 12px;
+    margin: 8px 0;
+
+    .form-check-input {
+      margin: 0;
+      padding: 0;
+    }
+  }
+  &__file {
+    display: block;
+  }
+}
+
+input {
+  @include input;
+}
+
+body .rjf-form-group-wrapper {
+  max-width: 100%;
+
+  select {
+    @include input;
+  }
+
+  .rjf-form-row .rjf-form-row-inner div {
+    display: flex;
+
+    .rjf-input-group {
+      flex: 1;
+      margin-right: 10px;
+    }
+  }
+
+  .rjf-form-group-inner {
+    background-color: var(--color-brand-100);
+  }
+  .rjf-form-row-controls {
+    top: 8px;
+  }
+}
+
+.search-form {
+  @extend .bg-brand-200;
+  @extend .p-1;
+  @extend .align-items-center;
+  @extend .rounded-3;
+  @extend .p-1;
+  max-width: 768px;
+  transition: all 0.3s ease;
+
+  &:focus-within {
+    @extend .bg-brand-500;
+  }
+
+  &__group {
+    @extend .d-flex;
+    @extend .bg-white;
+    @extend .gap-0;
+    @extend .rounded-2;
+    @extend .p-2;
+    align-items: center;
+  }
+
+  &__field {
+    flex-grow: 1;
+    @extend .px-2;
+
+    input[type="text"] {
+      @extend .form-control;
+      @extend .m-0;
+      @extend .border-0;
+      @extend .rounded-0;
+
+      width: 100%;
+      margin: 0;
+
+      &::placeholder {
+        color: var(--color-brand-500);
+        opacity: 0.6;
+      }
+
+      &::-ms-input-placeholder {
+        color: var(--color-brand-500);
+      }
+
+      &:focus {
+        box-shadow: 0 0 0 0 var(--color-brand-100);
+        outline: 0 none;
+      }
+    }
+  }
+
+  &__submit[type="submit"] {
+    width: 46px;
+    height: 46px;
+    background: none;
+    border: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background: none !important;
+      border: none;
+    }
+  }
+}

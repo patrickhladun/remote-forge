@@ -1,0 +1,22 @@
+.btn-primary {
+  @include button-variant(
+    $color-brand-600,
+    $color-brand-600,
+    $color-brand-50,
+    lighten($color-brand-600, 10%),
+    lighten($color-brand-600, 10%),
+    $color-brand-50
+  );
+}
+
+.btn-outline-primary {
+  @include button-outline-variant($color-brand-600, $color-brand-50);
+}
+
+.card {
+  transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 0 20px rgba($color-brand-600, 0.3);
+  }
+}

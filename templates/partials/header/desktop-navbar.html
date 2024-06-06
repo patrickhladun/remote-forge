@@ -1,42 +1,50 @@
 {% load static %}
 <!-- Desktop Navigation -->
 <nav class="d-none d-lg-flex navbar navbar-expand-lg bg-light fixed-top">
-  <div class="container-fluid">
+  <div class="container">
     {% include './brand.html' %}
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation-content" aria-controls="navigation-content" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse justify-content-end" id="navigation-content">
       <ul class="navbar-nav align-items-center">
         {% include './site-links.html' %}
         {% if request.user.is_authenticated %}
-        <li class="nav-item bg-red-100 dropdown align-items-center justify-content-center">
-          <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <span class="profile-menu">
-              {% if profile.image %}
-              <img src="{{ MEDIA_URL }}{{ profile.image }}" />
-              {% else %}
-              <img class="no-headshot" src="{% static '/assets/images/avatar.png' %}" />
+          <li class="nav-item bg-red-100 dropdown align-items-center justify-content-center">
+            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-label="avatar">
+              <span class="profile-menu">
+                {% if profile.image %}
+                  <img src="{{ MEDIA_URL }}{{ profile.image }}" />
+                {% else %}
+                  <img class="no-headshot" src="{% static '/assets/images/avatar.png' %}" />
+                {% endif %}
+              </span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li>
+                <a class="dropdown-item" href="{% url 'profile' %}">Profile</a>
+              </li>
+              {% if request.user.user_type == 'employer' %}
+                <li>
+                  <a class="dropdown-item" href="{% url 'user-job-list' %}">My Jobs</a>
+                </li>
               {% endif %}
-            </span>
-          </a>
-          <ul class="dropdown-menu dropdown-menu-end">
-            <li><a class="dropdown-item" href="{% url 'profile' %}">Profile</a></li>
-            <li><a class="dropdown-item" href="{% url 'account' %}">Account</a></li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-            <li><a class="dropdown-item" href="#">Logout</a></li>
-          </ul>
-        </li>
+              <li>
+                <a class="dropdown-item" href="{% url 'account' %}">Account</a>
+              </li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+              <li>
+                <a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a>
+              </li>
+            </ul>
+          </li>
         {% else %}
-        <li class="nav-item">
-          <a class="btn btn-primary" aria-current="page" href="{% url 'account_login' %}">Login/Sign in</a>
-        </li>
-        <li class="nav-item">
-          <a class="btn btn-outline-primary" aria-current="page" href="#">Post a Job</a>
-        </li>
+          <li class="nav-item ms-2">
+            <a class="btn btn-primary" aria-current="page" href="{% url 'account_login' %}">Login/Sign in</a>
+          </li>
+          <li class="nav-item ms-2">
+            <a class="btn btn-outline-primary" aria-current="page" href="{% url 'employer_signup' %}">Post a Job</a>
+          </li>
         {% endif %}
       </ul>
     </div>

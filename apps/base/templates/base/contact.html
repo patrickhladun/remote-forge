@@ -1,0 +1,70 @@
+{% extends 'index.html' %}
+{% load icon_tags %}
+
+{% block content %}
+  <main class="main">
+    <section class="bg-brand-100">
+      <div class="container py-sm">
+        <h1 class="text-center">Contact</h1>
+      </div>
+    </section>
+
+    <section class="bg-brand-50">
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-md-6">
+            <form method="post">
+              {% csrf_token %}
+              {{ form.media }}
+              {% for field in form %}
+                <div class="field field__text">{{ field.label_tag }}
+                  {{ field }}
+                  {{ field.errors }}</div>
+              {% endfor %}
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+          <div class="col-md-6">
+            <h2>Get in Touch</h2>
+            <p>We value your feedback and are here to assist you with any inquiries, support requests, or suggestions you may have. Whether you have a question about our services, need assistance with your account, or just want to provide feedback, please feel free to reach out to us. Our team is committed to providing you with the best possible support and ensuring that your experience with Remote Forge is a positive one.</p>
+            <p>Below you will find our contact details, including our email address, phone number, and social media links. Additionally, you can use the contact form to send us a message directly. We look forward to hearing from you!</p>
+
+            <div class="d-flex flex-column gap-2">
+              <div class="d-flex align-items-start">
+                {% icon 'icon-location' 'sm' %}
+                <p class="m-0 ps-1">
+                  Remote Forge Headquarters,<br />
+                  123 Remote Street,<br />
+                  Dublin,<br />
+                  D02 ABC1,<br />
+                  Ireland
+                </p>
+              </div>
+
+              <div class="d-flex align-items-center">
+                {% icon 'icon-envelope' 'sm' %}
+                <p class="m-0 ps-1">support@remoteforge.example.com</p>
+              </div>
+
+              <div class="d-flex align-items-center">
+                {% icon 'icon-phone' 'sm' %}
+                <p class="m-0 ps-1">+353 (0)1 234 5678</p>
+              </div>
+
+              <div class="d-flex align-items-center">
+                {% icon 'icon-time' 'sm' %}
+                <p class="m-0 ps-1">Monday - Friday: 9:00 AM - 6:00 PM (GMT)</p>
+              </div>
+            </div>
+
+            <div class="d-flex gap-2 py-2">
+              <a class="p-2 bg-brand-200 rounded-1" href="https://twitter.com/">{% icon 'icon-twitter' 'sm' %}</a>
+              <a class="p-2 bg-brand-200 rounded-1" href="https://www.linkedin.com/">{% icon 'icon-linkedin' 'sm' %}</a>
+              <a class="p-2 bg-brand-200 rounded-1" href="https://www.facebook.com/">{% icon 'icon-facebook' 'sm' %}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+{% endblock %}

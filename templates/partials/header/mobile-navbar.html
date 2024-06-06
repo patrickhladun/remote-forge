@@ -3,37 +3,51 @@
 <nav class="d-lg-none navbar bg-light fixed-top">
   <div class="container-fluid">
     {% include './brand.html' %}
-    <button class="navbar-toggler profile-menu" type="button" data-bs-toggle="offcanvas"
-      data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+    <button class="navbar-toggler profile-menu" type="button" data-bs-toggle="offcanvas" data-bs-target="#off-canvas-menu" aria-controls="off-canvas-menu" aria-label="Menu Toggle">
       {% if request.user.is_authenticated %}
-      <span class="profile-menu">
-        {% if request.user.is_superuser %}
-        <img class="no-headshot" src="{% static 'assets/images/avatar.png' %}" />
-        {% else %}
-        <img src="media/{{ user.talent.image }}" />
-        {% endif %}
-      </span>
+        <span class="profile-menu">
+          {% if profile.image %}
+            <img src="{{ MEDIA_URL }}{{ profile.image }}" />
+          {% else %}
+            <img class="no-headshot" src="{% static '/assets/images/avatar.png' %}" />
+          {% endif %}
+        </span>
       {% else %}
-      Menu
+        <div class="hamburger" for="mobile-menu-toggle" aria-label="menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       {% endif %}
     </button>
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="off-canvas-menu" aria-labelledby="off-canvas-menu-label">
       <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+        <h5 class="offcanvas-title" id="off-canvas-menu-label">REMOTE FORGE</h5>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
-        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Profile</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Account</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Logout</a>
-          </li>
-        </ul>
+        {% if request.user.is_authenticated %}
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="{% url 'profile' %}">Profile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="{% url 'account' %}">Account</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="{% url 'account_logout' %}">Logout</a>
+            </li>
+          </ul>
+        {% else %}
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 gap-2">
+            <li class="nav-item">
+              <a class="btn btn-primary" aria-current="page" href="{% url 'account_login' %}">Login/Sign in</a>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-outline-primary" aria-current="page" href="{% url 'employer_signup' %}">Post a Job</a>
+            </li>
+          </ul>
+        {% endif %}
         <hr />
         <ul class="navbar-nav flex-grow-1 pe-3">
           {% include './site-links.html' %}

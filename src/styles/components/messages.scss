@@ -1,0 +1,33 @@
+.message {
+  position: fixed;
+  display: flex;
+  bottom: 15px;
+  right: 15px;
+  z-index: 9999;
+  padding: 8px 16px;
+  border-radius: 4px;
+  color: white;
+  text-align: center;
+  font-size: 0.9rem;
+
+  &--success {
+    background-color: $success;
+  }
+  &--danger {
+    background-color: $danger;
+  }
+  &--warning {
+    background-color: $warning;
+  }
+  &--info {
+    background-color: $info;
+  }
+
+  &__close {
+    border: none;
+    border-radius: 100%;
+    margin-left: 16px;
+    width: 24px;
+    height: 24px;
+  }
+}

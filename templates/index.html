@@ -1,28 +1,58 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Remote Forge</title>
+
+    {% if metadata %}
+      {% for meta in metadata %}
+        {{ meta|safe }}
+      {% endfor %}
+    {% endif %}
 
     {% block css %}
-    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}" />
+      <link rel="stylesheet" href="{% static 'assets/css/style.css' %}" />
     {% endblock %}
 
     {% block js %}
-    <script src="{% static 'assets/js/bundle.js' %}"></script>
+      <script src="{% static 'assets/js/bundle.js' %}"></script>
     {% endblock %}
-</head>
 
-<body>
+    {% load livereload_tags %}
+    {% livereload_script %}
+  </head>
+
+  <body class="{{ page_slug }}{% if body_class %}
+      {{ body_class }}
+    {% endif %}">
     {% include './partials/header.html' %}
-    <div class="page">
-        {% block content %}{% endblock %}
+    <div class="message-container">
+      {% include 'partials/messages/message-info.html' %}
+      {% include 'partials/messages/message-success.html' %}
+      {% include 'partials/messages/message-warning.html' %}
+      {% include 'partials/messages/message-error.html' %}
     </div>
+    <div class="page {% if page_class %}{{ page_class }}{% endif %}">
+      {% block content %}
+      {% endblock %}
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    {% block footer_js %}
+    {% endblock %}
+    {% if messages %}
+      <script>
+        // TODO: Instead loading full jQuery libreary only for messages, use vanilla JS
+        $(document).ready(function () {
+          $('.message').toast('show')
+        })
+      </script>
+    {% endif %}
     {% include './partials/footer.html' %}
-</body>
-
+  </body>
 </html>

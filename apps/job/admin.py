@@ -1,11 +1,10 @@
 from django.contrib import admin
-from .models import Listing
-# Register your models here.
+
+from .models import Job
 
 
-class ListingAdmin(admin.ModelAdmin):
-    list_display = ('user', 'title', 'city', 'is_published', 'created_at')
-    
+class JobAdmin(admin.ModelAdmin):
+    list_display = ("user", "title", "city", "is_published", "created_at")
 
 
-admin.site.register(Listing, ListingAdmin)
+admin.site.register(Job, JobAdmin)

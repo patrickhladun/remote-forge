@@ -25,16 +25,18 @@
       "email": "aoife.ryan@example.com",
       "phone": "+353871234567",
       "company": "EmeraldTech Solutions",
+      "image": "employer/profile/emeraldtech_logo.webp",
       "about": "EmeraldTech Solutions specializes in providing innovative software solutions for e-commerce analytics, helping businesses thrive in the digital marketplace.",
       "website": "https://www.emeraldtech.ie",
       "city": "Dublin",
       "country": "Ireland",
-      "social": {},
+      "social": [{ "site": "Twitter", "url": "https://twitter.com" }],
       "created_at": "2023-07-20 10:00:00.000000",
       "updated_at": "2023-07-20 10:00:00.000000",
       "is_published": true
     }
   },
+
   {
     "model": "user.user",
     "pk": "5ae5b91b-0d3b-4d84-8f48-73523b9d77c0",
@@ -61,16 +63,18 @@
       "email": "liam.obrien@example.com",
       "phone": "+353871234567",
       "company": "PixelForge Games",
+      "image": "employer/profile/pixelforgegames_logo.webp",
       "about": "PixelForge Games is a leading game production company, crafting immersive experiences for players worldwide. We specialize in creating captivating gameplay and stunning visuals.",
       "website": "https://www.pixelforgegames.ie",
       "city": "Dublin",
       "country": "Ireland",
-      "social": {},
+      "social": [{ "site": "Twitter", "url": "https://twitter.com" }],
       "created_at": "2023-07-20 10:00:00.000000",
       "updated_at": "2023-07-20 10:00:00.000000",
       "is_published": true
     }
   },
+
   {
     "model": "user.user",
     "pk": "9a12c4bf-22f1-41a0-aabe-fa4c632d408e",
@@ -97,16 +101,18 @@
       "email": "juha.korhonen@example.com",
       "phone": "+358401234567",
       "company": "NordicComms",
+      "image": "employer/profile/nordiccomms_logo.webp",
       "about": "NordicComms is a leading provider of communication software solutions, offering secure and reliable platforms for businesses to connect and collaborate seamlessly.",
       "website": "https://www.nordiccomms.fi",
       "city": "Helsinki",
       "country": "Finland",
-      "social": {},
+      "social": [{ "site": "Twitter", "url": "https://twitter.com" }],
       "created_at": "2023-07-20 10:00:00.000000",
       "updated_at": "2023-07-20 10:00:00.000000",
       "is_published": true
     }
   },
+
   {
     "model": "user.user",
     "pk": "fcd36b6a-b6af-4534-9f2a-5e77b6f44a30",
@@ -133,11 +139,338 @@
       "email": "max.mueller@example.com",
       "phone": "+491234567890",
       "company": "TechGmbH",
+      "image": "employer/profile/techgmbh_logo.webp",
       "about": "TechGmbH is a leading software company based in Germany, specializing in developing innovative solutions to address complex business challenges.",
       "website": "https://www.techgmbh.de",
       "city": "Berlin",
       "country": "Germany",
-      "social": {},
+      "social": [{ "site": "Twitter", "url": "https://twitter.com" }],
+      "created_at": "2023-07-20 10:00:00.000000",
+      "updated_at": "2023-07-20 10:00:00.000000",
+      "is_published": true
+    }
+  },
+
+  {
+    "model": "user.user",
+    "pk": "d56b1c8e-4f47-4a8b-8a6f-8b6e0b1d2c3e",
+    "fields": {
+      "email": "patrick.obrien@example.com",
+      "username": "patrick_obrien",
+      "password": "pbkdf2_sha256$720000$xyz123abc456$abcdefghijklmnopqrstuv1234567890=",
+      "is_admin": false,
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "date_joined": "2023-07-20 10:00:00.000000",
+      "last_login": "2023-07-25 14:45:00.000000",
+      "user_type": "employer"
+    }
+  },
+  {
+    "model": "user.employer",
+    "pk": "e67f1d9a-7f5b-4a8e-b6f1-7d6e8a9b1c2d",
+    "fields": {
+      "user": "d56b1c8e-4f47-4a8b-8a6f-8b6e0b1d2c3e",
+      "first_name": "Patrick",
+      "last_name": "O'Brien",
+      "email": "patrick.obrien@example.com",
+      "phone": "+353871234567",
+      "company": "Leprechaun's Tech Brewmasters",
+      "image": "employer/profile/leprechaunstechbrew_logo.webp",
+      "about": "Leprechaun's Tech Brewmasters specializes in providing innovative software solutions for the brewing industry, with a touch of Irish humor and magic. Our team of 'Leprechaun Brewmasters' ensures every project is as delightful as a pint of stout.",
+      "website": "https://www.leprechaunstechbrew.ie",
+      "city": "Dublin",
+      "country": "Ireland",
+      "social": [
+        { "site": "Twitter", "url": "https://twitter.com/leprechaunstechbrew" }
+      ],
+      "created_at": "2023-07-20 10:00:00.000000",
+      "updated_at": "2023-07-20 10:00:00.000000",
+      "is_published": true
+    }
+  },
+
+  {
+    "model": "user.user",
+    "pk": "b7a1f1b8-8d5f-4a7e-b46d-8b5d7a1f1b80",
+    "fields": {
+      "email": "niall.sullivan@example.com",
+      "username": "niall_sullivan",
+      "password": "pbkdf2_sha256$720000$d9nahLFNnDl5Yr9A3ewMgx$igf567La3i6LuPJRwaGH05bRs8CHgq8os+4nYh/PbdQ=",
+      "is_admin": false,
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "date_joined": "2023-07-20 10:00:00.000000",
+      "last_login": "2023-07-25 14:45:00.000000",
+      "user_type": "employer"
+    }
+  },
+  {
+    "model": "user.employer",
+    "pk": "d5e8f1a7-5c4d-4b7f-a1e8-5c4d5e8f1a7b",
+    "fields": {
+      "user": "b7a1f1b8-8d5f-4a7e-b46d-8b5d7a1f1b80",
+      "first_name": "Niall",
+      "last_name": "Sullivan",
+      "email": "niall.sullivan@example.com",
+      "phone": "+353851234567",
+      "company": "BookingPro Systems",
+      "image": "employer/profile/bookingpro_logo.webp",
+      "about": "BookingPro Systems is a leading software company in Ireland, specializing in developing advanced booking systems for various industries, including hospitality, events, and transportation. Our solutions are designed to streamline booking processes and enhance customer experience.",
+      "website": "https://www.bookingpro.ie",
+      "city": "Galway",
+      "country": "Ireland",
+      "social": [
+        { "site": "LinkedIn", "url": "https://linkedin.com/company/bookingpro" }
+      ],
+      "created_at": "2023-07-20 10:00:00.000000",
+      "updated_at": "2023-07-20 10:00:00.000000",
+      "is_published": true
+    }
+  },
+
+  {
+    "model": "user.user",
+    "pk": "c9e8d7a6-4b3f-2a5d-6f8a-9b8d7a6c9e8d",
+    "fields": {
+      "email": "jan.kowalski@example.com",
+      "username": "jan_kowalski",
+      "password": "pbkdf2_sha256$720000$d9nahLFNnDl5Yr9A3ewMgx$igf567La3i6LuPJRwaGH05bRs8CHgq8os+4nYh/PbdQ=",
+      "is_admin": false,
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "date_joined": "2023-07-21 10:00:00.000000",
+      "last_login": "2023-07-26 14:45:00.000000",
+      "user_type": "employer"
+    }
+  },
+  {
+    "model": "user.employer",
+    "pk": "d3a5e6c7-4b5d-2a3f-6e7f-9b8d7a6c9e8d",
+    "fields": {
+      "user": "c9e8d7a6-4b3f-2a5d-6f8a-9b8d7a6c9e8d",
+      "first_name": "Jan",
+      "last_name": "Kowalski",
+      "email": "jan.kowalski@example.com",
+      "phone": "+48512345678",
+      "company": "FitTech Solutions",
+      "image": "employer/profile/fittech_logo.webp",
+      "about": "FitTech Solutions is a leading tech company based in Poland, specializing in developing innovative fitness apps that help users achieve their health and wellness goals. Our app combines advanced tracking features with personalized workout plans to provide a comprehensive fitness solution.",
+      "website": "https://www.fittech.pl",
+      "city": "Krakow",
+      "country": "Poland",
+      "social": [
+        { "site": "LinkedIn", "url": "https://linkedin.com/company/fittech" }
+      ],
+      "created_at": "2023-07-21 10:00:00.000000",
+      "updated_at": "2023-07-21 10:00:00.000000",
+      "is_published": true
+    }
+  },
+
+  {
+    "model": "user.user",
+    "pk": "123e4567-e89b-12d3-a456-426614174000",
+    "fields": {
+      "email": "omar.hussein@example.com",
+      "username": "omar_hussein",
+      "password": "pbkdf2_sha256$720000$d9nahLFNnDl5Yr9A3ewMgx$igf567La3i6LuPJRwaGH05bRs8CHgq8os+4nYh/PbdQ=",
+      "is_admin": false,
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "date_joined": "2022-02-02 10:00:00.000000",
+      "last_login": "2023-07-27 14:45:00.000000",
+      "user_type": "employer"
+    }
+  },
+  {
+    "model": "user.employer",
+    "pk": "123e4567-e89b-12d3-a456-426614174001",
+    "fields": {
+      "user": "123e4567-e89b-12d3-a456-426614174000",
+      "first_name": "Omar",
+      "last_name": "Hussein",
+      "email": "omar.hussein@example.com",
+      "phone": "+971501234567",
+      "company": "Gulf Property Solutions",
+      "image": "employer/profile/gulfproperty_logo.webp",
+      "about": "Gulf Property Solutions is a premier real estate company based in Abu Dhabi, specializing in sales, rental, and property management. We offer comprehensive services to help clients find their perfect property and manage their investments efficiently.",
+      "website": "https://www.gulfproperty.ae",
+      "city": "Abu Dhabi",
+      "country": "United Arab Emirates",
+      "social": [
+        {
+          "site": "LinkedIn",
+          "url": "https://linkedin.com/company/gulfproperty"
+        }
+      ],
+      "created_at": "2022-02-02 10:00:00.000000",
+      "updated_at": "2023-07-22 10:00:00.000000",
+      "is_published": true
+    }
+  },
+
+  {
+    "model": "user.user",
+    "pk": "456e7890-b12d-34e5-a678-901234567890",
+    "fields": {
+      "email": "alex.taylor@example.com",
+      "username": "alex_taylor",
+      "password": "pbkdf2_sha256$720000$d9nahLFNnDl5Yr9A3ewMgx$igf567La3i6LuPJRwaGH05bRs8CHgq8os+4nYh/PbdQ=",
+      "is_admin": false,
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "date_joined": "2023-07-23 10:00:00.000000",
+      "last_login": "2023-07-28 14:45:00.000000",
+      "user_type": "employer"
+    }
+  },
+  {
+    "model": "user.employer",
+    "pk": "789e1234-b12d-34e5-a678-901234567890",
+    "fields": {
+      "user": "456e7890-b12d-34e5-a678-901234567890",
+      "first_name": "Alex",
+      "last_name": "Taylor",
+      "email": "alex.taylor@example.com",
+      "phone": "+441234567890",
+      "company": "AudioTech Innovations",
+      "image": "employer/profile/audiotech_logo.webp",
+      "about": "AudioTech Innovations is a pioneering company dedicated to developing world-leading audio technology. Our cutting-edge products enhance sound experiences across various industries, from entertainment to communication.",
+      "website": "https://www.audiotechinnovations.com",
+      "city": "London",
+      "country": "United Kingdom",
+      "social": [
+        { "site": "LinkedIn", "url": "https://linkedin.com/company/audiotech" }
+      ],
+      "created_at": "2023-07-23 10:00:00.000000",
+      "updated_at": "2023-07-23 10:00:00.000000",
+      "is_published": true
+    }
+  },
+
+  {
+    "model": "user.user",
+    "pk": "b3a6e1f5-9c8d-4f2b-a3d5-1f7e8a6b9c4f",
+    "fields": {
+      "email": "marta.nowak@example.com",
+      "username": "marta_nowak",
+      "password": "pbkdf2_sha256$720000$d9nahLFNnDl5Yr9A3ewMgx$igf567La3i6LuPJRwaGH05bRs8CHgq8os+4nYh/PbdQ=",
+      "is_admin": false,
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "date_joined": "2023-07-20 10:00:00.000000",
+      "last_login": "2023-07-25 14:45:00.000000",
+      "user_type": "employer"
+    }
+  },
+  {
+    "model": "user.employer",
+    "pk": "d2a1f3e7-5c9b-4d6f-a1b3-8c4d7a1f3e8b",
+    "fields": {
+      "user": "b3a6e1f5-9c8d-4f2b-a3d5-1f7e8a6b9c4f",
+      "first_name": "Marta",
+      "last_name": "Nowak",
+      "email": "marta.nowak@example.com",
+      "phone": "+48223456789",
+      "company": "SportWear Polska",
+      "image": "employer/profile/sportwear_logo.webp",
+      "about": "SportWear Polska is a leading sport clothing company based in Warsaw, specializing in high-quality sportswear and accessories. We are dedicated to providing athletes with the best gear to enhance their performance.",
+      "website": "https://www.sportwearpolska.pl",
+      "city": "Warsaw",
+      "country": "Poland",
+      "social": [
+        {
+          "site": "LinkedIn",
+          "url": "https://linkedin.com/company/sportwearpolska"
+        }
+      ],
+      "created_at": "2023-07-20 10:00:00.000000",
+      "updated_at": "2023-07-20 10:00:00.000000",
+      "is_published": true
+    }
+  },
+
+  {
+    "model": "user.user",
+    "pk": "e1f6b7a9-3c8d-4f1e-a5d6-9a7b6c5e4f3d",
+    "fields": {
+      "email": "marco.rossi@example.com",
+      "username": "marco_rossi",
+      "password": "pbkdf2_sha256$720000$d9nahLFNnDl5Yr9A3ewMgx$igf567La3i6LuPJRwaGH05bRs8CHgq8os+4nYh/PbdQ=",
+      "is_admin": false,
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "date_joined": "2023-07-20 10:00:00.000000",
+      "last_login": "2023-07-25 14:45:00.000000",
+      "user_type": "employer"
+    }
+  },
+  {
+    "model": "user.employer",
+    "pk": "f2a1e3d6-4b5c-4a7e-b1c3-9d6f7a1e3b5a",
+    "fields": {
+      "user": "e1f6b7a9-3c8d-4f1e-a5d6-9a7b6c5e4f3d",
+      "first_name": "Marco",
+      "last_name": "Rossi",
+      "email": "marco.rossi@example.com",
+      "phone": "+393401234567",
+      "company": "Roma Travel Agency",
+      "image": "employer/profile/romatravel_logo.webp",
+      "about": "Roma Travel Agency is a premier travel agency based in Rome, specializing in personalized travel experiences. We offer a range of services from luxury vacations to business travel, ensuring each journey is memorable and seamless.",
+      "website": "https://www.romatravelagency.it",
+      "city": "Rome",
+      "country": "Italy",
+      "social": [
+        { "site": "LinkedIn", "url": "https://linkedin.com/company/romatravel" }
+      ],
+      "created_at": "2023-07-20 10:00:00.000000",
+      "updated_at": "2023-07-20 10:00:00.000000",
+      "is_published": true
+    }
+  },
+
+  {
+    "model": "user.user",
+    "pk": "e7b6d5c4-a3f2-4b1e-a2d5-7a6b8c9f1e3d",
+    "fields": {
+      "email": "lisa.nilsson@example.com",
+      "username": "lisa_nilsson",
+      "password": "pbkdf2_sha256$720000$d9nahLFNnDl5Yr9A3ewMgx$igf567La3i6LuPJRwaGH05bRs8CHgq8os+4nYh/PbdQ=",
+      "is_admin": false,
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "date_joined": "2023-07-20 10:00:00.000000",
+      "last_login": "2023-07-25 14:45:00.000000",
+      "user_type": "employer"
+    }
+  },
+  {
+    "model": "user.employer",
+    "pk": "f3a1e2b5-4c7d-4a6e-b2c3-9d7f8a1e2b5a",
+    "fields": {
+      "user": "e7b6d5c4-a3f2-4b1e-a2d5-7a6b8c9f1e3d",
+      "first_name": "Lisa",
+      "last_name": "Nilsson",
+      "email": "lisa.nilsson@example.com",
+      "phone": "+46701234567",
+      "company": "TaskMaster AB",
+      "image": "employer/profile/taskmaster_logo.webp",
+      "about": "TaskMaster AB is a leading company based in Stockholm that specializes in developing advanced task management solutions. Our app helps individuals and teams organize, prioritize, and manage their tasks efficiently.",
+      "website": "https://www.taskmaster.se",
+      "city": "Stockholm",
+      "country": "Sweden",
+      "social": [
+        { "site": "LinkedIn", "url": "https://linkedin.com/company/taskmaster" }
+      ],
       "created_at": "2023-07-20 10:00:00.000000",
       "updated_at": "2023-07-20 10:00:00.000000",
       "is_published": true

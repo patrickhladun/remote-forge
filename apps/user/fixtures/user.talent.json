@@ -30,9 +30,12 @@
       "bio": "As a self-taught software engineer, I am passionate about creating innovative solutions to complex problems. With a strong foundation in programming acquired through self-study and hands-on projects, I thrive in dynamic environments and enjoy collaborating with cross-functional teams to deliver high-quality software.",
       "resume": "talent/resumes/alex_johnson_resume.pdf",
       "website": "https://alex-johnson.dev/",
-      "social": {
-        "linkedin": "https://www.linkedin.com/in/alexjohnson/"
-      },
+      "social": [
+        {
+          "site": "linkedin",
+          "url": "https://www.linkedin.com/in/alexjohnson/"
+        }
+      ],
       "experience": [
         {
           "company_name": "Tech Innovations Inc.",
@@ -89,9 +92,10 @@
       "skills": ["JavaScript", "HTML", "CSS", "Python"],
       "created_at": "2023-08-20 15:30:45.123456",
       "updated_at": "2023-08-25 10:20:30.654321",
-      "is_published": false
+      "is_published": true
     }
   },
+
   {
     "model": "user.user",
     "pk": "22d19d16-5f1d-4e2c-8a25-d3704175f2f7",
@@ -119,15 +123,24 @@
       "city": "Warsaw",
       "country": "Poland",
       "title": "Frontend Lead",
-      "image": "talent/profile/adam_kowalski.png",
+      "image": "talent/profile/adam_kowalski.webp",
       "bio": "I am a dedicated frontend developer with extensive experience in leading teams and delivering high-quality web solutions. With a passion for clean and maintainable code, I excel in creating user-friendly interfaces that drive engagement and enhance the overall user experience.",
       "resume": "talent/resumes/adam_kowalski_resume.pdf",
       "website": "",
-      "social": {
-        "linkedin": "https://www.linkedin.com/in/adamkowalski/",
-        "github": "https://github.com/adamkowalski",
-        "twitter": "https://twitter.com/adam_kowalski"
-      },
+      "social": [
+        {
+          "site": "linkedin",
+          "url": "https://www.linkedin.com/in/adamkowalski/"
+        },
+        {
+          "site": "github",
+          "url": "https://github.com/adamkowalski"
+        },
+        {
+          "site": "twitter",
+          "url": "https://twitter.com/adam_kowalski"
+        }
+      ],
       "experience": [
         {
           "company_name": "Tech Solutions Inc.",
@@ -135,7 +148,7 @@
           "start_date": "2018-05-01",
           "end_date": "2019-04-30",
           "still_on": false,
-          "responsibilities": "<p>Assisted in frontend development tasks, implemented UI designs, and participated in code reviews.</p>"
+          "responsibilities": "Assisted in frontend development tasks, implemented UI designs, and participated in code reviews."
         },
         {
           "company_name": "Web Development Agency",
@@ -143,7 +156,7 @@
           "start_date": "2019-06-01",
           "end_date": "2021-12-31",
           "still_on": false,
-          "responsibilities": "<p>Led frontend development efforts, collaborated with design and backend teams to implement features, and mentored junior developers.</p>"
+          "responsibilities": "Led frontend development efforts, collaborated with design and backend teams to implement features, and mentored junior developers."
         },
         {
           "company_name": "Digital Solutions Ltd.",
@@ -151,7 +164,7 @@
           "start_date": "2022-01-01",
           "end_date": null,
           "still_on": true,
-          "responsibilities": "<p>Lead a team of frontend developers, defined technical standards and best practices, and contributed to architectural decisions.</p>"
+          "responsibilities": "Lead a team of frontend developers, defined technical standards and best practices, and contributed to architectural decisions."
         }
       ],
       "education": [
@@ -184,9 +197,10 @@
       "skills": ["HTML", "CSS", "JavaScript", "React"],
       "created_at": "2023-11-15 08:00:00.000000",
       "updated_at": "2023-11-20 10:30:00.000000",
-      "is_published": false
+      "is_published": true
     }
   },
+
   {
     "model": "user.user",
     "pk": "17fd54c1-f894-4a78-8325-0b28d36cc95c",
@@ -218,10 +232,16 @@
       "bio": "I am a detail-oriented accountant with a proven track record of accuracy and efficiency in financial management. With a strong foundation in accounting principles and experience working with various industries, I am committed to delivering reliable financial insights to support business growth and decision-making.",
       "resume": "talent/resumes/sarah_smith_resume.pdf",
       "website": "",
-      "social": {
-        "linkedin": "https://www.linkedin.com/in/sarahsmith/",
-        "twitter": "https://twitter.com/sarah_smith"
-      },
+      "social": [
+        {
+          "site": "linkedin",
+          "url": "https://www.linkedin.com/in/sarahsmith/"
+        },
+        {
+          "site": "twitter",
+          "url": "https://twitter.com/sarah_smith"
+        }
+      ],
       "experience": [
         {
           "company_name": "Greenway Consulting",
@@ -229,7 +249,7 @@
           "start_date": "2019-03-01",
           "end_date": "2020-05-31",
           "still_on": false,
-          "responsibilities": "<p>Assisted in preparing financial statements, reconciled accounts, and conducted audits.</p>"
+          "responsibilities": "Assisted in preparing financial statements, reconciled accounts, and conducted audits."
         },
         {
           "company_name": "Summit Investments",
@@ -237,7 +257,7 @@
           "start_date": "2020-06-01",
           "end_date": "2022-08-31",
           "still_on": false,
-          "responsibilities": "<p>Managed financial reporting processes, analyzed financial data, and provided strategic financial guidance to management.</p>"
+          "responsibilities": "Managed financial reporting processes, analyzed financial data, and provided strategic financial guidance to management."
         },
         {
           "company_name": "Financial Dynamics",
@@ -245,7 +265,7 @@
           "start_date": "2022-09-01",
           "end_date": null,
           "still_on": true,
-          "responsibilities": "<p>Lead the accounting team, implemented financial controls, and optimized accounting procedures to enhance efficiency.</p>"
+          "responsibilities": "Lead the accounting team, implemented financial controls, and optimized accounting procedures to enhance efficiency."
         }
       ],
       "education": [
@@ -270,9 +290,108 @@
       "skills": ["Accounting", "Financial Reporting", "Auditing"],
       "created_at": "2023-09-10 12:00:00.000000",
       "updated_at": "2023-09-15 15:30:00.000000",
-      "is_published": false
+      "is_published": true
     }
   },
+
+  {
+    "model": "user.user",
+    "pk": "a7b8c9d0-1234-5678-9101-112131415161",
+    "fields": {
+      "email": "zorg.zenith@marsmail.com",
+      "username": "zorg_zenith",
+      "password": "pbkdf2_sha256$720000$d9nahLFNnDl5Yr9A3ewMgx$igf567La3i6LuPJRwaGH05bRs8CHgq8os+4nYh/PbdQ=",
+      "is_admin": false,
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "date_joined": "2020-11-18 09:00:00.000000",
+      "last_login": "2023-12-12 10:00:00.000000",
+      "user_type": "talent"
+    }
+  },
+  {
+    "model": "user.talent",
+    "pk": "b6c7d8e9-1234-5678-9101-212223242526",
+    "fields": {
+      "user": "a7b8c9d0-1234-5678-9101-112131415161",
+      "first_name": "Zorg",
+      "last_name": "Zenith",
+      "phone": "9999999999",
+      "city": "Olympus Mons",
+      "country": "Mars",
+      "title": "Intergalactic Software Engineer",
+      "image": "talent/profile/zorg_zenith.webp",
+      "bio": "Zorg Zenith is a distinguished Intergalactic Software Engineer hailing from Mars. Known for his superior intellect and exceptional problem-solving skills, Zorg excels in developing advanced technologies and interplanetary communication systems.",
+      "resume": "talent/resumes/zorg_zenith_resume.pdf",
+      "website": "https://zorg-zenith-mars.dev/",
+      "social": [
+        {
+          "site": "linkedin",
+          "url": "https://www.linkedin.com/in/zorg-zenith-mars/"
+        },
+        {
+          "site": "twitter",
+          "url": "https://twitter.com/zorg_zenith_mars"
+        }
+      ],
+      "experience": [
+        {
+          "company_name": "Martian Tech Enterprises",
+          "position": "Junior Martian Engineer",
+          "start_date": "2010-01-01",
+          "end_date": "2014-12-31",
+          "still_on": false,
+          "responsibilities": "<p>Developed and maintained critical Martian infrastructure, assisted in designing advanced rover systems, and collaborated with Earth-based teams on interplanetary projects.</p>"
+        },
+        {
+          "company_name": "Red Planet Innovations",
+          "position": "Senior Galactic Developer",
+          "start_date": "2015-01-01",
+          "end_date": "2018-06-30",
+          "still_on": false,
+          "responsibilities": "<p>Led the development of new propulsion systems, optimized life support algorithms, and contributed to the creation of the first Martian-Earth communication protocol.</p>"
+        },
+        {
+          "company_name": "Universal Code Solutions",
+          "position": "Chief Technology Officer",
+          "start_date": "2018-07-01",
+          "end_date": null,
+          "still_on": true,
+          "responsibilities": "<p>Oversees all technological advancements, mentors junior Martian developers, and ensures the integration of Martian technology with other planetary systems. Pioneers new software solutions for interstellar travel and colonization.</p>"
+        }
+      ],
+      "education": [
+        {
+          "level": "Bachelor's Degree in Extraterrestrial Engineering",
+          "status": "Completed",
+          "start_date": "2005-09-01",
+          "end_date": "2009-06-30",
+          "still_on": false,
+          "expected_end_date": ""
+        },
+        {
+          "level": "Master's Degree in Interplanetary Computer Science",
+          "status": "Completed",
+          "start_date": "2010-01-01",
+          "end_date": "2012-12-31",
+          "still_on": false,
+          "expected_end_date": ""
+        }
+      ],
+      "interests": "Quantum Computing, Terraforming, Space Exploration",
+      "skills": [
+        "C++",
+        "Python",
+        "Terraforming Algorithms",
+        "Quantum Computing"
+      ],
+      "created_at": "2020-11-18 09:00:00.000000",
+      "updated_at": "2023-12-12 10:00:00.000000",
+      "is_published": true
+    }
+  },
+
   {
     "model": "user.user",
     "pk": "f1fd07a2-39d2-4691-b7a3-693d0f70c1b9",
@@ -304,11 +423,12 @@
       "bio": "As a DevOps engineer, I specialize in automating and streamlining the software development processes to ensure efficient and reliable deployment pipelines. With a strong background in both development and operations, I leverage cutting-edge technologies to optimize system performance, enhance scalability, and minimize downtime.",
       "resume": "talent/resumes/jing_li_resume.pdf",
       "website": "",
-      "social": {
-        "linkedin": "https://www.linkedin.com/in/jingli/",
-        "github": "https://github.com/jing_li",
-        "twitter": "https://twitter.com/jing_li"
-      },
+      "social": [
+        {
+          "site": "github",
+          "url": "https://github.com/jing_li"
+        }
+      ],
       "experience": [
         {
           "company_name": "CloudSolutions",
@@ -316,7 +436,7 @@
           "start_date": "2019-08-01",
           "end_date": "2022-09-30",
           "still_on": false,
-          "responsibilities": "<p>Implemented CI/CD pipelines, managed infrastructure as code, and optimized system monitoring and alerting.</p>"
+          "responsibilities": "Implemented CI/CD pipelines, managed infrastructure as code, and optimized system monitoring and alerting."
         },
         {
           "company_name": "TechInnovate",
@@ -324,7 +444,7 @@
           "start_date": "2022-10-01",
           "end_date": null,
           "still_on": true,
-          "responsibilities": "<p>Lead DevOps initiatives, collaborated with cross-functional teams, and introduced containerization and orchestration solutions.</p>"
+          "responsibilities": "Lead DevOps initiatives, collaborated with cross-functional teams, and introduced containerization and orchestration solutions."
         }
       ],
       "education": [
@@ -357,7 +477,1702 @@
       "skills": ["Docker", "Kubernetes", "Terraform", "Jenkins"],
       "created_at": "2023-07-20 10:00:00.000000",
       "updated_at": "2023-07-25 14:45:00.000000",
-      "is_published": false
+      "is_published": true
+    }
+  },
+
+  {
+    "model": "user.user",
+    "pk": "e9a1f2b3-4c1d-4d7e-a5c7-9e2b3a4d9e5f",
+    "fields": {
+      "email": "marek.novak@example.com",
+      "username": "marek_novak",
+      "password": "pbkdf2_sha256$720000$d9nahLFNnDl5Yr9A3ewMgx$igf567La3i6LuPJRwaGH05bRs8CHgq8os+4nYh/PbdQ=",
+      "is_admin": false,
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "date_joined": "2023-11-30 10:00:00.000000",
+      "last_login": "2023-12-01 12:00:00.000000",
+      "user_type": "talent"
+    }
+  },
+  {
+    "model": "user.talent",
+    "pk": "b4e8f1d9-3f3c-4b4b-8d9a-6e7c9a4d8e6f",
+    "fields": {
+      "user": "e9a1f2b3-4c1d-4d7e-a5c7-9e2b3a4d9e5f",
+      "first_name": "Marek",
+      "last_name": "Novak",
+      "phone": "421987654321",
+      "city": "Bratislava",
+      "country": "Slovakia",
+      "title": "Software Engineer",
+      "image": "talent/profile/marek_novak.webp",
+      "bio": "A dedicated software engineer from Slovakia, passionate about developing innovative software solutions. Skilled in various programming languages and always eager to learn new technologies.",
+      "resume": "talent/resumes/marek_novak_resume.pdf",
+      "website": "https://marek-novak.dev/",
+      "social": [
+        {
+          "site": "linkedin",
+          "url": "https://www.linkedin.com/in/marek-novak/"
+        },
+        {
+          "site": "github",
+          "url": "https://github.com/marek-novak"
+        },
+        {
+          "site": "twitter",
+          "url": "https://twitter.com/marek_novak"
+        }
+      ],
+      "experience": [
+        {
+          "company_name": "Tech Innovators",
+          "position": "Junior Software Developer",
+          "start_date": "2018-07-01",
+          "end_date": "2020-06-30",
+          "still_on": false,
+          "responsibilities": "Assisted in the development of web applications, participated in code reviews, and collaborated with senior developers to implement new features. Developed and maintained internal tools to improve workflow efficiency."
+        },
+        {
+          "company_name": "Global Solutions",
+          "position": "Software Developer",
+          "start_date": "2020-07-01",
+          "end_date": "2022-12-31",
+          "still_on": false,
+          "responsibilities": "Developed and maintained client-facing web applications, integrated APIs, and optimized application performance. Worked closely with the QA team to ensure high-quality deliverables and resolved technical issues promptly."
+        },
+        {
+          "company_name": "Innovative Tech Ltd.",
+          "position": "Senior Software Engineer",
+          "start_date": "2023-01-01",
+          "end_date": null,
+          "still_on": true,
+          "responsibilities": "Lead the development of scalable software solutions, mentor junior developers, and manage code deployment processes. Collaborate with cross-functional teams to design and implement new features, and ensure the overall stability and performance of applications."
+        }
+      ],
+      "education": [
+        {
+          "level": "Bachelor's Degree in Computer Science",
+          "status": "Completed",
+          "start_date": "2014-09-01",
+          "end_date": "2018-06-30",
+          "still_on": false,
+          "expected_end_date": ""
+        },
+        {
+          "level": "Master's Degree in Software Engineering",
+          "status": "Completed",
+          "start_date": "2018-09-01",
+          "end_date": "2020-06-30",
+          "still_on": false,
+          "expected_end_date": ""
+        },
+        {
+          "level": "Udacity Nanodegree in Artificial Intelligence",
+          "status": "Completed",
+          "start_date": "2021-01-01",
+          "end_date": "2021-12-31",
+          "still_on": false,
+          "expected_end_date": ""
+        }
+      ],
+      "interests": "Machine Learning, Cloud Computing, Open Source Contributions",
+      "skills": ["Java", "Python", "JavaScript", "Docker"],
+      "created_at": "2023-11-30 10:00:00.000000",
+      "updated_at": "2023-12-01 12:00:00.000000",
+      "is_published": true
+    }
+  },
+
+  {
+    "model": "user.user",
+    "pk": "c8e4d9a1-7890-4567-b123-4567890abcde",
+    "fields": {
+      "email": "whiskers.cat@example.com",
+      "username": "whiskers_cat",
+      "password": "pbkdf2_sha256$720000$d9nahLFNnDl5Yr9A3ewMgx$igf567La3i6LuPJRwaGH05bRs8CHgq8os+4nYh/PbdQ=",
+      "is_admin": false,
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "date_joined": "2020-11-20 09:00:00.000000",
+      "last_login": "2023-12-12 10:00:00.000000",
+      "user_type": "talent"
+    }
+  },
+  {
+    "model": "user.talent",
+    "pk": "d2e8f3b4-5678-4567-8901-234567890abc",
+    "fields": {
+      "user": "c8e4d9a1-7890-4567-b123-4567890abcde",
+      "first_name": "Whiskers",
+      "last_name": "Cat",
+      "phone": "1234567890",
+      "city": "Catnipville",
+      "country": "Catland",
+      "title": "Professional Napper",
+      "image": "talent/profile/whiskers_cat.webp",
+      "bio": "Whiskers Cat is a professional napper with a penchant for finding the coziest spots and the sunniest patches. Known for his ability to sleep through anything, Whiskers has honed his napping skills to perfection.",
+      "resume": "talent/resumes/whiskers_cat_resume.pdf",
+      "website": "https://whiskers-catnapper.com/",
+      "social": [
+        {
+          "site": "linkedin",
+          "url": "https://www.linkedin.com/in/whiskers-catnapper/"
+        },
+        {
+          "site": "twitter",
+          "url": "https://twitter.com/whiskers_catnapper"
+        }
+      ],
+      "experience": [
+        {
+          "company_name": "Cozy Corner",
+          "position": "Junior Napper",
+          "start_date": "2015-01-01",
+          "end_date": "2018-12-31",
+          "still_on": false,
+          "responsibilities": "<p>Mastered the art of napping in various cozy corners, perfected purring techniques to enhance relaxation, and maintained a consistent napping schedule.</p>"
+        },
+        {
+          "company_name": "Sunbeam Studios",
+          "position": "Senior Napper",
+          "start_date": "2019-01-01",
+          "end_date": "2021-06-30",
+          "still_on": false,
+          "responsibilities": "<p>Found the best sunbeam spots for optimal warmth, led a team of junior nappers, and developed advanced napping strategies for different environments.</p>"
+        },
+        {
+          "company_name": "Feline Dreamland",
+          "position": "Chief Nap Officer",
+          "start_date": "2021-07-01",
+          "end_date": null,
+          "still_on": true,
+          "responsibilities": "<p>Oversees all napping operations, mentors aspiring nappers, and ensures the highest standards of nap quality and comfort. Innovates new techniques for deep, restful sleep.</p>"
+        }
+      ],
+      "education": [
+        {
+          "level": "Bachelor's Degree in Cozy Studies",
+          "status": "Completed",
+          "start_date": "2010-09-01",
+          "end_date": "2014-06-30",
+          "still_on": false,
+          "expected_end_date": ""
+        },
+        {
+          "level": "Master's Degree in Feline Relaxation",
+          "status": "Completed",
+          "start_date": "2015-01-01",
+          "end_date": "2017-12-31",
+          "still_on": false,
+          "expected_end_date": ""
+        }
+      ],
+      "interests": "Napping, Purring, Sunbathing",
+      "skills": [
+        "Napping",
+        "Purring",
+        "Sunbeam Spotting",
+        "Relaxation Techniques"
+      ],
+      "created_at": "2020-11-20 09:00:00.000000",
+      "updated_at": "2023-12-12 10:00:00.000000",
+      "is_published": true
+    }
+  },
+
+  {
+    "model": "user.user",
+    "pk": "a1234567-89ab-cdef-0123-456789abcdef",
+    "fields": {
+      "email": "luca.rossi@example.com",
+      "username": "luca_rossi",
+      "password": "pbkdf2_sha256$720000$d9nahLFNnDl5Yr9A3ewMgx$igf567La3i6LuPJRwaGH05bRs8CHgq8os+4nYh/PbdQ=",
+      "is_admin": false,
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "date_joined": "2023-11-30 11:00:00.000000",
+      "last_login": "2023-12-01 13:00:00.000000",
+      "user_type": "talent"
+    }
+  },
+  {
+    "model": "user.talent",
+    "pk": "b1234567-89ab-cdef-0123-456789abcdef",
+    "fields": {
+      "user": "a1234567-89ab-cdef-0123-456789abcdef",
+      "first_name": "Luca",
+      "last_name": "Rossi",
+      "phone": "390612345678",
+      "city": "Rome",
+      "country": "Italy",
+      "title": "Software Engineer",
+      "image": "talent/profile/luca_rossi.webp",
+      "bio": "A passionate software engineer from Italy, with a keen interest in developing efficient and scalable software solutions. Skilled in multiple programming languages and always eager to tackle new challenges.",
+      "resume": "talent/resumes/luca_rossi_resume.pdf",
+      "website": "https://luca-rossi.dev/",
+      "social": [
+        {
+          "site": "linkedin",
+          "url": "https://www.linkedin.com/in/luca-rossi/"
+        },
+        {
+          "site": "github",
+          "url": "https://github.com/luca-rossi"
+        },
+        {
+          "site": "twitter",
+          "url": "https://twitter.com/luca_rossi"
+        }
+      ],
+      "experience": [
+        {
+          "company_name": "Innovative Tech Solutions",
+          "position": "Junior Software Developer",
+          "start_date": "2017-06-01",
+          "end_date": "2019-05-31",
+          "still_on": false,
+          "responsibilities": "Participated in the development of web applications, conducted code reviews, and collaborated with senior developers to design and implement new features. Developed internal tools to improve team productivity."
+        },
+        {
+          "company_name": "Global Tech",
+          "position": "Software Developer",
+          "start_date": "2019-06-01",
+          "end_date": "2021-11-30",
+          "still_on": false,
+          "responsibilities": "Developed and maintained web applications, integrated third-party APIs, and optimized application performance. Worked closely with the QA team to ensure high-quality deliverables and resolved technical issues promptly."
+        },
+        {
+          "company_name": "Future Technologies Ltd.",
+          "position": "Senior Software Engineer",
+          "start_date": "2021-12-01",
+          "end_date": null,
+          "still_on": true,
+          "responsibilities": "Lead the development of scalable software solutions, mentored junior developers, and managed code deployment processes. Collaborated with cross-functional teams to design and implement new features, and ensured the overall stability and performance of applications."
+        }
+      ],
+      "education": [
+        {
+          "level": "Bachelor's Degree in Computer Science",
+          "status": "Completed",
+          "start_date": "2013-09-01",
+          "end_date": "2017-05-31",
+          "still_on": false,
+          "expected_end_date": ""
+        },
+        {
+          "level": "Master's Degree in Software Engineering",
+          "status": "Completed",
+          "start_date": "2017-09-01",
+          "end_date": "2019-05-31",
+          "still_on": false,
+          "expected_end_date": ""
+        },
+        {
+          "level": "Coursera Specialization in Cloud Computing",
+          "status": "Completed",
+          "start_date": "2020-01-01",
+          "end_date": "2020-12-31",
+          "still_on": false,
+          "expected_end_date": ""
+        }
+      ],
+      "interests": "Cloud Computing, Open Source Projects, DevOps",
+      "skills": ["Python", "JavaScript", "Go", "AWS"],
+      "created_at": "2023-11-30 11:00:00.000000",
+      "updated_at": "2023-12-01 13:00:00.000000",
+      "is_published": true
+    }
+  },
+
+  {
+    "model": "user.user",
+    "pk": "c1234567-89ab-cdef-0123-456789abcdef",
+    "fields": {
+      "email": "anna.schmidt@example.com",
+      "username": "anna_schmidt",
+      "password": "pbkdf2_sha256$720000$d9nahLFNnDl5Yr9A3ewMgx$igf567La3i6LuPJRwaGH05bRs8CHgq8os+4nYh/PbdQ=",
+      "is_admin": false,
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "date_joined": "2023-12-01 09:00:00.000000",
+      "last_login": "2023-12-02 11:00:00.000000",
+      "user_type": "talent"
+    }
+  },
+  {
+    "model": "user.talent",
+    "pk": "d1234567-89ab-cdef-0123-456789abcdef",
+    "fields": {
+      "user": "c1234567-89ab-cdef-0123-456789abcdef",
+      "first_name": "Anna",
+      "last_name": "Schmidt",
+      "phone": "491234567890",
+      "city": "Berlin",
+      "country": "Germany",
+      "title": "UX Designer",
+      "image": "talent/profile/anna_schmidt.webp",
+      "bio": "Creative UX Designer with a passion for crafting user-centric digital experiences. With a strong background in design and a keen eye for detail, I am dedicated to improving the usability and aesthetics of web and mobile applications.",
+      "resume": "talent/resumes/anna_schmidt_resume.pdf",
+      "website": "https://anna-schmidt.design/",
+      "social": [
+        {
+          "site": "linkedin",
+          "url": "https://www.linkedin.com/in/anna-schmidt/"
+        },
+        {
+          "site": "github",
+          "url": "https://github.com/anna-schmidt"
+        },
+        {
+          "site": "twitter",
+          "url": "https://twitter.com/anna_schmidt"
+        }
+      ],
+      "experience": [
+        {
+          "company_name": "Design Innovators",
+          "position": "Junior UX Designer",
+          "start_date": "2017-05-01",
+          "end_date": "2019-04-30",
+          "still_on": false,
+          "responsibilities": "Assisted in user research, created wireframes and prototypes, and collaborated with developers to ensure design feasibility. Conducted usability testing to gather feedback and improve designs."
+        },
+        {
+          "company_name": "Global Design Solutions",
+          "position": "UX Designer",
+          "start_date": "2019-05-01",
+          "end_date": "2021-10-31",
+          "still_on": false,
+          "responsibilities": "Led user research projects, developed user personas, and designed intuitive user interfaces for web and mobile applications. Worked closely with product managers and developers to align design goals with business objectives."
+        },
+        {
+          "company_name": "Innovative Interfaces GmbH",
+          "position": "Senior UX Designer",
+          "start_date": "2021-11-01",
+          "end_date": null,
+          "still_on": true,
+          "responsibilities": "Lead UX design initiatives, mentored junior designers, and managed the design process from ideation to implementation. Conducted user testing and iterated on designs to enhance user satisfaction and engagement."
+        }
+      ],
+      "education": [
+        {
+          "level": "Bachelor's Degree in Graphic Design",
+          "status": "Completed",
+          "start_date": "2013-09-01",
+          "end_date": "2017-04-30",
+          "still_on": false,
+          "expected_end_date": ""
+        },
+        {
+          "level": "Master's Degree in Human-Computer Interaction",
+          "status": "Completed",
+          "start_date": "2017-09-01",
+          "end_date": "2019-04-30",
+          "still_on": false,
+          "expected_end_date": ""
+        },
+        {
+          "level": "Coursera Specialization in UX Design",
+          "status": "Completed",
+          "start_date": "2020-01-01",
+          "end_date": "2020-12-31",
+          "still_on": false,
+          "expected_end_date": ""
+        }
+      ],
+      "interests": "User Research, Interaction Design, Usability Testing",
+      "skills": ["Adobe XD", "Sketch", "Figma", "User Research"],
+      "created_at": "2023-12-01 09:00:00.000000",
+      "updated_at": "2023-12-02 11:00:00.000000",
+      "is_published": true
+    }
+  },
+
+  {
+    "model": "user.user",
+    "pk": "f1234567-89ab-cdef-0123-456789abcdef",
+    "fields": {
+      "email": "emma.murphy@example.com",
+      "username": "emma_murphy",
+      "password": "pbkdf2_sha256$720000$d9nahLFNnDl5Yr9A3ewMgx$igf567La3i6LuPJRwaGH05bRs8CHgq8os+4nYh/PbdQ=",
+      "is_admin": false,
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "date_joined": "2023-12-01 10:00:00.000000",
+      "last_login": "2023-12-02 12:00:00.000000",
+      "user_type": "talent"
+    }
+  },
+  {
+    "model": "user.talent",
+    "pk": "e1234567-89ab-cdef-0123-456789abcdef",
+    "fields": {
+      "user": "f1234567-89ab-cdef-0123-456789abcdef",
+      "first_name": "Emma",
+      "last_name": "Murphy",
+      "phone": "35312345678",
+      "city": "Dublin",
+      "country": "Ireland",
+      "title": "Professional Recruiter",
+      "image": "talent/profile/emma_murphy.webp",
+      "bio": "Experienced recruiter specializing in finding top talent for leading companies in the tech industry. With a keen eye for identifying potential, I am dedicated to helping both companies and candidates achieve their goals.",
+      "resume": "talent/resumes/emma_murphy_resume.pdf",
+      "website": "https://emma-murphy-recruiting.ie/",
+      "social": [
+        {
+          "site": "linkedin",
+          "url": "https://www.linkedin.com/in/emma-murphy-recruiting/"
+        },
+        {
+          "site": "twitter",
+          "url": "https://twitter.com/emma_murphy_rec"
+        }
+      ],
+      "experience": [
+        {
+          "company_name": "Tech Talent Hub",
+          "position": "Recruitment Consultant",
+          "start_date": "2015-01-01",
+          "end_date": "2018-12-31",
+          "still_on": false,
+          "responsibilities": "Managed full-cycle recruitment for various tech roles, built and maintained strong relationships with clients, and sourced candidates through various channels. Conducted interviews and provided guidance to hiring managers on recruitment strategies."
+        },
+        {
+          "company_name": "Global Recruiters Network",
+          "position": "Senior Recruitment Consultant",
+          "start_date": "2019-01-01",
+          "end_date": "2021-06-30",
+          "still_on": false,
+          "responsibilities": "Led a team of recruiters, developed and implemented recruitment strategies, and managed high-profile client accounts. Provided training and mentorship to junior recruiters and conducted market research to identify talent trends."
+        },
+        {
+          "company_name": "Emerald Recruiting Solutions",
+          "position": "Professional Recruiter",
+          "start_date": "2021-07-01",
+          "end_date": null,
+          "still_on": true,
+          "responsibilities": "Oversee the recruitment process for tech positions, collaborate with clients to understand their hiring needs, and implement innovative sourcing techniques. Focus on building a diverse talent pipeline and ensuring a positive candidate experience."
+        }
+      ],
+      "education": [
+        {
+          "level": "Bachelor's Degree in Business Administration",
+          "status": "Completed",
+          "start_date": "2010-09-01",
+          "end_date": "2014-06-30",
+          "still_on": false,
+          "expected_end_date": ""
+        },
+        {
+          "level": "Master's Degree in Human Resources Management",
+          "status": "Completed",
+          "start_date": "2014-09-01",
+          "end_date": "2016-06-30",
+          "still_on": false,
+          "expected_end_date": ""
+        },
+        {
+          "level": "Certification in Talent Acquisition",
+          "status": "Completed",
+          "start_date": "2017-01-01",
+          "end_date": "2017-12-31",
+          "still_on": false,
+          "expected_end_date": ""
+        }
+      ],
+      "interests": "Talent Acquisition, Employer Branding, Diversity and Inclusion",
+      "skills": [
+        "Recruitment",
+        "Interviewing",
+        "Talent Sourcing",
+        "Employer Branding"
+      ],
+      "created_at": "2023-12-01 10:00:00.000000",
+      "updated_at": "2023-12-02 12:00:00.000000",
+      "is_published": true
+    }
+  },
+
+  {
+    "model": "user.user",
+    "pk": "b2345678-90ab-cdef-1234-567890abcdef",
+    "fields": {
+      "email": "john.mcdonald@example.com",
+      "username": "john_mcdonald",
+      "password": "pbkdf2_sha256$720000$d9nahLFNnDl5Yr9A3ewMgx$igf567La3i6LuPJRwaGH05bRs8CHgq8os+4nYh/PbdQ=",
+      "is_admin": false,
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "date_joined": "2023-12-03 09:00:00.000000",
+      "last_login": "2023-12-04 10:00:00.000000",
+      "user_type": "talent"
+    }
+  },
+  {
+    "model": "user.talent",
+    "pk": "d2345678-90ab-cdef-1234-567890abcdef",
+    "fields": {
+      "user": "b2345678-90ab-cdef-1234-567890abcdef",
+      "first_name": "John",
+      "last_name": "McDonald",
+      "phone": "441234567890",
+      "city": "Edinburgh",
+      "country": "Scotland",
+      "title": "Digital Marketer",
+      "image": "talent/profile/john_mcdonald.webp",
+      "bio": "Experienced Digital Marketer from Scotland with a passion for creating and implementing effective online marketing strategies. Skilled in SEO, content marketing, and social media management.",
+      "resume": "talent/resumes/john_mcdonald_resume.pdf",
+      "website": "https://john-mcdonald.digital/",
+      "social": [
+        {
+          "site": "linkedin",
+          "url": "https://www.linkedin.com/in/john-mcdonald/"
+        },
+        {
+          "site": "twitter",
+          "url": "https://twitter.com/john_mcdonald"
+        }
+      ],
+      "experience": [
+        {
+          "company_name": "Highland Marketing Ltd.",
+          "position": "Junior Digital Marketer",
+          "start_date": "2016-06-01",
+          "end_date": "2018-05-31",
+          "still_on": false,
+          "responsibilities": "Assisted in developing and executing digital marketing campaigns, conducted keyword research, and managed social media accounts. Worked with the team to analyze campaign performance and optimize content for better engagement."
+        },
+        {
+          "company_name": "Global Reach Media",
+          "position": "Digital Marketing Specialist",
+          "start_date": "2018-06-01",
+          "end_date": "2021-10-31",
+          "still_on": false,
+          "responsibilities": "Developed comprehensive digital marketing strategies, managed PPC campaigns, and optimized website content for SEO. Collaborated with the design team to create engaging visuals and worked on email marketing campaigns to drive customer engagement."
+        },
+        {
+          "company_name": "Innovative Digital Solutions",
+          "position": "Senior Digital Marketer",
+          "start_date": "2021-11-01",
+          "end_date": null,
+          "still_on": true,
+          "responsibilities": "Lead the digital marketing team, developed high-impact marketing campaigns, and implemented advanced SEO techniques. Analyzed market trends and adapted strategies to improve ROI. Mentored junior marketers and managed key client accounts."
+        }
+      ],
+      "education": [
+        {
+          "level": "Bachelor's Degree in Marketing",
+          "status": "Completed",
+          "start_date": "2012-09-01",
+          "end_date": "2016-05-31",
+          "still_on": false,
+          "expected_end_date": ""
+        },
+        {
+          "level": "Certification in Digital Marketing",
+          "status": "Completed",
+          "start_date": "2016-01-01",
+          "end_date": "2016-06-30",
+          "still_on": false,
+          "expected_end_date": ""
+        }
+      ],
+      "interests": "SEO, Content Marketing, Social Media Strategy",
+      "skills": ["SEO", "Content Marketing", "PPC", "Social Media Management"],
+      "created_at": "2023-12-03 09:00:00.000000",
+      "updated_at": "2023-12-04 10:00:00.000000",
+      "is_published": true
+    }
+  },
+
+  {
+    "model": "user.user",
+    "pk": "a3456789-90ab-cdef-1234-567890abcdef",
+    "fields": {
+      "email": "john.doe@example.com",
+      "username": "john_doe",
+      "password": "pbkdf2_sha256$720000$d9nahLFNnDl5Yr9A3ewMgx$igf567La3i6LuPJRwaGH05bRs8CHgq8os+4nYh/PbdQ=",
+      "is_admin": false,
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "date_joined": "2023-12-05 09:00:00.000000",
+      "last_login": "2023-12-06 10:00:00.000000",
+      "user_type": "talent"
+    }
+  },
+  {
+    "model": "user.talent",
+    "pk": "c3456789-90ab-cdef-1234-567890abcdef",
+    "fields": {
+      "user": "a3456789-90ab-cdef-1234-567890abcdef",
+      "first_name": "John",
+      "last_name": "Doe",
+      "phone": "441234567891",
+      "city": "London",
+      "country": "United Kingdom",
+      "title": "Professional Do-Nothing",
+      "image": "talent/profile/john_doe.webp",
+      "bio": "Meet John Doe, the perfect employee for doing absolutely nothing. With years of experience in sitting idle and mastering the art of inactivity, John is an expert at maintaining a constant state of nothingness.",
+      "resume": "talent/resumes/john_doe_resume.pdf",
+      "website": "https://john-doe-doing-nothing.com/",
+      "social": [
+        {
+          "site": "linkedin",
+          "url": "https://www.linkedin.com/in/john-doe-doing-nothing/"
+        },
+        {
+          "site": "twitter",
+          "url": "https://twitter.com/john_doe_do_nothing"
+        }
+      ],
+      "experience": [
+        {
+          "company_name": "Idle Corp",
+          "position": "Chief Idleness Officer",
+          "start_date": "2015-01-01",
+          "end_date": "2018-12-31",
+          "still_on": false,
+          "responsibilities": "Ensured the company maintained peak idleness, led the team in daily nothingness activities, and perfected the art of staring into space."
+        },
+        {
+          "company_name": "Do-Nothing Enterprises",
+          "position": "Professional Lounger",
+          "start_date": "2019-01-01",
+          "end_date": "2021-06-30",
+          "still_on": false,
+          "responsibilities": "Maintained a constant presence in front of the computer doing nothing, excelled in avoiding any productive tasks, and became a role model for inactivity."
+        },
+        {
+          "company_name": "Nothing Inc.",
+          "position": "Master of Inactivity",
+          "start_date": "2021-07-01",
+          "end_date": null,
+          "still_on": true,
+          "responsibilities": "Currently setting new standards in doing nothing, guiding the next generation of do-nothings, and ensuring the company's zero productivity remains untouched."
+        }
+      ],
+      "education": [
+        {
+          "level": "Bachelor's Degree in Procrastination",
+          "status": "Completed",
+          "start_date": "2010-09-01",
+          "end_date": "2014-06-30",
+          "still_on": false,
+          "expected_end_date": ""
+        },
+        {
+          "level": "Master's Degree in Idleness",
+          "status": "Completed",
+          "start_date": "2014-09-01",
+          "end_date": "2016-06-30",
+          "still_on": false,
+          "expected_end_date": ""
+        },
+        {
+          "level": "PhD in Doing Nothing",
+          "status": "Completed",
+          "start_date": "2016-09-01",
+          "end_date": "2019-06-30",
+          "still_on": false,
+          "expected_end_date": ""
+        }
+      ],
+      "interests": "Sitting Idle, Doing Nothing, Mastering Inactivity",
+      "skills": [
+        "Staring into Space",
+        "Avoiding Work",
+        "Perfecting Inactivity"
+      ],
+      "created_at": "2023-12-05 09:00:00.000000",
+      "updated_at": "2023-12-06 10:00:00.000000",
+      "is_published": true
+    }
+  },
+
+  {
+    "model": "user.user",
+    "pk": "e1234567-89ab-cdef-0123-456789abcdef",
+    "fields": {
+      "email": "jane.smith@example.com",
+      "username": "jane_smith",
+      "password": "pbkdf2_sha256$720000$d9nahLFNnDl5Yr9A3ewMgx$igf567La3i6LuPJRwaGH05bRs8CHgq8os+4nYh/PbdQ=",
+      "is_admin": false,
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "date_joined": "2023-12-06 09:00:00.000000",
+      "last_login": "2023-12-07 10:00:00.000000",
+      "user_type": "talent"
+    }
+  },
+  {
+    "model": "user.talent",
+    "pk": "f1234567-89ab-cdef-0123-456789abcdef",
+    "fields": {
+      "user": "e1234567-89ab-cdef-0123-456789abcdef",
+      "first_name": "Jane",
+      "last_name": "Smith",
+      "phone": "441234567890",
+      "city": "London",
+      "country": "United Kingdom",
+      "title": "Head of Meme Curation",
+      "image": "talent/profile/jane_smith.webp",
+      "bio": "As the Head of Meme Curation, Jane Smith brings humor and entertainment to the workplace. With an eye for the funniest and most relevant memes, she ensures the team stays entertained and up-to-date with internet culture.",
+      "resume": "talent/resumes/jane_smith_resume.pdf",
+      "website": "https://jane-smith-memes.com/",
+      "social": [
+        {
+          "site": "linkedin",
+          "url": "https://www.linkedin.com/in/jane-smith-memes/"
+        },
+        {
+          "site": "twitter",
+          "url": "https://twitter.com/jane_smith_memes"
+        }
+      ],
+      "experience": [
+        {
+          "company_name": "LOL Enterprises",
+          "position": "Junior Meme Curator",
+          "start_date": "2015-01-01",
+          "end_date": "2017-12-31",
+          "still_on": false,
+          "responsibilities": "Scoured the internet for the funniest memes, managed the company's social media accounts, and kept the team laughing with daily meme updates."
+        },
+        {
+          "company_name": "Giggle Factory",
+          "position": "Senior Meme Specialist",
+          "start_date": "2018-01-01",
+          "end_date": "2020-06-30",
+          "still_on": false,
+          "responsibilities": "Led meme discovery and creation projects, analyzed meme trends, and worked with the marketing team to integrate memes into campaigns. Ensured a steady stream of high-quality memes to keep the team engaged."
+        },
+        {
+          "company_name": "Meme Masters Inc.",
+          "position": "Head of Meme Curation",
+          "start_date": "2020-07-01",
+          "end_date": null,
+          "still_on": true,
+          "responsibilities": "Oversee the meme curation process, mentor junior curators, and maintain the company's meme library. Collaborate with cross-functional teams to incorporate memes into company culture and external communications."
+        }
+      ],
+      "education": [
+        {
+          "level": "Bachelor's Degree in Internet Culture",
+          "status": "Completed",
+          "start_date": "2010-09-01",
+          "end_date": "2014-06-30",
+          "still_on": false,
+          "expected_end_date": ""
+        },
+        {
+          "level": "Master's Degree in Digital Media",
+          "status": "Completed",
+          "start_date": "2014-09-01",
+          "end_date": "2016-06-30",
+          "still_on": false,
+          "expected_end_date": ""
+        },
+        {
+          "level": "Certification in Social Media Management",
+          "status": "Completed",
+          "start_date": "2017-01-01",
+          "end_date": "2017-12-31",
+          "still_on": false,
+          "expected_end_date": ""
+        }
+      ],
+      "interests": "Internet Culture, Digital Media, Social Media Trends",
+      "skills": [
+        "Meme Curation",
+        "Social Media Management",
+        "Digital Marketing",
+        "Content Creation"
+      ],
+      "created_at": "2023-12-06 09:00:00.000000",
+      "updated_at": "2023-12-07 10:00:00.000000",
+      "is_published": true
+    }
+  },
+
+  {
+    "model": "user.user",
+    "pk": "d3f8a7e6-4567-8901-2345-67890abcdef1",
+    "fields": {
+      "email": "rex.dog@example.com",
+      "username": "rex_dog",
+      "password": "pbkdf2_sha256$720000$d9nahLFNnDl5Yr9A3ewMgx$igf567La3i6LuPJRwaGH05bRs8CHgq8os+4nYh/PbdQ=",
+      "is_admin": false,
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "date_joined": "2020-11-22 09:00:00.000000",
+      "last_login": "2023-12-13 10:00:00.000000",
+      "user_type": "talent"
+    }
+  },
+  {
+    "model": "user.talent",
+    "pk": "e4b9f7d8-5678-4567-8901-34567890abcd",
+    "fields": {
+      "user": "d3f8a7e6-4567-8901-2345-67890abcdef1",
+      "first_name": "Rex",
+      "last_name": "Dog",
+      "phone": "9876543210",
+      "city": "Dogtown",
+      "country": "Dogland",
+      "title": "Chief Barking Officer",
+      "image": "talent/profile/rex_dog.webp",
+      "bio": "Rex Dog is a highly skilled Chief Barking Officer known for his exceptional ability to alert his owners and guard his territory. With a keen sense of smell and a playful demeanor, Rex is always ready for action.",
+      "resume": "talent/resumes/rex_dog_resume.pdf",
+      "website": "https://rex-doggy.com/",
+      "social": [
+        {
+          "site": "linkedin",
+          "url": "https://www.linkedin.com/in/rex-doggy/"
+        },
+        {
+          "site": "twitter",
+          "url": "https://twitter.com/rex_doggy"
+        }
+      ],
+      "experience": [
+        {
+          "company_name": "Neighborhood Watch",
+          "position": "Junior Barker",
+          "start_date": "2015-01-01",
+          "end_date": "2018-12-31",
+          "still_on": false,
+          "responsibilities": "<p>Patrolled the neighborhood, barked at intruders, and ensured the safety of the local community. Developed strong communication skills with other dogs and humans.</p>"
+        },
+        {
+          "company_name": "Barking Brigade",
+          "position": "Senior Watchdog",
+          "start_date": "2019-01-01",
+          "end_date": "2021-06-30",
+          "still_on": false,
+          "responsibilities": "<p>Led a team of junior barkers, trained new recruits, and coordinated with local authorities. Implemented new barking techniques to enhance effectiveness.</p>"
+        },
+        {
+          "company_name": "Guardians of the Yard",
+          "position": "Chief Barking Officer",
+          "start_date": "2021-07-01",
+          "end_date": null,
+          "still_on": true,
+          "responsibilities": "<p>Oversees all barking operations, mentors young puppies, and ensures the highest standards of territorial defense. Innovates new strategies for alerting and protection.</p>"
+        }
+      ],
+      "education": [
+        {
+          "level": "Bachelor's Degree in Canine Studies",
+          "status": "Completed",
+          "start_date": "2010-09-01",
+          "end_date": "2014-06-30",
+          "still_on": false,
+          "expected_end_date": ""
+        },
+        {
+          "level": "Master's Degree in Barking and Communication",
+          "status": "Completed",
+          "start_date": "2015-01-01",
+          "end_date": "2017-12-31",
+          "still_on": false,
+          "expected_end_date": ""
+        }
+      ],
+      "interests": "Chasing Cats, Digging Holes, Playing Fetch",
+      "skills": ["Barking", "Guarding", "Sniffing", "Fetching"],
+      "created_at": "2020-11-22 09:00:00.000000",
+      "updated_at": "2023-12-13 10:00:00.000000",
+      "is_published": true
+    }
+  },
+
+  {
+    "model": "user.user",
+    "pk": "e2345678-90ab-cdef-1234-567890abcdef",
+    "fields": {
+      "email": "charlie.baker@example.com",
+      "username": "charlie_baker",
+      "password": "pbkdf2_sha256$720000$d9nahLFNnDl5Yr9A3ewMgx$igf567La3i6LuPJRwaGH05bRs8CHgq8os+4nYh/PbdQ=",
+      "is_admin": false,
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "date_joined": "2023-12-07 09:00:00.000000",
+      "last_login": "2023-12-08 10:00:00.000000",
+      "user_type": "talent"
+    }
+  },
+  {
+    "model": "user.talent",
+    "pk": "f2345678-90ab-cdef-1234-567890abcdef",
+    "fields": {
+      "user": "e2345678-90ab-cdef-1234-567890abcdef",
+      "first_name": "Charlie",
+      "last_name": "Baker",
+      "phone": "441234567890",
+      "city": "Manchester",
+      "country": "United Kingdom",
+      "title": "Alien and Flying Saucer Spotter",
+      "image": "talent/profile/charlie_baker.webp",
+      "bio": "Meet Charlie Baker, the ultimate Alien and Flying Saucer Spotter. Instead of focusing on his job, Charlie spends his time scanning the skies for UFOs and crafting intricate conspiracy theories about extraterrestrial visitors.",
+      "resume": "talent/resumes/charlie_baker_resume.pdf",
+      "website": "https://charlie-baker-ufo.com/",
+      "social": [
+        {
+          "site": "linkedin",
+          "url": "https://www.linkedin.com/in/charlie-baker-ufo/"
+        },
+        {
+          "site": "twitter",
+          "url": "https://twitter.com/charlie_baker_ufo"
+        }
+      ],
+      "experience": [
+        {
+          "company_name": "UFO Watchers Ltd.",
+          "position": "Junior Skywatcher",
+          "start_date": "2016-01-01",
+          "end_date": "2018-12-31",
+          "still_on": false,
+          "responsibilities": "Monitored the skies for unidentified flying objects, reported sightings, and maintained detailed logs of all unusual aerial phenomena."
+        },
+        {
+          "company_name": "Galactic Research Group",
+          "position": "Senior UFO Analyst",
+          "start_date": "2019-01-01",
+          "end_date": "2021-06-30",
+          "still_on": false,
+          "responsibilities": "Analyzed reports of UFO sightings, investigated conspiracy theories, and presented findings at various extraterrestrial conferences. Developed new techniques for spotting and tracking alien spacecraft."
+        },
+        {
+          "company_name": "Cosmic Theories Inc.",
+          "position": "Chief Conspiracy Theorist",
+          "start_date": "2021-07-01",
+          "end_date": null,
+          "still_on": true,
+          "responsibilities": "Leads the creation of new and exciting conspiracy theories about alien visitations, collaborates with other theorists, and publishes regular updates on his findings. Ensures that no stone is left unturned in the quest for the truth."
+        }
+      ],
+      "education": [
+        {
+          "level": "Bachelor's Degree in Astronomy",
+          "status": "Completed",
+          "start_date": "2010-09-01",
+          "end_date": "2014-06-30",
+          "still_on": false,
+          "expected_end_date": ""
+        },
+        {
+          "level": "Master's Degree in Extraterrestrial Studies",
+          "status": "Completed",
+          "start_date": "2014-09-01",
+          "end_date": "2016-06-30",
+          "still_on": false,
+          "expected_end_date": ""
+        },
+        {
+          "level": "Certification in Conspiracy Theory Development",
+          "status": "Completed",
+          "start_date": "2017-01-01",
+          "end_date": "2017-12-31",
+          "still_on": false,
+          "expected_end_date": ""
+        }
+      ],
+      "interests": "UFO Spotting, Alien Theories, Space Exploration",
+      "skills": [
+        "Skywatching",
+        "Conspiracy Theory Crafting",
+        "UFO Analysis",
+        "Extraterrestrial Communication"
+      ],
+      "created_at": "2023-12-07 09:00:00.000000",
+      "updated_at": "2023-12-08 10:00:00.000000",
+      "is_published": true
+    }
+  },
+
+  {
+    "model": "user.user",
+    "pk": "d4567890-12ab-cdef-3456-7890abcdef12",
+    "fields": {
+      "email": "max.johnson@example.com",
+      "username": "max_johnson",
+      "password": "pbkdf2_sha256$720000$d9nahLFNnDl5Yr9A3ewMgx$igf567La3i6LuPJRwaGH05bRs8CHgq8os+4nYh/PbdQ=",
+      "is_admin": false,
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "date_joined": "2023-12-09 09:00:00.000000",
+      "last_login": "2023-12-10 10:00:00.000000",
+      "user_type": "talent"
+    }
+  },
+  {
+    "model": "user.talent",
+    "pk": "e4567890-12ab-cdef-3456-7890abcdef12",
+    "fields": {
+      "user": "d4567890-12ab-cdef-3456-7890abcdef12",
+      "first_name": "Max",
+      "last_name": "Johnson",
+      "phone": "441234567892",
+      "city": "London",
+      "country": "United Kingdom",
+      "title": "Zombie Apocalypse Planner",
+      "image": "talent/profile/max_johnson.webp",
+      "bio": "Max Johnson is a talented designer by title, but his true passion lies in meticulously planning for the zombie apocalypse. Instead of working on design projects, Max spends his time developing comprehensive strategies for surviving the undead.",
+      "resume": "talent/resumes/max_johnson_resume.pdf",
+      "website": "https://max-johnson-zombies.com/",
+      "social": [
+        {
+          "site": "linkedin",
+          "url": "https://www.linkedin.com/in/max-johnson-zombies/"
+        },
+        {
+          "site": "twitter",
+          "url": "https://twitter.com/max_johnson_zom"
+        }
+      ],
+      "experience": [
+        {
+          "company_name": "Creative Designs Ltd.",
+          "position": "Junior Designer",
+          "start_date": "2015-01-01",
+          "end_date": "2017-12-31",
+          "still_on": false,
+          "responsibilities": "Worked on various design projects, created visual content for clients, and assisted the senior design team. However, Max often found himself daydreaming about zombie survival strategies."
+        },
+        {
+          "company_name": "Innovative Studios",
+          "position": "Senior Designer",
+          "start_date": "2018-01-01",
+          "end_date": "2020-06-30",
+          "still_on": false,
+          "responsibilities": "Led design projects, developed branding materials, and managed a team of junior designers. Despite his responsibilities, Max's mind was often preoccupied with planning for the zombie apocalypse."
+        },
+        {
+          "company_name": "Futuristic Design Co.",
+          "position": "Lead Designer",
+          "start_date": "2020-07-01",
+          "end_date": null,
+          "still_on": true,
+          "responsibilities": "Oversees major design initiatives, collaborates with cross-functional teams, and ensures the delivery of high-quality design solutions. Max, however, spends a significant amount of his time preparing detailed zombie apocalypse plans."
+        }
+      ],
+      "education": [
+        {
+          "level": "Bachelor's Degree in Graphic Design",
+          "status": "Completed",
+          "start_date": "2010-09-01",
+          "end_date": "2014-06-30",
+          "still_on": false,
+          "expected_end_date": ""
+        },
+        {
+          "level": "Certification in Survival Planning",
+          "status": "Completed",
+          "start_date": "2016-01-01",
+          "end_date": "2016-12-31",
+          "still_on": false,
+          "expected_end_date": ""
+        }
+      ],
+      "interests": "Zombie Apocalypse Planning, Survival Tactics, Strategic Defense",
+      "skills": [
+        "Graphic Design",
+        "Survival Strategy",
+        "Emergency Preparedness",
+        "Zombie Defense"
+      ],
+      "created_at": "2023-12-09 09:00:00.000000",
+      "updated_at": "2023-12-10 10:00:00.000000",
+      "is_published": true
+    }
+  },
+
+  {
+    "model": "user.user",
+    "pk": "a8d9b8f4-4f6d-47a7-965a-8459b6a7d0b1",
+    "fields": {
+      "email": "liam.murphy@example.com",
+      "username": "liam_murphy",
+      "password": "pbkdf2_sha256$720000$d9nahLFNnDl5Yr9A3ewMgx$igf567La3i6LuPJRwaGH05bRs8CHgq8os+4nYh/PbdQ=",
+      "is_admin": false,
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "date_joined": "2023-12-11 09:00:00.000000",
+      "last_login": "2023-12-12 10:00:00.000000",
+      "user_type": "talent"
+    }
+  },
+  {
+    "model": "user.talent",
+    "pk": "b6f19c2a-5b4c-4d3f-9427-f2b0df78b5b6",
+    "fields": {
+      "user": "a8d9b8f4-4f6d-47a7-965a-8459b6a7d0b1",
+      "first_name": "Liam",
+      "last_name": "Murphy",
+      "phone": "353123456789",
+      "city": "Dublin",
+      "country": "Ireland",
+      "title": "Virtual Assistant",
+      "image": "talent/profile/liam_murphy.webp",
+      "bio": "Liam Murphy is a dedicated Virtual Assistant from Ireland, skilled in providing administrative support and managing day-to-day tasks remotely. With a keen eye for detail and excellent organizational skills, Liam ensures that all operations run smoothly.",
+      "resume": "talent/resumes/liam_murphy_resume.pdf",
+      "website": "https://liam-murphy-va.com/",
+      "social": [
+        {
+          "site": "linkedin",
+          "url": "https://www.linkedin.com/in/liam-murphy-va/"
+        },
+        {
+          "site": "twitter",
+          "url": "https://twitter.com/liam_murphy_va"
+        }
+      ],
+      "experience": [
+        {
+          "company_name": "Remote Support Solutions",
+          "position": "Administrative Assistant",
+          "start_date": "2017-01-01",
+          "end_date": "2019-12-31",
+          "still_on": false,
+          "responsibilities": "Provided administrative support to the team, managed schedules, handled correspondence, and ensured efficient office operations."
+        },
+        {
+          "company_name": "Virtual Help Desk",
+          "position": "Senior Virtual Assistant",
+          "start_date": "2020-01-01",
+          "end_date": "2022-06-30",
+          "still_on": false,
+          "responsibilities": "Assisted executives with daily tasks, organized meetings, managed emails, and performed data entry. Developed procedures to improve remote work efficiency."
+        },
+        {
+          "company_name": "Global Virtual Assistants",
+          "position": "Lead Virtual Assistant",
+          "start_date": "2022-07-01",
+          "end_date": null,
+          "still_on": true,
+          "responsibilities": "Leads a team of virtual assistants, oversees client projects, ensures timely completion of tasks, and provides high-quality administrative support to clients worldwide."
+        }
+      ],
+      "education": [
+        {
+          "level": "Bachelor's Degree in Business Administration",
+          "status": "Completed",
+          "start_date": "2013-09-01",
+          "end_date": "2017-05-31",
+          "still_on": false,
+          "expected_end_date": ""
+        },
+        {
+          "level": "Certification in Office Administration",
+          "status": "Completed",
+          "start_date": "2018-01-01",
+          "end_date": "2018-12-31",
+          "still_on": false,
+          "expected_end_date": ""
+        }
+      ],
+      "interests": "Project Management, Remote Work, Digital Productivity Tools",
+      "skills": [
+        "Administrative Support",
+        "Calendar Management",
+        "Email Handling",
+        "Data Entry"
+      ],
+      "created_at": "2023-12-11 09:00:00.000000",
+      "updated_at": "2023-12-12 10:00:00.000000",
+      "is_published": true
+    }
+  },
+
+  {
+    "model": "user.user",
+    "pk": "f78c2349-90ab-cdef-3456-7890abcdef34",
+    "fields": {
+      "email": "sarah.jones@example.com",
+      "username": "sarah_jones",
+      "password": "pbkdf2_sha256$720000$d9nahLFNnDl5Yr9A3ewMgx$igf567La3i6LuPJRwaGH05bRs8CHgq8os+4nYh/PbdQ=",
+      "is_admin": false,
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "date_joined": "2023-12-13 09:00:00.000000",
+      "last_login": "2023-12-14 10:00:00.000000",
+      "user_type": "talent"
+    }
+  },
+  {
+    "model": "user.talent",
+    "pk": "e78c2349-90ab-cdef-3456-7890abcdef34",
+    "fields": {
+      "user": "f78c2349-90ab-cdef-3456-7890abcdef34",
+      "first_name": "Sarah",
+      "last_name": "Jones",
+      "phone": "1234567890",
+      "city": "New York",
+      "country": "United States",
+      "title": "SEO Specialist",
+      "image": "talent/profile/sarah_jones.webp",
+      "bio": "Sarah Jones is an experienced SEO Specialist from the USA, passionate about optimizing websites to improve their search engine rankings. With a deep understanding of SEO best practices and the latest industry trends, Sarah helps businesses enhance their online presence.",
+      "resume": "talent/resumes/sarah_jones_resume.pdf",
+      "website": "https://sarah-jones-seo.com/",
+      "social": [
+        {
+          "site": "linkedin",
+          "url": "https://www.linkedin.com/in/sarah-jones-seo/"
+        },
+        {
+          "site": "twitter",
+          "url": "https://twitter.com/sarah_jones_seo"
+        }
+      ],
+      "experience": [
+        {
+          "company_name": "Optimize Now",
+          "position": "SEO Analyst",
+          "start_date": "2016-01-01",
+          "end_date": "2018-12-31",
+          "still_on": false,
+          "responsibilities": "Conducted keyword research, analyzed website performance, and implemented on-page and off-page SEO strategies to improve search engine rankings."
+        },
+        {
+          "company_name": "Search Engine Experts",
+          "position": "Senior SEO Specialist",
+          "start_date": "2019-01-01",
+          "end_date": "2021-06-30",
+          "still_on": false,
+          "responsibilities": "Led SEO campaigns, optimized content, monitored website analytics, and provided actionable insights to improve organic search performance. Collaborated with content creators and web developers to ensure SEO best practices were followed."
+        },
+        {
+          "company_name": "Top Rank Solutions",
+          "position": "Lead SEO Consultant",
+          "start_date": "2021-07-01",
+          "end_date": null,
+          "still_on": true,
+          "responsibilities": "Oversees SEO strategy development, conducts advanced SEO audits, and provides training to junior SEO specialists. Works closely with clients to develop customized SEO plans that drive traffic and increase conversions."
+        }
+      ],
+      "education": [
+        {
+          "level": "Bachelor's Degree in Marketing",
+          "status": "Completed",
+          "start_date": "2010-09-01",
+          "end_date": "2014-06-30",
+          "still_on": false,
+          "expected_end_date": ""
+        },
+        {
+          "level": "Certification in SEO",
+          "status": "Completed",
+          "start_date": "2015-01-01",
+          "end_date": "2015-12-31",
+          "still_on": false,
+          "expected_end_date": ""
+        }
+      ],
+      "interests": "Search Engine Optimization, Content Marketing, Data Analytics",
+      "skills": [
+        "SEO Strategy",
+        "Keyword Research",
+        "Content Optimization",
+        "Web Analytics"
+      ],
+      "created_at": "2023-12-13 09:00:00.000000",
+      "updated_at": "2023-12-14 10:00:00.000000",
+      "is_published": true
+    }
+  },
+
+  {
+    "model": "user.user",
+    "pk": "e9d7c1a6-91f5-47a5-a8c6-b9d7c1a691f5",
+    "fields": {
+      "email": "maricka.sullivan@example.com",
+      "username": "maricka_sullivan",
+      "password": "pbkdf2_sha256$720000$d9nahLFNnDl5Yr9A3ewMgx$igf567La3i6LuPJRwaGH05bRs8CHgq8os+4nYh/PbdQ=",
+      "is_admin": false,
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "date_joined": "2020-11-10 09:00:00.000000",
+      "last_login": "2023-12-10 10:00:00.000000",
+      "user_type": "talent"
+    }
+  },
+  {
+    "model": "user.talent",
+    "pk": "a5d7e1b2-83f4-48b3-91d6-c7b5d7e1b283",
+    "fields": {
+      "user": "e9d7c1a6-91f5-47a5-a8c6-b9d7c1a691f5",
+      "first_name": "Maricka",
+      "last_name": "Sullivan",
+      "phone": "353987654321",
+      "city": "Dublin",
+      "country": "Ireland",
+      "title": "UX/UI Designer",
+      "image": "talent/profile/maricka_sullivan.webp",
+      "bio": "Maricka Sullivan is a talented UX/UI Designer from Ireland, specializing in creating user-friendly and visually appealing digital interfaces. With a strong background in user research and design principles, Maricka is dedicated to improving user experiences through innovative design solutions.",
+      "resume": "talent/resumes/maricka_sullivan_resume.pdf",
+      "website": "https://maricka-sullivan-uxui.com/",
+      "social": [
+        {
+          "site": "linkedin",
+          "url": "https://www.linkedin.com/in/maricka-sullivan-uxui/"
+        },
+        {
+          "site": "twitter",
+          "url": "https://twitter.com/maricka_sullivan_uxui"
+        }
+      ],
+      "experience": [
+        {
+          "company_name": "Creative Designs Ltd.",
+          "position": "Junior UX/UI Designer",
+          "start_date": "2016-01-01",
+          "end_date": "2018-12-31",
+          "still_on": false,
+          "responsibilities": "<p>Assisted in the design of web and mobile applications, conducted user research, and created wireframes and prototypes. Collaborated with developers to ensure design feasibility and implementation.</p>"
+        },
+        {
+          "company_name": "Innovative Interfaces",
+          "position": "UX/UI Designer",
+          "start_date": "2019-01-01",
+          "end_date": "2021-06-30",
+          "still_on": false,
+          "responsibilities": "<p>Designed user interfaces for various digital products, performed usability testing, and iterated on designs based on user feedback. Worked closely with cross-functional teams to deliver high-quality design solutions.</p>"
+        },
+        {
+          "company_name": "Future Tech Solutions",
+          "position": "Senior UX/UI Designer",
+          "start_date": "2021-07-01",
+          "end_date": null,
+          "still_on": true,
+          "responsibilities": "<p>Leads the design process for major projects, mentors junior designers, and ensures the delivery of user-centered design solutions. Collaborates with stakeholders to align design goals with business objectives and improve overall user satisfaction.</p>"
+        }
+      ],
+      "education": [
+        {
+          "level": "Bachelor's Degree in Graphic Design",
+          "status": "Completed",
+          "start_date": "2010-09-01",
+          "end_date": "2014-06-30",
+          "still_on": false,
+          "expected_end_date": ""
+        },
+        {
+          "level": "Master's Degree in Human-Computer Interaction",
+          "status": "Completed",
+          "start_date": "2015-01-01",
+          "end_date": "2017-12-31",
+          "still_on": false,
+          "expected_end_date": ""
+        }
+      ],
+      "interests": "User Research, Interaction Design, Usability Testing",
+      "skills": ["UX Design", "UI Design", "User Research", "Prototyping"],
+      "created_at": "2020-11-10 09:00:00.000000",
+      "updated_at": "2023-12-10 10:00:00.000000",
+      "is_published": true
+    }
+  },
+
+  {
+    "model": "user.user",
+    "pk": "a8d3b5e8-8d4c-4a89-9d70-b6e3f8b8e7c5",
+    "fields": {
+      "email": "sean.brennan@example.com",
+      "username": "sean_brennan",
+      "password": "pbkdf2_sha256$720000$d9nahLFNnDl5Yr9A3ewMgx$igf567La3i6LuPJRwaGH05bRs8CHgq8os+4nYh/PbdQ=",
+      "is_admin": false,
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "date_joined": "2020-11-12 09:00:00.000000",
+      "last_login": "2023-12-11 10:00:00.000000",
+      "user_type": "talent"
+    }
+  },
+  {
+    "model": "user.talent",
+    "pk": "f2b4c6d8-3e4f-42e8-a9e0-5b7e4b8e6f3a",
+    "fields": {
+      "user": "a8d3b5e8-8d4c-4a89-9d70-b6e3f8b8e7c5",
+      "first_name": "Sean",
+      "last_name": "Brennan",
+      "phone": "353987654321",
+      "city": "Dublin",
+      "country": "Ireland",
+      "title": "UX/UI Designer",
+      "image": "talent/profile/sean_brennan.webp",
+      "bio": "Sean Brennan is a talented UX/UI Designer from Ireland, specializing in creating user-friendly and visually appealing digital interfaces. With a strong background in user research and design principles, Sean is dedicated to improving user experiences through innovative design solutions.",
+      "resume": "talent/resumes/sean_brennan_resume.pdf",
+      "website": "https://sean-brennan-uxui.com/",
+      "social": [
+        {
+          "site": "linkedin",
+          "url": "https://www.linkedin.com/in/sean-brennan-uxui/"
+        },
+        {
+          "site": "twitter",
+          "url": "https://twitter.com/sean_brennan_uxui"
+        }
+      ],
+      "experience": [
+        {
+          "company_name": "Creative Designs Ltd.",
+          "position": "Junior UX/UI Designer",
+          "start_date": "2016-01-01",
+          "end_date": "2018-12-31",
+          "still_on": false,
+          "responsibilities": "<p>Assisted in the design of web and mobile applications, conducted user research, and created wireframes and prototypes. Collaborated with developers to ensure design feasibility and implementation.</p>"
+        },
+        {
+          "company_name": "Innovative Interfaces",
+          "position": "UX/UI Designer",
+          "start_date": "2019-01-01",
+          "end_date": "2021-06-30",
+          "still_on": false,
+          "responsibilities": "<p>Designed user interfaces for various digital products, performed usability testing, and iterated on designs based on user feedback. Worked closely with cross-functional teams to deliver high-quality design solutions.</p>"
+        },
+        {
+          "company_name": "Future Tech Solutions",
+          "position": "Senior UX/UI Designer",
+          "start_date": "2021-07-01",
+          "end_date": null,
+          "still_on": true,
+          "responsibilities": "<p>Leads the design process for major projects, mentors junior designers, and ensures the delivery of user-centered design solutions. Collaborates with stakeholders to align design goals with business objectives and improve overall user satisfaction.</p>"
+        }
+      ],
+      "education": [
+        {
+          "level": "Bachelor's Degree in Graphic Design",
+          "status": "Completed",
+          "start_date": "2010-09-01",
+          "end_date": "2014-06-30",
+          "still_on": false,
+          "expected_end_date": ""
+        },
+        {
+          "level": "Master's Degree in Human-Computer Interaction",
+          "status": "Completed",
+          "start_date": "2015-01-01",
+          "end_date": "2017-12-31",
+          "still_on": false,
+          "expected_end_date": ""
+        }
+      ],
+      "interests": "User Research, Interaction Design, Usability Testing",
+      "skills": ["UX Design", "UI Design", "User Research", "Prototyping"],
+      "created_at": "2020-11-12 09:00:00.000000",
+      "updated_at": "2023-12-11 10:00:00.000000",
+      "is_published": true
+    }
+  },
+
+  {
+    "model": "user.user",
+    "pk": "b12c9e8f-7d4b-4a7b-9c50-a8f9c6e7b9d5",
+    "fields": {
+      "email": "julien.dupont@example.com",
+      "username": "julien_dupont",
+      "password": "pbkdf2_sha256$720000$d9nahLFNnDl5Yr9A3ewMgx$igf567La3i6LuPJRwaGH05bRs8CHgq8os+4nYh/PbdQ=",
+      "is_admin": false,
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "date_joined": "2020-11-15 09:00:00.000000",
+      "last_login": "2023-12-12 10:00:00.000000",
+      "user_type": "talent"
+    }
+  },
+  {
+    "model": "user.talent",
+    "pk": "d34a5f8e-6d7b-4b9b-950c-a7d8c5e6b9c4",
+    "fields": {
+      "user": "b12c9e8f-7d4b-4a7b-9c50-a8f9c6e7b9d5",
+      "first_name": "Julien",
+      "last_name": "Dupont",
+      "phone": "33123456789",
+      "city": "Paris",
+      "country": "France",
+      "title": "Backend Developer",
+      "image": "talent/profile/julien_dupont.webp",
+      "bio": "Julien Dupont is a skilled Backend Developer from France, specializing in building robust and scalable server-side applications. With a strong foundation in various backend technologies and a passion for problem-solving, Julien is dedicated to delivering high-quality code and efficient solutions.",
+      "resume": "talent/resumes/julien_dupont_resume.pdf",
+      "website": "https://julien-dupont-dev.com/",
+      "social": [
+        {
+          "site": "linkedin",
+          "url": "https://www.linkedin.com/in/julien-dupont-dev/"
+        },
+        {
+          "site": "twitter",
+          "url": "https://twitter.com/julien_dupont_dev"
+        }
+      ],
+      "experience": [
+        {
+          "company_name": "Tech Solutions Ltd.",
+          "position": "Junior Backend Developer",
+          "start_date": "2016-01-01",
+          "end_date": "2018-12-31",
+          "still_on": false,
+          "responsibilities": "<p>Developed and maintained server-side applications, assisted in database design, and collaborated with frontend developers to integrate user-facing elements with server-side logic.</p>"
+        },
+        {
+          "company_name": "Innovative Software",
+          "position": "Backend Developer",
+          "start_date": "2019-01-01",
+          "end_date": "2021-06-30",
+          "still_on": false,
+          "responsibilities": "<p>Built and optimized backend services, implemented RESTful APIs, and ensured the performance, quality, and responsiveness of applications. Worked closely with cross-functional teams to define, design, and ship new features.</p>"
+        },
+        {
+          "company_name": "Global Tech Solutions",
+          "position": "Senior Backend Developer",
+          "start_date": "2021-07-01",
+          "end_date": null,
+          "still_on": true,
+          "responsibilities": "<p>Leads the development of backend systems, mentors junior developers, and ensures best practices in code quality, testing, and deployment. Collaborates with product managers and other stakeholders to deliver scalable and secure backend solutions.</p>"
+        }
+      ],
+      "education": [
+        {
+          "level": "Bachelor's Degree in Computer Science",
+          "status": "Completed",
+          "start_date": "2010-09-01",
+          "end_date": "2014-06-30",
+          "still_on": false,
+          "expected_end_date": ""
+        },
+        {
+          "level": "Master's Degree in Software Engineering",
+          "status": "Completed",
+          "start_date": "2015-01-01",
+          "end_date": "2017-12-31",
+          "still_on": false,
+          "expected_end_date": ""
+        }
+      ],
+      "interests": "Backend Development, Cloud Computing, DevOps",
+      "skills": ["Python", "Django", "RESTful APIs", "SQL"],
+      "created_at": "2020-11-15 09:00:00.000000",
+      "updated_at": "2023-12-12 10:00:00.000000",
+      "is_published": true
+    }
+  },
+
+  {
+    "model": "user.user",
+    "pk": "e9d8f7a6-5678-8901-2345-67890abcdef2",
+    "fields": {
+      "email": "anna.nowak@example.com",
+      "username": "anna_nowak",
+      "password": "pbkdf2_sha256$720000$d9nahLFNnDl5Yr9A3ewMgx$igf567La3i6LuPJRwaGH05bRs8CHgq8os+4nYh/PbdQ=",
+      "is_admin": false,
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "date_joined": "2020-11-25 09:00:00.000000",
+      "last_login": "2023-12-13 10:00:00.000000",
+      "user_type": "talent"
+    }
+  },
+  {
+    "model": "user.talent",
+    "pk": "d3e4f5a6-8901-2345-6789-0123456789ab",
+    "fields": {
+      "user": "e9d8f7a6-5678-8901-2345-67890abcdef2",
+      "first_name": "Anna",
+      "last_name": "Nowak",
+      "phone": "48123456789",
+      "city": "Warsaw",
+      "country": "Poland",
+      "title": "Frontend Engineer",
+      "image": "talent/profile/anna_nowak.webp",
+      "bio": "Anna Nowak is a highly skilled Frontend Engineer from Poland with extensive experience in developing modern, responsive web applications. Known for her expertise in JavaScript frameworks and a keen eye for design, Anna delivers high-quality, user-centric solutions.",
+      "resume": "talent/resumes/anna_nowak_resume.pdf",
+      "website": "https://anna-nowak.dev/",
+      "social": [
+        {
+          "site": "linkedin",
+          "url": "https://www.linkedin.com/in/anna-nowak-frontend/"
+        },
+        {
+          "site": "twitter",
+          "url": "https://twitter.com/anna_nowak_dev"
+        }
+      ],
+      "experience": [
+        {
+          "company_name": "TechVision",
+          "position": "Junior Frontend Developer",
+          "start_date": "2015-01-01",
+          "end_date": "2017-12-31",
+          "still_on": false,
+          "responsibilities": "<p>Developed and maintained web applications using HTML, CSS, and JavaScript. Collaborated with designers and backend developers to ensure seamless integration of UI components.</p>"
+        },
+        {
+          "company_name": "Innovative Solutions",
+          "position": "Frontend Developer",
+          "start_date": "2018-01-01",
+          "end_date": "2020-06-30",
+          "still_on": false,
+          "responsibilities": "<p>Implemented responsive designs, optimized web performance, and developed interactive features using React.js. Worked closely with the UX team to improve user experience.</p>"
+        },
+        {
+          "company_name": "FutureTech",
+          "position": "Senior Frontend Engineer",
+          "start_date": "2020-07-01",
+          "end_date": null,
+          "still_on": true,
+          "responsibilities": "<p>Leads the frontend development team, architects scalable frontend solutions, and mentors junior developers. Collaborates with cross-functional teams to deliver high-impact web applications.</p>"
+        }
+      ],
+      "education": [
+        {
+          "level": "Bachelor's Degree in Computer Science",
+          "status": "Completed",
+          "start_date": "2010-09-01",
+          "end_date": "2014-06-30",
+          "still_on": false,
+          "expected_end_date": ""
+        },
+        {
+          "level": "Master's Degree in Web Development",
+          "status": "Completed",
+          "start_date": "2015-01-01",
+          "end_date": "2017-12-31",
+          "still_on": false,
+          "expected_end_date": ""
+        }
+      ],
+      "interests": "Web Development, UI/UX Design, JavaScript Frameworks",
+      "skills": [
+        "JavaScript",
+        "React.js",
+        "HTML",
+        "CSS",
+        "TypeScript",
+        "UI/UX Design"
+      ],
+      "created_at": "2020-11-25 09:00:00.000000",
+      "updated_at": "2023-12-13 10:00:00.000000",
+      "is_published": true
     }
   }
 ]

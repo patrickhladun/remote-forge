@@ -1,0 +1,21 @@
+.icon {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  fill: var(--color-brand-500);
+
+  &.icon--sm {
+    width: 20px;
+    height: 20px;
+  }
+
+  &.icon--md {
+    width: 42px;
+    height: 42px;
+  }
+
+  &.icon--lg {
+    width: 56px;
+    height: 56px;
+  }
+}

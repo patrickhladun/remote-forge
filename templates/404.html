@@ -1,0 +1,26 @@
+{% extends 'index.html' %}
+
+{% block content %}
+  <main class="main">
+    <div class="container text-center mt-5">
+      <h1 class="display-3">404</h1>
+      <h2>Oops! Page Not Found</h2>
+      <p class="lead">Sorry, the page you're looking for doesn't exist. It might have been moved or deleted.</p>
+      <p class="lead">Here are some helpful links instead:</p>
+      <ul class="list-unstyled">
+        <li>
+          <a href="{% url 'home' %}">Home</a>
+        </li>
+        <li>
+          <a href="{% url 'job-list' %}">Job Listings</a>
+        </li>
+        <li>
+          <a href="{% url 'about' %}">About Us</a>
+        </li>
+      </ul>
+      <p class="lead">
+        If you think this is a mistake, please <a href="{% url 'contact' %}">contact us</a>.
+      </p>
+    </div>
+  </main>
+{% endblock %}
