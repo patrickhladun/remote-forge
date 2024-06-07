@@ -1,18 +1,20 @@
-{% extends "allauth/layouts/entrance.html" %}
+{% extends 'allauth/layouts/entrance.html' %}
 {% load i18n %}
 {% load allauth %}
 
 {% block head_title %}
-    {% trans "Account Inactive" %}
-{% endblock head_title %}
+  {% trans 'Account Inactive' %}
+{% endblock %}
 
 {% block content %}
-    <main class="main">
-        <section class="container py-5">
-            {% element h1 %}
-                {% trans "Account Inactive" %}
-            {% endelement %}
-            <p>{% trans "This account is inactive." %}</p>
-        </section>
-    </main>
-{% endblock content %}
+  <main class="main">
+    <section class="container-sm py-5">
+      {% element h1 %}
+      {% trans 'Account Inactive' %}
+      {% endelement %}
+      <p>
+        {% trans 'This account is inactive.' %}
+      </p>
+    </section>
+  </main>
+{% endblock %}
