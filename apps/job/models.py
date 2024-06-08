@@ -35,6 +35,7 @@ class Job(models.Model):
     user = models.ForeignKey(User, related_name="jobs", on_delete=models.CASCADE)
     title = models.CharField(max_length=100)
     city = models.CharField(max_length=56, null=True, blank=True)
+    country = models.CharField(max_length=56, null=True, blank=True)
     salary = models.CharField(max_length=40, null=True, blank=True)
     schedule = models.CharField(max_length=100, null=True, blank=True)
     details = JSONField(schema=DETAILS_SCHEMA, null=True, blank=True)
