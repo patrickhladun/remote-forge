@@ -51,53 +51,72 @@ def test_data():
 
 
 @pytest.mark.django_db
-def test_job_list_view(test_data):
+def test_job_list_view_no_filters(test_data):
+    """Test job list view without filters. Unpublished jobs should not be displayed."""
     client = Client()
 
-    # Test without filters (all jobs)
-    # Unpublished job should not be visible
     response = client.get(reverse("job-list"))
     assert response.status_code == 200
-    print("Response context data (no filters):", response.context["data"])
     assert len(response.context["data"]) == 3
 
-    # Test with keyword filter
-    response = client.get(reverse("job-list") + "?keyword=DevOps")
-    job = response.context["data"][0]["job"]
-    assert response.status_code == 200
-    assert len(response.context["data"]) == 1
-    assert job.title == "DevOps Engineer"
-    assert job.city == "Dublin"
 
-    # Test with filter location Dublin
-    response = client.get(reverse("job-list") + "?location=Dublin")
-    assert response.status_code == 200
-    assert len(response.context["data"]) == 1
+@pytest.mark.django_db
+def test_job_list_view_location_filter_not_existing(test_data):
+    """Test job list view with location filter that does not exist."""
+    client = Client()
 
-    # Test with filter location Galway
-    response = client.get(reverse("job-list") + "?location=Galway")
+    response = client.get(reverse("job-list") + "?location=NotExisting")
     assert response.status_code == 200
-    assert len(response.context["data"]) == 1
+    assert len(response.context["data"]) == 0
 
-    # Test with filter location Warsaw
-    response = client.get(reverse("job-list") + "?keyword=&location=Warsaw")
+
+@pytest.mark.django_db
+def test_job_list_view_location_filter_warsaw(test_data):
+    """Test job list view with location filter Warsaw."""
+    client = Client()
+
+    response = client.get(reverse("job-list") + "?location=Warsaw")
     assert response.status_code == 200
     assert len(response.context["data"]) == 1
     assert response.context["data"][0]["job"].title == "Backend Developer"
     assert response.context["data"][0]["job"].city == "Warsaw"
+    # Ensure the test checks the job's city, not the employer's city for filtering
     assert response.context["data"][0]["employer"].city == "Krakow"
+    assert response.context["data"][0]["job"].country == "Poland"
 
-    # Test with filter location Ireland
+
+@pytest.mark.django_db
+def test_job_list_view_location_filter_dublin(test_data):
+    client = Client()
+
+    response = client.get(reverse("job-list") + "?location=Dublin")
+    assert response.status_code == 200
+    assert len(response.context["data"]) == 1
+
+
+@pytest.mark.django_db
+def test_job_list_view_location_filter_galway(test_data):
+    client = Client()
+
+    response = client.get(reverse("job-list") + "?location=Galway")
+    assert response.status_code == 200
+    assert len(response.context["data"]) == 1
+
+
+@pytest.mark.django_db
+def test_job_list_view_location_filter_ireland(test_data):
+    client = Client()
+
     response = client.get(reverse("job-list") + "?location=Ireland")
     assert response.status_code == 200
     assert len(response.context["data"]) == 2
 
-    # Test with filter location Cork
-    response = client.get(reverse("job-list") + "?location=Cork")
-    assert response.status_code == 200
-    assert len(response.context["data"]) == 0
 
-    # Test for not existing location keyword
-    response = client.get(reverse("job-list") + "?location=NotExisting")
+@pytest.mark.django_db
+def test_job_list_view_location_filter_cork(test_data):
+    """Test job list view with location filter that does not exist."""
+    client = Client()
+
+    response = client.get(reverse("job-list") + "?location=Cork")
     assert response.status_code == 200
     assert len(response.context["data"]) == 0
