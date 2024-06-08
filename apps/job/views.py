@@ -34,10 +34,11 @@ def job_list(request):
 
     for job in jobs:
         employer = get_object_or_404(Employer, user=job.user)
+
         if location:
             if (
-                employer.city.lower() == location.lower()
-                or employer.country.lower() == location.lower()
+                job.city.lower() == location.lower()
+                or job.country.lower() == location.lower()
             ):
                 data.append({"job": job, "employer": employer})
         else:
