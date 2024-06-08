@@ -31,7 +31,7 @@
             {% icon 'icon-location' 'md' %}
             <p class="text-center">
               <span class="h5">Location</span><br />
-              <span>{{ employer.city }}</span>
+              <span>{{ job.city }}</span>
             </p>
           </div>
           <!-- Schedule Icon -->
@@ -80,7 +80,7 @@
                     <p>{{ employer.company }}</p>
                     <span class="d-flex align-items-center gap-1">
                       {% icon 'icon-date-check' 'sm' %}
-                      <span>{{ job.created_at|date:'d M Y' }}</span>
+                      <span>Posted on: {{ job.created_at|date:'d M Y' }}</span>
                     </span>
                   </div>
                 </div>
