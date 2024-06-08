@@ -7,10 +7,8 @@ from apps.user.models import User
 from tests.factories import EmployerFactory, JobFactory, UserEmployerFactory
 
 
-@pytest.mark.django_db
-def test_job_list_view():
-    client = Client()
-
+@pytest.fixture
+def test_data():
     employer_user_1 = UserEmployerFactory()
     employer_1 = EmployerFactory(user=employer_user_1, city="Dublin")
 
@@ -48,6 +46,13 @@ def test_job_list_view():
         country="Poland",
         is_published=False,
     )
+
+    return job1, job2, job3, job4
+
+
+@pytest.mark.django_db
+def test_job_list_view(test_data):
+    client = Client()
 
     # Test without filters (all jobs)
     # Unpublished job should not be visible
