@@ -31,18 +31,34 @@
           <div class="employer-box">
             <h3>Contact</h3>
             <div class="d-flex flex-column gap-1">
-              <div class="d-flex align-items-center">
-                {% icon 'icon-location' 'sm' %}
-                <p class="m-0 ps-1">{{ employer.city }}, {{ employer.country }}</p>
-              </div>
-              <div class="d-flex align-items-center">
-                {% icon 'icon-phone' 'sm' %}
-                <p class="m-0 ps-1">{{ employer.phone }}</p>
-              </div>
-              <div class="d-flex align-items-center">
-                {% icon 'icon-envelope' 'sm' %}
-                <p class="m-0 ps-1">{{ employer.email }}</p>
-              </div>
+              {% if employer.city or employer.country %}
+                <div class="d-flex align-items-center">
+                  {% icon 'icon-location' 'sm' %}
+                  <p class="m-0 ps-1">
+                    {% if employer.city %}{{ employer.city }}{% endif %}
+                    {% if employer.city and employer.country %}, {% endif %}
+                    {% if employer.country %}{{ employer.country }}{% endif %}
+                  </p>
+                </div>
+              {% endif %}
+              {% if employer.phone %}
+                <div class="d-flex align-items-center">
+                  {% icon 'icon-phone' 'sm' %}
+                  <p class="m-0 ps-1">{{ employer.phone }}</p>
+                </div>
+              {% endif %}
+              {% if employer.email %}
+                <div class="d-flex align-items-center">
+                  {% icon 'icon-envelope' 'sm' %}
+                  <p class="m-0 ps-1">{{ employer.email }}</p>
+                </div>
+              {% endif %}
+              {% if employer.website %}
+                <div class="d-flex align-items-center">
+                  {% icon 'icon-globe' 'sm' %}
+                  <a href="{{ employer.website }}" class="m-0 ps-1">{{ employer.website }}</a>
+                </div>
+              {% endif %}
             </div>
             <div class="d-flex gap-2 py-2">
               {% for link in employer.social %}

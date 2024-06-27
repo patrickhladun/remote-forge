@@ -22,8 +22,12 @@ DETAILS_SCHEMA = {
                     "About Us",
                 ],
             },
-            "content": {"type": "textarea"},
+            "content": {
+                "type": "string",
+                "widget": "textarea",
+            },
         },
+        "required": ["heading", "content"],
     },
 }
 
@@ -34,10 +38,10 @@ class Job(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     user = models.ForeignKey(User, related_name="jobs", on_delete=models.CASCADE)
     title = models.CharField(max_length=100)
-    city = models.CharField(max_length=56, null=True, blank=True)
-    country = models.CharField(max_length=56, null=True, blank=True)
-    salary = models.CharField(max_length=40, null=True, blank=True)
-    schedule = models.CharField(max_length=100, null=True, blank=True)
+    city = models.CharField(max_length=56, blank=True, default="")
+    country = models.CharField(max_length=56, blank=True, default="")
+    salary = models.CharField(max_length=40, blank=True, default="")
+    schedule = models.CharField(max_length=100, blank=True, default="")
     details = JSONField(schema=DETAILS_SCHEMA, null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
