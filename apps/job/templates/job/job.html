@@ -31,7 +31,11 @@
             {% icon 'icon-location' 'md' %}
             <p class="text-center">
               <span class="h5">Location</span><br />
-              <span>{{ job.city }}</span>
+              {% if job.city %}
+                <span>{{ job.city }}</span>
+              {% else %}
+                <span>Unspecified</span>
+              {% endif %}
             </p>
           </div>
           <!-- Schedule Icon -->
@@ -39,7 +43,11 @@
             {% icon 'icon-time' 'md' %}
             <p class="text-center">
               <span class="h5">Schedule</span><br />
-              <span>{{ job.schedule }}</span>
+              {% if job.schedule %}
+                <span>{{ job.schedule }}</span>
+              {% else %}
+                <span>Unspecified</span>
+              {% endif %}
             </p>
           </div>
           <!-- Salary Icon -->
@@ -47,7 +55,11 @@
             {% icon 'icon-salary' 'md' %}
             <p class="text-center">
               <span class="h5">Salary</span><br />
-              <span>{{ job.salary }}</span>
+              {% if job.salary %}
+                <span>{{ job.salary }}</span>
+              {% else %}
+                <span>Unspecified</span>
+              {% endif %}
             </p>
           </div>
         </div>

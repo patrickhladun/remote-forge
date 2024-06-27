@@ -41,7 +41,7 @@
           "company_name": "Tech Innovations Inc.",
           "position": "Software Engineer",
           "start_date": "2019-07-01",
-          "end_date": null,
+          "end_date": "",
           "still_on": true,
           "responsibilities": "Designed and implemented scalable software solutions, participated in code reviews and technical discussions, and collaborated with product and design teams to deliver user-centric features."
         },
@@ -162,7 +162,7 @@
           "company_name": "Digital Solutions Ltd.",
           "position": "Frontend Lead",
           "start_date": "2022-01-01",
-          "end_date": null,
+          "end_date": "",
           "still_on": true,
           "responsibilities": "Lead a team of frontend developers, defined technical standards and best practices, and contributed to architectural decisions."
         }
@@ -263,7 +263,7 @@
           "company_name": "Financial Dynamics",
           "position": "Accounting Manager",
           "start_date": "2022-09-01",
-          "end_date": null,
+          "end_date": "",
           "still_on": true,
           "responsibilities": "Lead the accounting team, implemented financial controls, and optimized accounting procedures to enhance efficiency."
         }
@@ -342,7 +342,7 @@
           "start_date": "2010-01-01",
           "end_date": "2014-12-31",
           "still_on": false,
-          "responsibilities": "<p>Developed and maintained critical Martian infrastructure, assisted in designing advanced rover systems, and collaborated with Earth-based teams on interplanetary projects.</p>"
+          "responsibilities": "Developed and maintained critical Martian infrastructure, assisted in designing advanced rover systems, and collaborated with Earth-based teams on interplanetary projects."
         },
         {
           "company_name": "Red Planet Innovations",
@@ -350,15 +350,15 @@
           "start_date": "2015-01-01",
           "end_date": "2018-06-30",
           "still_on": false,
-          "responsibilities": "<p>Led the development of new propulsion systems, optimized life support algorithms, and contributed to the creation of the first Martian-Earth communication protocol.</p>"
+          "responsibilities": "Led the development of new propulsion systems, optimized life support algorithms, and contributed to the creation of the first Martian-Earth communication protocol."
         },
         {
           "company_name": "Universal Code Solutions",
           "position": "Chief Technology Officer",
           "start_date": "2018-07-01",
-          "end_date": null,
+          "end_date": "",
           "still_on": true,
-          "responsibilities": "<p>Oversees all technological advancements, mentors junior Martian developers, and ensures the integration of Martian technology with other planetary systems. Pioneers new software solutions for interstellar travel and colonization.</p>"
+          "responsibilities": "Oversees all technological advancements, mentors junior Martian developers, and ensures the integration of Martian technology with other planetary systems. Pioneers new software solutions for interstellar travel and colonization."
         }
       ],
       "education": [
@@ -442,7 +442,7 @@
           "company_name": "TechInnovate",
           "position": "Senior DevOps Engineer",
           "start_date": "2022-10-01",
-          "end_date": null,
+          "end_date": "",
           "still_on": true,
           "responsibilities": "Lead DevOps initiatives, collaborated with cross-functional teams, and introduced containerization and orchestration solutions."
         }
@@ -547,7 +547,7 @@
           "company_name": "Innovative Tech Ltd.",
           "position": "Senior Software Engineer",
           "start_date": "2023-01-01",
-          "end_date": null,
+          "end_date": "",
           "still_on": true,
           "responsibilities": "Lead the development of scalable software solutions, mentor junior developers, and manage code deployment processes. Collaborate with cross-functional teams to design and implement new features, and ensure the overall stability and performance of applications."
         }
@@ -634,7 +634,7 @@
           "start_date": "2015-01-01",
           "end_date": "2018-12-31",
           "still_on": false,
-          "responsibilities": "<p>Mastered the art of napping in various cozy corners, perfected purring techniques to enhance relaxation, and maintained a consistent napping schedule.</p>"
+          "responsibilities": "Mastered the art of napping in various cozy corners, perfected purring techniques to enhance relaxation, and maintained a consistent napping schedule."
         },
         {
           "company_name": "Sunbeam Studios",
@@ -642,15 +642,15 @@
           "start_date": "2019-01-01",
           "end_date": "2021-06-30",
           "still_on": false,
-          "responsibilities": "<p>Found the best sunbeam spots for optimal warmth, led a team of junior nappers, and developed advanced napping strategies for different environments.</p>"
+          "responsibilities": "Found the best sunbeam spots for optimal warmth, led a team of junior nappers, and developed advanced napping strategies for different environments."
         },
         {
           "company_name": "Feline Dreamland",
           "position": "Chief Nap Officer",
           "start_date": "2021-07-01",
-          "end_date": null,
+          "end_date": "",
           "still_on": true,
-          "responsibilities": "<p>Oversees all napping operations, mentors aspiring nappers, and ensures the highest standards of nap quality and comfort. Innovates new techniques for deep, restful sleep.</p>"
+          "responsibilities": "Oversees all napping operations, mentors aspiring nappers, and ensures the highest standards of nap quality and comfort. Innovates new techniques for deep, restful sleep."
         }
       ],
       "education": [
@@ -750,7 +750,7 @@
           "company_name": "Future Technologies Ltd.",
           "position": "Senior Software Engineer",
           "start_date": "2021-12-01",
-          "end_date": null,
+          "end_date": "",
           "still_on": true,
           "responsibilities": "Lead the development of scalable software solutions, mentored junior developers, and managed code deployment processes. Collaborated with cross-functional teams to design and implement new features, and ensured the overall stability and performance of applications."
         }
@@ -855,7 +855,7 @@
           "company_name": "Innovative Interfaces GmbH",
           "position": "Senior UX Designer",
           "start_date": "2021-11-01",
-          "end_date": null,
+          "end_date": "",
           "still_on": true,
           "responsibilities": "Lead UX design initiatives, mentored junior designers, and managed the design process from ideation to implementation. Conducted user testing and iterated on designs to enhance user satisfaction and engagement."
         }
@@ -956,7 +956,7 @@
           "company_name": "Emerald Recruiting Solutions",
           "position": "Professional Recruiter",
           "start_date": "2021-07-01",
-          "end_date": null,
+          "end_date": "",
           "still_on": true,
           "responsibilities": "Oversee the recruitment process for tech positions, collaborate with clients to understand their hiring needs, and implement innovative sourcing techniques. Focus on building a diverse talent pipeline and ensuring a positive candidate experience."
         }
@@ -1062,7 +1062,7 @@
           "company_name": "Innovative Digital Solutions",
           "position": "Senior Digital Marketer",
           "start_date": "2021-11-01",
-          "end_date": null,
+          "end_date": "",
           "still_on": true,
           "responsibilities": "Lead the digital marketing team, developed high-impact marketing campaigns, and implemented advanced SEO techniques. Analyzed market trends and adapted strategies to improve ROI. Mentored junior marketers and managed key client accounts."
         }
@@ -1155,7 +1155,7 @@
           "company_name": "Nothing Inc.",
           "position": "Master of Inactivity",
           "start_date": "2021-07-01",
-          "end_date": null,
+          "end_date": "",
           "still_on": true,
           "responsibilities": "Currently setting new standards in doing nothing, guiding the next generation of do-nothings, and ensuring the company's zero productivity remains untouched."
         }
@@ -1260,7 +1260,7 @@
           "company_name": "Meme Masters Inc.",
           "position": "Head of Meme Curation",
           "start_date": "2020-07-01",
-          "end_date": null,
+          "end_date": "",
           "still_on": true,
           "responsibilities": "Oversee the meme curation process, mentor junior curators, and maintain the company's meme library. Collaborate with cross-functional teams to incorporate memes into company culture and external communications."
         }
@@ -1352,7 +1352,7 @@
           "start_date": "2015-01-01",
           "end_date": "2018-12-31",
           "still_on": false,
-          "responsibilities": "<p>Patrolled the neighborhood, barked at intruders, and ensured the safety of the local community. Developed strong communication skills with other dogs and humans.</p>"
+          "responsibilities": "Patrolled the neighborhood, barked at intruders, and ensured the safety of the local community. Developed strong communication skills with other dogs and humans."
         },
         {
           "company_name": "Barking Brigade",
@@ -1360,15 +1360,15 @@
           "start_date": "2019-01-01",
           "end_date": "2021-06-30",
           "still_on": false,
-          "responsibilities": "<p>Led a team of junior barkers, trained new recruits, and coordinated with local authorities. Implemented new barking techniques to enhance effectiveness.</p>"
+          "responsibilities": "Led a team of junior barkers, trained new recruits, and coordinated with local authorities. Implemented new barking techniques to enhance effectiveness."
         },
         {
           "company_name": "Guardians of the Yard",
           "position": "Chief Barking Officer",
           "start_date": "2021-07-01",
-          "end_date": null,
+          "end_date": "",
           "still_on": true,
-          "responsibilities": "<p>Oversees all barking operations, mentors young puppies, and ensures the highest standards of territorial defense. Innovates new strategies for alerting and protection.</p>"
+          "responsibilities": "Oversees all barking operations, mentors young puppies, and ensures the highest standards of territorial defense. Innovates new strategies for alerting and protection."
         }
       ],
       "education": [
@@ -1459,7 +1459,7 @@
           "company_name": "Cosmic Theories Inc.",
           "position": "Chief Conspiracy Theorist",
           "start_date": "2021-07-01",
-          "end_date": null,
+          "end_date": "",
           "still_on": true,
           "responsibilities": "Leads the creation of new and exciting conspiracy theories about alien visitations, collaborates with other theorists, and publishes regular updates on his findings. Ensures that no stone is left unturned in the quest for the truth."
         }
@@ -1565,7 +1565,7 @@
           "company_name": "Futuristic Design Co.",
           "position": "Lead Designer",
           "start_date": "2020-07-01",
-          "end_date": null,
+          "end_date": "",
           "still_on": true,
           "responsibilities": "Oversees major design initiatives, collaborates with cross-functional teams, and ensures the delivery of high-quality design solutions. Max, however, spends a significant amount of his time preparing detailed zombie apocalypse plans."
         }
@@ -1663,7 +1663,7 @@
           "company_name": "Global Virtual Assistants",
           "position": "Lead Virtual Assistant",
           "start_date": "2022-07-01",
-          "end_date": null,
+          "end_date": "",
           "still_on": true,
           "responsibilities": "Leads a team of virtual assistants, oversees client projects, ensures timely completion of tasks, and provides high-quality administrative support to clients worldwide."
         }
@@ -1761,7 +1761,7 @@
           "company_name": "Top Rank Solutions",
           "position": "Lead SEO Consultant",
           "start_date": "2021-07-01",
-          "end_date": null,
+          "end_date": "",
           "still_on": true,
           "responsibilities": "Oversees SEO strategy development, conducts advanced SEO audits, and provides training to junior SEO specialists. Works closely with clients to develop customized SEO plans that drive traffic and increase conversions."
         }
@@ -1845,7 +1845,7 @@
           "start_date": "2016-01-01",
           "end_date": "2018-12-31",
           "still_on": false,
-          "responsibilities": "<p>Assisted in the design of web and mobile applications, conducted user research, and created wireframes and prototypes. Collaborated with developers to ensure design feasibility and implementation.</p>"
+          "responsibilities": "Assisted in the design of web and mobile applications, conducted user research, and created wireframes and prototypes. Collaborated with developers to ensure design feasibility and implementation."
         },
         {
           "company_name": "Innovative Interfaces",
@@ -1853,15 +1853,15 @@
           "start_date": "2019-01-01",
           "end_date": "2021-06-30",
           "still_on": false,
-          "responsibilities": "<p>Designed user interfaces for various digital products, performed usability testing, and iterated on designs based on user feedback. Worked closely with cross-functional teams to deliver high-quality design solutions.</p>"
+          "responsibilities": "Designed user interfaces for various digital products, performed usability testing, and iterated on designs based on user feedback. Worked closely with cross-functional teams to deliver high-quality design solutions."
         },
         {
           "company_name": "Future Tech Solutions",
           "position": "Senior UX/UI Designer",
           "start_date": "2021-07-01",
-          "end_date": null,
+          "end_date": "",
           "still_on": true,
-          "responsibilities": "<p>Leads the design process for major projects, mentors junior designers, and ensures the delivery of user-centered design solutions. Collaborates with stakeholders to align design goals with business objectives and improve overall user satisfaction.</p>"
+          "responsibilities": "Leads the design process for major projects, mentors junior designers, and ensures the delivery of user-centered design solutions. Collaborates with stakeholders to align design goals with business objectives and improve overall user satisfaction."
         }
       ],
       "education": [
@@ -1938,7 +1938,7 @@
           "start_date": "2016-01-01",
           "end_date": "2018-12-31",
           "still_on": false,
-          "responsibilities": "<p>Assisted in the design of web and mobile applications, conducted user research, and created wireframes and prototypes. Collaborated with developers to ensure design feasibility and implementation.</p>"
+          "responsibilities": "Assisted in the design of web and mobile applications, conducted user research, and created wireframes and prototypes. Collaborated with developers to ensure design feasibility and implementation."
         },
         {
           "company_name": "Innovative Interfaces",
@@ -1946,15 +1946,15 @@
           "start_date": "2019-01-01",
           "end_date": "2021-06-30",
           "still_on": false,
-          "responsibilities": "<p>Designed user interfaces for various digital products, performed usability testing, and iterated on designs based on user feedback. Worked closely with cross-functional teams to deliver high-quality design solutions.</p>"
+          "responsibilities": "Designed user interfaces for various digital products, performed usability testing, and iterated on designs based on user feedback. Worked closely with cross-functional teams to deliver high-quality design solutions."
         },
         {
           "company_name": "Future Tech Solutions",
           "position": "Senior UX/UI Designer",
           "start_date": "2021-07-01",
-          "end_date": null,
+          "end_date": "",
           "still_on": true,
-          "responsibilities": "<p>Leads the design process for major projects, mentors junior designers, and ensures the delivery of user-centered design solutions. Collaborates with stakeholders to align design goals with business objectives and improve overall user satisfaction.</p>"
+          "responsibilities": "Leads the design process for major projects, mentors junior designers, and ensures the delivery of user-centered design solutions. Collaborates with stakeholders to align design goals with business objectives and improve overall user satisfaction."
         }
       ],
       "education": [
@@ -2031,7 +2031,7 @@
           "start_date": "2016-01-01",
           "end_date": "2018-12-31",
           "still_on": false,
-          "responsibilities": "<p>Developed and maintained server-side applications, assisted in database design, and collaborated with frontend developers to integrate user-facing elements with server-side logic.</p>"
+          "responsibilities": "Developed and maintained server-side applications, assisted in database design, and collaborated with frontend developers to integrate user-facing elements with server-side logic."
         },
         {
           "company_name": "Innovative Software",
@@ -2039,15 +2039,15 @@
           "start_date": "2019-01-01",
           "end_date": "2021-06-30",
           "still_on": false,
-          "responsibilities": "<p>Built and optimized backend services, implemented RESTful APIs, and ensured the performance, quality, and responsiveness of applications. Worked closely with cross-functional teams to define, design, and ship new features.</p>"
+          "responsibilities": "Built and optimized backend services, implemented RESTful APIs, and ensured the performance, quality, and responsiveness of applications. Worked closely with cross-functional teams to define, design, and ship new features."
         },
         {
           "company_name": "Global Tech Solutions",
           "position": "Senior Backend Developer",
           "start_date": "2021-07-01",
-          "end_date": null,
+          "end_date": "",
           "still_on": true,
-          "responsibilities": "<p>Leads the development of backend systems, mentors junior developers, and ensures best practices in code quality, testing, and deployment. Collaborates with product managers and other stakeholders to deliver scalable and secure backend solutions.</p>"
+          "responsibilities": "Leads the development of backend systems, mentors junior developers, and ensures best practices in code quality, testing, and deployment. Collaborates with product managers and other stakeholders to deliver scalable and secure backend solutions."
         }
       ],
       "education": [
@@ -2124,7 +2124,7 @@
           "start_date": "2015-01-01",
           "end_date": "2017-12-31",
           "still_on": false,
-          "responsibilities": "<p>Developed and maintained web applications using HTML, CSS, and JavaScript. Collaborated with designers and backend developers to ensure seamless integration of UI components.</p>"
+          "responsibilities": "Developed and maintained web applications using HTML, CSS, and JavaScript. Collaborated with designers and backend developers to ensure seamless integration of UI components."
         },
         {
           "company_name": "Innovative Solutions",
@@ -2132,15 +2132,15 @@
           "start_date": "2018-01-01",
           "end_date": "2020-06-30",
           "still_on": false,
-          "responsibilities": "<p>Implemented responsive designs, optimized web performance, and developed interactive features using React.js. Worked closely with the UX team to improve user experience.</p>"
+          "responsibilities": "Implemented responsive designs, optimized web performance, and developed interactive features using React.js. Worked closely with the UX team to improve user experience."
         },
         {
           "company_name": "FutureTech",
           "position": "Senior Frontend Engineer",
           "start_date": "2020-07-01",
-          "end_date": null,
+          "end_date": "",
           "still_on": true,
-          "responsibilities": "<p>Leads the frontend development team, architects scalable frontend solutions, and mentors junior developers. Collaborates with cross-functional teams to deliver high-impact web applications.</p>"
+          "responsibilities": "Leads the frontend development team, architects scalable frontend solutions, and mentors junior developers. Collaborates with cross-functional teams to deliver high-impact web applications."
         }
       ],
       "education": [
