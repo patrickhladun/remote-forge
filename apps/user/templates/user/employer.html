@@ -24,7 +24,16 @@
 
   <section class="bg-brand-100">
     <div class="container pb-5">
-      <div class="row">
+      {% if user.is_authenticated and employer.is_published == True %}
+        <div class="py-4">
+          <a href="{% url 'profile' %}" class="btn btn-primary">Edit Profile</a>
+        </div>
+        <div class="row">
+      {% else %}
+        <div class="row pt-4">
+      {% endif %}
+
+
         <!-- Main Content -->
         <div class="col-md-8">
           <!-- About Section -->
