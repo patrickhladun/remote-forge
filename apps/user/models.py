@@ -27,6 +27,10 @@ def talent_upload_resume_path(instance, filename):
     return get_uploads_path(instance, filename, "talent/resumes/", "resume")
 
 
+def employer_upload_profile_path(instance, filename):
+    return get_uploads_path(instance, filename, "employer/profile/", "profile")
+
+
 SOCIAL_SCHEMA = {
     "type": "array",
     "items": {
@@ -208,7 +212,9 @@ class Employer(models.Model):
     phone = models.CharField(max_length=30, blank=True, default="")
     company = models.CharField(max_length=100, blank=True, default="")
     about = models.TextField(blank=True, default="")
-    image = models.ImageField(upload_to="employer/profile/", null=True, blank=True)
+    image = models.ImageField(
+        upload_to=employer_upload_profile_path, null=True, blank=True
+    )
     website = models.URLField(max_length=200, blank=True, default="")
     city = models.CharField(max_length=75, blank=True, default="")
     country = models.CharField(max_length=56, blank=True, default="")
