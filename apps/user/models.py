@@ -36,6 +36,7 @@ SOCIAL_SCHEMA = {
             },
             "url": {"type": "string"},
         },
+        "required": ["site", "url"],
     },
 }
 
@@ -70,7 +71,10 @@ EXPERIENCE_SCHEMA = {
             "start_date": {"type": "string"},
             "end_date": {"type": "string"},
             "still_on": {"type": "boolean"},
-            "responsibilities": {"type": "textarea"},
+            "responsibilities": {
+                "type": "string",
+                "widget": "textarea",
+            },
         },
     },
 }
@@ -123,7 +127,6 @@ class User(AbstractBaseUser):
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
     is_superuser = models.BooleanField(default=False)
-    hide_email = models.BooleanField(default=True)
     user_type = models.CharField(max_length=10)
 
     objects = CustomUserManager()
@@ -185,9 +188,7 @@ class Employer(models.Model):
     phone = models.CharField(max_length=30, blank=True, default="")
     company = models.CharField(max_length=100, blank=True, default="")
     about = models.TextField(blank=True, default="")
-    image = models.ImageField(
-        upload_to="media/employer/profile/", null=True, blank=True
-    )
+    image = models.ImageField(upload_to="employer/profile/", null=True, blank=True)
     website = models.URLField(max_length=200, blank=True, default="")
     city = models.CharField(max_length=75, blank=True, default="")
     country = models.CharField(max_length=56, blank=True, default="")
