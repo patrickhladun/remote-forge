@@ -6,7 +6,7 @@
   <section class="bg-brand-100">
     <div class="container py-5">
       <div class="talent-header bg-brand-200 rounded p-4">
-        <div class="d-flex justify-content-between align-items-center">
+        <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center">
           <div class="d-flex justify-content-between align-items-center py-3 gap-2">
             <div class="image">
               {% if talent.image %}
@@ -20,7 +20,9 @@
               <span>{{ talent.title }}</span>
             </p>
           </div>
-          <button class="btn btn-primary">Download CV</button>
+          {% if talent.resume %}
+            <a href="{{ MEDIA_URL }}{{ talent.resume }}" class="btn btn-primary" target="_blank">Download CV</a>
+          {% endif %}
         </div>
       </div>
     </div>
