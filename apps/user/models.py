@@ -5,6 +5,9 @@ from django.core.exceptions import ValidationError
 from django.db import models
 from django_jsonform.models.fields import JSONField
 
+from config.utils.uploads import get_uploads_path
+
+
 def validate_resume_extension(value):
     import os
 
@@ -14,6 +17,15 @@ def validate_resume_extension(value):
         raise ValidationError(
             "Unsupported file extension. Allowed extensions are: .pdf, .doc, .docx"
         )
+
+
+def talent_upload_profile_path(instance, filename):
+    return get_uploads_path(instance, filename, "talent/profile/", "profile")
+
+
+def talent_upload_resume_path(instance, filename):
+    return get_uploads_path(instance, filename, "talent/resumes/", "resume")
+
 
 SOCIAL_SCHEMA = {
     "type": "array",
@@ -154,11 +166,19 @@ class Talent(models.Model):
     phone = models.CharField(max_length=30, blank=True, default="")
     city = models.CharField(max_length=75, blank=True, default="")
     country = models.CharField(max_length=56, blank=True, default="")
-    image = models.ImageField(upload_to="media/talent/profile/", null=True, blank=True)
+    image = models.ImageField(
+        upload_to=talent_upload_profile_path,
+        null=True,
+        blank=True,
+    )
     bio = models.TextField(blank=True, default="")
     title = models.CharField(max_length=100, blank=True, default="")
-    resume = models.FileField(upload_to="media/talent/resumes/", null=True, blank=True)
+    resume = models.FileField(
+        upload_to=talent_upload_resume_path,
+        null=True,
+        blank=True,
         validators=[validate_resume_extension],
+    )
     website = models.URLField(max_length=200, blank=True, default="")
     social = JSONField(schema=SOCIAL_SCHEMA, null=True, blank=True)
     experience = JSONField(schema=EXPERIENCE_SCHEMA, null=True, blank=True)
