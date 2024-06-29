@@ -5,10 +5,6 @@ from .models import Employer, Talent, User
 
 
 class TalentSignupForm(SignupForm):
-    consent = forms.BooleanField(
-        required=True, label="I agree to the terms and conditions"
-    )
-
     def save(self, request):
         user = super(TalentSignupForm, self).save(request)
         user.user_type = "talent"
@@ -19,10 +15,6 @@ class TalentSignupForm(SignupForm):
 
 
 class EmployerSignupForm(SignupForm):
-    consent = forms.BooleanField(
-        required=True, label="I agree to the terms and conditions"
-    )
-
     def save(self, request):
         user = super(EmployerSignupForm, self).save(request)
         user.user_type = "employer"
@@ -37,6 +29,7 @@ class TalentProfileForm(forms.ModelForm):
         model = Talent
         fields = [
             "is_published",
+            "image",
             "first_name",
             "last_name",
             "phone",
@@ -53,6 +46,8 @@ class TalentProfileForm(forms.ModelForm):
             "social",
         ]
         labels = {
+            "is_published": "Published",
+            "image": "Profile Image",
             "first_name": "First Name",
             "last_name": "Last Name",
             "phone": "Phone",
@@ -89,6 +84,7 @@ class EmployerProfileForm(forms.ModelForm):
             "social",
         ]
         labels = {
+            "is_published": "Published",
             "first_name": "First Name",
             "last_name": "Last Name",
             "email": "Email",
@@ -109,10 +105,8 @@ class AccountProfile(forms.ModelForm):
         fields = [
             "username",
             "email",
-            "hide_email",
         ]
         labels = {
             "username": "Username",
             "email": "Email",
-            "hide_email": "Hide my Email",
         }
