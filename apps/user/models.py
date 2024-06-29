@@ -1,8 +1,19 @@
 import uuid
 
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
+from django.core.exceptions import ValidationError
 from django.db import models
 from django_jsonform.models.fields import JSONField
+
+def validate_resume_extension(value):
+    import os
+
+    extension = os.path.splitext(value.name)[1]
+    valid_extensions = [".pdf", ".doc", ".docx"]
+    if not extension.lower() in valid_extensions:
+        raise ValidationError(
+            "Unsupported file extension. Allowed extensions are: .pdf, .doc, .docx"
+        )
 
 SOCIAL_SCHEMA = {
     "type": "array",
@@ -144,6 +155,7 @@ class Talent(models.Model):
     bio = models.TextField(blank=True, default="")
     title = models.CharField(max_length=100, blank=True, default="")
     resume = models.FileField(upload_to="media/talent/resumes/", null=True, blank=True)
+        validators=[validate_resume_extension],
     website = models.URLField(max_length=200, blank=True, default="")
     social = JSONField(schema=SOCIAL_SCHEMA, null=True, blank=True)
     experience = JSONField(schema=EXPERIENCE_SCHEMA, null=True, blank=True)
