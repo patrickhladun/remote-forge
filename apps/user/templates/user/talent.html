@@ -33,69 +33,109 @@
       <!-- Main Content -->
       <div class="col-md-8">
         <!-- BIO Section -->
-        <div class="bio">
-          <p>{{ talent.bio }}</p>
-        </div>
+        {% if talent.bio %}
+          <div class="bio">
+            <p>{{ talent.bio }}</p>
+          </div>
+        {% endif %}
         <!-- Experience Section -->
-        <div class="experience">
-          <h2>Experience</h2>
-          {% for experience in talent.experience %}
-            <h3>{{ experience.company_name }}</h3>
-            <p>{{ experience.start_date }} - {{ experience.end_date }}</p>
-            <h5>{{ experience.position }}</h5>
-            <h4>Responsibilities</h4>
-            <p>{{ experience.responsibilities }}</p>
-          {% endfor %}
-        </div>
+        {% if talent.experience %}
+          <div class="experience">
+            <h2>Experience</h2>
+            {% for experience in talent.experience %}
+              <h3>{{ experience.company_name }}</h3>
+              <p>
+                {{ experience.start_date }}
+                {% if experience.end_date %}
+                  - {{ experience.end_date }}
+                {% endif %}
+              </p>
+              <h5>{{ experience.position }}</h5>
+              {% if experience.responsibilities %}
+                <h4>Responsibilities</h4>
+                <p>{{ experience.responsibilities }}</p>
+              {% endif %}
+            {% endfor %}
+          </div>
+        {% endif %}
         <!-- Education Section -->
-        <div class="education">
-          <h2>Education</h2>
-          {% for education in talent.education %}
-            <p>{{ education.level }}</p>
-            <p>{{ education.status }}</p>
-            <p>{{ education.start_date }} - {{ education.end_date }}</p>
-          {% endfor %}
-        </div>
+        {% if talent.education %}
+          <div class="education">
+            <h2>Education</h2>
+            {% for education in talent.education %}
+              <p>{{ education.level }}</p>
+              <p>{{ education.status }}</p>
+              <p>{{ education.start_date }} - {{ education.end_date }}</p>
+            {% endfor %}
+          </div>
+        {% endif %}
       </div>
 
       <!-- Sidebar -->
       <div class="col-md-4">
         <!-- Details Section -->
-        <div class="talent-box">
-          <h3>Details</h3>
-          <div>
-            <h5>Location</h5>
-            <p>{{ talent.city }}, {{ talent.country }}</p>
+        {% if talent.city or talent.country or talent.phone %}
+          <div class="talent-box">
+            <h3>Details</h3>
+            <div>
+              {% if talent.city or talent.country %}
+                <div class="d-flex align-items-center">
+                  {% icon 'icon-location' 'sm' %}
+                  <p class="m-0 ps-1">
+                    {% if talent.city %}{{ talent.city }}{% endif %}
+                    {% if talent.city and talent.country %}, {% endif %}
+                    {% if talent.country %}{{ talent.country }}{% endif %}
+                  </p>
+                </div>
+              {% endif %}
+              {% if talent.phone %}
+                <div class="d-flex align-items-center">
+                  {% icon 'icon-phone' 'sm' %}
+                  <p class="m-0 ps-1">{{ talent.phone }}</p>
+                </div>
+              {% endif %}
+              {% if talent.website %}
+                <div class="d-flex align-items-center">
+                  {% icon 'icon-web' 'sm' %}
+                  <a href="{{ talent.website }}" target="_blank" class="m-0 ps-1">{{ talent.website }}</a>
+                </div>
+              {% endif %}
+            </div>
           </div>
-        </div>
-        <!-- Skills Section -->
-        <div class="talent-box">
-          <h3>Skills</h3>
-          <div class="skills">
-            {% for skill in talent.skills %}
-              <span class="skills__item">{{ skill }}</span>
-            {% endfor %}
-          </div>
-        </div>
-        <!-- Interests Section -->
-        <div class="talent-box">
-          <h3>Interests</h3>
-          <div class="interests">{{ talent.interests }}</div>
-        </div>
-
+        {% endif %}
         <!-- Social Section -->
-        <div class="talent-box">
-          <h3>Social</h3>
-          <div class="skills">
-            <div class="d-flex gap-2 py-2">
-              {% for link in talent.social %}
-                {% with icon_name='icon-'|add:link.site %}
-                  <a class="p-2 bg-brand-100 rounded-1" href="{{ link.url }}">{% icon icon_name 'sm' %}</a>
-                {% endwith %}
+        {% if talent.social %}
+          <div class="talent-box">
+            <h3>Social</h3>
+            <div class="skills">
+              <div class="d-flex gap-2 py-2">
+                {% for link in talent.social %}
+                  {% with icon_name='icon-'|add:link.site %}
+                    <a class="p-2 bg-brand-100 rounded-1" href="{{ link.url }}" target="_blank">{% icon icon_name 'sm' %}</a>
+                  {% endwith %}
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        {% endif %}
+        <!-- Skills Section -->
+        {% if talent.skills %}
+          <div class="talent-box">
+            <h3>Skills</h3>
+            <div class="skills">
+              {% for skill in talent.skills %}
+                <span class="skills__item">{{ skill }}</span>
               {% endfor %}
             </div>
           </div>
-        </div>
+        {% endif %}
+        <!-- Interests Section -->
+        {% if talent.interests %}
+          <div class="talent-box">
+            <h3>Interests</h3>
+            <div class="interests">{{ talent.interests }}</div>
+          </div>
+        {% endif %}
       </div>
     </div>
   </section>
