@@ -54,10 +54,18 @@ def talent_signup_view(request):
             user = form.save(request)
             backend = get_backend_name()
             login(request, user, backend=backend)
-            return redirect(reverse("profile"))
+            request.session["user_type"] = "talent"
+            messages.success(
+                request, "Registration successful! Welcome to our platform."
+            )
+            return redirect(reverse("welcome"))
     else:
         form = TalentSignupForm()
-    return render(request, "allauth/account/signup_talent.html", {"form": form})
+    return render(
+        request,
+        "allauth/account/signup_talent.html",
+        {"form": form},
+    )
 
 
 def employer_signup_view(request):
@@ -68,10 +76,24 @@ def employer_signup_view(request):
             user = form.save(request)
             backend = get_backend_name()
             login(request, user, backend=backend)
-            return redirect(reverse("profile"))
+            request.session["user_type"] = "employer"
+            messages.success(
+                request, "Registration successful! Welcome to our platform."
+            )
+            return redirect(reverse("welcome"))
     else:
         form = EmployerSignupForm()
-    return render(request, "allauth/account/signup_employer.html", {"form": form})
+    return render(
+        request,
+        "allauth/account/signup_employer.html",
+        {"form": form},
+    )
+
+
+@login_required
+def welcome_view(request):
+    user_type = request.session.get("user_type", "default")
+    return render(request, "./user/admin/welcome.html", {"user_type": user_type})
 
 
 @login_required
