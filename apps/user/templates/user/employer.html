@@ -1,12 +1,20 @@
 {% extends 'index.html' %}
+{% load static %}
 {% load icon_tags %}
 
 {% block content %}
   <section class="bg-brand-100">
-    <div class="container py-sm">
+    <div class="container pt-sm">
       <div class="employer-header bg-brand-200 rounded p-4">
         <div class="d-flex justify-content-between align-items-center">
           <div class="d-flex justify-content-between align-items-center py-1 gap-2">
+            <div class="image">
+              {% if employer.image %}
+                <img src="{{ MEDIA_URL }}{{ employer.image }}" class="rounded-circle border" width="80" />
+              {% else %}
+                <img src="{% static 'assets/images/avatar.png' %}" class="rounded-circle border" width="80" />
+              {% endif %}
+            </div>
             <h1>{{ employer.company }}</h1>
           </div>
         </div>
