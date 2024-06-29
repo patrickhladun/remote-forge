@@ -117,7 +117,9 @@ def profile_view(request):
     else:
         form = form_class(instance=profile)
 
-    return render(request, "user/admin/profile.html", {"form": form})
+    return render(
+        request, "user/admin/profile.html", {"form": form, "profile": profile}
+    )
 
 
 @login_required
