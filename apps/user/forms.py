@@ -1,3 +1,5 @@
+import re
+
 from allauth.account.forms import SignupForm
 from django import forms
 
@@ -13,6 +15,24 @@ class TalentSignupForm(SignupForm):
         talent.save()
         return user
 
+    def clean_username(self):
+        username = self.cleaned_data["username"]
+        if User.objects.filter(username=username).exists():
+            raise forms.ValidationError("Username already exists")
+        if len(username) < 4:
+            raise forms.ValidationError("Username must be at least 4 characters")
+        if len(username) > 30:
+            raise forms.ValidationError("Username must be at most 30 characters")
+        if not username.isalnum():
+            raise forms.ValidationError("Username must be alphanumeric")
+        if not username[0].isalpha():
+            raise forms.ValidationError("Username must start with a letter")
+        if not re.match("^[a-zA-Z0-9]*$", username):
+            raise forms.ValidationError(
+                "Username must contain only letters, numbers, or underscores"
+            )
+        return username
+
 
 class EmployerSignupForm(SignupForm):
     def save(self, request):
@@ -22,6 +42,24 @@ class EmployerSignupForm(SignupForm):
         employer = Employer.objects.create(user=user)
         employer.save()
         return user
+
+    def clean_username(self):
+        username = self.cleaned_data["username"]
+        if User.objects.filter(username=username).exists():
+            raise forms.ValidationError("Username already exists")
+        if len(username) < 4:
+            raise forms.ValidationError("Username must be at least 4 characters")
+        if len(username) > 30:
+            raise forms.ValidationError("Username must be at most 30 characters")
+        if not username.isalnum():
+            raise forms.ValidationError("Username must be alphanumeric")
+        if not username[0].isalpha():
+            raise forms.ValidationError("Username must start with a letter")
+        if not re.match("^[a-zA-Z0-9]*$", username):
+            raise forms.ValidationError(
+                "Username must contain only letters, numbers, or underscores"
+            )
+        return username
 
 
 class TalentProfileForm(forms.ModelForm):
@@ -110,3 +148,21 @@ class AccountProfile(forms.ModelForm):
             "username": "Username",
             "email": "Email",
         }
+
+    def clean_username(self):
+        username = self.cleaned_data["username"]
+        if User.objects.filter(username=username).exists():
+            raise forms.ValidationError("Username already exists")
+        if len(username) < 4:
+            raise forms.ValidationError("Username must be at least 4 characters")
+        if len(username) > 30:
+            raise forms.ValidationError("Username must be at most 30 characters")
+        if not username.isalnum():
+            raise forms.ValidationError("Username must be alphanumeric")
+        if not username[0].isalpha():
+            raise forms.ValidationError("Username must start with a letter")
+        if not re.match("^[a-zA-Z0-9]*$", username):
+            raise forms.ValidationError(
+                "Username must contain only letters, numbers, or underscores"
+            )
+        return username
