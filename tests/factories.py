@@ -1,9 +1,24 @@
+from random import choice
+
 import factory
 from factory import Faker, LazyFunction, SubFactory
 from factory.django import DjangoModelFactory
 
 from apps.job.models import Job
 from apps.user.models import Employer, Talent, User
+
+job_titles = [
+    "Software Engineer",
+    "Data Scientist",
+    "DevOps Engineer",
+    "Frontend Developer",
+    "Backend Developer",
+    "Full Stack Developer",
+    "Mobile App Developer",
+    "Cloud Engineer",
+    "Cybersecurity Analyst",
+    "IT Project Manager",
+]
 
 
 class UserTalentFactory(factory.django.DjangoModelFactory):
@@ -17,7 +32,6 @@ class UserTalentFactory(factory.django.DjangoModelFactory):
     is_active = True
     is_staff = False
     is_superuser = False
-    hide_email = False
     user_type = "talent"
 
 
@@ -110,7 +124,6 @@ class UserEmployerFactory(factory.django.DjangoModelFactory):
     is_active = True
     is_staff = False
     is_superuser = False
-    hide_email = False
     user_type = "employer"
 
 
@@ -137,7 +150,7 @@ class JobFactory(factory.django.DjangoModelFactory):
 
     id = Faker("uuid4")
     user = factory.SubFactory(UserEmployerFactory)
-    title = Faker("job_title")
+    title = LazyFunction(lambda: choice(job_titles))
     city = Faker("city")
     country = Faker("country")
     salary = Faker("random_int", min=30000, max=100000)
