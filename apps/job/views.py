@@ -114,4 +114,5 @@ def delete_job(request, id):
         job.delete()
         messages.success(request, "Job deleted successfully.")
         return redirect("user-job-list")
-    return render(request, "job/user/job_delete_confirm.html", {"job": job})
+
+    return redirect("user-job-list")
