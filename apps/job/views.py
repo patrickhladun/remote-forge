@@ -95,7 +95,6 @@ def user_job_edit(request, id):
         form = JobForm(request.POST, instance=job)
         if form.is_valid():
             form.save()
-            form = JobForm(instance=job)
             messages.success(request, "Job listing updated successfully.")
             return render(request, "job/user/job_edit.html", {"form": form, "job": job})
     else:
