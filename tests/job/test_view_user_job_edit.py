@@ -1,3 +1,4 @@
+import json
 import uuid
 
 import pytest
@@ -45,15 +46,16 @@ def test_user_job_edit_user_employer():
     assert isinstance(form, JobForm)
 
     data = {
+        "is_published": job.is_published,
         "title": "Updated Job Title",
         "city": job.city,
         "country": job.country,
         "salary": job.salary,
         "schedule": job.schedule,
-        "details": job.details,
+        "details": json.dumps(job.details),
     }
     response = client.post(reverse("user-job-edit", kwargs={"id": job.id}), data)
-    assert response.status_code == 302
+    assert response.status_code == 200
 
     updated_job = Job.objects.get(id=job.id)
     assert updated_job.title == "Updated Job Title"
