@@ -1,5 +1,6 @@
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.core.exceptions import PermissionDenied
 from django.shortcuts import get_object_or_404, redirect, render
 from django.urls import reverse
 from django.utils.dateparse import parse_date
@@ -59,13 +60,17 @@ def job_list(request):
 @login_required
 def user_job_list(request):
     """View function for user-specific job listings."""
-    # Filter the listings to only those created by the logged-in user
+    if request.user.user_type != "employer":
+        raise PermissionDenied
     jobs = Job.objects.filter(user=request.user)
     return render(request, "job/user/job_list.html", {"jobs": jobs})
 
 
 @login_required
 def user_job_add(request):
+    if request.user.user_type != "employer":
+        raise PermissionDenied
+
     if request.method == "POST":
         form = JobForm(request.POST)
         if form.is_valid():
@@ -81,7 +86,10 @@ def user_job_add(request):
 
 @login_required
 def user_job_edit(request, id):
-    job = get_object_or_404(Job, id=id, user=request.user)
+    job = get_object_or_404(Job, id=id)
+
+    if job.user != request.user:
+        raise PermissionDenied
 
     if request.method == "POST":
         form = JobForm(request.POST, instance=job)
@@ -99,6 +107,10 @@ def user_job_edit(request, id):
 @login_required
 def delete_job(request, id):
     job = get_object_or_404(Job, id=id)
+
+    if job.user != request.user:
+        raise PermissionDenied
+
     if request.method == "POST":
         job.delete()
         messages.success(request, "Job deleted successfully.")
