@@ -1,6 +1,7 @@
 from django.contrib import messages
 from django.contrib.auth import get_backends, login
 from django.contrib.auth.decorators import login_required
+from django.http import Http404
 from django.shortcuts import get_object_or_404, redirect, render
 from django.urls import reverse
 
@@ -92,7 +93,9 @@ def employer_signup_view(request):
 
 @login_required
 def welcome_view(request):
-    user_type = request.session.get("user_type", "default")
+    user_type = request.user.user_type
+    if user_type not in ["talent", "employer"]:
+        raise Http404
     return render(request, "./user/admin/welcome.html", {"user_type": user_type})
 
 
