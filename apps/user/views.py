@@ -106,7 +106,7 @@ def profile_view(request):
         profile = get_object_or_404(Employer, user=request.user)
         form_class = EmployerProfileForm
     else:
-        return redirect("error")
+        raise Http404
 
     if request.method == "POST":
         form = form_class(request.POST, request.FILES, instance=profile)
