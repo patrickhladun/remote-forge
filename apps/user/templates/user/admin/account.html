@@ -9,10 +9,12 @@
       <h1 class="text-center">Account</h1>
     </div>
   </section>
-  {% include 'partials/forms/form.html' %}
-  <section class="bg-brand-50">
-    <div class="container-sm py-5">
-      <a href="{% url 'account_change_password' %}">Change your password</a>
+  <section class="bg-brand-50 py-5">
+    <div class="container-sm">
+      {% include 'partials/forms/form.html' %}
+      <div class="mt-4">
+        <a href="{% url 'account_change_password' %}">Change your password</a>
+      </div>
     </div>
   </section>
 {% endblock %}

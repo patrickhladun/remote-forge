@@ -1,4 +1,5 @@
 {% extends 'index.html' %}
+{% load static %}
 {% load icon_tags %}
 
 {% block content %}
@@ -8,7 +9,12 @@
       <div class="container-sm py-5">
         <div class="p-3 d-flex flex-column flex-md-row align-items-center justify-content-between">
           <div class="d-flex align-items-center">
-            <img src="{{ MEDIA_URL }}{{ employer.image }}" class="rounded-circle border me-4" width="60" />
+            {% if employer.image %}
+              <img src="{{ MEDIA_URL }}{{ employer.image }}" class="rounded-circle border" width="80" />
+            {% else %}
+              <img src="{% static 'assets/images/avatar.png' %}" class="rounded-circle border" width="80" />
+            {% endif %}
+
             <div>
               <h1 class="h4">{{ job.title }}</h1>
               <p class="m-0">{{ employer.company }}</p>
@@ -31,7 +37,11 @@
             {% icon 'icon-location' 'md' %}
             <p class="text-center">
               <span class="h5">Location</span><br />
-              <span>{{ employer.city }}</span>
+              {% if job.city %}
+                <span>{{ job.city }}</span>
+              {% else %}
+                <span>Unspecified</span>
+              {% endif %}
             </p>
           </div>
           <!-- Schedule Icon -->
@@ -39,7 +49,11 @@
             {% icon 'icon-time' 'md' %}
             <p class="text-center">
               <span class="h5">Schedule</span><br />
-              <span>{{ job.schedule }}</span>
+              {% if job.schedule %}
+                <span>{{ job.schedule }}</span>
+              {% else %}
+                <span>Unspecified</span>
+              {% endif %}
             </p>
           </div>
           <!-- Salary Icon -->
@@ -47,7 +61,11 @@
             {% icon 'icon-salary' 'md' %}
             <p class="text-center">
               <span class="h5">Salary</span><br />
-              <span>{{ job.salary }}</span>
+              {% if job.salary %}
+                <span>{{ job.salary }}</span>
+              {% else %}
+                <span>Unspecified</span>
+              {% endif %}
             </p>
           </div>
         </div>
@@ -80,7 +98,7 @@
                     <p>{{ employer.company }}</p>
                     <span class="d-flex align-items-center gap-1">
                       {% icon 'icon-date-check' 'sm' %}
-                      <span>{{ job.created_at|date:'d M Y' }}</span>
+                      <span>Posted on: {{ job.created_at|date:'d M Y' }}</span>
                     </span>
                   </div>
                 </div>
