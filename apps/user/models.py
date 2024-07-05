@@ -98,7 +98,7 @@ EXPERIENCE_SCHEMA = {
 
 class CustomUserManager(BaseUserManager):
     """
-    Custom user manager to allow email login and creation of users with the `hide_email` field.
+    Custom user manager to allow email login and creation of users.
     """
 
     def _create_user(self, email, password, **extra_fields):
