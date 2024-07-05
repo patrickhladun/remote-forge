@@ -136,6 +136,12 @@ class EmployerProfileForm(forms.ModelForm):
             "social": "Social",
         }
 
+    def clean_company(self):
+        company = self.cleaned_data.get("company")
+        if not company:
+            raise forms.ValidationError("Company field is required.")
+        return company
+
 
 class AccountProfile(forms.ModelForm):
     class Meta:
