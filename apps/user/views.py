@@ -84,10 +84,13 @@ def employer_signup_view(request):
             return redirect(reverse("welcome"))
     else:
         form = EmployerSignupForm()
+
+    login_url = reverse("account_login")
+
     return render(
         request,
         "allauth/account/signup_employer.html",
-        {"form": form},
+        {"form": form, "login_url": login_url},
     )
 
 
