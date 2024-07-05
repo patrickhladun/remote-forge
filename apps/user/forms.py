@@ -157,7 +157,7 @@ class AccountProfile(forms.ModelForm):
 
     def clean_username(self):
         username = self.cleaned_data["username"]
-        if User.objects.filter(username=username).exists():
+        if User.objects.filter(username=username).exclude(id=self.instance.id).exists():
             raise forms.ValidationError("Username already exists")
         if len(username) < 4:
             raise forms.ValidationError("Username must be at least 4 characters")
