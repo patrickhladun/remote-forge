@@ -8,7 +8,6 @@ from pathlib import Path
 from dotenv import load_dotenv
 
 load_dotenv()
-print("common.py")
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 DJANGO_APPS = [
@@ -103,3 +102,12 @@ USE_I18N = True
 USE_TZ = True
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 STATIC_URL = "/static/"
+
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
+EMAIL_HOST_USER = os.getenv("GMAIL_EMAIL")
+EMAIL_HOST_PASSWORD = "dsmp oqmu hhof auec"
+DEFAULT_FROM_EMAIL = os.getenv("GMAIL_EMAIL")

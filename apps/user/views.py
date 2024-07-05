@@ -1,6 +1,7 @@
 from django.contrib import messages
 from django.contrib.auth import get_backends, login
 from django.contrib.auth.decorators import login_required
+from django.http import Http404
 from django.shortcuts import get_object_or_404, redirect, render
 from django.urls import reverse
 
@@ -54,10 +55,18 @@ def talent_signup_view(request):
             user = form.save(request)
             backend = get_backend_name()
             login(request, user, backend=backend)
-            return redirect(reverse("profile"))
+            request.session["user_type"] = "talent"
+            messages.success(
+                request, "Registration successful! Welcome to our platform."
+            )
+            return redirect(reverse("welcome"))
     else:
         form = TalentSignupForm()
-    return render(request, "allauth/account/signup_talent.html", {"form": form})
+    return render(
+        request,
+        "allauth/account/signup_talent.html",
+        {"form": form},
+    )
 
 
 def employer_signup_view(request):
@@ -68,10 +77,29 @@ def employer_signup_view(request):
             user = form.save(request)
             backend = get_backend_name()
             login(request, user, backend=backend)
-            return redirect(reverse("profile"))
+            request.session["user_type"] = "employer"
+            messages.success(
+                request, "Registration successful! Welcome to our platform."
+            )
+            return redirect(reverse("welcome"))
     else:
         form = EmployerSignupForm()
-    return render(request, "allauth/account/signup_employer.html", {"form": form})
+
+    login_url = reverse("account_login")
+
+    return render(
+        request,
+        "allauth/account/signup_employer.html",
+        {"form": form, "login_url": login_url},
+    )
+
+
+@login_required
+def welcome_view(request):
+    user_type = request.user.user_type
+    if user_type not in ["talent", "employer"]:
+        raise Http404
+    return render(request, "./user/admin/welcome.html", {"user_type": user_type})
 
 
 @login_required
@@ -84,18 +112,20 @@ def profile_view(request):
         profile = get_object_or_404(Employer, user=request.user)
         form_class = EmployerProfileForm
     else:
-        return redirect("error")
+        raise Http404
 
     if request.method == "POST":
         form = form_class(request.POST, request.FILES, instance=profile)
         if form.is_valid():
             form.save()
             messages.success(request, "Profile updated successfully.")
-            return redirect("profile")
+            request, "user/admin/profile.html", {"form": form, "profile": profile}
     else:
         form = form_class(instance=profile)
 
-    return render(request, "user/admin/profile.html", {"form": form})
+    return render(
+        request, "user/admin/profile.html", {"form": form, "profile": profile}
+    )
 
 
 @login_required
@@ -105,7 +135,7 @@ def account_view(request):
         if form.is_valid():
             form.save()
             messages.success(request, "Account updated successfully.")
-            return redirect("account")
+            return render(request, "user/admin/account.html", {"form": form})
     else:
         form = AccountProfile(instance=request.user)
     return render(request, "user/admin/account.html", {"form": form})

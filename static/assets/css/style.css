@@ -2417,7 +2417,7 @@ textarea.form-control-lg {
   clip: rect(0, 0, 0, 0);
   pointer-events: none;
 }
-.btn-check[disabled] + .btn, .btn-check:disabled + .btn {
+.btn-check[disabled] + .btn, form .btn-check[disabled] + button[type=submit], .btn-check:disabled + .btn, form .btn-check:disabled + button[type=submit] {
   pointer-events: none;
   filter: none;
   opacity: 0.65;
@@ -2620,11 +2620,11 @@ textarea.form-control-lg {
 .input-group > .form-floating:focus-within {
   z-index: 5;
 }
-.input-group .btn {
+.input-group .btn, .input-group form button[type=submit], form .input-group button[type=submit] {
   position: relative;
   z-index: 2;
 }
-.input-group .btn:focus {
+.input-group .btn:focus, .input-group form button[type=submit]:focus, form .input-group button[type=submit]:focus {
   z-index: 5;
 }
 
@@ -2646,7 +2646,8 @@ textarea.form-control-lg {
 .input-group-lg > .form-control, .search-form__field .input-group-lg > input[type=text],
 .input-group-lg > .form-select,
 .input-group-lg > .input-group-text,
-.input-group-lg > .btn {
+.input-group-lg > .btn,
+form .input-group-lg > button[type=submit] {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   border-radius: var(--bs-border-radius-lg);
@@ -2655,7 +2656,8 @@ textarea.form-control-lg {
 .input-group-sm > .form-control, .search-form__field .input-group-sm > input[type=text],
 .input-group-sm > .form-select,
 .input-group-sm > .input-group-text,
-.input-group-sm > .btn {
+.input-group-sm > .btn,
+form .input-group-sm > button[type=submit] {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   border-radius: var(--bs-border-radius-sm);
@@ -2873,7 +2875,7 @@ textarea.form-control-lg {
   z-index: 4;
 }
 
-.btn {
+.btn, form button[type=submit] {
   --bs-btn-padding-x: 0.75rem;
   --bs-btn-padding-y: 0.375rem;
   --bs-btn-font-family: ;
@@ -2907,44 +2909,44 @@ textarea.form-control-lg {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
-  .btn {
+  .btn, form button[type=submit] {
     transition: none;
   }
 }
-.btn:hover {
+.btn:hover, form button[type=submit]:hover {
   color: var(--bs-btn-hover-color);
   background-color: var(--bs-btn-hover-bg);
   border-color: var(--bs-btn-hover-border-color);
 }
-.btn-check + .btn:hover {
+.btn-check + .btn:hover, form .btn-check + button[type=submit]:hover {
   color: var(--bs-btn-color);
   background-color: var(--bs-btn-bg);
   border-color: var(--bs-btn-border-color);
 }
-.btn:focus-visible {
+.btn:focus-visible, form button[type=submit]:focus-visible {
   color: var(--bs-btn-hover-color);
   background-color: var(--bs-btn-hover-bg);
   border-color: var(--bs-btn-hover-border-color);
   outline: 0;
   box-shadow: var(--bs-btn-focus-box-shadow);
 }
-.btn-check:focus-visible + .btn {
+.btn-check:focus-visible + .btn, form .btn-check:focus-visible + button[type=submit] {
   border-color: var(--bs-btn-hover-border-color);
   outline: 0;
   box-shadow: var(--bs-btn-focus-box-shadow);
 }
-.btn-check:checked + .btn, :not(.btn-check) + .btn:active, .btn:first-child:active, .btn.active, .btn.show {
+.btn-check:checked + .btn, form .btn-check:checked + button[type=submit], :not(.btn-check) + .btn:active, form :not(.btn-check) + button[type=submit]:active, .btn:first-child:active, form button[type=submit]:first-child:active, .btn.active, form button.active[type=submit], .btn.show, form button.show[type=submit] {
   color: var(--bs-btn-active-color);
   background-color: var(--bs-btn-active-bg);
   border-color: var(--bs-btn-active-border-color);
 }
-.btn-check:checked + .btn:focus-visible, :not(.btn-check) + .btn:active:focus-visible, .btn:first-child:active:focus-visible, .btn.active:focus-visible, .btn.show:focus-visible {
+.btn-check:checked + .btn:focus-visible, form .btn-check:checked + button[type=submit]:focus-visible, :not(.btn-check) + .btn:active:focus-visible, form :not(.btn-check) + button[type=submit]:active:focus-visible, .btn:first-child:active:focus-visible, form button[type=submit]:first-child:active:focus-visible, .btn.active:focus-visible, form button.active[type=submit]:focus-visible, .btn.show:focus-visible, form button.show[type=submit]:focus-visible {
   box-shadow: var(--bs-btn-focus-box-shadow);
 }
-.btn-check:checked:focus-visible + .btn {
+.btn-check:checked:focus-visible + .btn, form .btn-check:checked:focus-visible + button[type=submit] {
   box-shadow: var(--bs-btn-focus-box-shadow);
 }
-.btn:disabled, .btn.disabled, fieldset:disabled .btn {
+.btn:disabled, form button[type=submit]:disabled, .btn.disabled, form button.disabled[type=submit], fieldset:disabled .btn, fieldset:disabled form button[type=submit], form fieldset:disabled button[type=submit] {
   color: var(--bs-btn-disabled-color);
   pointer-events: none;
   background-color: var(--bs-btn-disabled-bg);
@@ -2952,7 +2954,7 @@ textarea.form-control-lg {
   opacity: var(--bs-btn-disabled-opacity);
 }
 
-.btn-primary {
+.btn-primary, form button[type=submit] {
   --bs-btn-color: #fff;
   --bs-btn-bg: #0d6efd;
   --bs-btn-border-color: #0d6efd;
@@ -5271,7 +5273,7 @@ textarea.form-control-lg {
   background-color: currentcolor;
   opacity: 0.5;
 }
-.placeholder.btn::before {
+.placeholder.btn::before, form button.placeholder[type=submit]::before {
   display: inline-block;
   content: "";
 }
@@ -6673,7 +6675,7 @@ textarea.form-control-lg {
   padding: 0.25rem !important;
 }
 
-.p-2, .search-form__group, .city-list span {
+.p-2, .search-form__group, .city-list span, .errorlist {
   padding: 0.5rem !important;
 }
 
@@ -7669,7 +7671,7 @@ textarea.form-control-lg {
   border-radius: var(--bs-border-radius-sm) !important;
 }
 
-.rounded-2, .search-form__group {
+.rounded-2, .search-form__group, .errorlist {
   border-radius: var(--bs-border-radius) !important;
 }
 
@@ -11800,7 +11802,7 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-.btn-primary {
+.btn-primary, form button[type=submit] {
   --bs-btn-color: #f6f9f4;
   --bs-btn-bg: #537742;
   --bs-btn-border-color: #537742;
@@ -11905,6 +11907,19 @@ h6,
     max-width: 768px !important;
   }
 }
+form input[type=text],
+form input[type=email],
+form input[type=password],
+form textarea {
+  width: 100%;
+}
+
+.errorlist {
+  list-style-type: none;
+  background-color: #dc3545;
+  color: white;
+}
+
 /* Hero Section */
 .hero-home {
   padding-top: 8rem;

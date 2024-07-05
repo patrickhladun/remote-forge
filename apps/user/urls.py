@@ -9,4 +9,5 @@ urlpatterns = [
     path("employer/<uuid:id>", views.employer_view, name="employer"),
     path("account/", views.account_view, name="account"),
     path("profile/", views.profile_view, name="profile"),
+    path("welcome/", views.welcome_view, name="welcome"),
 ]

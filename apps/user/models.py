@@ -1,8 +1,35 @@
 import uuid
 
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
+from django.core.exceptions import ValidationError
 from django.db import models
 from django_jsonform.models.fields import JSONField
+
+from config.utils.uploads import get_uploads_path
+
+
+def validate_resume_extension(value):
+    import os
+
+    extension = os.path.splitext(value.name)[1]
+    valid_extensions = [".pdf", ".doc", ".docx"]
+    if not extension.lower() in valid_extensions:
+        raise ValidationError(
+            "Unsupported file extension. Allowed extensions are: .pdf, .doc, .docx"
+        )
+
+
+def talent_upload_profile_path(instance, filename):
+    return get_uploads_path(instance, filename, "talent/profile/", "profile")
+
+
+def talent_upload_resume_path(instance, filename):
+    return get_uploads_path(instance, filename, "talent/resumes/", "resume")
+
+
+def employer_upload_profile_path(instance, filename):
+    return get_uploads_path(instance, filename, "employer/profile/", "profile")
+
 
 SOCIAL_SCHEMA = {
     "type": "array",
@@ -25,6 +52,7 @@ SOCIAL_SCHEMA = {
             },
             "url": {"type": "string"},
         },
+        "required": ["site", "url"],
     },
 }
 
@@ -59,7 +87,10 @@ EXPERIENCE_SCHEMA = {
             "start_date": {"type": "string"},
             "end_date": {"type": "string"},
             "still_on": {"type": "boolean"},
-            "responsibilities": {"type": "textarea"},
+            "responsibilities": {
+                "type": "string",
+                "widget": "textarea",
+            },
         },
     },
 }
@@ -67,7 +98,7 @@ EXPERIENCE_SCHEMA = {
 
 class CustomUserManager(BaseUserManager):
     """
-    Custom user manager to allow email login and creation of users with the `hide_email` field.
+    Custom user manager to allow email login and creation of users.
     """
 
     def _create_user(self, email, password, **extra_fields):
@@ -112,7 +143,6 @@ class User(AbstractBaseUser):
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
     is_superuser = models.BooleanField(default=False)
-    hide_email = models.BooleanField(default=True)
     user_type = models.CharField(max_length=10)
 
     objects = CustomUserManager()
@@ -135,16 +165,25 @@ class Talent(models.Model):
 
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    first_name = models.CharField(max_length=30, null=True, blank=True)
-    last_name = models.CharField(max_length=30, null=True, blank=True)
-    phone = models.CharField(max_length=30, null=True, blank=True)
-    city = models.CharField(max_length=75, null=True, blank=True)
-    country = models.CharField(max_length=56, null=True, blank=True)
-    image = models.ImageField(upload_to="media/talent/profile/", null=True, blank=True)
-    bio = models.TextField(null=True, blank=True)
-    title = models.CharField(max_length=100, null=True, blank=True)
-    resume = models.FileField(upload_to="media/talent/resumes/", null=True, blank=True)
-    website = models.URLField(max_length=200, null=True, blank=True)
+    first_name = models.CharField(max_length=30, blank=True, default="")
+    last_name = models.CharField(max_length=30, blank=True, default="")
+    phone = models.CharField(max_length=30, blank=True, default="")
+    city = models.CharField(max_length=75, blank=True, default="")
+    country = models.CharField(max_length=56, blank=True, default="")
+    image = models.ImageField(
+        upload_to=talent_upload_profile_path,
+        null=True,
+        blank=True,
+    )
+    bio = models.TextField(blank=True, default="")
+    title = models.CharField(max_length=100, blank=True, default="")
+    resume = models.FileField(
+        upload_to=talent_upload_resume_path,
+        null=True,
+        blank=True,
+        validators=[validate_resume_extension],
+    )
+    website = models.URLField(max_length=200, blank=True, default="")
     social = JSONField(schema=SOCIAL_SCHEMA, null=True, blank=True)
     experience = JSONField(schema=EXPERIENCE_SCHEMA, null=True, blank=True)
     education = JSONField(schema=EDUCATION_SCHEMA, null=True, blank=True)
@@ -167,18 +206,18 @@ class Employer(models.Model):
 
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    first_name = models.CharField(max_length=30, null=True, blank=True)
-    last_name = models.CharField(max_length=30, null=True, blank=True)
-    email = models.EmailField(null=True, blank=True)
-    phone = models.CharField(max_length=30, null=True, blank=True)
-    company = models.CharField(max_length=100, null=True, blank=True)
-    about = models.TextField(null=True, blank=True)
+    first_name = models.CharField(max_length=30, blank=True, default="")
+    last_name = models.CharField(max_length=30, blank=True, default="")
+    email = models.EmailField(blank=True, default="")
+    phone = models.CharField(max_length=30, blank=True, default="")
+    company = models.CharField(max_length=100, blank=True, default="")
+    about = models.TextField(blank=True, default="")
     image = models.ImageField(
-        upload_to="media/employer/profile/", null=True, blank=True
+        upload_to=employer_upload_profile_path, null=True, blank=True
     )
-    website = models.URLField(max_length=200, null=True, blank=True)
-    city = models.CharField(max_length=75, null=True, blank=True)
-    country = models.CharField(max_length=56, null=True, blank=True)
+    website = models.URLField(max_length=200, blank=True, default="")
+    city = models.CharField(max_length=75, blank=True, default="")
+    country = models.CharField(max_length=56, blank=True, default="")
     social = JSONField(schema=SOCIAL_SCHEMA, null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True, editable=False)
     updated_at = models.DateTimeField(auto_now=True, editable=False)

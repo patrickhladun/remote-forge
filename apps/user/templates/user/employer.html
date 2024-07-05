@@ -1,12 +1,20 @@
 {% extends 'index.html' %}
+{% load static %}
 {% load icon_tags %}
 
 {% block content %}
   <section class="bg-brand-100">
-    <div class="container py-sm">
+    <div class="container pt-sm">
       <div class="employer-header bg-brand-200 rounded p-4">
         <div class="d-flex justify-content-between align-items-center">
-          <div class="d-flex justify-content-between align-items-center py-3 gap-2">
+          <div class="d-flex justify-content-between align-items-center py-1 gap-2">
+            <div class="image">
+              {% if employer.image %}
+                <img src="{{ MEDIA_URL }}{{ employer.image }}" class="rounded-circle border" width="80" />
+              {% else %}
+                <img src="{% static 'assets/images/avatar.png' %}" class="rounded-circle border" width="80" />
+              {% endif %}
+            </div>
             <h1>{{ employer.company }}</h1>
           </div>
         </div>
@@ -16,34 +24,73 @@
 
   <section class="bg-brand-100">
     <div class="container pb-5">
-      <div class="row">
+      {% if user.is_authenticated and employer.is_published == True %}
+        <div class="py-4">
+          <a href="{% url 'profile' %}" class="btn btn-primary">Edit Profile</a>
+        </div>
+      {% endif %}
+      <div class="row pt-4">
         <!-- Main Content -->
         <div class="col-md-8">
           <!-- About Section -->
-          <div class="about">
-            <p>{{ employer.about }}</p>
-          </div>
+          {% if employer.about %}
+            <div class="about">
+              <h2 class="h3">About</h2>
+              <p>{{ employer.about }}</p>
+            </div>
+          {% endif %}
         </div>
 
         <!-- Sidebar -->
         <div class="col-md-4">
           <!-- Details Section -->
           <div class="employer-box">
-            <h3>Contact</h3>
             <div class="d-flex flex-column gap-1">
+              {% if employer.city or employer.country or employer.phone or employer.email or employer.first_name or employer.last_name %}
+                <h2 class="h3">Contact Details</h2>
+              {% endif %}
+
               <div class="d-flex align-items-center">
-                {% icon 'icon-location' 'sm' %}
-                <p class="m-0 ps-1">{{ employer.city }}, {{ employer.country }}</p>
+                <h3 class="m-0 h5">
+                  {% if employer.first_name %}{{ employer.first_name }}{% endif %}
+                  {% if employer.first_name and employer.last_name %} {% endif %}
+                  {% if employer.last_name %}{{ employer.last_name }}{% endif %}
+                </h3>
               </div>
-              <div class="d-flex align-items-center">
-                {% icon 'icon-phone' 'sm' %}
-                <p class="m-0 ps-1">{{ employer.phone }}</p>
-              </div>
-              <div class="d-flex align-items-center">
-                {% icon 'icon-envelope' 'sm' %}
-                <p class="m-0 ps-1">{{ employer.email }}</p>
-              </div>
+
+              {% if employer.phone %}
+                <div class="d-flex align-items-center">
+                  {% icon 'icon-phone' 'sm' %}
+                  <p class="m-0 ps-1">{{ employer.phone }}</p>
+                </div>
+              {% endif %}
+
+              {% if employer.email %}
+                <div class="d-flex align-items-center">
+                  {% icon 'icon-envelope' 'sm' %}
+                  <p class="m-0 ps-1">{{ employer.email }}</p>
+                </div>
+              {% endif %}
+
+              {% if employer.website %}
+                <div class="d-flex align-items-center">
+                  {% icon 'icon-web' 'sm' %}
+                  <a href="{{ employer.website }}" class="m-0 ps-1">{{ employer.website }}</a>
+                </div>
+              {% endif %}
+
+              {% if employer.city or employer.country %}
+                <div class="d-flex align-items-center">
+                  {% icon 'icon-location' 'sm' %}
+                  <p class="m-0 ps-1">
+                    {% if employer.city %}{{ employer.city }}{% endif %}
+                    {% if employer.city and employer.country %}, {% endif %}
+                    {% if employer.country %}{{ employer.country }}{% endif %}
+                  </p>
+                </div>
+              {% endif %}
             </div>
+
             <div class="d-flex gap-2 py-2">
               {% for link in employer.social %}
                 {% with icon_name='icon-'|add:link.site %}
@@ -59,29 +106,38 @@
 
   <section class="bg-brand-50">
     <div class="container py-5">
-      <h2 class="mb-5">Open Roles</h2>
+      <h2>Open Roles</h2>
+
+      {% if user.is_authenticated and user.user_type == 'employer' %}
+        <a href="{% url 'user-job-add' %}" class="btn btn-primary">Create Job</a>
+      {% endif %}
+
       <div class="d-flex flex-wrap">
-        {% for job in jobs %}
-          <a href="{% url 'job' job.id %}" class="card p-3 text-decoration-none">
-            <div class="d-flex align-items-start">
-              <div class="w-100">
-                <div class="card__header">
-                  <h3 class="mb-0 mt-0">{{ job.title }}</h3>
-                  <div class="d-flex flex-wrap gap-2">
-                    <div class="d-flex align-items-center">
-                      {% icon 'icon-date-check' 'sm' %}
-                      <p class="m-0 ps-1">{{ employer.created_at|date:'d M Y' }}</p>
-                    </div>
-                    <div class="d-flex align-items-center">
-                      {% icon 'icon-location' 'sm' %}
-                      <p class="m-0 ps-1">{{ employer.city }}, {{ employer.country }}</p>
+        {% if jobs %}
+          {% for job in jobs %}
+            <a href="{% url 'job' job.id %}" class="card p-3 text-decoration-none">
+              <div class="d-flex align-items-start">
+                <div class="w-100">
+                  <div class="card__header">
+                    <h3 class="mb-0 mt-0">{{ job.title }}</h3>
+                    <div class="d-flex flex-wrap gap-2">
+                      <div class="d-flex align-items-center">
+                        {% icon 'icon-date-check' 'sm' %}
+                        <p class="m-0 ps-1">Posted on: {{ job.created_at|date:'d M Y' }}</p>
+                      </div>
+                      <div class="d-flex align-items-center">
+                        {% icon 'icon-location' 'sm' %}
+                        <p class="m-0 ps-1">{{ job.city }}, {{ job.country }}</p>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </a>
-        {% endfor %}
+            </a>
+          {% endfor %}
+        {% else %}
+          <p class="py-2">No jobs available</p>
+        {% endif %}
       </div>
     </div>
   </section>
