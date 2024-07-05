@@ -116,7 +116,7 @@ def profile_view(request):
         if form.is_valid():
             form.save()
             messages.success(request, "Profile updated successfully.")
-            return redirect("profile")
+            request, "user/admin/profile.html", {"form": form, "profile": profile}
     else:
         form = form_class(instance=profile)
 
@@ -132,7 +132,7 @@ def account_view(request):
         if form.is_valid():
             form.save()
             messages.success(request, "Account updated successfully.")
-            return redirect("account")
+            return render(request, "user/admin/account.html", {"form": form})
     else:
         form = AccountProfile(instance=request.user)
     return render(request, "user/admin/account.html", {"form": form})
