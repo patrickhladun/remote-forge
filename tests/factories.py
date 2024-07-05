@@ -56,15 +56,15 @@ class TalentFactory(factory.django.DjangoModelFactory):
     ]
     experience = [
         {
-            "company_name": "Tech Innovations Inc.",
+            "company": "Tech Innovations Inc.",
             "position": "Software Engineer",
             "start_date": "2019-07-01",
-            "end_date": None,
+            "end_date": "",
             "still_on": True,
             "responsibilities": "Designed and implemented scalable software solutions, participated in code reviews and technical discussions, and collaborated with product and design teams to deliver user-centric features.",
         },
         {
-            "company_name": "Startup XYZ",
+            "company": "Startup XYZ",
             "position": "Full Stack Developer",
             "start_date": "2018-01-15",
             "end_date": "2019-06-30",
@@ -72,7 +72,7 @@ class TalentFactory(factory.django.DjangoModelFactory):
             "responsibilities": "Developed and maintained web applications, designed and implemented database schemas, and optimized application performance for scalability.",
         },
         {
-            "company_name": "Freelance Projects",
+            "company": "Freelance Projects",
             "position": "Freelance Developer",
             "start_date": "2016-05-01",
             "end_date": "2017-12-31",
