@@ -94,7 +94,7 @@
             <div class="d-flex gap-2 py-2">
               {% for link in employer.social %}
                 {% with icon_name='icon-'|add:link.site %}
-                  <a class="p-2 bg-brand-200 rounded-1" href="{{ link.url }}">{% icon icon_name 'sm' %}</a>
+                  <a class="p-2 bg-brand-200 rounded-1" href="{{ link.url }}" aria-label="{{link.name}} Social Profile">{% icon icon_name 'sm' %}</a>
                 {% endwith %}
               {% endfor %}
             </div>
