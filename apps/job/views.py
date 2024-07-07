@@ -112,6 +112,7 @@ def user_job_add(request):
             job = form.save(commit=False)
             job.user = request.user
             job.save()
+            messages.success(request, "Job listing added successfully.")
             return redirect("user-job-list")
     else:
         form = JobForm()
