@@ -6,6 +6,7 @@ from django.shortcuts import get_object_or_404, redirect, render
 from django.urls import reverse
 
 from apps.job.models import Job
+from common.utils.metadata import make_metadata
 
 from .forms import (
     AccountProfile,
@@ -25,13 +26,56 @@ def get_backend_name():
 def talent_view(request, id):
     """View function for talent single page."""
     talent = get_object_or_404(Talent, id=id)
-    return render(request, "user/talent.html", {"talent": talent})
+
+    title_talent = talent.title or "Talent"
+
+    title_first_name = f"{talent.first_name}" if talent.first_name else ""
+    title_last_name = f"{talent.last_name}" if talent.last_name else ""
+    title_space = " " if talent.first_name and talent.last_name else ""
+    title_comma = " - " if talent.first_name or talent.last_name else ""
+
+    metadata = make_metadata(
+        request,
+        {
+            "title": f"{title_first_name}{title_space}{title_last_name}{title_comma}{title_talent}",
+            "meta": {
+                "description": "Remote Forge is a platform that connects remote talents with remote jobs.",
+                "keywords": "Remote Work, Remote Jobs, Work from Home, Online Jobs, Remote Talents",
+                "robots": "index, follow",
+            },
+        },
+    )
+
+    data = {
+        "talent": talent,
+        "metadata": metadata,
+    }
+
+    return render(request, "user/talent.html", data)
 
 
 def talents_view(request):
     """View function for talents list."""
     talents = Talent.objects.filter(is_published=True)
-    return render(request, "user/talents.html", {"talents": talents})
+
+    metadata = make_metadata(
+        request,
+        {
+            "title": f"Best Talent for Remote Jobs",
+            "meta": {
+                "description": "Remote Forge is a platform that connects remote talents with remote jobs.",
+                "keywords": "Remote Work, Remote Jobs, Work from Home, Online Jobs, Remote Talents",
+                "robots": "index, follow",
+            },
+        },
+    )
+
+    data = {
+        "talents": talents,
+        "metadata": metadata,
+    }
+
+    return render(request, "user/talents.html", data)
 
 
 def employer_view(request, id):
