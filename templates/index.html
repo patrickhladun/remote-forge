@@ -17,7 +17,7 @@
     {% endblock %}
 
     {% block js %}
-      <script src="{% static 'assets/js/bundle.js' %}"></script>
+
     {% endblock %}
 
     {% load livereload_tags %}
@@ -36,6 +36,7 @@
     </div>
     <div class="page {% if page_class %}{{ page_class }}{% endif %}">
       {% block content %}
+
       {% endblock %}
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -43,7 +44,9 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <!-- Bootstrap JS -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
     {% block footer_js %}
+      <script src="{% static 'assets/js/bundle.js' %}"></script>
     {% endblock %}
     {% if messages %}
       <script>
