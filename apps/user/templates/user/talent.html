@@ -15,10 +15,10 @@
                 <img src="{% static 'assets/images/avatar.png' %}" class="rounded-circle" width="80" />
               {% endif %}
             </div>
-            <p>
-              {{ talent.first_name }} {{ talent.last_name }}<br />
-              <span>{{ talent.title }}</span>
-            </p>
+            <h1 class="h3 m-0">
+              <span>{{ talent.first_name }} {{ talent.last_name }}</span><br />
+              <span class="h4">{{ talent.title }}</span>
+            </h1>
           </div>
           {% if talent.resume %}
             {% if user.is_authenticated and user == talent.user or user.user_type == 'employer' %}
