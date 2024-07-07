@@ -11,7 +11,6 @@ load_dotenv()
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 DJANGO_APPS = [
-    "livereload",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -44,8 +43,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    "allauth.account.middleware.AccountMiddleware",    
-    "livereload.middleware.LiveReloadScript",
+    "allauth.account.middleware.AccountMiddleware",
 ]
 ROOT_URLCONF = "config.urls"
 TEMPLATES = [
