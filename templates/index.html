@@ -50,9 +50,23 @@
     {% endblock %}
     {% if messages %}
       <script>
-        // TODO: Instead loading full jQuery libreary only for messages, use vanilla JS
         $(document).ready(function () {
-          $('.message').toast('show')
+          const $messages = $('.message')
+          const $container = $('.message-container')
+        
+          $messages.each(function () {
+            const $message = $(this)
+            setTimeout(function () {
+              $message.hide()
+              if ($messages.filter(':visible').length === 0) {
+                $container.hide()
+              }
+            }, 3000)
+          })
+        
+          if ($messages.filter(':visible').length === 0) {
+            $container.hide()
+          }
         })
       </script>
     {% endif %}
