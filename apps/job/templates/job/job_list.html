@@ -10,12 +10,12 @@
           <form method="GET" action="{% url 'job-list' %}" class="search-form">
             <div class="search-form__group">
               <div class="search-form__field">
-                <input type="text" id="keyword" name="keyword" value="{{ keyword }}" placeholder="keyword" />
+                <input type="text" id="keyword" name="keyword" value="{{ keyword }}" placeholder="Find a job" aria-label="Keyword" />
               </div>
               <div class="search-form__field">
-                <input type="text" id="location" name="location" value="{{ location }}" placeholder="location" />
+                <input type="text" id="location" name="location" value="{{ location }}" placeholder="Location" aria-label="Location" />
               </div>
-              <button type="submit" class="search-form__submit">{% icon 'icon-search' 'sm' %}</button>
+              <button type="submit" class="search-form__submit" aria-label="Search Jobs">{% icon 'icon-search' 'sm' %}</button>
             </div>
           </form>
         </div>
