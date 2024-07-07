@@ -82,13 +82,56 @@ def employer_view(request, id):
     """View function for employer single page."""
     employer = get_object_or_404(Employer, id=id)
     jobs = Job.objects.filter(user=employer.user, is_published=True)
-    return render(request, "user/employer.html", {"employer": employer, "jobs": jobs})
+
+    title_employer = employer.company or "Employer"
+    title_city = employer.city or ""
+    title_country = employer.country or ""
+    title_dash = " - " if employer.city or employer.country else ""
+    title_comma = ", " if employer.city and employer.country else ""
+
+    metadata = make_metadata(
+        request,
+        {
+            "title": f"{title_employer}{title_dash}{title_city}{title_comma}{title_country}",
+            "meta": {
+                "description": "Remote Forge is a platform that connects remote talents with remote jobs.",
+                "keywords": "Remote Work, Remote Jobs, Work from Home, Online Jobs, Remote Talents",
+                "robots": "index, follow",
+            },
+        },
+    )
+
+    data = {
+        "employer": employer,
+        "jobs": jobs,
+        "metadata": metadata,
+    }
+
+    return render(request, "user/employer.html", data)
 
 
 def employers_view(request):
     """View function for employers list."""
     employers = Employer.objects.filter(is_published=True)
-    return render(request, "user/employers.html", {"employers": employers})
+
+    metadata = make_metadata(
+        request,
+        {
+            "title": f"Best Remote Employers",
+            "meta": {
+                "description": "Remote Forge is a platform that connects remote talents with remote jobs.",
+                "keywords": "Remote Work, Remote Jobs, Work from Home, Online Jobs, Remote Talents",
+                "robots": "index, follow",
+            },
+        },
+    )
+
+    data = {
+        "employers": employers,
+        "metadata": metadata,
+    }
+
+    return render(request, "user/employers.html", data)
 
 
 def talent_signup_view(request):
