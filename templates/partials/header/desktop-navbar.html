@@ -20,30 +20,30 @@
             </a>
             <ul class="dropdown-menu dropdown-menu-end">
               <li>
-                <a class="dropdown-item" href="{% url 'profile' %}">Profile</a>
+                <a class="dropdown-item" aria-label="Link to Profile Page" href="{% url 'profile' %}">Profile</a>
               </li>
               {% if request.user.user_type == 'employer' %}
                 <li>
-                  <a class="dropdown-item" href="{% url 'user-job-list' %}">My Jobs</a>
+                  <a class="dropdown-item" aria-label="Link to My Jobs Page" href="{% url 'user-job-list' %}">My Jobs</a>
                 </li>
               {% endif %}
               <li>
-                <a class="dropdown-item" href="{% url 'account' %}">Account</a>
+                <a class="dropdown-item" aria-label="Link to Account Page" href="{% url 'account' %}">Account</a>
               </li>
               <li>
                 <hr class="dropdown-divider" />
               </li>
               <li>
-                <a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a>
+                <a class="dropdown-item" aria-label="Link to Logout Page" href="{% url 'account_logout' %}">Logout</a>
               </li>
             </ul>
           </li>
         {% else %}
           <li class="nav-item ms-2">
-            <a class="btn btn-primary" aria-current="page" href="{% url 'account_login' %}">Login/Sign in</a>
+            <a class="btn btn-primary" aria-label="Link to Login Page" href="{% url 'account_login' %}">Login/Sign in</a>
           </li>
           <li class="nav-item ms-2">
-            <a class="btn btn-outline-primary" aria-current="page" href="{% url 'employer_signup' %}">Post a Job</a>
+            <a class="btn btn-outline-primary" aria-label="Link to Post a Job Page" href="{% url 'employer_signup' %}">Post a Job</a>
           </li>
         {% endif %}
       </ul>
