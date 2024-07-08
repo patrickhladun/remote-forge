@@ -73,6 +73,14 @@
         })
       </script>
     {% endif %}
+    <script>
+      $(document).ready(function () {
+        const $container = $('.message-container')
+        if ($container.children().length === 0) {
+          $container.hide()
+        }
+      })
+    </script>
     {% include './partials/footer.html' %}
   </body>
 </html>
