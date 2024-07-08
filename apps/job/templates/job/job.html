@@ -10,9 +10,9 @@
         <div class="p-3 d-flex flex-column flex-md-row align-items-center justify-content-between">
           <div class="d-flex align-items-center">
             {% if employer.image %}
-              <img src="{{ MEDIA_URL }}{{ employer.image }}" class="rounded-circle border" width="80" />
+              <img src="{{ MEDIA_URL }}{{ employer.image }}" class="rounded-circle border" width="80" height="80" alt="{{ employer.company|default:'Company Avatar' }}" />
             {% else %}
-              <img src="{% static 'assets/images/avatar.png' %}" class="rounded-circle border" width="80" />
+              <img src="{% static 'assets/images/avatar.png' %}" class="rounded-circle border" width="80" height="80" alt="Default Avatart" />
             {% endif %}
 
             <div>
@@ -75,7 +75,8 @@
     <!-- Job Details -->
     <section class="bg-brand-50">
       <div class="container-sm py-5">
-        <div class="">
+        <div>
+          <h2>Job Information</h2>
           {% for detail in job.details %}
             <h3>{{ detail.heading }}</h3>
             <p>{{ detail.content|safe }}</p>

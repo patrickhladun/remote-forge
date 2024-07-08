@@ -10,21 +10,21 @@
           <div class="d-flex justify-content-between align-items-center py-1 gap-2">
             <div class="image">
               {% if talent.image %}
-                <img src="{{ MEDIA_URL }}{{ talent.image }}" class="rounded-circle" width="80" />
+                <img src="{{ MEDIA_URL }}{{ talent.image }}" class="rounded-circle" width="80" height="80" alt="{% if talent.first_name %}{{ talent.first_name }} {% endif %}{% if talent.last_name %}{{ talent.last_name }} {% endif %}{{ talent.title|default:'Talent Avatar' }}">
               {% else %}
-                <img src="{% static 'assets/images/avatar.png' %}" class="rounded-circle" width="80" />
+                <img src="{% static 'assets/images/avatar.png' %}" class="rounded-circle" width="80" height="80"/>
               {% endif %}
             </div>
-            <p>
-              {{ talent.first_name }} {{ talent.last_name }}<br />
-              <span>{{ talent.title }}</span>
-            </p>
+            <h1 class="h3 m-0">
+              <span>{{ talent.first_name }} {{ talent.last_name }}</span><br />
+              <span class="h4">{{ talent.title }}</span>
+            </h1>
           </div>
           {% if talent.resume %}
             {% if user.is_authenticated and user == talent.user or user.user_type == 'employer' %}
               <a href="{{ MEDIA_URL }}{{ talent.resume }}" class="btn btn-primary" target="_blank">Download CV</a>
             {% else %}
-              <a href="#" class="btn btn-primary disabled" tabindex="-1" aria-disabled="true">Download CV</a>
+              <a href="#" class="btn btn-primary disabled" tabindex="-1">Download CV</a>
             {% endif %}
           {% endif %}
         </div>
@@ -54,9 +54,9 @@
                   - {{ experience.end_date }}
                 {% endif %}
               </p>
-              <h5>{{ experience.position }}</h5>
+              <h4>{{ experience.position }}</h4>
               {% if experience.responsibilities %}
-                <h4>Responsibilities</h4>
+                <h5>Responsibilities</h5>
                 <p>{{ experience.responsibilities }}</p>
               {% endif %}
             {% endfor %}
@@ -115,7 +115,7 @@
               <div class="d-flex gap-2 py-2">
                 {% for link in talent.social %}
                   {% with icon_name='icon-'|add:link.site %}
-                    <a class="p-2 bg-brand-100 rounded-1" href="{{ link.url }}" target="_blank">{% icon icon_name 'sm' %}</a>
+                    <a class="p-2 bg-brand-100 rounded-1" href="{{ link.url }}" target="_blank" aria-label="{{link.name}} Social Profile">{% icon icon_name 'sm' %}</a>
                   {% endwith %}
                 {% endfor %}
               </div>

@@ -10,6 +10,12 @@
       {% for meta in metadata %}
         {{ meta|safe }}
       {% endfor %}
+    {% else %}
+      <title>
+        {% block head_title %}
+
+        {% endblock %}| {{ site_name }}
+      </title>
     {% endif %}
 
     {% block css %}
@@ -17,11 +23,8 @@
     {% endblock %}
 
     {% block js %}
-      <script src="{% static 'assets/js/bundle.js' %}"></script>
-    {% endblock %}
 
-    {% load livereload_tags %}
-    {% livereload_script %}
+    {% endblock %}
   </head>
 
   <body class="{{ page_slug }}{% if body_class %}
@@ -36,6 +39,7 @@
     </div>
     <div class="page {% if page_class %}{{ page_class }}{% endif %}">
       {% block content %}
+
       {% endblock %}
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -43,13 +47,29 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <!-- Bootstrap JS -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
     {% block footer_js %}
+      <script src="{% static 'assets/js/bundle.js' %}"></script>
     {% endblock %}
     {% if messages %}
       <script>
-        // TODO: Instead loading full jQuery libreary only for messages, use vanilla JS
         $(document).ready(function () {
-          $('.message').toast('show')
+          const $messages = $('.message')
+          const $container = $('.message-container')
+        
+          $messages.each(function () {
+            const $message = $(this)
+            setTimeout(function () {
+              $message.hide()
+              if ($messages.filter(':visible').length === 0) {
+                $container.hide()
+              }
+            }, 3000)
+          })
+        
+          if ($messages.filter(':visible').length === 0) {
+            $container.hide()
+          }
         })
       </script>
     {% endif %}
