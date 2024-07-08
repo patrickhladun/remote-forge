@@ -62,9 +62,8 @@ Welcome to Remote Forge, my creation and your gateway to the world of remote wor
 - [Testing and Validation](#testing-and-validation)
   - [Testing with Pytest](#testing-with-pytest)
     - [Running Tests](#running-tests)
-- [Functional testing](#functional-testing)
-  - [Website Header on Desktop](#website-header-on-desktop)
-  - [Website Header on Mobile](#website-header-on-mobile)
+- [Manual Functional testing](#manual-functional-testing)
+  - [Website Header](#website-header)
   - [Website Footer](#website-footer)
   - [Home Page](#home-page-1)
   - [About Page](#about-page-1)
@@ -518,11 +517,96 @@ For a more detailed report, run:
 
 `pytest --cov --cov-report=html`
 
-## Functional testing
+## Manual Functional testing
 
-### Website Header on Desktop
+### Website Header
 
-### Website Header on Mobile
+<details><summary>As Visitor - Desktop</summary>
+
+|Test Scenario|Steps to Reproduce|Expected Results|Actual Results|
+|-------------|------------------|----------------|--------------|
+|Logo Link|Click on the website logo|User is redirected to the home page|As expected|
+|Home Link|Click on the Home link|User is redirected to the home page|As expected|
+|About Link|Click on the About link|User is redirected to the About page|As expected|
+|Jobs Link|Click on the Jobs link|User is redirected to the Jobs page|As expected|
+|Talent link|Click on the Talent link|User is redirected to the Talent page|As expected|
+|Employers Link|Click on the Employers link|User is redirected to the Employers page|As expected|
+|Login/Sign In button|Click on the Login/Sign In button|User is redirected to the Login/Sign In page|As expected|
+|Post a Job Button|Click on the Post a Job button|User is redirected to the Post a Job page|As expected|
+
+</details>
+
+<details><summary>As Visitor - Mobile</summary>
+
+|Test Scenario|Steps to Reproduce|Expected Results|Actual Results|
+|-------------|------------------|----------------|--------------|
+|Menu toggle button|Click on the hamburger menu button|Offcanvas menu should slide in from the right to the left|As expected|
+|Menu close button|Click on the Close button|Offcanvas menu should close by sliding to the right|As expected|
+|Logo Link|Click on the website logo|User is redirected to the home page|As expected|
+|Home Link|Click on the Home link|User is redirected to the home page|As expected|
+|About Link|Click on the About link|User is redirected to the About page|As expected|
+|Jobs Link|Click on the Jobs link|User is redirected to the Jobs page|As expected|
+|Talent link|Click on the Talent link|User is redirected to the Talent page|As expected|
+|Employers Link|Click on the Employers link|User is redirected to the Employers page|As expected|
+|Login/Sign In button|Click on the Login/Sign In button|User is redirected to the Login/Sign In page|As expected|
+|Post a Job Button|Click on the Post a Job button|User is redirected to the Post a Job page|As expected|
+
+</details>
+
+<details><summary>As Talent - Desktop</summary>
+
+| Test Scenario | Steps to Reproduce | Expected Results | Actual Results |
+|---------------|--------------------|------------------|----------------|
+| User avatar | User has uploaded a custom avatar | User avatar image is visible | As expected |
+| User default avatar | User did not upload a custom avatar | Default user avatar is used | As expected |
+| User Menu | User clicks on the avatar | Dropdown menu is opened | As expected |
+| Profile link | 1. Click on avatar 2. Click on Profile link | User is redirected to user's profile page | As expected |
+| Account | 1. Click on avatar 2. Click on Account link | User is redirected to the Account page | As expected |
+| Log out | 1. Click on avatar 2. Click on Logout link | User is logged out and redirected to the home page | As expected |
+
+</details>
+
+<details><summary>As Talent - Mobile</summary>
+
+| Test Scenario | Steps to Reproduce | Expected Results | Actual Results |
+|---------------|--------------------|------------------|----------------|
+| User avatar | User has uploaded a custom avatar | User avatar image is visible | As expected |
+| User default avatar | User did not upload a custom avatar | Default user avatar is used | As expected |
+| User Menu | User clicks on the avatar | Offcanvas menu should slide in from the right to the left with user-specific links | As expected |
+| Profile link | 1. Click on avatar 2. Click on Profile link | User is redirected to user's profile page | As expected |
+| Account | 1. Click on avatar 2. Click on Account link | User is redirected to the Account page | As expected |
+| Log out | 1. Click on avatar 2. Click on Logout link | User is logged out and redirected to the home page | As expected |
+
+</details>
+
+<details><summary>As Employer - Desktop</summary>
+
+| Test Scenario | Steps to Reproduce | Expected Results | Actual Results |
+|---------------|--------------------|------------------|----------------|
+| User avatar | User has uploaded a custom avatar | User avatar image is visible | As expected |
+| User default avatar | User did not upload a custom avatar | Default user avatar is used | As expected |
+| User Menu | User clicks on the avatar | Dropdown menu is opened | As expected |
+| Profile link | 1. Click on avatar 2. Click on Profile link | User is redirected to user's profile page | As expected |
+| Account | 1. Click on avatar 2. Click on Account link | User is redirected to the Account page | As expected |
+| Jobs | 1. Click on avatar 2. Click on Jobs link | User is redirected to the Jobs page | As expected |
+| Log out | 1. Click on avatar 2. Click on Logout link | User is logged out and redirected to the home page | As expected |
+
+</details>
+
+<details><summary>As Employer - Mobile</summary>
+
+| Test Scenario | Steps to Reproduce | Expected Results | Actual Results |
+|---------------|--------------------|------------------|----------------|
+| User avatar | User has uploaded a custom avatar | User avatar image is visible | As expected |
+| User default avatar | User did not upload a custom avatar | Default user avatar is used | As expected |
+| User Menu | User clicks on the avatar | Offcanvas menu should slide in from the right to the left with user-specific links | As expected |
+| Profile link | 1. Click on avatar 2. Click on Profile link | User is redirected to user's profile page | As expected |
+| Jobs | 1. Click on avatar 2. Click on Jobs link | User is redirected to the Jobs page | As expected |
+| Account | 1. Click on avatar 2. Click on Account link | User is redirected to the Account page | As expected |
+| Log out | 1. Click on avatar 2. Click on Logout link | User is logged out and redirected to the home page | As expected |
+
+</details>
+
 
 ### Website Footer
 

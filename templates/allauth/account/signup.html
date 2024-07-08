@@ -7,10 +7,10 @@
 
 {% block content %}
 <main class="main">
-    <section class="container py-5">
+    <section class="container-sm py-5">
         {% element h1 %}Talent {% trans "Sign Up" %}{% endelement %}
         <p>
-            {% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}
+            {% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">log in</a>.{% endblocktrans %}
         </p>
         {% url 'talent_signup' as action_url %}
         {% element form form=form method="post" action=action_url tags="entrance,signup" %}

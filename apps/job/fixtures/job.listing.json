@@ -21,6 +21,8 @@
           "content": "Competitive salary and benefits package. Remote work options. Health and wellness programs. Opportunities for career advancement."
         }
       ],
+      "city": "Dublin",
+      "country": "Ireland",
       "created_at": "2023-04-23T00:00:00Z",
       "updated_at": "2023-04-23T00:00:00Z",
       "is_published": true
@@ -48,6 +50,8 @@
           "content": "Competitive salary and benefits package. Remote work options. Health and wellness programs. Opportunities for career advancement."
         }
       ],
+      "city": "Dublin",
+      "country": "Ireland",
       "created_at": "2023-04-23T00:00:00Z",
       "updated_at": "2023-04-23T00:00:00Z",
       "is_published": true
@@ -75,6 +79,8 @@
           "content": "Competitive salary and benefits package. Remote work options. Health and wellness programs. Opportunities for career advancement."
         }
       ],
+      "city": "Dublin",
+      "country": "Ireland",
       "created_at": "2023-04-23T00:00:00Z",
       "updated_at": "2023-04-23T00:00:00Z",
       "is_published": true
@@ -102,6 +108,8 @@
           "content": "Competitive salary and benefits package. Remote work options. Health and wellness programs. Opportunities for career advancement."
         }
       ],
+      "city": "Dublin",
+      "country": "Ireland",
       "created_at": "2023-04-23T00:00:00Z",
       "updated_at": "2023-04-23T00:00:00Z",
       "is_published": true
@@ -129,6 +137,8 @@
           "content": "Competitive salary and benefits package. Remote work options. Health and wellness programs. Opportunities for career advancement."
         }
       ],
+      "city": "Dublin",
+      "country": "Ireland",
       "created_at": "2023-04-23T00:00:00Z",
       "updated_at": "2023-04-23T00:00:00Z",
       "is_published": true
@@ -156,6 +166,8 @@
           "content": "Competitive salary and benefits package. Remote work options. Health and wellness programs. Opportunities for career advancement."
         }
       ],
+      "city": "Dublin",
+      "country": "Ireland",
       "created_at": "2023-04-23T00:00:00Z",
       "updated_at": "2023-04-23T00:00:00Z",
       "is_published": true
@@ -184,6 +196,8 @@
           "content": "Competitive salary and benefits package. Remote work options. Health and wellness programs. Opportunities for career advancement."
         }
       ],
+      "city": "London",
+      "country": "United Kingdom",
       "created_at": "2023-01-15T00:00:00Z",
       "updated_at": "2023-01-15T00:00:00Z",
       "is_published": true
@@ -211,6 +225,8 @@
           "content": "Competitive salary and benefits package. Remote work options. Health and wellness programs. Opportunities for career advancement."
         }
       ],
+      "city": "London",
+      "country": "United Kingdom",
       "created_at": "2023-02-10T00:00:00Z",
       "updated_at": "2023-02-10T00:00:00Z",
       "is_published": true
@@ -238,6 +254,8 @@
           "content": "Competitive salary and benefits package. Remote work options. Health and wellness programs. Opportunities for career advancement."
         }
       ],
+      "city": "London",
+      "country": "United Kingdom",
       "created_at": "2023-03-05T00:00:00Z",
       "updated_at": "2023-03-05T00:00:00Z",
       "is_published": true
@@ -265,6 +283,8 @@
           "content": "Competitive salary and benefits package. Remote work options. Health and wellness programs. Opportunities for career advancement."
         }
       ],
+      "city": "London",
+      "country": "United Kingdom",
       "created_at": "2023-04-01T00:00:00Z",
       "updated_at": "2023-04-01T00:00:00Z",
       "is_published": true
@@ -293,6 +313,8 @@
           "content": "Competitive salary and benefits package. Health insurance. Opportunities for career advancement."
         }
       ],
+      "city": "Abu Dhabi",
+      "country": "United Arab Emirates",
       "created_at": "2023-05-01T00:00:00Z",
       "updated_at": "2023-05-01T00:00:00Z",
       "is_published": true
@@ -320,6 +342,8 @@
           "content": "Competitive salary and commission structure. Health insurance. Opportunities for career advancement."
         }
       ],
+      "city": "Abu Dhabi",
+      "country": "United Arab Emirates",
       "created_at": "2023-06-01T00:00:00Z",
       "updated_at": "2023-06-01T00:00:00Z",
       "is_published": true
@@ -347,6 +371,8 @@
           "content": "Competitive salary and benefits package. Health insurance. Opportunities for career advancement."
         }
       ],
+      "city": "Abu Dhabi",
+      "country": "United Arab Emirates",
       "created_at": "2023-07-01T00:00:00Z",
       "updated_at": "2023-07-01T00:00:00Z",
       "is_published": true
@@ -375,6 +401,8 @@
           "content": "Competitive salary and benefits package. Remote work options. Health and wellness programs. Opportunities for career advancement."
         }
       ],
+      "city": "Krakow",
+      "country": "Poland",
       "created_at": "2023-04-01T00:00:00Z",
       "updated_at": "2023-04-01T00:00:00Z",
       "is_published": true
@@ -402,6 +430,8 @@
           "content": "Competitive salary and benefits package. Remote work options. Health and wellness programs. Opportunities for career advancement."
         }
       ],
+      "city": "Krakow",
+      "country": "Poland",
       "created_at": "2023-04-10T00:00:00Z",
       "updated_at": "2023-04-10T00:00:00Z",
       "is_published": true
@@ -429,6 +459,8 @@
           "content": "Competitive salary and benefits package. Remote work options. Health and wellness programs. Opportunities for career advancement."
         }
       ],
+      "city": "Krakow",
+      "country": "Poland",
       "created_at": "2023-04-20T00:00:00Z",
       "updated_at": "2023-04-20T00:00:00Z",
       "is_published": true
@@ -456,6 +488,8 @@
           "content": "Competitive salary and benefits package. Remote work options. Health and wellness programs. Opportunities for career advancement."
         }
       ],
+      "city": "Krakow",
+      "country": "Poland",
       "created_at": "2023-05-01T00:00:00Z",
       "updated_at": "2023-05-01T00:00:00Z",
       "is_published": true
@@ -483,6 +517,8 @@
           "content": "Competitive salary and benefits package. Remote work options. Health and wellness programs. Opportunities for career advancement."
         }
       ],
+      "city": "Krakow",
+      "country": "Poland",
       "created_at": "2023-05-10T00:00:00Z",
       "updated_at": "2023-05-10T00:00:00Z",
       "is_published": true
@@ -511,6 +547,8 @@
           "content": "Competitive salary and benefits package. Remote work options. Health and wellness programs. Opportunities for career advancement."
         }
       ],
+      "city": "Galway",
+      "country": "Ireland",
       "created_at": "2023-06-01T00:00:00Z",
       "updated_at": "2023-06-01T00:00:00Z",
       "is_published": true
@@ -538,6 +576,8 @@
           "content": "Competitive salary and benefits package. Remote work options. Health and wellness programs. Opportunities for career advancement."
         }
       ],
+      "city": "Galway",
+      "country": "Ireland",
       "created_at": "2023-07-01T00:00:00Z",
       "updated_at": "2023-07-01T00:00:00Z",
       "is_published": true
@@ -565,6 +605,8 @@
           "content": "Competitive salary and benefits package. Remote work options. Health and wellness programs. Opportunities for career advancement."
         }
       ],
+      "city": "Galway",
+      "country": "Ireland",
       "created_at": "2023-08-01T00:00:00Z",
       "updated_at": "2023-08-01T00:00:00Z",
       "is_published": true
@@ -593,6 +635,8 @@
           "content": "Competitive salary and benefits package. Remote work options. Health and wellness programs. Opportunities for career advancement."
         }
       ],
+      "city": "Berlin",
+      "country": "Germany",
       "created_at": "2023-07-01T00:00:00Z",
       "updated_at": "2023-07-01T00:00:00Z",
       "is_published": true
@@ -620,6 +664,8 @@
           "content": "Competitive salary and benefits package. Remote work options. Health and wellness programs. Opportunities for career advancement."
         }
       ],
+      "city": "Berlin",
+      "country": "Germany",
       "created_at": "2023-08-01T00:00:00Z",
       "updated_at": "2023-08-01T00:00:00Z",
       "is_published": true
@@ -648,6 +694,8 @@
           "content": "Competitive salary and benefits package. Remote work options. Health and wellness programs. Opportunities for career advancement."
         }
       ],
+      "city": "Helsinki",
+      "country": "Finland",
       "created_at": "2023-08-01T00:00:00Z",
       "updated_at": "2023-08-01T00:00:00Z",
       "is_published": true
@@ -676,6 +724,8 @@
           "content": "Competitive salary and benefits package. Remote work options. Health and wellness programs. Opportunities for career advancement."
         }
       ],
+      "city": "Dublin",
+      "country": "Ireland",
       "created_at": "2023-01-01T00:00:00Z",
       "updated_at": "2023-01-01T00:00:00Z",
       "is_published": true
@@ -703,6 +753,8 @@
           "content": "Competitive salary and benefits package. Remote work options. Health and wellness programs. Opportunities for career advancement."
         }
       ],
+      "city": "Dublin",
+      "country": "Ireland",
       "created_at": "2023-02-01T00:00:00Z",
       "updated_at": "2023-02-01T00:00:00Z",
       "is_published": true
@@ -730,6 +782,8 @@
           "content": "Competitive salary and benefits package. Remote work options. Health and wellness programs. Opportunities for career advancement."
         }
       ],
+      "city": "Dublin",
+      "country": "Ireland",
       "created_at": "2023-03-01T00:00:00Z",
       "updated_at": "2023-03-01T00:00:00Z",
       "is_published": true
@@ -757,6 +811,8 @@
           "content": "Competitive salary and benefits package. Remote work options. Health and wellness programs. Opportunities for career advancement."
         }
       ],
+      "city": "Dublin",
+      "country": "Ireland",
       "created_at": "2023-04-01T00:00:00Z",
       "updated_at": "2023-04-01T00:00:00Z",
       "is_published": true
@@ -784,6 +840,8 @@
           "content": "Competitive salary and benefits package. Remote work options. Health and wellness programs. Opportunities for career advancement."
         }
       ],
+      "city": "Dublin",
+      "country": "Ireland",
       "created_at": "2023-05-01T00:00:00Z",
       "updated_at": "2023-05-01T00:00:00Z",
       "is_published": true
@@ -811,6 +869,8 @@
           "content": "Competitive salary and benefits package. Remote work options. Health and wellness programs. Opportunities for career advancement."
         }
       ],
+      "city": "Dublin",
+      "country": "Ireland",
       "created_at": "2023-06-01T00:00:00Z",
       "updated_at": "2023-06-01T00:00:00Z",
       "is_published": true
@@ -838,6 +898,8 @@
           "content": "Competitive salary and benefits package. Remote work options. Health and wellness programs. Opportunities for career advancement."
         }
       ],
+      "city": "Dublin",
+      "country": "Ireland",
       "created_at": "2023-07-01T00:00:00Z",
       "updated_at": "2023-07-01T00:00:00Z",
       "is_published": true
@@ -865,6 +927,8 @@
           "content": "Competitive salary and benefits package. Remote work options. Health and wellness programs. Opportunities for career advancement."
         }
       ],
+      "city": "Dublin",
+      "country": "Ireland",
       "created_at": "2023-08-01T00:00:00Z",
       "updated_at": "2023-08-01T00:00:00Z",
       "is_published": true
@@ -894,6 +958,8 @@
         }
       ],
       "created_at": "2023-01-01T00:00:00Z",
+      "city": "Dublin",
+      "country": "Ireland",
       "updated_at": "2023-01-01T00:00:00Z",
       "is_published": true
     }
@@ -920,6 +986,8 @@
           "content": "Competitive salary and benefits package. Remote work options. Health and wellness programs. Opportunities for career advancement."
         }
       ],
+      "city": "Dublin",
+      "country": "Ireland",
       "created_at": "2023-02-01T00:00:00Z",
       "updated_at": "2023-02-01T00:00:00Z",
       "is_published": true
@@ -947,6 +1015,8 @@
           "content": "Competitive salary and benefits package. Remote work options. Health and wellness programs. Opportunities for career advancement."
         }
       ],
+      "city": "Dublin",
+      "country": "Ireland",
       "created_at": "2023-03-01T00:00:00Z",
       "updated_at": "2023-03-01T00:00:00Z",
       "is_published": true
@@ -974,6 +1044,8 @@
           "content": "Competitive salary and benefits package. Remote work options. Health and wellness programs. Opportunities for career advancement."
         }
       ],
+      "city": "Dublin",
+      "country": "Ireland",
       "created_at": "2023-04-01T00:00:00Z",
       "updated_at": "2023-04-01T00:00:00Z",
       "is_published": true
@@ -1002,6 +1074,8 @@
           "content": "Competitive salary and benefits package. Opportunities for career advancement. Employee discounts on SportWear Polska products."
         }
       ],
+      "city": "Warsaw",
+      "country": "Poland",
       "created_at": "2023-01-01T00:00:00Z",
       "updated_at": "2023-01-01T00:00:00Z",
       "is_published": true
@@ -1029,6 +1103,8 @@
           "content": "Competitive salary and benefits package. Opportunities for career advancement. Employee discounts on SportWear Polska products."
         }
       ],
+      "city": "Warsaw",
+      "country": "Poland",
       "created_at": "2023-02-01T00:00:00Z",
       "updated_at": "2023-02-01T00:00:00Z",
       "is_published": true
@@ -1056,6 +1132,8 @@
           "content": "Competitive salary and commission structure. Opportunities for career advancement. Employee discounts on SportWear Polska products."
         }
       ],
+      "city": "Warsaw",
+      "country": "Poland",
       "created_at": "2023-03-01T00:00:00Z",
       "updated_at": "2023-03-01T00:00:00Z",
       "is_published": true
@@ -1083,6 +1161,8 @@
           "content": "Competitive salary and benefits package. Opportunities for career advancement. Employee discounts on SportWear Polska products."
         }
       ],
+      "city": "Warsaw",
+      "country": "Poland",
       "created_at": "2023-04-01T00:00:00Z",
       "updated_at": "2023-04-01T00:00:00Z",
       "is_published": true
@@ -1110,6 +1190,8 @@
           "content": "Competitive salary and benefits package. Opportunities for career advancement. Employee discounts on SportWear Polska products."
         }
       ],
+      "city": "Warsaw",
+      "country": "Poland",
       "created_at": "2023-05-01T00:00:00Z",
       "updated_at": "2023-05-01T00:00:00Z",
       "is_published": true
@@ -1138,6 +1220,8 @@
           "content": "Competitive salary and benefits package. Opportunities for career advancement. Employee discounts on travel packages."
         }
       ],
+      "city": "Rome",
+      "country": "Italy",
       "created_at": "2023-01-01T00:00:00Z",
       "updated_at": "2023-01-01T00:00:00Z",
       "is_published": true
@@ -1165,6 +1249,8 @@
           "content": "Competitive salary and benefits package. Opportunities for career advancement. Employee discounts on travel packages."
         }
       ],
+      "city": "Rome",
+      "country": "Italy",
       "created_at": "2023-02-01T00:00:00Z",
       "updated_at": "2023-02-01T00:00:00Z",
       "is_published": true
@@ -1192,6 +1278,8 @@
           "content": "Competitive salary and benefits package. Opportunities for career advancement. Employee discounts on travel packages."
         }
       ],
+      "city": "Rome",
+      "country": "Italy",
       "created_at": "2023-03-01T00:00:00Z",
       "updated_at": "2023-03-01T00:00:00Z",
       "is_published": true
@@ -1219,6 +1307,8 @@
           "content": "Competitive salary and benefits package. Opportunities for career advancement. Employee discounts on travel packages."
         }
       ],
+      "city": "Rome",
+      "country": "Italy",
       "created_at": "2023-04-01T00:00:00Z",
       "updated_at": "2023-04-01T00:00:00Z",
       "is_published": true
@@ -1246,6 +1336,8 @@
           "content": "Competitive salary and benefits package. Opportunities for career advancement. Employee discounts on travel packages."
         }
       ],
+      "city": "Rome",
+      "country": "Italy",
       "created_at": "2023-05-01T00:00:00Z",
       "updated_at": "2023-05-01T00:00:00Z",
       "is_published": true
@@ -1273,6 +1365,8 @@
           "content": "Competitive salary and benefits package. Opportunities for career advancement. Employee discounts on travel packages."
         }
       ],
+      "city": "Rome",
+      "country": "Italy",
       "created_at": "2023-06-01T00:00:00Z",
       "updated_at": "2023-06-01T00:00:00Z",
       "is_published": true
@@ -1301,6 +1395,8 @@
           "content": "Competitive salary and benefits package. Opportunities for career advancement. Employee discounts on travel packages."
         }
       ],
+      "city": "Rome",
+      "country": "Italy",
       "created_at": "2023-01-01T00:00:00Z",
       "updated_at": "2023-01-01T00:00:00Z",
       "is_published": true
@@ -1328,6 +1424,8 @@
           "content": "Competitive salary and benefits package. Opportunities for career advancement. Employee discounts on travel packages."
         }
       ],
+      "city": "Rome",
+      "country": "Italy",
       "created_at": "2023-02-01T00:00:00Z",
       "updated_at": "2023-02-01T00:00:00Z",
       "is_published": true
@@ -1355,6 +1453,8 @@
           "content": "Competitive salary and benefits package. Opportunities for career advancement. Employee discounts on travel packages."
         }
       ],
+      "city": "Rome",
+      "country": "Italy",
       "created_at": "2023-03-01T00:00:00Z",
       "updated_at": "2023-03-01T00:00:00Z",
       "is_published": true
@@ -1382,6 +1482,8 @@
           "content": "Competitive salary and benefits package. Opportunities for career advancement. Employee discounts on travel packages."
         }
       ],
+      "city": "Rome",
+      "country": "Italy",
       "created_at": "2023-04-01T00:00:00Z",
       "updated_at": "2023-04-01T00:00:00Z",
       "is_published": true
@@ -1409,6 +1511,8 @@
           "content": "Competitive salary and benefits package. Opportunities for career advancement. Employee discounts on travel packages."
         }
       ],
+      "city": "Rome",
+      "country": "Italy",
       "created_at": "2023-05-01T00:00:00Z",
       "updated_at": "2023-05-01T00:00:00Z",
       "is_published": true
@@ -1436,6 +1540,8 @@
           "content": "Competitive salary and benefits package. Opportunities for career advancement. Employee discounts on travel packages."
         }
       ],
+      "city": "Rome",
+      "country": "Italy",
       "created_at": "2023-06-01T00:00:00Z",
       "updated_at": "2023-06-01T00:00:00Z",
       "is_published": true
@@ -1464,6 +1570,8 @@
           "content": "Competitive salary and benefits package. Opportunities for career advancement. Flexible working hours."
         }
       ],
+      "city": "Stockholm",
+      "country": "Sweden",
       "created_at": "2023-01-01T00:00:00Z",
       "updated_at": "2023-01-01T00:00:00Z",
       "is_published": true
@@ -1491,6 +1599,8 @@
           "content": "Competitive salary and benefits package. Opportunities for career advancement. Flexible working hours."
         }
       ],
+      "city": "Stockholm",
+      "country": "Sweden",
       "created_at": "2023-02-01T00:00:00Z",
       "updated_at": "2023-02-01T00:00:00Z",
       "is_published": true
@@ -1519,6 +1629,8 @@
         }
       ],
       "created_at": "2023-03-01T00:00:00Z",
+      "city": "Stockholm",
+      "country": "Sweden",
       "updated_at": "2023-03-01T00:00:00Z",
       "is_published": true
     }
@@ -1545,6 +1657,8 @@
           "content": "Competitive salary and benefits package. Opportunities for career advancement. Flexible working hours."
         }
       ],
+      "city": "Stockholm",
+      "country": "Sweden",
       "created_at": "2023-04-01T00:00:00Z",
       "updated_at": "2023-04-01T00:00:00Z",
       "is_published": true
@@ -1572,6 +1686,8 @@
           "content": "Competitive salary and benefits package. Opportunities for career advancement. Flexible working hours."
         }
       ],
+      "city": "Stockholm",
+      "country": "Sweden",
       "created_at": "2023-05-01T00:00:00Z",
       "updated_at": "2023-05-01T00:00:00Z",
       "is_published": true
@@ -1599,6 +1715,8 @@
           "content": "Competitive salary and benefits package. Opportunities for career advancement. Flexible working hours."
         }
       ],
+      "city": "Stockholm",
+      "country": "Sweden",
       "created_at": "2023-06-01T00:00:00Z",
       "updated_at": "2023-06-01T00:00:00Z",
       "is_published": true
@@ -1626,6 +1744,8 @@
           "content": "Competitive salary and benefits package. Opportunities for career advancement. Flexible working hours."
         }
       ],
+      "city": "Stockholm",
+      "country": "Sweden",
       "created_at": "2023-07-01T00:00:00Z",
       "updated_at": "2023-07-01T00:00:00Z",
       "is_published": true
@@ -1653,6 +1773,8 @@
           "content": "Competitive salary and benefits package. Opportunities for career advancement. Flexible working hours."
         }
       ],
+      "city": "Stockholm",
+      "country": "Sweden",
       "created_at": "2023-08-01T00:00:00Z",
       "updated_at": "2023-08-01T00:00:00Z",
       "is_published": true
@@ -1681,6 +1803,8 @@
           "content": "Competitive salary and benefits package. Opportunities for career advancement. Flexible remote working options."
         }
       ],
+      "city": "Dublin",
+      "country": "Ireland",
       "created_at": "2023-05-01T00:00:00Z",
       "updated_at": "2023-05-01T00:00:00Z",
       "is_published": true
@@ -1708,6 +1832,8 @@
           "content": "Competitive salary and benefits package. Opportunities for career advancement. Flexible remote working options."
         }
       ],
+      "city": "Dublin",
+      "country": "Ireland",
       "created_at": "2023-06-01T00:00:00Z",
       "updated_at": "2023-06-01T00:00:00Z",
       "is_published": true
@@ -1735,6 +1861,8 @@
           "content": "Competitive salary and benefits package. Opportunities for career advancement. Flexible remote working options."
         }
       ],
+      "city": "Dublin",
+      "country": "Ireland",
       "created_at": "2023-07-01T00:00:00Z",
       "updated_at": "2023-07-01T00:00:00Z",
       "is_published": true
@@ -1762,6 +1890,8 @@
           "content": "Competitive salary and benefits package. Opportunities for career advancement. Flexible remote working options."
         }
       ],
+      "city": "Dublin",
+      "country": "Ireland",
       "created_at": "2023-08-01T00:00:00Z",
       "updated_at": "2023-08-01T00:00:00Z",
       "is_published": true
@@ -1789,6 +1919,8 @@
           "content": "Competitive salary and benefits package. Opportunities for career advancement. Flexible remote working options."
         }
       ],
+      "city": "Dublin",
+      "country": "Ireland",
       "created_at": "2023-09-01T00:00:00Z",
       "updated_at": "2023-09-01T00:00:00Z",
       "is_published": true
@@ -1816,6 +1948,8 @@
           "content": "Competitive salary and benefits package. Opportunities for career advancement. Flexible remote working options."
         }
       ],
+      "city": "Dublin",
+      "country": "Ireland",
       "created_at": "2023-10-01T00:00:00Z",
       "updated_at": "2023-10-01T00:00:00Z",
       "is_published": true

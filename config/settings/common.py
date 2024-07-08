@@ -8,11 +8,9 @@ from pathlib import Path
 from dotenv import load_dotenv
 
 load_dotenv()
-print("common.py")
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 DJANGO_APPS = [
-    "livereload",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -37,6 +35,8 @@ APPS = [
 INSTALLED_APPS = DJANGO_APPS + EXTERNAL_APPS + APPS
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
+    "django.middleware.gzip.GZipMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -44,8 +44,6 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "allauth.account.middleware.AccountMiddleware",
-    "whitenoise.middleware.WhiteNoiseMiddleware",
-    "livereload.middleware.LiveReloadScript",
 ]
 ROOT_URLCONF = "config.urls"
 TEMPLATES = [
@@ -103,3 +101,12 @@ USE_I18N = True
 USE_TZ = True
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 STATIC_URL = "/static/"
+
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
+EMAIL_HOST_USER = os.getenv("GMAIL_EMAIL")
+EMAIL_HOST_PASSWORD = "dsmp oqmu hhof auec"
+DEFAULT_FROM_EMAIL = os.getenv("GMAIL_EMAIL")
