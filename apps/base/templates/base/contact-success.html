@@ -10,7 +10,23 @@
 
     <section class="bg-brand-50">
       <div class="container py-5">
-        <p>Thank you for your message! We will get back to you as soon as possible.</p>
+        <h2 class="text-center">Thank you for your message!</h2>
+        <p class="lead text-center">We will get back to you as soon as possible.</p>
+        <h3 class="h5 text-center">While you waiting, here are some helpful links:</h3>
+        <ul class="list-unstyled d-flex gap-4 justify-content-center">
+          <li>
+            <a href="{% url 'job-list' %}">Job Listings</a>
+          </li>
+          <li>
+            <a href="{% url 'employers' %}">Employers</a>
+          </li>
+          <li>
+            <a href="{% url 'talents' %}">Our Best Talent</a>
+          </li>
+          <li>
+            <a href="{% url 'about' %}">About Us</a>
+          </li>
+        </ul>
       </div>
     </section>
   </main>
