@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- Metadata -->
     {% if metadata %}
       {% for meta in metadata %}
         {{ meta|safe }}
@@ -18,10 +19,31 @@
       </title>
     {% endif %}
 
+    <!-- Styles Block -->
     {% block css %}
       <link rel="stylesheet" href="{% static 'assets/css/style.css' %}" />
     {% endblock %}
 
+    <!-- Favicon Includes -->
+    <link rel="shortcut icon" href="{% static 'favicon.ico' %}" />
+    <link rel="icon" sizes="16x16 32x32 64x64" href="{% static 'favicon.ico' %}" />
+    <link rel="icon" type="image/svg+xml" sizes="any" href="{% static 'assets/favicon/favicon.svg' %}" />
+    <link rel="icon" type="image/png" sizes="160x160" href="{% static 'assets/favicon/favicon-160x160.png' %}" />
+    <link rel="icon" type="image/png" sizes="96x96" href="{% static 'assets/favicon/favicon-96x96.png' %}" />
+    <link rel="icon" type="image/png" sizes="64x64" href="{% static 'assets/favicon/favicon-64x64.png' %}" />
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'assets/favicon/favicon-32x32.png' %}" />
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'assets/favicon/favicon-16x16.png' %}" />
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'assets/favicon/favicon-180x180.png' %}" />
+    <link rel="apple-touch-icon" sizes="152x152" href="{% static 'assets/favicon/favicon-152x152.png' %}" />
+    <link rel="apple-touch-icon" sizes="144x144" href="{% static 'assets/favicon/favicon-144x144.png' %}" />
+    <link rel="apple-touch-icon" sizes="120x120" href="{% static 'assets/favicon/favicon-120x120.png' %}" />
+    <link rel="apple-touch-icon" sizes="114x114" href="{% static 'assets/favicon/favicon-114x114.png' %}" />
+    <link rel="apple-touch-icon" sizes="76x76" href="{% static 'assets/favicon/favicon-76x76.png' %}" />
+    <link rel="apple-touch-icon" sizes="72x72" href="{% static 'assets/favicon/favicon-72x72.png' %}" />
+    <link rel="apple-touch-icon" sizes="60x60" href="{% static 'assets/favicon/favicon-60x60.png' %}" />
+    <link rel="apple-touch-icon" sizes="57x57" href="{% static 'assets/favicon/favicon-57x57.png' %}" />
+
+    <!-- Scripts Block -->
     {% block js %}
 
     {% endblock %}
@@ -48,9 +70,12 @@
     <!-- Bootstrap JS -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
+    <!-- Footer Scripts Block -->
     {% block footer_js %}
       <script src="{% static 'assets/js/bundle.js' %}"></script>
     {% endblock %}
+
+    <!-- Messages Scripts -->
     {% if messages %}
       <script>
         $(document).ready(function () {
