@@ -1,0 +1,9 @@
+.footer-nav {
+  .nav-item {
+    &:hover {
+      .nav-link {
+        color: var(--color-brand-300) !important;
+      }
+    }
+  }
+}
