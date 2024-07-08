@@ -10,6 +10,12 @@
       {% for meta in metadata %}
         {{ meta|safe }}
       {% endfor %}
+    {% else %}
+      <title>
+        {% block head_title %}
+
+        {% endblock %}| {{ site_name }}
+      </title>
     {% endif %}
 
     {% block css %}
