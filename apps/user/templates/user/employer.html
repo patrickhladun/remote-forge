@@ -10,10 +10,10 @@
           <div class="d-flex justify-content-between align-items-center py-1 gap-2">
             <div class="image">
               {% if employer.image %}
-                <img src="{{ MEDIA_URL }}{{ employer.image }}" class="rounded-circle border" width="80" />
-              {% else %}
-                <img src="{% static 'assets/images/avatar.png' %}" class="rounded-circle border" width="80" />
-              {% endif %}
+                  <img src="{{ MEDIA_URL }}{{ employer.image }}" class="rounded-circle border" width="80" height="80" alt="{{ employer.company|default:'Company Avatar' }}"/>
+                {% else %}
+                  <img src="{% static 'assets/images/avatar.png' %}" class="rounded-circle border" width="80" height="80" alt="Company Avatar" />
+                {% endif %}
             </div>
             <h1>{{ employer.company }}</h1>
           </div>
@@ -75,7 +75,7 @@
               {% if employer.website %}
                 <div class="d-flex align-items-center">
                   {% icon 'icon-web' 'sm' %}
-                  <a href="{{ employer.website }}" class="m-0 ps-1">{{ employer.website }}</a>
+                  <a href="{{ employer.website }}" class="web-link">{{ employer.website }}</a>
                 </div>
               {% endif %}
 
@@ -94,7 +94,7 @@
             <div class="d-flex gap-2 py-2">
               {% for link in employer.social %}
                 {% with icon_name='icon-'|add:link.site %}
-                  <a class="p-2 bg-brand-200 rounded-1" href="{{ link.url }}">{% icon icon_name 'sm' %}</a>
+                  <a class="p-2 bg-brand-200 rounded-1" href="{{ link.url }}" aria-label="{{link.name}} Social Profile">{% icon icon_name 'sm' %}</a>
                 {% endwith %}
               {% endfor %}
             </div>

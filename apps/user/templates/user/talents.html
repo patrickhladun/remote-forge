@@ -16,14 +16,17 @@
             <div class="d-flex align-items-start">
               <div class="image">
                 {% if talent.image %}
-                  <img src="{{ MEDIA_URL }}{{ talent.image }}" class="rounded-circle" width="80" />
+                <img src="{{ MEDIA_URL }}{{ talent.image }}" class="rounded-circle" width="80" height="80"
+                alt="{% if talent.first_name %}{{ talent.first_name }} {% endif %}{% if talent.last_name %}{{ talent.last_name }} {% endif %}{{ talent.title|default:'Talent Avatar' }}">
                 {% else %}
-                  <img src="{% static 'assets/images/avatar.png' %}" class="rounded-circle" width="80" />
+                  <img src="{% static 'assets/images/avatar.png' %}" class="rounded-circle" width="80" height="80" alt="Talent Avatar" />
                 {% endif %}
               </div>
               <div class="ms-3 w-100">
                 <div class="card__header">
-                  <h5 class="mb-0 mt-0">{{ talent.first_name }} {{ talent.last_name }}</h5>
+                  {% if talent.first_name or talent.last_name %}
+                  <h3 class="h-5 mb-0 mt-0">{{ talent.first_name }} {{ talent.last_name }}</h3>
+                  {% endif %}
                   <span>{{ talent.title }}</span>
                 </div>
                 <div class="skills">
