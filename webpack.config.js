@@ -55,7 +55,7 @@ module.exports = {
           from: 'src/static',
           to: './',
           globOptions: {
-            ignore: ['**/*.!(png|svg|jpg|jpeg|gif|webp|ico)'],
+            ignore: ['**/*.!(png|svg|jpg|jpeg|gif|webp|ico|ttf)'],
           },
           noErrorOnMissing: true,
         },
