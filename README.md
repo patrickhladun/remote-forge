@@ -582,7 +582,7 @@ These font choices are integral to the overall user experience, contributing not
 
 </details>
 
-## Responsive Design Tests
+### Responsive Design Tests
 
 These are manual tests for responsiveness performed in the Chrome browser using the Toggle Device Toolbar. Each device preset listed in the tool was tested to ensure the responsiveness and proper layout of the page elements.
 
@@ -615,7 +615,7 @@ Test Setup for Responsiveness
 
 </details>
 
-## Functionality tests
+### Functionality tests
 
 <details><summary>Home Page</summary>
 
@@ -643,7 +643,7 @@ Test Setup for Responsiveness
 
 </details>
 
-### Admin Pages
+#### Admin Pages
 
 <details><summary>Sign in Page</summary>
 
@@ -725,22 +725,55 @@ Test Setup for Responsiveness
 
 </details>
 
-## Google Page Insights Tests:
+### Google Page Insights Tests:
 
-### Home Page
+### HTML Validation and Accessibility Testing
 
-### About Page
+I conducted comprehensive HTML validation tests using the W3C validator to ensure that all pages adhere to HTML standards. Additionally, I performed accessibility checks to identify and resolve any errors and contrast issues. All pages have successfully passed these tests, ensuring they meet web standards and are accessible to users with disabilities.
 
-### Contact Page
+Tools used:
 
-### Thank You Contact Page
+- W3C HTML Validator: For validating the HTML structure of each page.
+- Web Accessibility Evaluation tool WAVE: For detecting and fixing accessibility issues.
+
+|Tested Page|Accesibility (WAVE)|Contrast (WAVE)|W3C HTML |Comments|
+|---|---|---|---|---|
+|[Home](https://remote-forge-production-9d9d5aefbaa0.herokuapp.com/)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-production-9d9d5aefbaa0.herokuapp.com%2F)||
+|[About](https://remote-forge-production-9d9d5aefbaa0.herokuapp.com/about/)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-production-9d9d5aefbaa0.herokuapp.com%2Fabout%2F)||
+|[Contact](https://remote-forge-production-9d9d5aefbaa0.herokuapp.com/contact/)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-production-9d9d5aefbaa0.herokuapp.com%2Fcontact%2F)||
+|[Contact Success](https://remote-forge-production-9d9d5aefbaa0.herokuapp.com/contact/success/)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-production-9d9d5aefbaa0.herokuapp.com%2Fcontact%2Fsuccess%2F)||
+|[Privacy Policy](https://remote-forge-production-9d9d5aefbaa0.herokuapp.com/privacy-policy/)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-production-9d9d5aefbaa0.herokuapp.com%2Fprivacy-policy%2F)||
+|[Terms and Conditions](https://remote-forge-production-9d9d5aefbaa0.herokuapp.com/terms-conditions/)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-production-9d9d5aefbaa0.herokuapp.com%2Fterms-conditions%2F)||
+|[Jobs](https://remote-forge-production-9d9d5aefbaa0.herokuapp.com/job-list/)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-production-9d9d5aefbaa0.herokuapp.com%2Fjob-list%2F)||
+|[Single Job](https://remote-forge-production-9d9d5aefbaa0.herokuapp.com/job/8d83b12b-0e13-4a6b-92c1-26a3d7bf92f3)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-production-9d9d5aefbaa0.herokuapp.com%2Fjob%2F8d83b12b-0e13-4a6b-92c1-26a3d7bf92f3)||
+|[Talents](https://remote-forge-production-9d9d5aefbaa0.herokuapp.com/talents/)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-production-9d9d5aefbaa0.herokuapp.com%2Ftalents%2F)||
+|[Single Talent](https://remote-forge-production-9d9d5aefbaa0.herokuapp.com/talent/f40faef6-33f8-4a69-89d2-cf6e173e64c9)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-production-9d9d5aefbaa0.herokuapp.com%2Ftalent%2Ff40faef6-33f8-4a69-89d2-cf6e173e64c9)||
+|[Employers](https://remote-forge-production-9d9d5aefbaa0.herokuapp.com/employers/)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-production-9d9d5aefbaa0.herokuapp.com%2Femployers%2F)||
+|[Single Employer](https://remote-forge-production-9d9d5aefbaa0.herokuapp.com/employer/fd4351d1-3ad3-42c1-9379-1d09733e02ae)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-production-9d9d5aefbaa0.herokuapp.com%2Femployer%2Ffd4351d1-3ad3-42c1-9379-1d09733e02ae)||
+|[Log In](https://remote-forge-production-9d9d5aefbaa0.herokuapp.com/accounts/login/)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-production-9d9d5aefbaa0.herokuapp.com%2Faccounts%2Flogin%2F)||
+|[Sign Up Talent](https://remote-forge-production-9d9d5aefbaa0.herokuapp.com/accounts/signup/)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-production-9d9d5aefbaa0.herokuapp.com%2Faccounts%2Fsignup%2F)||
+|[Sign Up Employer](https://remote-forge-production-9d9d5aefbaa0.herokuapp.com/accounts/signup/employer/)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-production-9d9d5aefbaa0.herokuapp.com%2Faccounts%2Fsignup%2Femployer%2F)||
+|403 Error|No Errors|No Contrast Errors|No Errors|W3C validated by Direct Input|
+|[404 Error](https://remote-forge-production-9d9d5aefbaa0.herokuapp.com/not-found)|No Errors|No Contrast Errors|No Errors|W3C validated by Direct Input|
+|500 Error|No Errors|No Contrast Errors|No Errors|W3C validated by Direct Input|
 
 
-### 404 Error Page
-
-### HTML Validation
 
 ### CSS Validation
+
+## Automated testing with Pytest
+
+For "Remote Forge," I use pytest, a powerful testing framework for Python, to ensure the reliability and efficiency of my code. Pytest simplifies and enhances the testing process through its use of simple, scalable test cases and a suite of advanced features.
+
+#### Running Tests
+
+To run the tests with pytest, you can use the following command in your terminal. This command will discover and run all the test cases in your project:
+
+`pytest -rP`
+
+For a more detailed report, run:
+
+`pytest --cov --cov-report=html`
 
 ## Further Improvements
 
