@@ -44,3 +44,38 @@
   transform-origin: center;
   transition: all 0.2s ease-in-out;
 }
+
+ul {
+  .nav-item .nav-link {
+    border-bottom: 2px solid transparent;
+  }
+  .nav-item {
+    &.active {
+      .nav-link {
+        color: var(--color-brand-600);
+        border-bottom: 2px solid var(--color-brand-600);
+      }
+    }
+
+    .nav-link {
+      color: var(--color-brand-600);
+
+      &:hover {
+        color: var(--color-brand-400);
+      }
+    }
+  }
+}
+
+.mobile-nav {
+  .navbar-nav {
+    .nav-item {
+      .nav-link {
+        background: var(--color-brand-100);
+        padding: 8px;
+        border-radius: 4px;
+        margin-bottom: 4px;
+      }
+    }
+  }
+}
