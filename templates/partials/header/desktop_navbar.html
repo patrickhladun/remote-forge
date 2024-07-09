@@ -6,7 +6,7 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation-content" aria-controls="navigation-content" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
     <div class="collapse navbar-collapse justify-content-end" id="navigation-content">
       <ul class="navbar-nav align-items-center">
-        {% include './site-links.html' %}
+        {% include './site_links.html' %}
         {% if request.user.is_authenticated %}
           <li class="nav-item bg-red-100 dropdown align-items-center justify-content-center">
             <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-label="avatar">

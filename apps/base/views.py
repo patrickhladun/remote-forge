@@ -199,7 +199,7 @@ def contact_success(request):
 
     data = {"metadata": metadata}
 
-    return render(request, "base/contact-success.html", data)
+    return render(request, "base/contact_success.html", data)
 
 
 def privacy(request):
