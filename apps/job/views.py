@@ -124,6 +124,7 @@ def job_list(request):
         "data": data,
         "jobs_filter_form": jobs_filter_form,
         "keyword": keyword,
+        "location": location,
         "metadata": metadata,
     }
 
