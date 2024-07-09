@@ -21,6 +21,6 @@ def get_uploads_path(instance, filename, path, filename_prefix):
     """
     user_email = instance.user.email.replace("@", "-at-").replace(".", "-dot-")
     timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
-    ext = os.path.splitext(filename)[1]
-    new_filename = f"{filename_prefix}-{user_email}-{timestamp}{ext}"
+    extension = os.path.splitext(filename)[1]
+    new_filename = f"{filename_prefix}-{user_email}-{timestamp}{extension}"
     return os.path.join(path, new_filename)
