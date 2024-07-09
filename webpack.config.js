@@ -1,65 +1,57 @@
-const path = require('path');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
+const path = require("path");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const fs = require("fs");
+
+// Function to clean specific directories
+function cleanDirectories(directories) {
+  directories.forEach((dir) => {
+    const resolvedPath = path.resolve(__dirname, dir);
+    if (fs.existsSync(resolvedPath)) {
+      fs.rmSync(resolvedPath, { recursive: true, force: true });
+    }
+    fs.mkdirSync(resolvedPath, { recursive: true });
+  });
+}
+
+// Clean the directories before building
+cleanDirectories(["static/assets/js", "static/assets/css"]);
 
 module.exports = {
-  mode: 'development',
+  mode: "development",
   entry: {
-    bundle: './src/index.js',
+    bundle: "./src/index.js",
   },
   output: {
-    path: path.resolve(__dirname, 'static'),
-    filename: 'assets/js/[name].js',
-    clean: true,
+    path: path.resolve(__dirname, "static/assets/"),
+    filename: "js/[name].js",
   },
-  devtool: 'source-map',
+  devtool: "source-map",
   module: {
     rules: [
       {
         test: /\.scss$/,
         use: [
           MiniCssExtractPlugin.loader,
-          'css-loader',
-          'postcss-loader',
-          'sass-loader',
+          "css-loader",
+          "postcss-loader",
+          "sass-loader",
         ],
       },
       {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
+          loader: "babel-loader",
           options: {
-            presets: ['@babel/preset-env'],
+            presets: ["@babel/preset-env"],
           },
-        },
-      },
-      {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: 'asset/resource',
-        generator: {
-          filename: 'assets/images/[name][ext]',
         },
       },
     ],
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'assets/css/style.css',
-    }),
-    new CleanWebpackPlugin(),
-    new CopyWebpackPlugin({
-      patterns: [
-        {
-          from: 'src/static',
-          to: './',
-          globOptions: {
-            ignore: ['**/*.!(png|svg|jpg|jpeg|gif|webp|ico|ttf)'],
-          },
-          noErrorOnMissing: true,
-        },
-      ],
+      filename: "css/style.css",
     }),
   ],
 };
