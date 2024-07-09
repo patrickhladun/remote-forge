@@ -25,7 +25,14 @@
 
     <section class="bg-brand-50">
       <div class="container py-5">
+        {% if not data %}
+          <div>
+            <h2 class="text-center">No jobs found matching your criteria.</h2>
+            <p class="text-center">Please try a different keyword or location.</p>
+          </div>
+        {% endif %}
         <div class="d-flex flex-wrap">
+          
           {% for item in data %}
             <a href="{% url 'job' item.job.id %}" class="card p-3 text-decoration-none">
               <div class="d-flex align-items-start">
