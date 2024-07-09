@@ -33,10 +33,37 @@ DETAILS_SCHEMA = {
 
 
 class Job(models.Model):
-    """Model definition for Talent."""
+    """
+    Represents a job listing.
+
+    Attributes:
+        id (UUIDField): The unique identifier for the job, generated
+        automatically.
+        user (ForeignKey): The user who posted the job, linked to the User
+        model.
+        title (CharField): The title of the job.
+        city (CharField): The city where the job is located (optional).
+        country (CharField): The country where the job is located (optional).
+        salary (CharField): The salary for the job (optional).
+        schedule (CharField): The schedule details for the job (optional).
+        details (JSONField): Additional details about the job in JSON format
+        (optional).
+        created_at (DateTimeField): The date and time when the job was created.
+        updated_at (DateTimeField): The date and time when the job was last
+        updated.
+        is_published (BooleanField): Indicates whether the job is published or
+        not.
+
+    Meta:
+        db_table (str): The name of the database table.
+        verbose_name (str): The singular name for the model.
+        verbose_name_plural (str): The plural name for the model.
+    """
 
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    user = models.ForeignKey(User, related_name="jobs", on_delete=models.CASCADE)
+    user = models.ForeignKey(
+        User, related_name="jobs", on_delete=models.CASCADE
+    )
     title = models.CharField(max_length=100)
     city = models.CharField(max_length=56, blank=True, default="")
     country = models.CharField(max_length=56, blank=True, default="")

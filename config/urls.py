@@ -9,6 +9,18 @@ from apps.user.views import employer_signup_view, talent_signup_view
 
 
 def custom_404(request, exception):
+    """
+    Custom 404 error handler.
+
+    Renders a custom 404 error page when a page is not found.
+
+    Args:
+        request (HttpRequest): The HTTP request object.
+        exception (Exception): The exception that triggered the 404 error.
+
+    Returns:
+        HttpResponse: The rendered 404 error page with a 404 status code.
+    """
     return render(request, "404.html", status=404)
 
 

@@ -1,4 +1,18 @@
 def make_metadata(request, page):
+    """
+    Generate metadata for a webpage, including title, meta tags, and link tags.
+
+    Args:
+        request (HttpRequest): The HTTP request object.
+        page (dict): A dictionary containing page metadata information. It
+        should include:
+            - "title": The title of the page.
+            - "meta": A dictionary of meta tags (e.g., description, keywords).
+            - "link": A dictionary of link tags (e.g., canonical).
+
+    Returns:
+        list: A list of HTML metadata tags.
+    """
     site_name = "Remote Forge"
     url = request.build_absolute_uri()
     metadata = []
