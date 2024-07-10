@@ -59,25 +59,16 @@ Welcome to Remote Forge, my creation and your gateway to the world of remote wor
 - [Issues](#issues)
 - [Unresolved Issues](#unresolved-issues)
 - [Resolved Issues](#resolved-issues)
-- [Testing and Validation](#testing-and-validation)
-  - [Testing with Pytest](#testing-with-pytest)
-    - [Running Tests](#running-tests)
-- [Manual Functional testing](#manual-functional-testing)
-  - [Website Header](#website-header)
-  - [Website Footer](#website-footer)
-  - [Home Page](#home-page-1)
-  - [About Page](#about-page-1)
-  - [Contact Page](#contact-page-1)
-  - [Thank You and 404 Error Pages](#thank-you-and-404-error-pages)
-- [Google Page Insights Tests:](#google-page-insights-tests)
-  - [Home Page](#home-page-2)
-  - [About Page](#about-page-2)
-  - [Contact Page](#contact-page-2)
-  - [Thank You Contact Page](#thank-you-contact-page)
-  - [Thank You Newsletter Page](#thank-you-newsletter-page)
-  - [404 Error Page](#404-error-page)
-  - [HTML Validation](#html-validation)
+- [Manual testing](#manual-testing)
+  - [Website Header and Navigation](#website-header-and-navigation)
+  - [Responsive Design Tests](#responsive-design-tests)
+  - [Functionality tests](#functionality-tests)
+    - [Admin Pages](#admin-pages)
+  - [Google Page Insights Tests:](#google-page-insights-tests)
+  - [HTML Validation and Accessibility Testing](#html-validation-and-accessibility-testing)
   - [CSS Validation](#css-validation)
+- [Automated testing with Pytest](#automated-testing-with-pytest)
+    - [Running Tests](#running-tests)
 - [Further Improvements](#further-improvements)
 - [Credits](#credits)
 - [Acknowledgments](#acknowledgments)
@@ -501,62 +492,46 @@ These font choices are integral to the overall user experience, contributing not
 
 ## Resolved Issues
 
-## Testing and Validation
+## Manual testing
 
-### Testing with Pytest
-
-For "Remote Forge," I use pytest, a powerful testing framework for Python, to ensure the reliability and efficiency of my code. Pytest simplifies and enhances the testing process through its use of simple, scalable test cases and a suite of advanced features.
-
-#### Running Tests
-
-To run the tests with pytest, you can use the following command in your terminal. This command will discover and run all the test cases in your project:
-
-`pytest -rP`
-
-For a more detailed report, run:
-
-`pytest --cov --cov-report=html`
-
-## Manual Functional testing
-
-### Website Header
+### Website Header and Navigation
 
 <details><summary>As Visitor - Desktop</summary>
 
-|Test Scenario|Steps to Reproduce|Expected Results|Actual Results|
-|-------------|------------------|----------------|--------------|
-|Logo Link|Click on the website logo|User is redirected to the home page|As expected|
-|Home Link|Click on the Home link|User is redirected to the home page|As expected|
-|About Link|Click on the About link|User is redirected to the About page|As expected|
-|Jobs Link|Click on the Jobs link|User is redirected to the Jobs page|As expected|
-|Talent link|Click on the Talent link|User is redirected to the Talent page|As expected|
-|Employers Link|Click on the Employers link|User is redirected to the Employers page|As expected|
-|Login/Sign In button|Click on the Login/Sign In button|User is redirected to the Login/Sign In page|As expected|
-|Post a Job Button|Click on the Post a Job button|User is redirected to the Post a Job page|As expected|
+| Test Scenario | Steps to Reproduce | Expected Results | Actual Results |
+| --- | --- | --- | --- |
+| Logo Link | Click on the website logo | User is redirected to the home page | As expected |
+| Home Link | Click on the Home link | User is redirected to the home page | As expected |
+| About Link | Click on the About link | User is redirected to the About page | As expected |
+| Jobs Link | Click on the Jobs link | User is redirected to the Jobs page | As expected |
+| Talent link | Click on the Talent link | User is redirected to the Talent page | As expected |
+| Employers Link | Click on the Employers link | User is redirected to the Employers page | As expected |
+| Login/Sign In button | Click on the Login/Sign In button | User is redirected to the Login/Sign In page | As expected |
+| Post a Job Button | Click on the Post a Job button | User is redirected to the Post a Job page | As expected |
 
 </details>
 
 <details><summary>As Visitor - Mobile</summary>
 
-|Test Scenario|Steps to Reproduce|Expected Results|Actual Results|
-|-------------|------------------|----------------|--------------|
-|Menu toggle button|Click on the hamburger menu button|Offcanvas menu should slide in from the right to the left|As expected|
-|Menu close button|Click on the Close button|Offcanvas menu should close by sliding to the right|As expected|
-|Logo Link|Click on the website logo|User is redirected to the home page|As expected|
-|Home Link|Click on the Home link|User is redirected to the home page|As expected|
-|About Link|Click on the About link|User is redirected to the About page|As expected|
-|Jobs Link|Click on the Jobs link|User is redirected to the Jobs page|As expected|
-|Talent link|Click on the Talent link|User is redirected to the Talent page|As expected|
-|Employers Link|Click on the Employers link|User is redirected to the Employers page|As expected|
-|Login/Sign In button|Click on the Login/Sign In button|User is redirected to the Login/Sign In page|As expected|
-|Post a Job Button|Click on the Post a Job button|User is redirected to the Post a Job page|As expected|
+| Test Scenario | Steps to Reproduce | Expected Results | Actual Results |
+| --- | --- | --- | --- |
+| Menu toggle button | Click on the hamburger menu button | Offcanvas menu should slide in from the right to the left | As expected |
+| Menu close button | Click on the Close button | Offcanvas menu should close by sliding to the right | As expected |
+| Logo Link | Click on the website logo | User is redirected to the home page | As expected |
+| Home Link | Click on the Home link | User is redirected to the home page | As expected |
+| About Link | Click on the About link | User is redirected to the About page | As expected |
+| Jobs Link | Click on the Jobs link | User is redirected to the Jobs page | As expected |
+| Talent link | Click on the Talent link | User is redirected to the Talent page | As expected |
+| Employers Link | Click on the Employers link | User is redirected to the Employers page | As expected |
+| Login/Sign In button | Click on the Login/Sign In button | User is redirected to the Login/Sign In page | As expected |
+| Post a Job Button | Click on the Post a Job button | User is redirected to the Post a Job page | As expected |
 
 </details>
 
 <details><summary>As Talent - Desktop</summary>
 
 | Test Scenario | Steps to Reproduce | Expected Results | Actual Results |
-|---------------|--------------------|------------------|----------------|
+| --- | --- | --- | --- |
 | User avatar | User has uploaded a custom avatar | User avatar image is visible | As expected |
 | User default avatar | User did not upload a custom avatar | Default user avatar is used | As expected |
 | User Menu | User clicks on the avatar | Dropdown menu is opened | As expected |
@@ -569,7 +544,7 @@ For a more detailed report, run:
 <details><summary>As Talent - Mobile</summary>
 
 | Test Scenario | Steps to Reproduce | Expected Results | Actual Results |
-|---------------|--------------------|------------------|----------------|
+| --- | --- | --- | --- |
 | User avatar | User has uploaded a custom avatar | User avatar image is visible | As expected |
 | User default avatar | User did not upload a custom avatar | Default user avatar is used | As expected |
 | User Menu | User clicks on the avatar | Offcanvas menu should slide in from the right to the left with user-specific links | As expected |
@@ -582,7 +557,7 @@ For a more detailed report, run:
 <details><summary>As Employer - Desktop</summary>
 
 | Test Scenario | Steps to Reproduce | Expected Results | Actual Results |
-|---------------|--------------------|------------------|----------------|
+| --- | --- | --- | --- |
 | User avatar | User has uploaded a custom avatar | User avatar image is visible | As expected |
 | User default avatar | User did not upload a custom avatar | Default user avatar is used | As expected |
 | User Menu | User clicks on the avatar | Dropdown menu is opened | As expected |
@@ -596,7 +571,7 @@ For a more detailed report, run:
 <details><summary>As Employer - Mobile</summary>
 
 | Test Scenario | Steps to Reproduce | Expected Results | Actual Results |
-|---------------|--------------------|------------------|----------------|
+| --- | --- | --- | --- |
 | User avatar | User has uploaded a custom avatar | User avatar image is visible | As expected |
 | User default avatar | User did not upload a custom avatar | Default user avatar is used | As expected |
 | User Menu | User clicks on the avatar | Offcanvas menu should slide in from the right to the left with user-specific links | As expected |
@@ -607,34 +582,198 @@ For a more detailed report, run:
 
 </details>
 
+### Responsive Design Tests
 
-### Website Footer
+These are manual tests for responsiveness performed in the Chrome browser using the Toggle Device Toolbar. Each device preset listed in the tool was tested to ensure the responsiveness and proper layout of the page elements.
 
-### Home Page
+Test Setup for Responsiveness
 
-### About Page
+1. Load the home page on Chrome.
+2. Launch the Toggle Device Toolbar.
+3. Select each device preset listed and test the responsiveness of the elements.
 
-### Contact Page
+<details><summary>Responsive Design Test Cases</summary>
 
-### Thank You and 404 Error Pages
+| Test Scenario | Steps to Reproduce | Expected Results | Actual Results |
+| --- | --- | --- | --- |
+| Website Header | 1. Load website on Chrome. 2. Test header responsiveness for all device presets listed. | On medium and below devices, mobile navigation is used, and the mobile menu toggle is visible. For above medium, desktop menu is used, and the mobile menu toggle is hidden. | As expected |
+| Home - Hero Section Responsiveness | 1. Load home page on Chrome. 2. Test responsiveness for all device presets listed. | Hero section design changes based on the device width | As expected |
+| Home - How it Works Section | 1. Load home page on Chrome. 2. Test responsiveness for all device presets listed. | Icon text elements should be displayed in a column on small devices | As expected |
+| Home - Featured Cities Section | 1. Load home page on Chrome. 2. Test responsiveness for all device presets listed. | Layout should adapt to the device width, on small devices links should be in a column. | As expected |
+| Home - Our Best Talent | 1. Load home page on Chrome. 2. Test responsiveness for all device presets listed. | Layout should adapt to the device width, on small devices links should be in a column. | As expected |
+| About - Content Section | 1. Load about page on Chrome. 2. Test content section responsiveness for all device presets listed. | Layout should adapt to the device width. Success stories should change to one column on small devices. | As expected |
+| About - Our Best Talent Section | 1. Load about page on Chrome. 2. Test "Our best talent" section responsiveness for all device presets listed. | Layout should adapt to the device width, on small devices links should be in a column. | As expected |
+| Jobs - Jobs List | 1. Load jobs page on Chrome. 2. Test Jobs list section responsiveness for all device presets listed. | Layout should adapt to the device width, on small devices jobs links should be in a column. | As expected |
+| Single Job Page - Hero Section | 1. Load any single job page on Chrome. 2. Test hero section responsiveness for all device presets listed. | Hero section should adapt to the device width. On smaller devices hero header section and details icons items should break to one column | As expected |
+| Single Job Page - Content Section | 1. Load any single job page on Chrome. 2. Test content section responsiveness for all device presets listed. | Content section should adapt to the device width. Other roles section should break to two columns. | As expected |
+| Talents - Talents List | 1. Load talents page on Chrome. 2. Test responsiveness for all device presets listed. | Layout should adapt to the device width, on small devices talents card links should break to one column. | As expected |
+| Single Talent Page - Hero Section | 1. Load any single talent page. 2. Test responsiveness for all device presets listed. | Page hero sections should adapt to the device width and it should break to one column on small devices. | As expected |
+| Single Talent Page - Content Section | 1. Load any single talent page. 2. Test responsiveness for all device presets listed. | Page content sections should adapt to the device width and break to one column where aside (sidebar) section display below main content. | As expected |
+| Employers - Employers List | 1. Load employers page on Chrome. 2. Test responsiveness for all device presets listed. | Layout should adapt to the device width, on small devices employers card links should break to one column. | As expected |
+| Employer Single Page - Hero Section | 1. Load any single employer page on Chrome. 2. Test responsiveness for all device presets listed. | Hero section should adapt to the device width and break to one column on small devices. | As expected |
+| Employer Single Page - Content Section | 1. Load any single employer page on Chrome. 2. Test responsiveness for all device presets listed. | Content section Open Roles should adapt to the device width and break to one column on small devices. | As expected |
 
-## Google Page Insights Tests:
+</details>
 
-### Home Page
+### Functionality tests
 
-### About Page
+<details><summary>Home Page</summary>
 
-### Contact Page
+| Test Scenario | Steps to Reproduce | Expected Results | Actual Results |
+| --- | --- | --- | --- |
+| Submit empty job search form | Without filling the form fields click on search icon. | Jobs page should open and display all available jobs. | As expected |
+| Search for Job by keyword only | 1. Type keyword i.e. "DevOps" in the "Find a job" field. 2. Press search icon. | Jobs page should open and display filtered by keyword results. | As expected |
+| Search for Job by city only | 1. Type city in the "City" field. 2. Press search icon. | Jobs page should open and display filtered results by City. | As expected |
+| Search for Job by Keyword and City | 1. Type keyword and city in the form. 2. Press search icon. | Jobs page should open and display filtered results by the Keyword and the City. | As expected |
+| Featured Cities links | 1. Scroll to the Cities section. 2. Click on the link. | Jobs page should open with selected City as a filter. | As expected |
+| Our best talent links | 1. Scroll to "Our best talent" section. 2. Click on the talent link. | When link is clicked selected Talent profile page should open. | As expected |
+| View all talent button | 1. Scroll to "Our best talent" section. 2. Click on "View all Talent" button. | User should be redirected to talent list page. | As expected |
 
-### Thank You Contact Page
+</details>
 
-### Thank You Newsletter Page
+<details><summary>Contact Page</summary>
 
-### 404 Error Page
+| Test Scenario | Steps to Reproduce | Expected Results | Actual Results |
+| --- | --- | --- | --- |
+| Empty Form | Submit empty form | The Form can't be submitted and Name field "Please fill out this field" validation warning is showing. | As expected |
+| Only Name Field | Submit the form only with Name field | The Form can't be submitted and Email field "Please fill out this field" validation warning is showing. | As expected |
+| Name and Email | Submit the form only with Name and Email fields | The Form can't be submitted and Message field "Please fill out this field" validation warning is showing. | As expected |
+| Email Field | Submit the form with incorrect email | The Form can't be submitted and relevant email validation warnings are displayed. | As expected |
+| All fields filled correctly | Submit correctly filled out form | The form is submitted successfully and email is sent to specified email. | As expected |
 
-### HTML Validation
+</details>
+
+#### Admin Pages
+
+<details><summary>Sign in Page</summary>
+
+| Test Scenario | Steps to Reproduce | Expected Results | Actual Results |
+| --- | --- | --- | --- |
+| Login with wrong details | Try to log in with wrong password or not existing email. | When Sign In button is clicked error is showed "The email address and/or password you specified are not correct." | As expected |
+
+</details>
+
+<details><summary>User Account Page</summary>
+
+| Test Scenario | Steps to Reproduce | Expected Results | Actual Results |
+| --- | --- | --- | --- |
+| Update username | 1. Change Username. 3. Save the form. | Username is updated. | As expected |
+| To short username | 1. Type new Username with less than 4 characters. 3. Save the form. | The error is raised "Username must be at least 4 characters" | As expected |
+| To long username | 1. Type new Username with less than 30 characters. 3. Save the form. | User is unable to type more than 30 character into the field. | As expected |
+| Non alphanumeric characters | 1. Type new Username using non-alphanumeric characters. 3. Save the form. | Error is raised "Username must be alphanumeric" | As expected |
+| Number first | 1. Type new Username with number first. 3. Save the form. | Error is raised "Username must start with a letter" | As expected |
+| Correct email change | 1. Type new correct Email. 3. Save the form. | The form saves the new email and success notification shows up. | As expected |
+| Incorrect email change | 1. Type new incorrect Email. 3. Save the form. | The error is raised "Enter a valid email address" | As expected |
+
+</details>
+
+<details><summary>Talent Sign up Page</summary>
+
+| Test Scenario | Steps to Reproduce | Expected Results | Actual Results |
+| --- | --- | --- | --- |
+| Registration Form wrong email | 1. Fill in the form (email, username, password). 2. Submit the form. | After submitting HTML5 validation is triggered. | As expected |
+| Registration Form existing username | 1. Fill in the form (email, username, password). 2. Submit the form. | After submitting the form error is showed "A user with that username already exists." | As expected |
+| Registration Form existing email | 1. Fill in the form (email, username, password). 2. Submit the form. | After submitting the form error is showed "A user is already registered with this email address." | As expected |
+| Registration Form | 1. Fill in the form (email, username, password). 2. Submit the form. | After successful registration user should be redirected to welcome page with Talent relevant content. | As expected |
+
+</details>
+
+<details><summary>Talent Profile Page</summary>
+
+| Test Scenario | Steps to Reproduce | Expected Results | Actual Results |
+| --- | --- | --- | --- |
+| Saving the form | Click save button under the form. | The form saves the changes and notify the user with popup with the "Profile updated successfully." message. | As expected |
+| Update profile "Is Published" status | Check or uncheck the "Is Published" checkbox. | If the "Is Published" is checked employer profile page will not be listed on the Talent page, home page and about page, when it is checked the Profile will be listed. | As expected |
+| Upload Profile image | Select the image and save the form to upload the profile image. | Image is uploaded and saved. Image is displaying correctly on the employers lists. | As expected |
+| Remove Profile image | Check "clear" checkbox on the profile image and save the form. | The image should be removed from the profile and default images should be used. | As expected |
+| Update First Name field | Change First Name field and save the form. | When form is saved the First Name field should be successfully changed and reflected on the profile page. | As expected |
+| Update Last Name field | Change Last Name field and save the form. | When form is saved the Last Name field should be successfully changed and reflected on the profile page. | As expected |
+| Update Email field | Change Email field and save the form. | When form is saved the Email field should be successfully changed and reflected on the profile page. | As expected |
+| Update Phone field | Change Phone field and save the form. | When form is saved the Phone field should be successfully changed and reflected on the profile page. | As expected |
+| Update Company field | Change Company field and save the form. | When form is saved the Company field should be successfully changed and reflected on the profile page. | As expected |
+| Update About field | Change About field and save the form. | When form is saved the About field should be successfully changed and reflected on the profile page. | As expected |
+| Upload Resume | Select the resume file and save the form to upload the resume. | After saving the form resume is uploaded and Download button is showed on Profile page. | As expected |
+| Upload Resume with unsupported extension | Select the resume file with different extension than (.pdf, .doc, .docx) and save the form to upload the resume. | After the form submission error is displayed "Unsupported file extension. Allowed extensions are: .pdf, .doc, .docx" | As expected |
+| Update Website field | Change Website field and save the form. | When form is saved the Website field should be successfully changed and reflected on the profile page. | As expected |
+| Update City field | Change City field and save the form. | When form is saved the City field should be successfully changed and reflected on the profile page. | As expected |
+| Update Country field | Change Country field and save the form. | When form is saved the Country field should be successfully changed and reflected on the profile page. | As expected |
+| Hide Location Icon | Remove Country and City. | Location icon should be hidden when Country and City fields are empty. | As expected |
+| Add Social Media link | 1. Click on Add Item for Social Media Links. 2. Select social media page from the list. 3. Add url to your social media page. | When the form is saved the social media link is added correctly. | As expected |
+
+</details>
+
+<details><summary>Employer Sign up Page</summary>
+
+| Test Scenario | Steps to Reproduce | Expected Results | Actual Results |
+| --- | --- | --- | --- |
+| Registration Form wrong email | 1. Fill in the form (email, username, password). 2. Submit the form. | After submitting HTML5 validation is triggered. | As expected |
+| Registration Form existing username | 1. Fill in the form (email, username, password). 2. Submit the form. | After submitting the form error is showed "A user with that username already exists." | As expected |
+| Registration Form existing email | 1. Fill in the form (email, username, password). 2. Submit the form. | After submitting the form error is showed "A user is already registered with this email address." | As expected |
+| Registration Form | 1. Fill in the form (email, username, password). 2. Submit the form. | After successful registration user should be redirected to welcome page with Employer relevant content. | As expected |
+
+</details>
+
+<details><summary>Employer Profile Page</summary>
+
+| Test Scenario | Steps to Reproduce | Expected Results | Actual Results |
+| --- | --- | --- | --- |
+| Saving the form | Click save button under the form. | The form saves the changes and notify the user with popup with the "Profile updated successfully." message. | As expected |
+| Update profile "Is Published" status | Check or uncheck the "Is Published" checkbox. | If the "Is Published" is checked employer profile page will not be listed on the Employers page, when it is checked the Profile will be listed. | As expected |
+| Update First Name field | Change First Name field and save the form. | When form is saved the First Name field should be successfully changed and reflected on the profile page. | As expected |
+| Update Last Name field | Change Last Name field and save the form. | When form is saved the Last Name field should be successfully changed and reflected on the profile page. | As expected |
+| Update Email field |
+
+</details>
+
+### Google Page Insights Tests:
+
+### HTML Validation and Accessibility Testing
+
+I conducted comprehensive HTML validation tests using the W3C validator to ensure that all pages adhere to HTML standards. Additionally, I performed accessibility checks to identify and resolve any errors and contrast issues. All pages have successfully passed these tests, ensuring they meet web standards and are accessible to users with disabilities.
+
+Tools used:
+
+- W3C HTML Validator: For validating the HTML structure of each page.
+- Web Accessibility Evaluation tool WAVE: For detecting and fixing accessibility issues.
+
+|Tested Page|Accesibility (WAVE)|Contrast (WAVE)|W3C HTML |Comments|
+|---|---|---|---|---|
+|[Home](https://remote-forge-production-9d9d5aefbaa0.herokuapp.com/)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-production-9d9d5aefbaa0.herokuapp.com%2F)||
+|[About](https://remote-forge-production-9d9d5aefbaa0.herokuapp.com/about/)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-production-9d9d5aefbaa0.herokuapp.com%2Fabout%2F)||
+|[Contact](https://remote-forge-production-9d9d5aefbaa0.herokuapp.com/contact/)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-production-9d9d5aefbaa0.herokuapp.com%2Fcontact%2F)||
+|[Contact Success](https://remote-forge-production-9d9d5aefbaa0.herokuapp.com/contact/success/)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-production-9d9d5aefbaa0.herokuapp.com%2Fcontact%2Fsuccess%2F)||
+|[Privacy Policy](https://remote-forge-production-9d9d5aefbaa0.herokuapp.com/privacy-policy/)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-production-9d9d5aefbaa0.herokuapp.com%2Fprivacy-policy%2F)||
+|[Terms and Conditions](https://remote-forge-production-9d9d5aefbaa0.herokuapp.com/terms-conditions/)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-production-9d9d5aefbaa0.herokuapp.com%2Fterms-conditions%2F)||
+|[Jobs](https://remote-forge-production-9d9d5aefbaa0.herokuapp.com/job-list/)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-production-9d9d5aefbaa0.herokuapp.com%2Fjob-list%2F)||
+|[Single Job](https://remote-forge-production-9d9d5aefbaa0.herokuapp.com/job/8d83b12b-0e13-4a6b-92c1-26a3d7bf92f3)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-production-9d9d5aefbaa0.herokuapp.com%2Fjob%2F8d83b12b-0e13-4a6b-92c1-26a3d7bf92f3)||
+|[Talents](https://remote-forge-production-9d9d5aefbaa0.herokuapp.com/talents/)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-production-9d9d5aefbaa0.herokuapp.com%2Ftalents%2F)||
+|[Single Talent](https://remote-forge-production-9d9d5aefbaa0.herokuapp.com/talent/f40faef6-33f8-4a69-89d2-cf6e173e64c9)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-production-9d9d5aefbaa0.herokuapp.com%2Ftalent%2Ff40faef6-33f8-4a69-89d2-cf6e173e64c9)||
+|[Employers](https://remote-forge-production-9d9d5aefbaa0.herokuapp.com/employers/)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-production-9d9d5aefbaa0.herokuapp.com%2Femployers%2F)||
+|[Single Employer](https://remote-forge-production-9d9d5aefbaa0.herokuapp.com/employer/fd4351d1-3ad3-42c1-9379-1d09733e02ae)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-production-9d9d5aefbaa0.herokuapp.com%2Femployer%2Ffd4351d1-3ad3-42c1-9379-1d09733e02ae)||
+|[Log In](https://remote-forge-production-9d9d5aefbaa0.herokuapp.com/accounts/login/)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-production-9d9d5aefbaa0.herokuapp.com%2Faccounts%2Flogin%2F)||
+|[Sign Up Talent](https://remote-forge-production-9d9d5aefbaa0.herokuapp.com/accounts/signup/)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-production-9d9d5aefbaa0.herokuapp.com%2Faccounts%2Fsignup%2F)||
+|[Sign Up Employer](https://remote-forge-production-9d9d5aefbaa0.herokuapp.com/accounts/signup/employer/)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-production-9d9d5aefbaa0.herokuapp.com%2Faccounts%2Fsignup%2Femployer%2F)||
+|403 Error|No Errors|No Contrast Errors|No Errors|W3C validated by Direct Input|
+|[404 Error](https://remote-forge-production-9d9d5aefbaa0.herokuapp.com/not-found)|No Errors|No Contrast Errors|No Errors|W3C validated by Direct Input|
+|500 Error|No Errors|No Contrast Errors|No Errors|W3C validated by Direct Input|
+
+
 
 ### CSS Validation
+
+## Automated testing with Pytest
+
+For "Remote Forge," I use pytest, a powerful testing framework for Python, to ensure the reliability and efficiency of my code. Pytest simplifies and enhances the testing process through its use of simple, scalable test cases and a suite of advanced features.
+
+#### Running Tests
+
+To run the tests with pytest, you can use the following command in your terminal. This command will discover and run all the test cases in your project:
+
+`pytest -rP`
+
+For a more detailed report, run:
+
+`pytest --cov --cov-report=html`
 
 ## Further Improvements
 

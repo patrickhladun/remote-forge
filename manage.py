@@ -14,11 +14,17 @@ def main():
     """Run administrative tasks."""
 
     if environment == "production":
-        os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings.production")
+        os.environ.setdefault(
+            "DJANGO_SETTINGS_MODULE", "config.settings.production"
+        )
     elif environment == "staging":
-        os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings.staging")
+        os.environ.setdefault(
+            "DJANGO_SETTINGS_MODULE", "config.settings.staging"
+        )
     else:
-        os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings.development")
+        os.environ.setdefault(
+            "DJANGO_SETTINGS_MODULE", "config.settings.development"
+        )
 
     try:
         from django.core.management import execute_from_command_line

@@ -5,8 +5,6 @@ from .common import *
 
 heroku_settings(locals(), staticfiles=False)
 
-print("staging.py")
-
 DEBUG = True
 ALLOWED_HOSTS = [
     "0.0.0.0",
@@ -34,11 +32,6 @@ STATIC_URL = f"https://{AWS_S3_CUSTOM_DOMAIN}/static/"
 MEDIA_URL = f"https://{AWS_S3_CUSTOM_DOMAIN}/media/"
 STATICFILES_LOCATION = "static"
 MEDIAFILES_LOCATION = "media"
-STORAGES = {
-    "default": {
-        "BACKEND": "storages.backends.s3boto3.S3StaticStorage",
-    },
-    "staticfiles": {
-        "BACKEND": "storages.backends.s3boto3.S3StaticStorage",
-    },
-}
+
+DEFAULT_FILE_STORAGE = "config.utils.custom_storages.MediaStorage"
+STATICFILES_STORAGE = "config.utils.custom_storages.StaticStorage"

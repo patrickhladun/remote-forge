@@ -46,6 +46,23 @@ h6 {
   fill: var(--color-brand-500);
 }
 
+a {
+  color: var(--color-brand-600);
+  &:hover {
+    color: var(--color-brand-500);
+  }
+}
+
+a.web-link {
+  @extend .m-0;
+  @extend .ms-1;
+
+  color: var(--color-brand-600);
+  &:hover {
+    color: var(--color-brand-500);
+  }
+}
+
 @media (min-width: 992px) {
   body .container-sm {
     max-width: 768px !important;

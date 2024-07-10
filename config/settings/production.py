@@ -5,14 +5,12 @@ from .common import *
 
 heroku_settings(locals(), staticfiles=False)
 
-print("production.py")
-
 DEBUG = False
 ALLOWED_HOSTS = [
     "0.0.0.0",
     "localhost",
     "127.0.0.1",
-    "remote-forge-production-9d9d5aefbaa0.herokuapp.com",
+    "remote-forge-9d9d5aefbaa0.herokuapp.com",
 ]
 DATABASES = {
     "default": dj_database_url.parse(os.environ.get("DATABASE_URL")),
@@ -34,11 +32,6 @@ STATIC_URL = f"https://{AWS_S3_CUSTOM_DOMAIN}/static/"
 MEDIA_URL = f"https://{AWS_S3_CUSTOM_DOMAIN}/media/"
 STATICFILES_LOCATION = "static"
 MEDIAFILES_LOCATION = "media"
-STORAGES = {
-    "default": {
-        "BACKEND": "storages.backends.s3boto3.S3StaticStorage",
-    },
-    "staticfiles": {
-        "BACKEND": "storages.backends.s3boto3.S3StaticStorage",
-    },
-}
+
+DEFAULT_FILE_STORAGE = "config.utils.custom_storages.MediaStorage"
+STATICFILES_STORAGE = "config.utils.custom_storages.StaticStorage"

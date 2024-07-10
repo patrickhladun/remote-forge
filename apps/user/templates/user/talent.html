@@ -29,6 +29,11 @@
           {% endif %}
         </div>
       </div>
+      {% if user.is_authenticated %}
+      <div class="py-2">
+        <a href="{% url 'profile' %}" class="btn btn-primary">Edit Profile</a>
+      </div>
+      {% endif %}
     </div>
   </section>
 

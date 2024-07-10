@@ -8,10 +8,14 @@ load_dotenv()
 environment = os.getenv("ENVIRONMENT")
 
 if environment == "production":
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings.production")
+    os.environ.setdefault(
+        "DJANGO_SETTINGS_MODULE", "config.settings.production"
+    )
 elif environment == "staging":
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings.staging")
 else:
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings.development")
+    os.environ.setdefault(
+        "DJANGO_SETTINGS_MODULE", "config.settings.development"
+    )
 
 application = get_wsgi_application()

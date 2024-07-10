@@ -1,0 +1,60 @@
+{% load widget_tweaks %}
+
+{% if success %}
+  <div>
+    <p class="alert alert-success">{{ success }}</p>
+  </div>
+{% endif %}
+<form id="profile-form" method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{ form.media }}
+  {% for field in form %}
+    {% if field.field.widget.input_type == 'checkbox' %}
+      <div class="field field__checkbox form-check form-switch">
+        {{ field|add_class:'form-check-input'|attr:'role:switch' }}
+        <label class="form-check-label" for="id_is_published">{{ field.label }}</label>
+        {{ field.errors }}
+      </div>
+    {% elif field.field.widget.input_type == 'file' %}
+      <div class="field field__file">{{ field.label_tag }}
+        {{ field }}
+        {{ field.errors }}</div>
+    {% else %}
+      <div class="field field__text">{{ field.label_tag }}
+        {{ field }}
+        {{ field.errors }}</div>
+    {% endif %}
+  {% endfor %}
+  <button type="submit" class="btn btn-primary">Save Profile</button>
+  <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#clearProfileModal">Clear Profile</button>
+</form>
+
+<!-- Clear Profile Modal -->
+<div class="modal fade" id="clearProfileModal" tabindex="-1" aria-labelledby="clearProfileModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="clearProfileModalLabel">Confirm Clear Profile</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Are you sure you want to clear your profile? This action cannot be undone.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-danger" onclick="clearProfile()">Clear Profile</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function clearProfile() {
+      const form = document.getElementById('profile-form');
+      const input = document.createElement('input');
+      input.type = 'hidden';
+      input.name = 'clear_profile';
+      form.appendChild(input);
+      form.submit();
+  }
+</script>

@@ -1,7 +1,20 @@
 const path = require("path");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CopyWebpackPlugin = require("copy-webpack-plugin");
+const fs = require("fs");
+
+// Function to clean specific directories
+function cleanDirectories(directories) {
+  directories.forEach((dir) => {
+    const resolvedPath = path.resolve(__dirname, dir);
+    if (fs.existsSync(resolvedPath)) {
+      fs.rmSync(resolvedPath, { recursive: true, force: true });
+    }
+    fs.mkdirSync(resolvedPath, { recursive: true });
+  });
+}
+
+// Clean the directories before building
+cleanDirectories(["static/assets/js", "static/assets/css"]);
 
 module.exports = {
   mode: "development",
@@ -9,9 +22,8 @@ module.exports = {
     bundle: "./src/index.js",
   },
   output: {
-    path: path.resolve(__dirname, "static"),
-    filename: "assets/js/[name].js",
-    clean: true,
+    path: path.resolve(__dirname, "static/assets/"),
+    filename: "js/[name].js",
   },
   devtool: "source-map",
   module: {
@@ -35,39 +47,11 @@ module.exports = {
           },
         },
       },
-      {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: "asset/resource",
-        generator: {
-          filename: "assets/images/[name][ext]",
-        },
-      },
     ],
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "assets/css/style.css",
-    }),
-    new CleanWebpackPlugin(),
-    new CopyWebpackPlugin({
-      patterns: [
-        {
-          from: "src/images",
-          to: "assets/images",
-          globOptions: {
-            ignore: ["**/*.!(png|svg|jpg|jpeg|gif|webp)"],
-          },
-          noErrorOnMissing: true,
-        },
-        {
-          from: "src/icons",
-          to: "assets/icons",
-          globOptions: {
-            ignore: ["**/*.!(png|svg|jpg|jpeg|gif|webp)"],
-          },
-          noErrorOnMissing: true,
-        },
-      ],
+      filename: "css/style.css",
     }),
   ],
 };

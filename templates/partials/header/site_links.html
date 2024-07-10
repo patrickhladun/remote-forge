@@ -1,0 +1,12 @@
+<li class="nav-item{% if request.path == '/about/' %} active{% endif %}">
+  <a class="nav-link" aria-label="Link to About Page" href="{% url 'about' %}">About</a>
+</li>
+<li class="nav-item{% if request.path == '/job-list/' %} active{% endif %}">
+  <a class="nav-link" aria-label="Link to Jobs Page" href="{% url 'job-list' %}">Jobs</a>
+</li>
+<li class="nav-item{% if request.path == '/talents/' %} active{% endif %}">
+  <a class="nav-link" aria-label="Link to Talent Page" href="{% url 'talents' %}">Talent</a>
+</li>
+<li class="nav-item{% if request.path == '/employers/' %} active{% endif %}">
+  <a class="nav-link" aria-label="Link to Employers Page" href="{% url 'employers' %}">Employers</a>
+</li>

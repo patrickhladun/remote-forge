@@ -1,7 +1,6 @@
 from django.conf import settings
 from django.core.mail import send_mail
 from django.shortcuts import redirect, render
-from django.template import RequestContext
 from django.urls import reverse
 
 from apps.user.models import Talent
@@ -11,6 +10,21 @@ from .forms import ContactForm, JobSearchForm
 
 
 def home(request):
+    """
+    Renders the home page with a list of published talents and a job search
+    form.
+
+    Retrieves a list of up to 6 published talents and initializes a job search
+    form. If the request contains GET parameters, processes the job search
+    form and redirects to the job list page with the search query.
+
+    Args:
+        request (HttpRequest): The HTTP request object.
+
+    Returns:
+        HttpResponse: The rendered home page with the talents, job search form,
+        and metadata context.
+    """
     talents = Talent.objects.filter(is_published=True)[:6]
     form = JobSearchForm()
 
@@ -19,8 +33,10 @@ def home(request):
         {
             "title": "Home | Find Your Perfect Remote Job",
             "meta": {
-                "description": "Remote Forge is a platform that connects remote talents with remote jobs.",
-                "keywords": "Remote Work, Remote Jobs, Work from Home, Online Jobs, Remote Talents",
+                "description": "Remote Forge is a platform that connects "
+                "remote talents with remote jobs.",
+                "keywords": "Remote Work, Remote Jobs, Work from Home, "
+                "Online Jobs, Remote Talents",
                 "robots": "index, follow",
             },
         },
@@ -48,6 +64,19 @@ def home(request):
 
 
 def about(request):
+    """
+    About page view function. Renders the about page including talents.
+
+    This view fetches the published talents and prepares metadata for the
+    about page. It then renders the "base/about.html" template with the
+    talents.
+
+    Args:
+        request: The HTTP request object.
+
+    Returns:
+        HttpResponse: The rendered about page with talents and metadata.
+    """
     talents = Talent.objects.filter(is_published=True)[:6]
 
     metadata = make_metadata(
@@ -55,8 +84,12 @@ def about(request):
         {
             "title": "About | Your Gateway to Remote Job Opportunities",
             "meta": {
-                "description": "Learn more about Remote Forge, our mission, vision, and the team that makes it all happen. Discover why we're dedicated to providing the best remote job opportunities.",
-                "keywords": "Remote Work, Remote Jobs, Work from Home, Online Jobs",
+                "description": "Learn more about Remote Forge, our mission, "
+                "vision, and the team that makes it all "
+                "happen. Discover why we're dedicated to "
+                "providing the best remote job opportunities.",
+                "keywords": "Remote Work, Remote Jobs, Work from Home, "
+                "Online Jobs",
                 "robots": "index, follow",
             },
         },
@@ -71,13 +104,31 @@ def about(request):
 
 
 def contact(request):
+    """
+    Contact page view function. Renders the contact page with the contact form.
+
+    This view handles the display and submission of the contact form. When the
+    form is submitted via a POST request, it validates the form data, sends a
+    confirmation email to the user, and redirects to the success page.
+
+    Args:
+        request: The HTTP request object.
+
+    Returns:
+        HttpResponse: The rendered contact page with the contact form and
+        metadata.
+    """
     metadata = make_metadata(
         request,
         {
             "title": "Contact Us for Remote Job Inquiries",
             "meta": {
-                "description": "Contact us for any questions or assistance. Our team is here to help. Reach out via email, phone, or use the contact form on this page.",
-                "keywords": "Remote Work, Remote Jobs, Work from Home, Online Jobs",
+                "description": "Contact us for any questions or assistance. "
+                "Our team is here to help. Reach out via "
+                "email, phone, or use the contact form on "
+                "this page.",
+                "keywords": "Remote Work, Remote Jobs, Work from Home, "
+                "Online Jobs",
                 "robots": "index, follow",
             },
         },
@@ -91,10 +142,16 @@ def contact(request):
             from_email = f'"Remote Forge" <{settings.DEFAULT_FROM_EMAIL}>'
             subject = "Thank you for contacting Remote Forge"
 
-            admin_message = "Thank you for reaching out! We have received your message and will get back to you soon."
+            admin_message = (
+                "Thank you for reaching out! We have received "
+                "your message and will get back to you soon."
+            )
             user_message = form.cleaned_data["message"]
 
-            message = f"Dear {name}!\n\n{admin_message}\n\nHere is your email:\n{user_message}\n\nRemote Forge Team\n"
+            message = (
+                f"Dear {name}!\n\n{admin_message}\n\nHere is your "
+                f"email:\n{user_message}\n\nRemote Forge Team\n"
+            )
 
             send_mail(
                 subject,
@@ -117,12 +174,24 @@ def contact(request):
 
 
 def contact_success(request):
+    """
+    Contact form submission success view function. Renders the success page.
+
+    This view handles the display of the contact form submission success page.
+
+    Args:
+        request: The HTTP request object.
+
+    Returns:
+        HttpResponse: The rendered success page with the metadata.
+    """
     metadata = make_metadata(
         request,
         {
             "title": "Contact Form Submission Success",
             "meta": {
-                "description": "Thank you for reaching out! We have received your message and will get back to you soon.",
+                "description": "Thank you for reaching out! We have received "
+                "your message and will get back to you soon.",
                 "robots": "no-index, no-follow",
             },
         },
@@ -130,17 +199,29 @@ def contact_success(request):
 
     data = {"metadata": metadata}
 
-    return render(request, "base/contact-success.html", data)
+    return render(request, "base/contact_success.html", data)
 
 
 def privacy(request):
+    """
+    Privacy policy view function. Renders the privacy policy page.
+
+    Args:
+        request: The HTTP request object.
+
+    Returns:
+        HttpResponse: The rendered privacy policy page with the metadata.
+    """
     metadata = make_metadata(
         request,
         {
             "title": "Privacy Policy | How Remote Forge Protects Your Data",
             "meta": {
-                "description": "Read the Remote Forge Privacy Policy to learn how we protect your personal data and ensure your privacy.",
-                "keywords": "privacy policy, data protection, personal information, user privacy, Remote Forge",
+                "description": "Read the Remote Forge Privacy Policy to "
+                "learn how we protect your personal data and "
+                "ensure your privacy.",
+                "keywords": "privacy policy, data protection, personal "
+                "information, user privacy, Remote Forge",
                 "robots": "index, follow",
             },
         },
@@ -152,13 +233,25 @@ def privacy(request):
 
 
 def terms(request):
+    """
+    Terms and conditions view function. Renders the terms and conditions page.
+
+    Args:
+        request: The HTTP request object.
+
+    Returns:
+        HttpResponse: The rendered terms and conditions page with the metadata.
+    """
     metadata = make_metadata(
         request,
         {
             "title": "Terms and Conditions | Remote Forge User Agreement",
             "meta": {
-                "description": "Review the Remote Forge Terms and Conditions to understand the rules and guidelines for using our services.",
-                "keywords": "terms and conditions, user agreement, terms of service, legal, Remote Forge",
+                "description": "Review the Remote Forge Terms and Conditions "
+                "to understand the rules and guidelines for "
+                "using our services.",
+                "keywords": "terms and conditions, user agreement, terms of "
+                "service, legal, Remote Forge",
                 "robots": "index, follow",
             },
         },

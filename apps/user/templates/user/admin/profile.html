@@ -8,20 +8,27 @@
       </div>
     </section>
 
+
     <section class="bg-brand-50 py-5">
       <div class="container-sm">
         <div class="row">
-          <div class="d-flex justify-content-between align-items-center py-2">
-            <p class="m-0">Update your profile information</p>
-            {% if user.is_authenticated %}
-              {% if profile.is_published == True %}
-                <a href="{% url 'employer' profile.id %}" class="btn btn-primary">View Profile</a>
+          {% if profile_exists %}
+            <div class="d-flex justify-content-between align-items-center py-2">
+              <p class="m-0">Update your profile information</p>
+              {% if user.is_authenticated and profile.is_published %}
+                  <a href="{% url user.user_type profile.id %}" class="btn btn-primary">View Profile</a>
               {% else %}
-                <button class="btn btn-primary" aria-disabled="true" disabled>Publish to View</button>
+                  <button class="btn btn-primary" aria-disabled="true" disabled>Publish to View</button>
               {% endif %}
-            {% endif %}
-          </div>
-          {% include 'partials/forms/form.html' %}
+            </div>
+            {% include 'partials/forms/profile_form.html' %}
+          {% else %}
+            <!-- Create profile button -->
+            <form method="post">
+              {% csrf_token %}
+              <button type="submit" class="btn btn-primary">Create Profile</button>
+          </form>
+          {% endif %}
         </div>
       </div>
     </section>
