@@ -333,20 +333,44 @@ def profile_view(request):
         raise Http404
 
     if request.method == "POST":
-        if profile:
-            form = form_class(request.POST, request.FILES, instance=profile)
-            if form.is_valid():
-                form.save()
-                messages.success(request, "Profile updated successfully.")
+        if "clear_profile" in request.POST:
+            if profile:
+                form = form_class(instance=profile)
+                profile.is_published = False
+                profile.first_name = ""
+                profile.last_name = ""
+                profile.phone = ""
+                profile.city = ""
+                profile.country = ""
+                profile.bio = ""
+                profile.title = ""
+                profile.resume = None
+                profile.website = ""
+                profile.social = None
+                profile.experience = None
+                profile.education = None
+                profile.interests = ""
+                profile.skills = None
+                profile.save()
+                messages.success(request, "Profile cleared successfully.")
+                return redirect("profile")
         else:
-            if request.user.user_type == "talent":
-                profile = Talent.objects.create(user=request.user)
-                form_class = TalentProfileForm
-            elif request.user.user_type == "employer":
-                profile = Employer.objects.create(user=request.user)
-                form_class = EmployerProfileForm
-            messages.success(request, "Profile created successfully.")
-            return redirect("profile")
+            if profile:
+                form = form_class(
+                    request.POST, request.FILES, instance=profile
+                )
+                if form.is_valid():
+                    form.save()
+                    messages.success(request, "Profile updated successfully.")
+            else:
+                if request.user.user_type == "talent":
+                    profile = Talent.objects.create(user=request.user)
+                    form_class = TalentProfileForm
+                elif request.user.user_type == "employer":
+                    profile = Employer.objects.create(user=request.user)
+                    form_class = EmployerProfileForm
+                messages.success(request, "Profile created successfully.")
+                return redirect("profile")
     else:
         form = form_class(instance=profile) if profile else None
 
