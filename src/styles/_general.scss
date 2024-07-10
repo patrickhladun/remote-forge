@@ -15,7 +15,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Josefin Sans', sans-serif !important;
+  font-family: "Josefin Sans", sans-serif !important;
   color: var(--color-brand-700);
 }
 
@@ -47,9 +47,9 @@ h6 {
 }
 
 a {
-  color: var(--color-brand-500);
+  color: var(--color-brand-600);
   &:hover {
-    color: var(--color-brand-400);
+    color: var(--color-brand-500);
   }
 }
 

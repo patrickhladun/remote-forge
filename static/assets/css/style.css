@@ -11942,10 +11942,10 @@ h6,
 }
 
 a {
-  color: var(--color-brand-500);
+  color: var(--color-brand-600);
 }
 a:hover {
-  color: var(--color-brand-400);
+  color: var(--color-brand-500);
 }
 
 a.web-link {
