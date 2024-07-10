@@ -25,10 +25,11 @@ class UserAdmin(admin.ModelAdmin):
     list_display = (
         "email",
         "username",
+        "user_type",
         "date_joined",
         "last_login",
-        "is_admin",
         "is_active",
+        "is_admin",
         "is_staff",
         "is_superuser",
     )
