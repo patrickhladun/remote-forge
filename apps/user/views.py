@@ -336,21 +336,35 @@ def profile_view(request):
         if "clear_profile" in request.POST:
             if profile:
                 form = form_class(instance=profile)
-                profile.is_published = False
-                profile.first_name = ""
-                profile.last_name = ""
-                profile.phone = ""
-                profile.city = ""
-                profile.country = ""
-                profile.bio = ""
-                profile.title = ""
-                profile.resume = None
-                profile.website = ""
-                profile.social = None
-                profile.experience = None
-                profile.education = None
-                profile.interests = ""
-                profile.skills = None
+                if request.user.user_type == "talent":
+                    profile.is_published = False
+                    profile.first_name = ""
+                    profile.last_name = ""
+                    profile.phone = ""
+                    profile.city = ""
+                    profile.country = ""
+                    profile.bio = ""
+                    profile.title = ""
+                    profile.resume = None
+                    profile.website = ""
+                    profile.social = None
+                    profile.experience = None
+                    profile.education = None
+                    profile.interests = ""
+                    profile.skills = None
+                elif request.user.user_type == "employer":
+                    profile.is_published = False
+                    profile.first_name = ""
+                    profile.last_name = ""
+                    profile.email = ""
+                    profile.phone = ""
+                    profile.company = ""
+                    profile.about = ""
+                    profile.image = None
+                    profile.website = ""
+                    profile.city = ""
+                    profile.country = ""
+                    profile.social = None
                 profile.save()
                 messages.success(request, "Profile cleared successfully.")
                 return redirect("profile")
