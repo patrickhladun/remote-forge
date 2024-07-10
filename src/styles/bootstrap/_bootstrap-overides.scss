@@ -13,6 +13,14 @@
   @include button-outline-variant($color-brand-600, $color-brand-50);
 }
 
+.btn-outline-danger {
+  @include button-outline-variant($color-danger-600, $color-neutral-50);
+}
+
+.btn-danger {
+  @include button-variant($color-danger-600, $color-neutral-50);
+}
+
 .card {
   transition: all 0.3s ease;
 

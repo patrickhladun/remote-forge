@@ -8,6 +8,9 @@ $color-brand-600: #537742;
 $color-brand-700: #455e37;
 $color-brand-800: #394c2f;
 $color-neutral-50: #f9f9f9;
+$color-danger-400: #bd4d4d;
+$color-danger-500: #ad2120;
+$color-danger-600: #8a1a1a;
 
 :root {
   --color-brand-50: #{$color-brand-50};
@@ -20,4 +23,7 @@ $color-neutral-50: #f9f9f9;
   --color-brand-700: #{$color-brand-700};
   --color-brand-800: #{$color-brand-800};
   --color-neutral-50: #{$color-neutral-50};
+  --color-danger-400: #{$color-danger-400};
+  --color-danger-500: #{$color-danger-500};
+  --color-danger-600: #{$color-danger-600};
 }
