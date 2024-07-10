@@ -314,29 +314,50 @@ def profile_view(request):
         successful update.
     """
 
+    profile = None
+    form_class = None
+
     if request.user.user_type == "talent":
-        profile = get_object_or_404(Talent, user=request.user)
-        form_class = TalentProfileForm
+        try:
+            profile = Talent.objects.get(user=request.user)
+            form_class = TalentProfileForm
+        except Talent.DoesNotExist:
+            pass
     elif request.user.user_type == "employer":
-        profile = get_object_or_404(Employer, user=request.user)
-        form_class = EmployerProfileForm
+        try:
+            profile = Employer.objects.get(user=request.user)
+            form_class = EmployerProfileForm
+        except Employer.DoesNotExist:
+            pass
     else:
         raise Http404
 
     if request.method == "POST":
-        form = form_class(request.POST, request.FILES, instance=profile)
-        if form.is_valid():
-            form.save()
-            messages.success(request, "Profile updated successfully.")
-            request, "user/admin/profile.html", {
-                "form": form,
-                "profile": profile,
-            }
+        if profile:
+            form = form_class(request.POST, request.FILES, instance=profile)
+            if form.is_valid():
+                form.save()
+                messages.success(request, "Profile updated successfully.")
+        else:
+            if request.user.user_type == "talent":
+                profile = Talent.objects.create(user=request.user)
+                form_class = TalentProfileForm
+            elif request.user.user_type == "employer":
+                profile = Employer.objects.create(user=request.user)
+                form_class = EmployerProfileForm
+            messages.success(request, "Profile created successfully.")
+            return redirect("profile")
     else:
-        form = form_class(instance=profile)
+        form = form_class(instance=profile) if profile else None
 
     return render(
-        request, "user/admin/profile.html", {"form": form, "profile": profile}
+        request,
+        "user/admin/profile.html",
+        {
+            "form": form,
+            "profile": profile,
+            "profile_exists": profile is not None,
+        },
     )
 
 
