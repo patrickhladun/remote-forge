@@ -345,6 +345,7 @@ def profile_view(request):
                     profile.country = ""
                     profile.bio = ""
                     profile.title = ""
+                    profile.image = ""
                     profile.resume = None
                     profile.website = ""
                     profile.social = None
