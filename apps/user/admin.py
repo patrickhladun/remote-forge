@@ -74,7 +74,11 @@ class TalentAdmin(admin.ModelAdmin):
         Returns:
             str: HTML string for the image tag.
         """
-        return mark_safe('<img src="%s" width="28" />' % obj.image.url)
+        if obj.image:
+            return mark_safe('<img src="%s" width="28" />' % obj.image.url)
+        else:
+            default_image_url = "/static/assets/images/avatar.png"
+            return mark_safe('<img src="%s" width="28" />' % default_image_url)
 
     image_display.allow_tags = True
     image_display.short_description = "Image"
@@ -108,7 +112,13 @@ class EmployerAdmin(admin.ModelAdmin):
         search_fields (tuple): Fields to include in the admin search.
     """
 
-    list_display = ("image", "user", "company", "is_published", "created_at")
+    list_display = (
+        "image_display",
+        "user",
+        "company",
+        "is_published",
+        "created_at",
+    )
     search_fields = ("first_name",)
 
     def image_display(self, obj):
@@ -121,10 +131,30 @@ class EmployerAdmin(admin.ModelAdmin):
         Returns:
             str: HTML string for the image tag.
         """
-        return mark_safe('<img src="%s" width="28" />' % obj.image.url)
+        if obj.image:
+            return mark_safe('<img src="%s" width="28" />' % obj.image.url)
+        else:
+            default_image_url = "/static/assets/images/avatar.png"
+            return mark_safe('<img src="%s" width="28" />' % default_image_url)
 
     image_display.allow_tags = True
     image_display.short_description = "Image"
+
+    def employer(self, obj):
+        """
+        Creates a clickable link to the employer's admin change page.
+
+        Args:
+            obj (Employer): The Employer instance.
+
+        Returns:
+            str: HTML string for the link tag.
+        """
+        url = reverse(
+            "admin:%s_%s_change" % (obj._meta.app_label, obj._meta.model_name),
+            args=[obj.id],
+        )
+        return mark_safe('<a href="{}">{}</a>'.format(url, obj.title))
 
 
 admin.site.register(User, UserAdmin)
