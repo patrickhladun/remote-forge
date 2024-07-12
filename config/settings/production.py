@@ -6,12 +6,7 @@ from .common import *
 heroku_settings(locals(), staticfiles=False)
 
 DEBUG = False
-ALLOWED_HOSTS = [
-    "0.0.0.0",
-    "localhost",
-    "127.0.0.1",
-    "remote-forge-9d9d5aefbaa0.herokuapp.com",
-]
+ALLOWED_HOSTS = ["remote-forge-a1aedba3d120.herokuapp.com"]
 DATABASES = {
     "default": dj_database_url.parse(os.environ.get("DATABASE_URL")),
 }
