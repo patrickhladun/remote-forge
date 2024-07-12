@@ -66,6 +66,7 @@ Welcome to Remote Forge, my creation and your gateway to the world of remote wor
     - [Admin Pages](#admin-pages)
   - [Google Page Insights Tests:](#google-page-insights-tests)
   - [HTML Validation and Accessibility Testing](#html-validation-and-accessibility-testing)
+  - [Testing User Pages](#testing-user-pages)
   - [CSS Validation](#css-validation)
 - [Automated testing with Pytest](#automated-testing-with-pytest)
     - [Running Tests](#running-tests)
@@ -738,25 +739,35 @@ Tools used:
 
 |Tested Page|Accesibility (WAVE)|Contrast (WAVE)|W3C HTML |Comments|
 |---|---|---|---|---|
-|[Home](https://remote-forge-production-9d9d5aefbaa0.herokuapp.com/)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-production-9d9d5aefbaa0.herokuapp.com%2F)||
-|[About](https://remote-forge-production-9d9d5aefbaa0.herokuapp.com/about/)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-production-9d9d5aefbaa0.herokuapp.com%2Fabout%2F)||
-|[Contact](https://remote-forge-production-9d9d5aefbaa0.herokuapp.com/contact/)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-production-9d9d5aefbaa0.herokuapp.com%2Fcontact%2F)||
-|[Contact Success](https://remote-forge-production-9d9d5aefbaa0.herokuapp.com/contact/success/)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-production-9d9d5aefbaa0.herokuapp.com%2Fcontact%2Fsuccess%2F)||
-|[Privacy Policy](https://remote-forge-production-9d9d5aefbaa0.herokuapp.com/privacy-policy/)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-production-9d9d5aefbaa0.herokuapp.com%2Fprivacy-policy%2F)||
-|[Terms and Conditions](https://remote-forge-production-9d9d5aefbaa0.herokuapp.com/terms-conditions/)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-production-9d9d5aefbaa0.herokuapp.com%2Fterms-conditions%2F)||
-|[Jobs](https://remote-forge-production-9d9d5aefbaa0.herokuapp.com/job-list/)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-production-9d9d5aefbaa0.herokuapp.com%2Fjob-list%2F)||
-|[Single Job](https://remote-forge-production-9d9d5aefbaa0.herokuapp.com/job/8d83b12b-0e13-4a6b-92c1-26a3d7bf92f3)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-production-9d9d5aefbaa0.herokuapp.com%2Fjob%2F8d83b12b-0e13-4a6b-92c1-26a3d7bf92f3)||
-|[Talents](https://remote-forge-production-9d9d5aefbaa0.herokuapp.com/talents/)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-production-9d9d5aefbaa0.herokuapp.com%2Ftalents%2F)||
-|[Single Talent](https://remote-forge-production-9d9d5aefbaa0.herokuapp.com/talent/f40faef6-33f8-4a69-89d2-cf6e173e64c9)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-production-9d9d5aefbaa0.herokuapp.com%2Ftalent%2Ff40faef6-33f8-4a69-89d2-cf6e173e64c9)||
-|[Employers](https://remote-forge-production-9d9d5aefbaa0.herokuapp.com/employers/)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-production-9d9d5aefbaa0.herokuapp.com%2Femployers%2F)||
-|[Single Employer](https://remote-forge-production-9d9d5aefbaa0.herokuapp.com/employer/fd4351d1-3ad3-42c1-9379-1d09733e02ae)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-production-9d9d5aefbaa0.herokuapp.com%2Femployer%2Ffd4351d1-3ad3-42c1-9379-1d09733e02ae)||
-|[Log In](https://remote-forge-production-9d9d5aefbaa0.herokuapp.com/accounts/login/)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-production-9d9d5aefbaa0.herokuapp.com%2Faccounts%2Flogin%2F)||
-|[Sign Up Talent](https://remote-forge-production-9d9d5aefbaa0.herokuapp.com/accounts/signup/)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-production-9d9d5aefbaa0.herokuapp.com%2Faccounts%2Fsignup%2F)||
-|[Sign Up Employer](https://remote-forge-production-9d9d5aefbaa0.herokuapp.com/accounts/signup/employer/)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-production-9d9d5aefbaa0.herokuapp.com%2Faccounts%2Fsignup%2Femployer%2F)||
-|403 Error|No Errors|No Contrast Errors|No Errors|W3C validated by Direct Input|
-|[404 Error](https://remote-forge-production-9d9d5aefbaa0.herokuapp.com/not-found)|No Errors|No Contrast Errors|No Errors|W3C validated by Direct Input|
-|500 Error|No Errors|No Contrast Errors|No Errors|W3C validated by Direct Input|
+|[Home](https://remote-forge-a1aedba3d120.herokuapp.com/)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-a1aedba3d120.herokuapp.com%2F)||
+|[About](https://remote-forge-a1aedba3d120.herokuapp.com/about/)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-a1aedba3d120.herokuapp.com%2Fabout%2F)||
+|[Contact](https://remote-forge-a1aedba3d120.herokuapp.com/contact/)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-a1aedba3d120.herokuapp.com%2Fcontact%2F)||
+|[Contact Success](https://remote-forge-a1aedba3d120.herokuapp.com/contact/success/)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-a1aedba3d120.herokuapp.com%2Fcontact%2Fsuccess%2F)||
+|[Privacy Policy](https://remote-forge-a1aedba3d120.herokuapp.com/privacy-policy/)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-a1aedba3d120.herokuapp.com%2Fprivacy-policy%2F)||
+|[Terms and Conditions](https://remote-forge-a1aedba3d120.herokuapp.com/terms-conditions/)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-a1aedba3d120.herokuapp.com%2Fterms-conditions%2F)||
+|[Jobs](https://remote-forge-a1aedba3d120.herokuapp.com/job-list/)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-a1aedba3d120.herokuapp.com%2Fjob-list%2F)||
+|[Single Job](https://remote-forge-a1aedba3d120.herokuapp.com/job/8d83b12b-0e13-4a6b-92c1-26a3d7bf92f3)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-a1aedba3d120.herokuapp.com%2Fjob%2F8d83b12b-0e13-4a6b-92c1-26a3d7bf92f3)||
+|[Talents](https://remote-forge-a1aedba3d120.herokuapp.com/talents/)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-a1aedba3d120.herokuapp.com%2Ftalents%2F)||
+|[Single Talent](https://remote-forge-a1aedba3d120.herokuapp.com/talent/f40faef6-33f8-4a69-89d2-cf6e173e64c9)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-a1aedba3d120.herokuapp.com%2Ftalent%2Ff40faef6-33f8-4a69-89d2-cf6e173e64c9)||
+|[Employers](https://remote-forge-a1aedba3d120.herokuapp.com/employers/)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-a1aedba3d120.herokuapp.com%2Femployers%2F)||
+|[Single Employer](https://remote-forge-a1aedba3d120.herokuapp.com/employer/fd4351d1-3ad3-42c1-9379-1d09733e02ae)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-a1aedba3d120.herokuapp.com%2Femployer%2Ffd4351d1-3ad3-42c1-9379-1d09733e02ae)||
+|[Log In](https://remote-forge-a1aedba3d120.herokuapp.com/accounts/login/)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-a1aedba3d120.herokuapp.com%2Faccounts%2Flogin%2F)||
+|[Sign Up Talent](https://remote-forge-a1aedba3d120.herokuapp.com/accounts/signup/talent/)|No Errors|No Contrast Errors|[With Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-a1aedba3d120.herokuapp.com%2Faccounts%2Fsignup%2Ftalent%2F)|I am unable to validate Sign Up Talent template as the errors comes from Allauth App Code|
+|[Sign Up Employer](https://remote-forge-a1aedba3d120.herokuapp.com/accounts/signup/employer/)|No Errors|No Contrast Errors|[With Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-a1aedba3d120.herokuapp.com%2Faccounts%2Fsignup%2Femployer%2F)|I am unable to validate Sign Up Employer template as the errors comes from Allauth App Code|
+|[Password Reset](https://remote-forge-a1aedba3d120.herokuapp.com/accounts/password/reset/)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-a1aedba3d120.herokuapp.com%2Faccounts%2Fpassword%2Freset%2F)||
+|403 Error|No Errors|No Contrast Errors|No Errors - W3C validated by Direct Input||
+|[404 Error](https://remote-forge-a1aedba3d120.herokuapp.com/not-found)|No Errors|No Contrast Errors|No Errors - W3C validated by Direct Input||
+|500 Error|No Errors|No Contrast Errors|No Errors - W3C validated by Direct Input||
 
+### Testing User Pages
+
+|Tested Page|Accesibility (WAVE)|Contrast (WAVE)|W3C HTML |Comments|
+|---|---|---|---|---|
+|[Account](https://remote-forge-a1aedba3d120.herokuapp.com/account/)|No Errors|No Contrast Errors|No Errors - W3C validated by Direct Input||
+|[Profile](https://remote-forge-a1aedba3d120.herokuapp.com/profile/)|With Errors|No Contrast Errors|No Errors - W3C validated by Direct Input|I can't fix the accessibility errors because they're caused by the django-jsonform app output|
+|[My Jobs](https://remote-forge-a1aedba3d120.herokuapp.com/user-job-list/)|No Errors|No Contrast Errors|No Errors - W3C validated by Direct Input||
+|Edit Job|With Errors|No Contrast Errors|No Errors - W3C validated by Direct Input|I can't fix the accessibility errors because they're caused by the django-jsonform app output|
+|[Log out](https://remote-forge-a1aedba3d120.herokuapp.com/accounts/logout/)|No Errors|No Contrast Errors|No Errors - W3C validated by Direct Input||
 
 
 ### CSS Validation
