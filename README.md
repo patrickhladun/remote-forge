@@ -405,6 +405,12 @@ Employers have the capability to create job listings, forming the core interacti
 
 ## Colours Scheme
 
+For my job board website, I chose a green colour scheme. Using green can make the website more inviting and trustworthy, contributing to a positive user experience.
+
+For the project, I use Bootstrap and override Bootstrap's primary and danger buttons with my custom green and red.
+
+![Colour Scheme](./docs/colour-scheme.webp)
+
 ## Fonts
 
 For "Remote Forge," I have carefully selected fonts that align with the aesthetic and functional needs of the platform. Understanding the importance of readability and design harmony, I chose two specific fonts to enhance the user interface.
