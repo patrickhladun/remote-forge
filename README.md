@@ -425,13 +425,27 @@ For "Remote Forge," I have carefully selected fonts that align with the aestheti
 
 These font choices are integral to the overall user experience, contributing not only to the visual impact of the site but also to its functionality and accessibility. By pairing Nunito Sans with Josefin Sans, I aim to create a cohesive and engaging environment that enhances both the aesthetic appeal and the usability of "Remote Forge."
 
-## Visuals
-
 ## Logo
+
+![Logo and Favicon](./docs/logo.webp)
 
 ## Images
 
+### Profile Images
+
+For generating user profile images on Remote Forge, I used the Figma plugin "User Profile - Avatar." This plugin provides high-quality, diverse avatars that enhance the visual appeal and user experience of the platform. This plugin uses images from Pexels and Unsplash, which provide free images for both commercial and non-commercial use.
+
+![Profile Images](./docs/profile-images.webp)
+
+Plugin Licence Page
+
+![Profile Images](./docs/profile-images-licence.webp)
+
 ## Icons
+
+For Remote Forge, I used a combination of custom-designed icons and icons downloaded from Iconmonstr. These icons contribute to the website's visual identity and enhance the user experience.
+
+![Icons](./docs/icons.webp)
 
 ## Pages and Features
 
