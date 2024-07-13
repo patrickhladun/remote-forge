@@ -746,7 +746,27 @@ Test Setup for Responsiveness
 
 </details>
 
-### Google Page Insights Tests:
+### Google PageSpeed Insights Tests:
+
+I tested the website's page performance using Google PageSpeed Insights. While the desktop scores are satisfactory, I am not fully happy with the mobile scores and recognize that there is room for improvement.
+
+- Desktop Scores: The desktop performance scores are satisfactory, indicating good loading times and efficient resource usage.
+- Mobile Scores: The mobile performance scores are lower than expected and need improvement to ensure a better user experience on mobile devices.
+
+| Page | Desktop | Mobile |
+| --- | --- | --- |
+| [Home](https://pagespeed.web.dev/analysis/https-remote-forge-a1aedba3d120-herokuapp-com/usq5ool38z?form_factor=desktop) | 98,100,100,100 | 77,100,100,100 |
+| [About](https://pagespeed.web.dev/analysis/https-remote-forge-a1aedba3d120-herokuapp-com-about/6cj9952sej?form_factor=desktop) | 99,100,100,100 | 85,100,100,100 |
+| [Jobs](https://pagespeed.web.dev/analysis/https-remote-forge-a1aedba3d120-herokuapp-com-job-list/zeh06brkrv?form_factor=desktop) | 90,98,100,100 | 76,98,100,100 |
+| [Single Job](https://pagespeed.web.dev/analysis/https-remote-forge-a1aedba3d120-herokuapp-com-job-8d83b12b-0e13-4a6b-92c1-26a3d7bf92f3/u9g5u82m3z?form_factor=desktop) | 97,100,100,100 | 81,100,100,100 |
+| [Talents](https://pagespeed.web.dev/analysis/https-remote-forge-a1aedba3d120-herokuapp-com-talents/0sijvvjy6x?form_factor=desktop) | 98,98,100,100 | 73,98,100,100 |
+| [Single Talent](https://pagespeed.web.dev/analysis/https-remote-forge-a1aedba3d120-herokuapp-com-talent-f40faef6-33f8-4a69-89d2-cf6e173e64c9/7vuxt0q04s?form_factor=desktop) | 99,95,100,100 | 81,95,100,100 |
+| [Employers](https://pagespeed.web.dev/analysis/https-remote-forge-a1aedba3d120-herokuapp-com-employers/md81bmzr59?form_factor=mobile) | 98,98,100,100 | 77,98,100,100 |
+| [Single Employer](https://pagespeed.web.dev/analysis/https-remote-forge-a1aedba3d120-herokuapp-com-employer-a25eac3e-4b95-41b2-af8d-10f7923f7c20/sc8fnnome1?form_factor=desktop) | 98,100,100,100 | 81,100,100,100 |
+| [Contact](https://pagespeed.web.dev/analysis/https-remote-forge-a1aedba3d120-herokuapp-com-contact/fpqiwo2x0g?form_factor=desktop) | 98,100,100,100 | 87,100,100,100 |
+| [Contact Success]() | 86,100,100,100 | 82,100,100,100 |
+| [Privacy Policy](https://pagespeed.web.dev/analysis/https-remote-forge-a1aedba3d120-herokuapp-com-privacy-policy/6x8wd2p882?form_factor=desktop) | 98,100,100,100 | 79,100,100,100 |
+| [Terms and Conditions](https://pagespeed.web.dev/analysis/https-remote-forge-a1aedba3d120-herokuapp-com-terms-conditions/1xjnwyc4zp?form_factor=desktop) | 98,100,100,100 | 79,100,100,100 |
 
 ### HTML Validation and Accessibility Testing
 
