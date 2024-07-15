@@ -622,7 +622,36 @@ Account page where users can update their email, username, and password.
 
 ## Technology used
 
-- [DB Diagram](https://dbdiagram.io/) - used for Database Design
+### Languages and Libraries
+
+- HTML
+- CSS, SCSS
+- Bootstrap
+- JavaScript
+- Python
+- Django
+
+### Version Control and Collaboration
+
+- GitHub, Git, Git Flow, and GitKraken - used for managing source code and collaboration
+- AWS Bucket - used for storing static and media files
+- VSCode - for code editing and development
+
+### Tooling
+
+- Webpack - used for building CSS and JS bundle files
+- Pytest - used for automated testing
+
+### Design Tools
+
+- Figma - used for wireframing and mockups
+- User Profile | Avatar - used for profile images
+- Adobe Illustrator - used for designing logos and icons
+- DB Diagram - used for database design
+
+### Other
+
+- ChatGPT, Gemini - Used for content creation
 
 ## Development and Deployment
 
