@@ -655,11 +655,122 @@ Account page where users can update their email, username, and password.
 
 ## Development and Deployment
 
-## Issues
+[Back to Top](#table-of-contents)
 
-## Unresolved Issues
+### Cloning the project
 
-## Resolved Issues
+[Back to Top](#table-of-contents)
+
+1. Install Git: If you haven't already installed Git on your computer, download and install it from the Git website. Follow the installation instructions for your operating system.
+2. Create project folder `mkdir remote-forge`
+3. Change to the project directory `cd remote-forge`
+4. Clone the repository `git clone https://github.com/patrickhladun/remote-forge.git .`
+
+### Environment Settings
+
+Remote Forge uses three environments: Development, Staging, and Production.
+
+#### Development
+
+For local development, Django uses SQLite3 for simplicity and ease of setup. The development settings are optimized for debugging and rapid iteration.
+
+#### Staging and Production
+
+Both staging and production environments use Heroku with the Gunicorn server, PostgreSQL as the database, and AWS for storing static and media files. For sending emails, the project uses Gmail's SMTP server. The staging setup mimics the production environment to ensure smooth transitions and accurate testing.
+
+#### Environment Variables Template
+
+Here is the template for environment variables that need to be set for server deployment:
+
+```
+ENVIRONMENT=
+SECRET_KEY=
+DATABASE_URL=
+AWS_ACCESS_KEY_ID=
+AWS_SECRET_ACCESS_KEY=
+GMAIL_EMAIL=
+GMAIL_PASS=
+```
+
+### Local Development
+
+To run the project locally for development, follow these steps:
+
+1. [Clone the Project:](#cloning-the-project)
+
+2. **Set Up the Database:**
+
+   - The project is set to use SQLite3 locally. Run the following command to create the database:
+     ```
+     python manage.py migrate
+     ```
+
+3. **Run the Project Locally:**
+
+   - Start the Django development server:
+     ```
+     python manage.py runserver
+     ```
+
+4. **Edit Styling and JavaScript:**
+
+   - Install the required npm packages:
+
+     ```
+     npm install
+     ```
+
+   - For development, run:
+
+     ```
+     npm run dev
+     ```
+
+   - To output minimized CSS and JS bundle files for production, run:
+     ```
+     npm run build
+     ```
+
+### Deployment on Heroku
+
+[Back to Top](#table-of-contents)
+
+To deploy Remote Forge on Heroku, follow these steps:
+
+1. Create a Heroku Account: at [sign up here](https://signup.heroku.com/).
+
+2. Create a New App:
+
+   - Once logged in, click on "Create New App."
+   - Enter a unique app name and select the region closest to your users.
+
+3. Select Buildpacks:
+
+   - Add `nodejs` and `python` as the buildpacks in the "Settings" tab.
+
+4. Configure Environment Variables:
+
+   - In the "Settings" tab, click on "Reveal Config Vars."
+   - Input all the required hidden variables - [variables template](#environment-variables-template)
+
+5. Connect to GitHub and Deploy:
+   - In the "Deploy" tab, select "GitHub" as the deployment method.
+   - Connect your GitHub account and find the desired repository.
+   - Enable automatic deploys and select the main branch.
+   - click "Deploy Branch."
+
+Your app should now be deployed and accessible on Heroku.
+
+### Page Performance
+
+I tested the website's page performance using Google PageSpeed Insights. While the desktop scores are satisfactory, I am not fully happy with the mobile scores and recognize that there is room for improvement.
+
+#### Google PageSpeed Insights
+
+- **Desktop Scores:** The desktop performance scores are satisfactory, indicating good loading times and efficient resource usage.
+- **Mobile Scores:** The mobile performance scores are lower than expected and need improvement to ensure a better user experience on mobile devices.
+
+I will continue to optimize the mobile performance to enhance loading times and overall user experience for mobile users.
 
 ## Manual testing
 
