@@ -57,9 +57,9 @@ a.web-link {
   @extend .m-0;
   @extend .ms-1;
 
-  color: var(--color-brand-600);
+  color: var(--color-brand-700);
   &:hover {
-    color: var(--color-brand-500);
+    color: var(--color-brand-600);
   }
 }
 

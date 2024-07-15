@@ -5,13 +5,13 @@
     "fields": {
       "email": "aoife.ryan@example.com",
       "username": "aoife_ryan",
-      "password": "pbkdf2_sha256$720000$d9nahLFNnDl5Yr9A3ewMgx$igf567La3i6LuPJRwaGH05bRs8CHgq8os+4nYh/PbdQ=",
+      "password": "pbkdf2_sha256$720000$hyx9oqMdx1PnBOItZBfquq$UUAVwy+MZCS+1Yh9Ezrx2d7zIBYTjVQAIRbKr3Z61KM=",
       "is_admin": false,
       "is_active": true,
       "is_staff": false,
       "is_superuser": false,
-      "date_joined": "2023-07-20 10:00:00.000000",
-      "last_login": "2023-07-25 14:45:00.000000",
+      "date_joined": "2023-07-20T00:00:00Z",
+      "last_login": "2023-07-25T00:00:00Z",
       "user_type": "employer"
     }
   },
@@ -31,8 +31,8 @@
       "city": "Dublin",
       "country": "Ireland",
       "social": [{ "site": "Twitter", "url": "https://twitter.com" }],
-      "created_at": "2023-07-20 10:00:00.000000",
-      "updated_at": "2023-07-20 10:00:00.000000",
+      "created_at": "2023-07-20T00:00:00Z",
+      "updated_at": "2023-07-20T00:00:00Z",
       "is_published": true
     }
   },
@@ -43,13 +43,13 @@
     "fields": {
       "email": "liam.obrien@example.com",
       "username": "liam_obrien",
-      "password": "pbkdf2_sha256$720000$d9nahLFNnDl5Yr9A3ewMgx$igf567La3i6LuPJRwaGH05bRs8CHgq8os+4nYh/PbdQ=",
+      "password": "pbkdf2_sha256$720000$hyx9oqMdx1PnBOItZBfquq$UUAVwy+MZCS+1Yh9Ezrx2d7zIBYTjVQAIRbKr3Z61KM=",
       "is_admin": false,
       "is_active": true,
       "is_staff": false,
       "is_superuser": false,
-      "date_joined": "2023-07-20 10:00:00.000000",
-      "last_login": "2023-07-25 14:45:00.000000",
+      "date_joined": "2023-07-20T00:00:00Z",
+      "last_login": "2023-07-25T00:00:00Z",
       "user_type": "employer"
     }
   },
@@ -69,8 +69,8 @@
       "city": "Dublin",
       "country": "Ireland",
       "social": [{ "site": "Twitter", "url": "https://twitter.com" }],
-      "created_at": "2023-07-20 10:00:00.000000",
-      "updated_at": "2023-07-20 10:00:00.000000",
+      "created_at": "2023-07-20T00:00:00Z",
+      "updated_at": "2023-07-20T00:00:00Z",
       "is_published": true
     }
   },
@@ -81,13 +81,13 @@
     "fields": {
       "email": "juha.korhonen@example.com",
       "username": "juha_korhonen",
-      "password": "pbkdf2_sha256$720000$d9nahLFNnDl5Yr9A3ewMgx$igf567La3i6LuPJRwaGH05bRs8CHgq8os+4nYh/PbdQ=",
+      "password": "pbkdf2_sha256$720000$hyx9oqMdx1PnBOItZBfquq$UUAVwy+MZCS+1Yh9Ezrx2d7zIBYTjVQAIRbKr3Z61KM=",
       "is_admin": false,
       "is_active": true,
       "is_staff": false,
       "is_superuser": false,
-      "date_joined": "2023-07-20 10:00:00.000000",
-      "last_login": "2023-07-25 14:45:00.000000",
+      "date_joined": "2023-07-20T00:00:00Z",
+      "last_login": "2023-07-25T00:00:00Z",
       "user_type": "employer"
     }
   },
@@ -107,8 +107,8 @@
       "city": "Helsinki",
       "country": "Finland",
       "social": [{ "site": "Twitter", "url": "https://twitter.com" }],
-      "created_at": "2023-07-20 10:00:00.000000",
-      "updated_at": "2023-07-20 10:00:00.000000",
+      "created_at": "2023-07-20T00:00:00Z",
+      "updated_at": "2023-07-20T00:00:00Z",
       "is_published": true
     }
   },
@@ -119,13 +119,13 @@
     "fields": {
       "email": "max.mueller@example.com",
       "username": "max_mueller",
-      "password": "pbkdf2_sha256$720000$d9nahLFNnDl5Yr9A3ewMgx$igf567La3i6LuPJRwaGH05bRs8CHgq8os+4nYh/PbdQ=",
+      "password": "pbkdf2_sha256$720000$hyx9oqMdx1PnBOItZBfquq$UUAVwy+MZCS+1Yh9Ezrx2d7zIBYTjVQAIRbKr3Z61KM=",
       "is_admin": false,
       "is_active": true,
       "is_staff": false,
       "is_superuser": false,
-      "date_joined": "2023-07-20 10:00:00.000000",
-      "last_login": "2023-07-25 14:45:00.000000",
+      "date_joined": "2023-07-20T00:00:00Z",
+      "last_login": "2023-07-25T00:00:00Z",
       "user_type": "employer"
     }
   },
@@ -145,8 +145,8 @@
       "city": "Berlin",
       "country": "Germany",
       "social": [{ "site": "Twitter", "url": "https://twitter.com" }],
-      "created_at": "2023-07-20 10:00:00.000000",
-      "updated_at": "2023-07-20 10:00:00.000000",
+      "created_at": "2023-07-20T00:00:00Z",
+      "updated_at": "2023-07-20T00:00:00Z",
       "is_published": true
     }
   },
@@ -162,8 +162,8 @@
       "is_active": true,
       "is_staff": false,
       "is_superuser": false,
-      "date_joined": "2023-07-20 10:00:00.000000",
-      "last_login": "2023-07-25 14:45:00.000000",
+      "date_joined": "2023-07-20T00:00:00Z",
+      "last_login": "2023-07-25T00:00:00Z",
       "user_type": "employer"
     }
   },
@@ -185,8 +185,8 @@
       "social": [
         { "site": "Twitter", "url": "https://twitter.com/leprechaunstechbrew" }
       ],
-      "created_at": "2023-07-20 10:00:00.000000",
-      "updated_at": "2023-07-20 10:00:00.000000",
+      "created_at": "2023-07-20T00:00:00Z",
+      "updated_at": "2023-07-20T00:00:00Z",
       "is_published": true
     }
   },
@@ -197,13 +197,13 @@
     "fields": {
       "email": "niall.sullivan@example.com",
       "username": "niall_sullivan",
-      "password": "pbkdf2_sha256$720000$d9nahLFNnDl5Yr9A3ewMgx$igf567La3i6LuPJRwaGH05bRs8CHgq8os+4nYh/PbdQ=",
+      "password": "pbkdf2_sha256$720000$hyx9oqMdx1PnBOItZBfquq$UUAVwy+MZCS+1Yh9Ezrx2d7zIBYTjVQAIRbKr3Z61KM=",
       "is_admin": false,
       "is_active": true,
       "is_staff": false,
       "is_superuser": false,
-      "date_joined": "2023-07-20 10:00:00.000000",
-      "last_login": "2023-07-25 14:45:00.000000",
+      "date_joined": "2023-07-20T00:00:00Z",
+      "last_login": "2023-07-25T00:00:00Z",
       "user_type": "employer"
     }
   },
@@ -225,8 +225,8 @@
       "social": [
         { "site": "LinkedIn", "url": "https://linkedin.com/company/bookingpro" }
       ],
-      "created_at": "2023-07-20 10:00:00.000000",
-      "updated_at": "2023-07-20 10:00:00.000000",
+      "created_at": "2023-07-20T00:00:00Z",
+      "updated_at": "2023-07-20T00:00:00Z",
       "is_published": true
     }
   },
@@ -237,13 +237,13 @@
     "fields": {
       "email": "jan.kowalski@example.com",
       "username": "jan_kowalski",
-      "password": "pbkdf2_sha256$720000$d9nahLFNnDl5Yr9A3ewMgx$igf567La3i6LuPJRwaGH05bRs8CHgq8os+4nYh/PbdQ=",
+      "password": "pbkdf2_sha256$720000$hyx9oqMdx1PnBOItZBfquq$UUAVwy+MZCS+1Yh9Ezrx2d7zIBYTjVQAIRbKr3Z61KM=",
       "is_admin": false,
       "is_active": true,
       "is_staff": false,
       "is_superuser": false,
-      "date_joined": "2023-07-21 10:00:00.000000",
-      "last_login": "2023-07-26 14:45:00.000000",
+      "date_joined": "2023-07-21T00:00:00Z",
+      "last_login": "2023-07-26T00:00:00Z",
       "user_type": "employer"
     }
   },
@@ -265,8 +265,8 @@
       "social": [
         { "site": "LinkedIn", "url": "https://linkedin.com/company/fittech" }
       ],
-      "created_at": "2023-07-21 10:00:00.000000",
-      "updated_at": "2023-07-21 10:00:00.000000",
+      "created_at": "2023-07-21T00:00:00Z",
+      "updated_at": "2023-07-21T00:00:00Z",
       "is_published": true
     }
   },
@@ -277,13 +277,13 @@
     "fields": {
       "email": "omar.hussein@example.com",
       "username": "omar_hussein",
-      "password": "pbkdf2_sha256$720000$d9nahLFNnDl5Yr9A3ewMgx$igf567La3i6LuPJRwaGH05bRs8CHgq8os+4nYh/PbdQ=",
+      "password": "pbkdf2_sha256$720000$hyx9oqMdx1PnBOItZBfquq$UUAVwy+MZCS+1Yh9Ezrx2d7zIBYTjVQAIRbKr3Z61KM=",
       "is_admin": false,
       "is_active": true,
       "is_staff": false,
       "is_superuser": false,
-      "date_joined": "2022-02-02 10:00:00.000000",
-      "last_login": "2023-07-27 14:45:00.000000",
+      "date_joined": "2022-02-02T00:00:00Z",
+      "last_login": "2023-07-27T00:00:00Z",
       "user_type": "employer"
     }
   },
@@ -308,8 +308,8 @@
           "url": "https://linkedin.com/company/gulfproperty"
         }
       ],
-      "created_at": "2022-02-02 10:00:00.000000",
-      "updated_at": "2023-07-22 10:00:00.000000",
+      "created_at": "2022-02-02T00:00:00Z",
+      "updated_at": "2023-07-22T00:00:00Z",
       "is_published": true
     }
   },
@@ -320,13 +320,13 @@
     "fields": {
       "email": "alex.taylor@example.com",
       "username": "alex_taylor",
-      "password": "pbkdf2_sha256$720000$d9nahLFNnDl5Yr9A3ewMgx$igf567La3i6LuPJRwaGH05bRs8CHgq8os+4nYh/PbdQ=",
+      "password": "pbkdf2_sha256$720000$hyx9oqMdx1PnBOItZBfquq$UUAVwy+MZCS+1Yh9Ezrx2d7zIBYTjVQAIRbKr3Z61KM=",
       "is_admin": false,
       "is_active": true,
       "is_staff": false,
       "is_superuser": false,
-      "date_joined": "2023-07-23 10:00:00.000000",
-      "last_login": "2023-07-28 14:45:00.000000",
+      "date_joined": "2023-07-23T00:00:00Z",
+      "last_login": "2023-07-28T00:00:00Z",
       "user_type": "employer"
     }
   },
@@ -348,8 +348,8 @@
       "social": [
         { "site": "LinkedIn", "url": "https://linkedin.com/company/audiotech" }
       ],
-      "created_at": "2023-07-23 10:00:00.000000",
-      "updated_at": "2023-07-23 10:00:00.000000",
+      "created_at": "2023-07-23T00:00:00Z",
+      "updated_at": "2023-07-23T00:00:00Z",
       "is_published": true
     }
   },
@@ -360,13 +360,13 @@
     "fields": {
       "email": "marta.nowak@example.com",
       "username": "marta_nowak",
-      "password": "pbkdf2_sha256$720000$d9nahLFNnDl5Yr9A3ewMgx$igf567La3i6LuPJRwaGH05bRs8CHgq8os+4nYh/PbdQ=",
+      "password": "pbkdf2_sha256$720000$hyx9oqMdx1PnBOItZBfquq$UUAVwy+MZCS+1Yh9Ezrx2d7zIBYTjVQAIRbKr3Z61KM=",
       "is_admin": false,
       "is_active": true,
       "is_staff": false,
       "is_superuser": false,
-      "date_joined": "2023-07-20 10:00:00.000000",
-      "last_login": "2023-07-25 14:45:00.000000",
+      "date_joined": "2023-07-20T00:00:00Z",
+      "last_login": "2023-07-25T00:00:00Z",
       "user_type": "employer"
     }
   },
@@ -391,8 +391,8 @@
           "url": "https://linkedin.com/company/sportwearpolska"
         }
       ],
-      "created_at": "2023-07-20 10:00:00.000000",
-      "updated_at": "2023-07-20 10:00:00.000000",
+      "created_at": "2023-07-20T00:00:00Z",
+      "updated_at": "2023-07-20T00:00:00Z",
       "is_published": true
     }
   },
@@ -403,13 +403,13 @@
     "fields": {
       "email": "marco.rossi@example.com",
       "username": "marco_rossi",
-      "password": "pbkdf2_sha256$720000$d9nahLFNnDl5Yr9A3ewMgx$igf567La3i6LuPJRwaGH05bRs8CHgq8os+4nYh/PbdQ=",
+      "password": "pbkdf2_sha256$720000$hyx9oqMdx1PnBOItZBfquq$UUAVwy+MZCS+1Yh9Ezrx2d7zIBYTjVQAIRbKr3Z61KM=",
       "is_admin": false,
       "is_active": true,
       "is_staff": false,
       "is_superuser": false,
-      "date_joined": "2023-07-20 10:00:00.000000",
-      "last_login": "2023-07-25 14:45:00.000000",
+      "date_joined": "2023-07-20T00:00:00Z",
+      "last_login": "2023-07-25T00:00:00Z",
       "user_type": "employer"
     }
   },
@@ -431,8 +431,8 @@
       "social": [
         { "site": "LinkedIn", "url": "https://linkedin.com/company/romatravel" }
       ],
-      "created_at": "2023-07-20 10:00:00.000000",
-      "updated_at": "2023-07-20 10:00:00.000000",
+      "created_at": "2023-07-20T00:00:00Z",
+      "updated_at": "2023-07-20T00:00:00Z",
       "is_published": true
     }
   },
@@ -443,13 +443,13 @@
     "fields": {
       "email": "lisa.nilsson@example.com",
       "username": "lisa_nilsson",
-      "password": "pbkdf2_sha256$720000$d9nahLFNnDl5Yr9A3ewMgx$igf567La3i6LuPJRwaGH05bRs8CHgq8os+4nYh/PbdQ=",
+      "password": "pbkdf2_sha256$720000$hyx9oqMdx1PnBOItZBfquq$UUAVwy+MZCS+1Yh9Ezrx2d7zIBYTjVQAIRbKr3Z61KM=",
       "is_admin": false,
       "is_active": true,
       "is_staff": false,
       "is_superuser": false,
-      "date_joined": "2023-07-20 10:00:00.000000",
-      "last_login": "2023-07-25 14:45:00.000000",
+      "date_joined": "2023-07-20T00:00:00Z",
+      "last_login": "2023-07-25T00:00:00Z",
       "user_type": "employer"
     }
   },
@@ -471,8 +471,8 @@
       "social": [
         { "site": "LinkedIn", "url": "https://linkedin.com/company/taskmaster" }
       ],
-      "created_at": "2023-07-20 10:00:00.000000",
-      "updated_at": "2023-07-20 10:00:00.000000",
+      "created_at": "2023-07-20T00:00:00Z",
+      "updated_at": "2023-07-20T00:00:00Z",
       "is_published": true
     }
   }

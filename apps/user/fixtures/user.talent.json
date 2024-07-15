@@ -5,13 +5,13 @@
     "fields": {
       "email": "alex.johnson@example.com",
       "username": "alex_johnson",
-      "password": "pbkdf2_sha256$720000$d9nahLFNnDl5Yr9A3ewMgx$igf567La3i6LuPJRwaGH05bRs8CHgq8os+4nYh/PbdQ=",
+      "password": "pbkdf2_sha256$720000$hyx9oqMdx1PnBOItZBfquq$UUAVwy+MZCS+1Yh9Ezrx2d7zIBYTjVQAIRbKr3Z61KM=",
       "is_admin": false,
       "is_active": true,
       "is_staff": false,
       "is_superuser": false,
-      "date_joined": "2023-08-20 15:30:45.123456",
-      "last_login": "2023-08-25 10:20:30.654321",
+      "date_joined": "2023-08-20T00:00:00Z",
+      "last_login": "2023-08-25T00:00:00Z",
       "user_type": "talent"
     }
   },
@@ -90,8 +90,8 @@
       ],
       "interests": "Open Source Projects, Cloud Computing, Machine Learning",
       "skills": ["JavaScript", "HTML", "CSS", "Python"],
-      "created_at": "2023-08-20 15:30:45.123456",
-      "updated_at": "2023-08-25 10:20:30.654321",
+      "created_at": "2023-08-20T00:00:00Z",
+      "updated_at": "2023-08-25T00:00:00Z",
       "is_published": true
     }
   },
@@ -102,13 +102,13 @@
     "fields": {
       "email": "adam.kowalski@example.com",
       "username": "adam_kowalski",
-      "password": "pbkdf2_sha256$720000$d9nahLFNnDl5Yr9A3ewMgx$igf567La3i6LuPJRwaGH05bRs8CHgq8os+4nYh/PbdQ=",
+      "password": "pbkdf2_sha256$720000$hyx9oqMdx1PnBOItZBfquq$UUAVwy+MZCS+1Yh9Ezrx2d7zIBYTjVQAIRbKr3Z61KM=",
       "is_admin": false,
       "is_active": true,
       "is_staff": false,
       "is_superuser": false,
-      "date_joined": "2023-11-15 08:00:00.000000",
-      "last_login": "2023-11-20 10:30:00.000000",
+      "date_joined": "2023-11-15T00:00:00Z",
+      "last_login": "2023-11-20T00:00:00Z",
       "user_type": "talent"
     }
   },
@@ -195,8 +195,8 @@
       ],
       "interests": "Web Development, UI/UX Design, Open Source Projects",
       "skills": ["HTML", "CSS", "JavaScript", "React"],
-      "created_at": "2023-11-15 08:00:00.000000",
-      "updated_at": "2023-11-20 10:30:00.000000",
+      "created_at": "2023-11-15T00:00:00Z",
+      "updated_at": "2023-11-20T00:00:00Z",
       "is_published": true
     }
   },
@@ -207,13 +207,13 @@
     "fields": {
       "email": "sarah.smith@example.com",
       "username": "sarah_smith",
-      "password": "pbkdf2_sha256$720000$d9nahLFNnDl5Yr9A3ewMgx$igf567La3i6LuPJRwaGH05bRs8CHgq8os+4nYh/PbdQ=",
+      "password": "pbkdf2_sha256$720000$hyx9oqMdx1PnBOItZBfquq$UUAVwy+MZCS+1Yh9Ezrx2d7zIBYTjVQAIRbKr3Z61KM=",
       "is_admin": false,
       "is_active": true,
       "is_staff": false,
       "is_superuser": false,
-      "date_joined": "2023-09-10 12:00:00.000000",
-      "last_login": "2023-09-15 15:30:00.000000",
+      "date_joined": "2023-09-10T00:00:00Z",
+      "last_login": "2023-09-15T00:00:00Z",
       "user_type": "talent"
     }
   },
@@ -288,8 +288,8 @@
       ],
       "interests": "Financial Analysis, Budgeting, Taxation",
       "skills": ["Accounting", "Financial Reporting", "Auditing"],
-      "created_at": "2023-09-10 12:00:00.000000",
-      "updated_at": "2023-09-15 15:30:00.000000",
+      "created_at": "2023-09-10T00:00:00Z",
+      "updated_at": "2023-09-15T00:00:00Z",
       "is_published": true
     }
   },
@@ -300,13 +300,13 @@
     "fields": {
       "email": "zorg.zenith@marsmail.com",
       "username": "zorg_zenith",
-      "password": "pbkdf2_sha256$720000$d9nahLFNnDl5Yr9A3ewMgx$igf567La3i6LuPJRwaGH05bRs8CHgq8os+4nYh/PbdQ=",
+      "password": "pbkdf2_sha256$720000$hyx9oqMdx1PnBOItZBfquq$UUAVwy+MZCS+1Yh9Ezrx2d7zIBYTjVQAIRbKr3Z61KM=",
       "is_admin": false,
       "is_active": true,
       "is_staff": false,
       "is_superuser": false,
-      "date_joined": "2020-11-18 09:00:00.000000",
-      "last_login": "2023-12-12 10:00:00.000000",
+      "date_joined": "2020-11-18T00:00:00Z",
+      "last_login": "2023-12-12T00:00:00Z",
       "user_type": "talent"
     }
   },
@@ -386,8 +386,8 @@
         "Terraforming Algorithms",
         "Quantum Computing"
       ],
-      "created_at": "2020-11-18 09:00:00.000000",
-      "updated_at": "2023-12-12 10:00:00.000000",
+      "created_at": "2020-11-18T00:00:00Z",
+      "updated_at": "2023-12-12T00:00:00Z",
       "is_published": true
     }
   },
@@ -398,13 +398,13 @@
     "fields": {
       "email": "jing.li@example.com",
       "username": "jing_li",
-      "password": "pbkdf2_sha256$720000$d9nahLFNnDl5Yr9A3ewMgx$igf567La3i6LuPJRwaGH05bRs8CHgq8os+4nYh/PbdQ=",
+      "password": "pbkdf2_sha256$720000$hyx9oqMdx1PnBOItZBfquq$UUAVwy+MZCS+1Yh9Ezrx2d7zIBYTjVQAIRbKr3Z61KM=",
       "is_admin": false,
       "is_active": true,
       "is_staff": false,
       "is_superuser": false,
-      "date_joined": "2023-07-20 10:00:00.000000",
-      "last_login": "2023-07-25 14:45:00.000000",
+      "date_joined": "2023-07-20T00:00:00Z",
+      "last_login": "2023-07-25T00:00:00Z",
       "user_type": "talent"
     }
   },
@@ -475,8 +475,8 @@
       ],
       "interests": "Automation, Cloud Computing, Containerization",
       "skills": ["Docker", "Kubernetes", "Terraform", "Jenkins"],
-      "created_at": "2023-07-20 10:00:00.000000",
-      "updated_at": "2023-07-25 14:45:00.000000",
+      "created_at": "2023-07-20T00:00:00Z",
+      "updated_at": "2023-07-25T00:00:00Z",
       "is_published": true
     }
   },
@@ -487,13 +487,13 @@
     "fields": {
       "email": "marek.novak@example.com",
       "username": "marek_novak",
-      "password": "pbkdf2_sha256$720000$d9nahLFNnDl5Yr9A3ewMgx$igf567La3i6LuPJRwaGH05bRs8CHgq8os+4nYh/PbdQ=",
+      "password": "pbkdf2_sha256$720000$hyx9oqMdx1PnBOItZBfquq$UUAVwy+MZCS+1Yh9Ezrx2d7zIBYTjVQAIRbKr3Z61KM=",
       "is_admin": false,
       "is_active": true,
       "is_staff": false,
       "is_superuser": false,
-      "date_joined": "2023-11-30 10:00:00.000000",
-      "last_login": "2023-12-01 12:00:00.000000",
+      "date_joined": "2023-11-30T00:00:00Z",
+      "last_login": "2023-12-01T00:00:00Z",
       "user_type": "talent"
     }
   },
@@ -580,8 +580,8 @@
       ],
       "interests": "Machine Learning, Cloud Computing, Open Source Contributions",
       "skills": ["Java", "Python", "JavaScript", "Docker"],
-      "created_at": "2023-11-30 10:00:00.000000",
-      "updated_at": "2023-12-01 12:00:00.000000",
+      "created_at": "2023-11-30T00:00:00Z",
+      "updated_at": "2023-12-01T00:00:00Z",
       "is_published": true
     }
   },
@@ -592,13 +592,13 @@
     "fields": {
       "email": "whiskers.cat@example.com",
       "username": "whiskers_cat",
-      "password": "pbkdf2_sha256$720000$d9nahLFNnDl5Yr9A3ewMgx$igf567La3i6LuPJRwaGH05bRs8CHgq8os+4nYh/PbdQ=",
+      "password": "pbkdf2_sha256$720000$hyx9oqMdx1PnBOItZBfquq$UUAVwy+MZCS+1Yh9Ezrx2d7zIBYTjVQAIRbKr3Z61KM=",
       "is_admin": false,
       "is_active": true,
       "is_staff": false,
       "is_superuser": false,
-      "date_joined": "2020-11-20 09:00:00.000000",
-      "last_login": "2023-12-12 10:00:00.000000",
+      "date_joined": "2020-11-20T00:00:00Z",
+      "last_login": "2023-12-12T00:00:00Z",
       "user_type": "talent"
     }
   },
@@ -678,8 +678,8 @@
         "Sunbeam Spotting",
         "Relaxation Techniques"
       ],
-      "created_at": "2020-11-20 09:00:00.000000",
-      "updated_at": "2023-12-12 10:00:00.000000",
+      "created_at": "2020-11-20T00:00:00Z",
+      "updated_at": "2023-12-12T00:00:00Z",
       "is_published": true
     }
   },
@@ -690,13 +690,13 @@
     "fields": {
       "email": "luca.rossi@example.com",
       "username": "luca_rossi",
-      "password": "pbkdf2_sha256$720000$d9nahLFNnDl5Yr9A3ewMgx$igf567La3i6LuPJRwaGH05bRs8CHgq8os+4nYh/PbdQ=",
+      "password": "pbkdf2_sha256$720000$hyx9oqMdx1PnBOItZBfquq$UUAVwy+MZCS+1Yh9Ezrx2d7zIBYTjVQAIRbKr3Z61KM=",
       "is_admin": false,
       "is_active": true,
       "is_staff": false,
       "is_superuser": false,
-      "date_joined": "2023-11-30 11:00:00.000000",
-      "last_login": "2023-12-01 13:00:00.000000",
+      "date_joined": "2023-11-30T00:00:00Z",
+      "last_login": "2023-12-01T00:00:00Z",
       "user_type": "talent"
     }
   },
@@ -783,8 +783,8 @@
       ],
       "interests": "Cloud Computing, Open Source Projects, DevOps",
       "skills": ["Python", "JavaScript", "Go", "AWS"],
-      "created_at": "2023-11-30 11:00:00.000000",
-      "updated_at": "2023-12-01 13:00:00.000000",
+      "created_at": "2023-11-30T00:00:00Z",
+      "updated_at": "2023-12-01T00:00:00Z",
       "is_published": true
     }
   },
@@ -795,13 +795,13 @@
     "fields": {
       "email": "anna.schmidt@example.com",
       "username": "anna_schmidt",
-      "password": "pbkdf2_sha256$720000$d9nahLFNnDl5Yr9A3ewMgx$igf567La3i6LuPJRwaGH05bRs8CHgq8os+4nYh/PbdQ=",
+      "password": "pbkdf2_sha256$720000$hyx9oqMdx1PnBOItZBfquq$UUAVwy+MZCS+1Yh9Ezrx2d7zIBYTjVQAIRbKr3Z61KM=",
       "is_admin": false,
       "is_active": true,
       "is_staff": false,
       "is_superuser": false,
-      "date_joined": "2023-12-01 09:00:00.000000",
-      "last_login": "2023-12-02 11:00:00.000000",
+      "date_joined": "2023-12-01T00:00:00Z",
+      "last_login": "2023-12-02T00:00:00Z",
       "user_type": "talent"
     }
   },
@@ -888,8 +888,8 @@
       ],
       "interests": "User Research, Interaction Design, Usability Testing",
       "skills": ["Adobe XD", "Sketch", "Figma", "User Research"],
-      "created_at": "2023-12-01 09:00:00.000000",
-      "updated_at": "2023-12-02 11:00:00.000000",
+      "created_at": "2023-12-01T00:00:00Z",
+      "updated_at": "2023-12-02T00:00:00Z",
       "is_published": true
     }
   },
@@ -900,13 +900,13 @@
     "fields": {
       "email": "emma.murphy@example.com",
       "username": "emma_murphy",
-      "password": "pbkdf2_sha256$720000$d9nahLFNnDl5Yr9A3ewMgx$igf567La3i6LuPJRwaGH05bRs8CHgq8os+4nYh/PbdQ=",
+      "password": "pbkdf2_sha256$720000$hyx9oqMdx1PnBOItZBfquq$UUAVwy+MZCS+1Yh9Ezrx2d7zIBYTjVQAIRbKr3Z61KM=",
       "is_admin": false,
       "is_active": true,
       "is_staff": false,
       "is_superuser": false,
-      "date_joined": "2023-12-01 10:00:00.000000",
-      "last_login": "2023-12-02 12:00:00.000000",
+      "date_joined": "2023-12-01T00:00:00Z",
+      "last_login": "2023-12-02T00:00:00Z",
       "user_type": "talent"
     }
   },
@@ -994,8 +994,8 @@
         "Talent Sourcing",
         "Employer Branding"
       ],
-      "created_at": "2023-12-01 10:00:00.000000",
-      "updated_at": "2023-12-02 12:00:00.000000",
+      "created_at": "2023-12-01T00:00:00Z",
+      "updated_at": "2023-12-02T00:00:00Z",
       "is_published": true
     }
   },
@@ -1006,13 +1006,13 @@
     "fields": {
       "email": "john.mcdonald@example.com",
       "username": "john_mcdonald",
-      "password": "pbkdf2_sha256$720000$d9nahLFNnDl5Yr9A3ewMgx$igf567La3i6LuPJRwaGH05bRs8CHgq8os+4nYh/PbdQ=",
+      "password": "pbkdf2_sha256$720000$hyx9oqMdx1PnBOItZBfquq$UUAVwy+MZCS+1Yh9Ezrx2d7zIBYTjVQAIRbKr3Z61KM=",
       "is_admin": false,
       "is_active": true,
       "is_staff": false,
       "is_superuser": false,
-      "date_joined": "2023-12-03 09:00:00.000000",
-      "last_login": "2023-12-04 10:00:00.000000",
+      "date_joined": "2023-12-03T00:00:00Z",
+      "last_login": "2023-12-04T00:00:00Z",
       "user_type": "talent"
     }
   },
@@ -1087,8 +1087,8 @@
       ],
       "interests": "SEO, Content Marketing, Social Media Strategy",
       "skills": ["SEO", "Content Marketing", "PPC", "Social Media Management"],
-      "created_at": "2023-12-03 09:00:00.000000",
-      "updated_at": "2023-12-04 10:00:00.000000",
+      "created_at": "2023-12-03T00:00:00Z",
+      "updated_at": "2023-12-04T00:00:00Z",
       "is_published": true
     }
   },
@@ -1099,13 +1099,13 @@
     "fields": {
       "email": "john.doe@example.com",
       "username": "john_doe",
-      "password": "pbkdf2_sha256$720000$d9nahLFNnDl5Yr9A3ewMgx$igf567La3i6LuPJRwaGH05bRs8CHgq8os+4nYh/PbdQ=",
+      "password": "pbkdf2_sha256$720000$hyx9oqMdx1PnBOItZBfquq$UUAVwy+MZCS+1Yh9Ezrx2d7zIBYTjVQAIRbKr3Z61KM=",
       "is_admin": false,
       "is_active": true,
       "is_staff": false,
       "is_superuser": false,
-      "date_joined": "2023-12-05 09:00:00.000000",
-      "last_login": "2023-12-06 10:00:00.000000",
+      "date_joined": "2023-12-05T00:00:00Z",
+      "last_login": "2023-12-06T00:00:00Z",
       "user_type": "talent"
     }
   },
@@ -1192,8 +1192,8 @@
         "Avoiding Work",
         "Perfecting Inactivity"
       ],
-      "created_at": "2023-12-05 09:00:00.000000",
-      "updated_at": "2023-12-06 10:00:00.000000",
+      "created_at": "2023-12-05T00:00:00Z",
+      "updated_at": "2023-12-06T00:00:00Z",
       "is_published": true
     }
   },
@@ -1204,13 +1204,13 @@
     "fields": {
       "email": "jane.smith@example.com",
       "username": "jane_smith",
-      "password": "pbkdf2_sha256$720000$d9nahLFNnDl5Yr9A3ewMgx$igf567La3i6LuPJRwaGH05bRs8CHgq8os+4nYh/PbdQ=",
+      "password": "pbkdf2_sha256$720000$hyx9oqMdx1PnBOItZBfquq$UUAVwy+MZCS+1Yh9Ezrx2d7zIBYTjVQAIRbKr3Z61KM=",
       "is_admin": false,
       "is_active": true,
       "is_staff": false,
       "is_superuser": false,
-      "date_joined": "2023-12-06 09:00:00.000000",
-      "last_login": "2023-12-07 10:00:00.000000",
+      "date_joined": "2023-12-06T00:00:00Z",
+      "last_login": "2023-12-07T00:00:00Z",
       "user_type": "talent"
     }
   },
@@ -1298,8 +1298,8 @@
         "Digital Marketing",
         "Content Creation"
       ],
-      "created_at": "2023-12-06 09:00:00.000000",
-      "updated_at": "2023-12-07 10:00:00.000000",
+      "created_at": "2023-12-06T00:00:00Z",
+      "updated_at": "2023-12-07T00:00:00Z",
       "is_published": true
     }
   },
@@ -1310,13 +1310,13 @@
     "fields": {
       "email": "rex.dog@example.com",
       "username": "rex_dog",
-      "password": "pbkdf2_sha256$720000$d9nahLFNnDl5Yr9A3ewMgx$igf567La3i6LuPJRwaGH05bRs8CHgq8os+4nYh/PbdQ=",
+      "password": "pbkdf2_sha256$720000$hyx9oqMdx1PnBOItZBfquq$UUAVwy+MZCS+1Yh9Ezrx2d7zIBYTjVQAIRbKr3Z61KM=",
       "is_admin": false,
       "is_active": true,
       "is_staff": false,
       "is_superuser": false,
-      "date_joined": "2020-11-22 09:00:00.000000",
-      "last_login": "2023-12-13 10:00:00.000000",
+      "date_joined": "2020-11-22T00:00:00Z",
+      "last_login": "2023-12-13T00:00:00Z",
       "user_type": "talent"
     }
   },
@@ -1391,8 +1391,8 @@
       ],
       "interests": "Chasing Cats, Digging Holes, Playing Fetch",
       "skills": ["Barking", "Guarding", "Sniffing", "Fetching"],
-      "created_at": "2020-11-22 09:00:00.000000",
-      "updated_at": "2023-12-13 10:00:00.000000",
+      "created_at": "2020-11-22T00:00:00Z",
+      "updated_at": "2023-12-13T00:00:00Z",
       "is_published": true
     }
   },
@@ -1403,13 +1403,13 @@
     "fields": {
       "email": "charlie.baker@example.com",
       "username": "charlie_baker",
-      "password": "pbkdf2_sha256$720000$d9nahLFNnDl5Yr9A3ewMgx$igf567La3i6LuPJRwaGH05bRs8CHgq8os+4nYh/PbdQ=",
+      "password": "pbkdf2_sha256$720000$hyx9oqMdx1PnBOItZBfquq$UUAVwy+MZCS+1Yh9Ezrx2d7zIBYTjVQAIRbKr3Z61KM=",
       "is_admin": false,
       "is_active": true,
       "is_staff": false,
       "is_superuser": false,
-      "date_joined": "2023-12-07 09:00:00.000000",
-      "last_login": "2023-12-08 10:00:00.000000",
+      "date_joined": "2023-12-07T00:00:00Z",
+      "last_login": "2023-12-08T00:00:00Z",
       "user_type": "talent"
     }
   },
@@ -1497,8 +1497,8 @@
         "UFO Analysis",
         "Extraterrestrial Communication"
       ],
-      "created_at": "2023-12-07 09:00:00.000000",
-      "updated_at": "2023-12-08 10:00:00.000000",
+      "created_at": "2023-12-07T00:00:00Z",
+      "updated_at": "2023-12-08T00:00:00Z",
       "is_published": true
     }
   },
@@ -1509,13 +1509,13 @@
     "fields": {
       "email": "max.johnson@example.com",
       "username": "max_johnson",
-      "password": "pbkdf2_sha256$720000$d9nahLFNnDl5Yr9A3ewMgx$igf567La3i6LuPJRwaGH05bRs8CHgq8os+4nYh/PbdQ=",
+      "password": "pbkdf2_sha256$720000$hyx9oqMdx1PnBOItZBfquq$UUAVwy+MZCS+1Yh9Ezrx2d7zIBYTjVQAIRbKr3Z61KM=",
       "is_admin": false,
       "is_active": true,
       "is_staff": false,
       "is_superuser": false,
-      "date_joined": "2023-12-09 09:00:00.000000",
-      "last_login": "2023-12-10 10:00:00.000000",
+      "date_joined": "2023-12-09T00:00:00Z",
+      "last_login": "2023-12-10T00:00:00Z",
       "user_type": "talent"
     }
   },
@@ -1595,8 +1595,8 @@
         "Emergency Preparedness",
         "Zombie Defense"
       ],
-      "created_at": "2023-12-09 09:00:00.000000",
-      "updated_at": "2023-12-10 10:00:00.000000",
+      "created_at": "2023-12-09T00:00:00Z",
+      "updated_at": "2023-12-10T00:00:00Z",
       "is_published": true
     }
   },
@@ -1607,13 +1607,13 @@
     "fields": {
       "email": "liam.murphy@example.com",
       "username": "liam_murphy",
-      "password": "pbkdf2_sha256$720000$d9nahLFNnDl5Yr9A3ewMgx$igf567La3i6LuPJRwaGH05bRs8CHgq8os+4nYh/PbdQ=",
+      "password": "pbkdf2_sha256$720000$hyx9oqMdx1PnBOItZBfquq$UUAVwy+MZCS+1Yh9Ezrx2d7zIBYTjVQAIRbKr3Z61KM=",
       "is_admin": false,
       "is_active": true,
       "is_staff": false,
       "is_superuser": false,
-      "date_joined": "2023-12-11 09:00:00.000000",
-      "last_login": "2023-12-12 10:00:00.000000",
+      "date_joined": "2023-12-11T00:00:00Z",
+      "last_login": "2023-12-12T00:00:00Z",
       "user_type": "talent"
     }
   },
@@ -1693,8 +1693,8 @@
         "Email Handling",
         "Data Entry"
       ],
-      "created_at": "2023-12-11 09:00:00.000000",
-      "updated_at": "2023-12-12 10:00:00.000000",
+      "created_at": "2023-12-11T00:00:00Z",
+      "updated_at": "2023-12-12T00:00:00Z",
       "is_published": true
     }
   },
@@ -1705,13 +1705,13 @@
     "fields": {
       "email": "sarah.jones@example.com",
       "username": "sarah_jones",
-      "password": "pbkdf2_sha256$720000$d9nahLFNnDl5Yr9A3ewMgx$igf567La3i6LuPJRwaGH05bRs8CHgq8os+4nYh/PbdQ=",
+      "password": "pbkdf2_sha256$720000$hyx9oqMdx1PnBOItZBfquq$UUAVwy+MZCS+1Yh9Ezrx2d7zIBYTjVQAIRbKr3Z61KM=",
       "is_admin": false,
       "is_active": true,
       "is_staff": false,
       "is_superuser": false,
-      "date_joined": "2023-12-13 09:00:00.000000",
-      "last_login": "2023-12-14 10:00:00.000000",
+      "date_joined": "2023-12-13T00:00:00Z",
+      "last_login": "2023-12-14T00:00:00Z",
       "user_type": "talent"
     }
   },
@@ -1791,8 +1791,8 @@
         "Content Optimization",
         "Web Analytics"
       ],
-      "created_at": "2023-12-13 09:00:00.000000",
-      "updated_at": "2023-12-14 10:00:00.000000",
+      "created_at": "2023-12-13T00:00:00Z",
+      "updated_at": "2023-12-14T00:00:00Z",
       "is_published": true
     }
   },
@@ -1803,13 +1803,13 @@
     "fields": {
       "email": "maricka.sullivan@example.com",
       "username": "maricka_sullivan",
-      "password": "pbkdf2_sha256$720000$d9nahLFNnDl5Yr9A3ewMgx$igf567La3i6LuPJRwaGH05bRs8CHgq8os+4nYh/PbdQ=",
+      "password": "pbkdf2_sha256$720000$hyx9oqMdx1PnBOItZBfquq$UUAVwy+MZCS+1Yh9Ezrx2d7zIBYTjVQAIRbKr3Z61KM=",
       "is_admin": false,
       "is_active": true,
       "is_staff": false,
       "is_superuser": false,
-      "date_joined": "2020-11-10 09:00:00.000000",
-      "last_login": "2023-12-10 10:00:00.000000",
+      "date_joined": "2020-11-10T00:00:00Z",
+      "last_login": "2023-12-10T00:00:00Z",
       "user_type": "talent"
     }
   },
@@ -1884,8 +1884,8 @@
       ],
       "interests": "User Research, Interaction Design, Usability Testing",
       "skills": ["UX Design", "UI Design", "User Research", "Prototyping"],
-      "created_at": "2020-11-10 09:00:00.000000",
-      "updated_at": "2023-12-10 10:00:00.000000",
+      "created_at": "2020-11-10T00:00:00Z",
+      "updated_at": "2023-12-10T00:00:00Z",
       "is_published": true
     }
   },
@@ -1896,13 +1896,13 @@
     "fields": {
       "email": "sean.brennan@example.com",
       "username": "sean_brennan",
-      "password": "pbkdf2_sha256$720000$d9nahLFNnDl5Yr9A3ewMgx$igf567La3i6LuPJRwaGH05bRs8CHgq8os+4nYh/PbdQ=",
+      "password": "pbkdf2_sha256$720000$hyx9oqMdx1PnBOItZBfquq$UUAVwy+MZCS+1Yh9Ezrx2d7zIBYTjVQAIRbKr3Z61KM=",
       "is_admin": false,
       "is_active": true,
       "is_staff": false,
       "is_superuser": false,
-      "date_joined": "2020-11-12 09:00:00.000000",
-      "last_login": "2023-12-11 10:00:00.000000",
+      "date_joined": "2020-11-12T00:00:00Z",
+      "last_login": "2023-12-11T00:00:00Z",
       "user_type": "talent"
     }
   },
@@ -1977,8 +1977,8 @@
       ],
       "interests": "User Research, Interaction Design, Usability Testing",
       "skills": ["UX Design", "UI Design", "User Research", "Prototyping"],
-      "created_at": "2020-11-12 09:00:00.000000",
-      "updated_at": "2023-12-11 10:00:00.000000",
+      "created_at": "2020-11-12T00:00:00Z",
+      "updated_at": "2023-12-11T00:00:00Z",
       "is_published": true
     }
   },
@@ -1989,13 +1989,13 @@
     "fields": {
       "email": "julien.dupont@example.com",
       "username": "julien_dupont",
-      "password": "pbkdf2_sha256$720000$d9nahLFNnDl5Yr9A3ewMgx$igf567La3i6LuPJRwaGH05bRs8CHgq8os+4nYh/PbdQ=",
+      "password": "pbkdf2_sha256$720000$hyx9oqMdx1PnBOItZBfquq$UUAVwy+MZCS+1Yh9Ezrx2d7zIBYTjVQAIRbKr3Z61KM=",
       "is_admin": false,
       "is_active": true,
       "is_staff": false,
       "is_superuser": false,
-      "date_joined": "2020-11-15 09:00:00.000000",
-      "last_login": "2023-12-12 10:00:00.000000",
+      "date_joined": "2020-11-15T00:00:00Z",
+      "last_login": "2023-12-12T00:00:00Z",
       "user_type": "talent"
     }
   },
@@ -2070,8 +2070,8 @@
       ],
       "interests": "Backend Development, Cloud Computing, DevOps",
       "skills": ["Python", "Django", "RESTful APIs", "SQL"],
-      "created_at": "2020-11-15 09:00:00.000000",
-      "updated_at": "2023-12-12 10:00:00.000000",
+      "created_at": "2020-11-15T00:00:00Z",
+      "updated_at": "2023-12-12T00:00:00Z",
       "is_published": true
     }
   },
@@ -2082,13 +2082,13 @@
     "fields": {
       "email": "anna.nowak@example.com",
       "username": "anna_nowak",
-      "password": "pbkdf2_sha256$720000$d9nahLFNnDl5Yr9A3ewMgx$igf567La3i6LuPJRwaGH05bRs8CHgq8os+4nYh/PbdQ=",
+      "password": "pbkdf2_sha256$720000$hyx9oqMdx1PnBOItZBfquq$UUAVwy+MZCS+1Yh9Ezrx2d7zIBYTjVQAIRbKr3Z61KM=",
       "is_admin": false,
       "is_active": true,
       "is_staff": false,
       "is_superuser": false,
-      "date_joined": "2020-11-25 09:00:00.000000",
-      "last_login": "2023-12-13 10:00:00.000000",
+      "date_joined": "2020-11-25T00:00:00Z",
+      "last_login": "2023-12-13T00:00:00Z",
       "user_type": "talent"
     }
   },
@@ -2170,8 +2170,8 @@
         "TypeScript",
         "UI/UX Design"
       ],
-      "created_at": "2020-11-25 09:00:00.000000",
-      "updated_at": "2023-12-13 10:00:00.000000",
+      "created_at": "2020-11-25T00:00:00Z",
+      "updated_at": "2023-12-13T00:00:00Z",
       "is_published": true
     }
   }

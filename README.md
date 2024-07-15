@@ -23,54 +23,43 @@ Welcome to Remote Forge, my creation and your gateway to the world of remote wor
 - [Database Design](#database-design)
 - [Colours Scheme](#colours-scheme)
 - [Fonts](#fonts)
-- [Visuals](#visuals)
 - [Logo](#logo)
 - [Images](#images)
+  - [Profile Images](#profile-images)
 - [Icons](#icons)
 - [Pages and Features](#pages-and-features)
-  - [Front end pages](#front-end-pages)
-    - [Website Header Design](#website-header-design)
-    - [Website Footer Design](#website-footer-design)
-    - [Home Page](#home-page)
-    - [About Page](#about-page)
-    - [Contact Page](#contact-page)
-    - [Jobs List Page](#jobs-list-page)
-    - [Job Single Page](#job-single-page)
-    - [Talent List Page](#talent-list-page)
-    - [Talent Single Page](#talent-single-page)
-    - [Talent Signup Page](#talent-signup-page)
-    - [Employer Signup Page](#employer-signup-page)
-    - [Thank you pages](#thank-you-pages)
-    - [404 Page](#404-page)
-    - [Legal Pages](#legal-pages)
+  - [Front End Pages](#front-end-pages)
   - [Backend (admin) Pages](#backend-admin-pages)
-    - [Talent Dashboard Page](#talent-dashboard-page)
-    - [Talent Account Page](#talent-account-page)
-    - [Talent Profile Edit Page](#talent-profile-edit-page)
-    - [Employer Dashboard Page](#employer-dashboard-page)
-    - [Employer Account Page](#employer-account-page)
-    - [Employer Profile Edit Page](#employer-profile-edit-page)
-    - [Employer Add Job Page](#employer-add-job-page)
-    - [Employer Edit Job Page](#employer-edit-job-page)
-    - [Employer Jobs List Page](#employer-jobs-list-page)
-    - [Employer Applicants List Page](#employer-applicants-list-page)
 - [Technology used](#technology-used)
+  - [Languages and Libraries](#languages-and-libraries)
+  - [Version Control and Collaboration](#version-control-and-collaboration)
+  - [Tooling](#tooling)
+  - [Design Tools](#design-tools)
+  - [Other](#other)
 - [Development and Deployment](#development-and-deployment)
-- [Issues](#issues)
-- [Unresolved Issues](#unresolved-issues)
-- [Resolved Issues](#resolved-issues)
+  - [Cloning the project](#cloning-the-project)
+  - [Environment Settings](#environment-settings)
+    - [Development](#development)
+    - [Staging and Production](#staging-and-production)
+    - [Environment Variables Template](#environment-variables-template)
+  - [Local Development](#local-development)
+  - [Deployment on Heroku](#deployment-on-heroku)
+  - [Page Performance](#page-performance)
+    - [Google PageSpeed Insights](#google-pagespeed-insights)
 - [Manual testing](#manual-testing)
   - [Website Header and Navigation](#website-header-and-navigation)
   - [Responsive Design Tests](#responsive-design-tests)
   - [Functionality tests](#functionality-tests)
     - [Admin Pages](#admin-pages)
-  - [Google Page Insights Tests:](#google-page-insights-tests)
+  - [Google PageSpeed Insights Tests](#google-pagespeed-insights-tests)
   - [HTML Validation and Accessibility Testing](#html-validation-and-accessibility-testing)
   - [Testing User Pages](#testing-user-pages)
   - [CSS Validation](#css-validation)
 - [Automated testing with Pytest](#automated-testing-with-pytest)
-    - [Running Tests](#running-tests)
-- [Further Improvements](#further-improvements)
+  - [Running Tests](#running-tests)
+- [Issues](#issues)
+  - [User Stories](#user-stories)
+  - [Bugs](#bugs)
 - [Credits](#credits)
 - [Acknowledgments](#acknowledgments)
 
@@ -405,6 +394,12 @@ Employers have the capability to create job listings, forming the core interacti
 
 ## Colours Scheme
 
+For my job board website, I chose a green colour scheme. Using green can make the website more inviting and trustworthy, contributing to a positive user experience.
+
+For the project, I use Bootstrap and override Bootstrap's primary and danger buttons with my custom green and red.
+
+![Colour Scheme](./docs/colour-scheme.webp)
+
 ## Fonts
 
 For "Remote Forge," I have carefully selected fonts that align with the aesthetic and functional needs of the platform. Understanding the importance of readability and design harmony, I chose two specific fonts to enhance the user interface.
@@ -419,79 +414,352 @@ For "Remote Forge," I have carefully selected fonts that align with the aestheti
 
 These font choices are integral to the overall user experience, contributing not only to the visual impact of the site but also to its functionality and accessibility. By pairing Nunito Sans with Josefin Sans, I aim to create a cohesive and engaging environment that enhances both the aesthetic appeal and the usability of "Remote Forge."
 
-## Visuals
-
 ## Logo
+
+![Logo and Favicon](./docs/logo.webp)
 
 ## Images
 
+### Profile Images
+
+For generating user profile images on Remote Forge, I used the Figma plugin "User Profile - Avatar." This plugin provides high-quality, diverse avatars that enhance the visual appeal and user experience of the platform. This plugin uses images from Pexels and Unsplash, which provide free images for both commercial and non-commercial use.
+
+![Profile Images](./docs/profile-images.webp)
+
+Plugin Licence Page
+
+![Profile Images](./docs/profile-images-licence.webp)
+
 ## Icons
+
+For Remote Forge, I used a combination of custom-designed icons and icons downloaded from Iconmonstr. These icons contribute to the website's visual identity and enhance the user experience.
+
+![Icons](./docs/icons.webp)
 
 ## Pages and Features
 
-### Front end pages
+### Front End Pages
 
-#### Website Header Design
+<details><summary>Website Header Design</summary>
+</details>
 
-#### Website Footer Design
+<details><summary>Home Page</summary>
 
-#### Home Page
+One of the main features of the site is the search box. Used on the home page, it will redirect to the Job List page with the search criteria. Users can search jobs by keyword and also narrow the search by typing the location city. If there are no results, users are presented with the message: "No jobs found matching your criteria. Please try a different keyword or location."
 
-#### About Page
+![Jobs Search Home](./docs/page-home-search.webp)
 
-#### Contact Page
+Cities is another cool feature on the home page that allows users to quickly filter all jobs by a city.
 
-#### Jobs List Page
+![City Quick Filters](./docs/page-home-cities.webp)
 
-#### Job Single Page
+Recent talent section shows the latest 6 talent items.
 
-#### Talent List Page
+![Recent Talent](./docs/page-home-talent.webp)
 
-#### Talent Single Page
+</details>
 
-#### Talent Signup Page
+<details><summary>About Page</summary>
 
-#### Employer Signup Page
+A simple informational page including the recent talent section.
 
-#### Thank you pages
+![Page About](./docs/page-about.webp)
 
-#### 404 Page
+</details>
 
-#### Legal Pages
+<details><summary>Contact Page</summary>
+
+The contact page includes contact details, social media links, and a contact form.
+
+![Contact Page](./docs/page-contact.webp)
+
+When the form is submitted, users are redirected to the success page.
+
+![Contact Form Success](./docs/page-contact-success.webp)
+
+An email is also sent with a confirmation and the user's email message.
+
+![Email Confirmation](./docs/page-contact-email-confirmation.webp)
+
+</details>
+
+<details><summary>Jobs List Page</summary>
+
+This page lists all jobs and allows users to use the search box to narrow the job results.
+
+![Jobs Page](./docs/page-jobs.webp)
+
+</details>
+
+<details><summary>Single Job Page</summary>
+
+This is a single job page. The top section of the page includes a header section with the job post date, location, schedule, and salary. Default text will display if these fields are not set.
+
+The page also lists other roles posted by this company.
+
+![Single Job Page](./docs/page-single-job.webp)
+
+</details>
+
+<details><summary>Talents Page</summary>
+
+The talents page is a simple list page of all site talents.
+
+![Talents List Page](./docs/page-talents.webp)
+
+</details>
+
+<details><summary>Talent Single Page</summary>
+
+The single talent page is a Talent Profile Page. Profile pages allow logged-in employers to download the talent's CV as a PDF file.
+
+![Single Talent Page](./docs/page-single-talent.webp)
+
+</details>
+
+<details><summary>Talent Sign Up Page</summary>
+
+![Talent Sign Up Page](./docs/page-signup-talent.webp)
+
+</details>
+
+<details><summary>Employer Sign Up Page</summary>
+
+![Employer Sign Up Page](./docs/page-signup-employer.webp)
+
+</details>
+
+<details><summary>Login Page</summary>
+
+![Login Page](./docs/page-login.webp)
+
+</details>
+
+<details><summary>404 Error Page</summary>
+
+![404 Error Page](./docs/page-error-404.webp)
+
+</details>
+
+<details><summary>500 Error Page</summary>
+
+![500 Error Page](./docs/page-error-500.webp)
+
+</details>
+
+<details><summary>Legal Pages</summary>
+
+Privacy Policy
+![Privacy Policy](./docs/page-privacy.webp)
+
+Terms and Conditions
+![Terms of Service](./docs/page-terms.webp)
+
+</details>
 
 ### Backend (admin) Pages
 
-#### Talent Dashboard Page
+<details><summary>Profile Page</summary>
 
-#### Talent Account Page
+There is one profile page for editing the user profile. The view manages which form to display, depending on whether it is for the Employer or Talent Profile.
 
-#### Talent Profile Edit Page
+Talent: ![Talent Profile](./docs/page-profile-talent.webp)
 
-#### Employer Dashboard Page
+Employer: ![Employer Profile](./docs/page-profile-employer.webp)
 
-#### Employer Account Page
+</details>
 
-#### Employer Profile Edit Page
+<details><summary>Employer Jobs List Page</summary>
 
-#### Employer Add Job Page
+A list of jobs created by the employer. On this page, employers can add, edit, or delete jobs.
 
-#### Employer Edit Job Page
+![Jobs List](./docs/page-employer-jobs-list.webp)
 
-#### Employer Jobs List Page
+</details>
 
-#### Employer Applicants List Page
+<details><summary>Employer Job Add Page</summary>
+
+Add job page.
+
+![Add Job](./docs/page-employer-job-add.webp)
+
+</details>
+
+<details><summary>Employer Job Edit Page</summary>
+
+Job edit page.
+
+![Edit Job](./docs/page-employer-job-edit.webp)
+
+</details>
+
+<details><summary>Employer Job Delete Page</summary>
+
+Delete Job modal popup.
+
+![Delete Job](./docs/page-employer-job-delete.webp)
+
+</details>
+
+<details><summary>Account Page</summary>
+
+Account page where users can update their email, username, and password.
+
+![Account](./docs/page-about.webp)
+
+</details>
 
 ## Technology used
 
-- [DB Diagram](https://dbdiagram.io/) - used for Database Design
+### Languages and Libraries
+
+- HTML
+- CSS, SCSS
+- Bootstrap
+- JavaScript
+- Python
+- Django
+
+### Version Control and Collaboration
+
+- GitHub, Git, Git Flow, and GitKraken - used for managing source code and collaboration
+- AWS Bucket - used for storing static and media files
+- VSCode - for code editing and development
+
+### Tooling
+
+- Webpack - used for building CSS and JS bundle files
+- Pytest - used for automated testing
+
+### Design Tools
+
+- Figma - used for wireframing and mockups
+- User Profile | Avatar - used for profile images
+- Adobe Illustrator - used for designing logos and icons
+- DB Diagram - used for database design
+
+### Other
+
+- ChatGPT, Gemini - Used for content creation
 
 ## Development and Deployment
 
-## Issues
+[Back to Top](#table-of-contents)
 
-## Unresolved Issues
+### Cloning the project
 
-## Resolved Issues
+[Back to Top](#table-of-contents)
+
+1. Install Git: If you haven't already installed Git on your computer, download and install it from the Git website. Follow the installation instructions for your operating system.
+2. Create project folder `mkdir remote-forge`
+3. Change to the project directory `cd remote-forge`
+4. Clone the repository `git clone https://github.com/patrickhladun/remote-forge.git .`
+
+### Environment Settings
+
+Remote Forge uses three environments: Development, Staging, and Production.
+
+#### Development
+
+For local development, Django uses SQLite3 for simplicity and ease of setup. The development settings are optimized for debugging and rapid iteration.
+
+#### Staging and Production
+
+Both staging and production environments use Heroku with the Gunicorn server, PostgreSQL as the database, and AWS for storing static and media files. For sending emails, the project uses Gmail's SMTP server. The staging setup mimics the production environment to ensure smooth transitions and accurate testing.
+
+#### Environment Variables Template
+
+Here is the template for environment variables that need to be set for server deployment:
+
+```
+ENVIRONMENT=
+SECRET_KEY=
+DATABASE_URL=
+AWS_ACCESS_KEY_ID=
+AWS_SECRET_ACCESS_KEY=
+GMAIL_EMAIL=
+GMAIL_PASS=
+```
+
+### Local Development
+
+To run the project locally for development, follow these steps:
+
+1. [Clone the Project:](#cloning-the-project)
+
+2. **Set Up the Database:**
+
+   - The project is set to use SQLite3 locally. Run the following command to create the database:
+     ```
+     python manage.py migrate
+     ```
+
+3. **Run the Project Locally:**
+
+   - Start the Django development server:
+     ```
+     python manage.py runserver
+     ```
+
+4. **Edit Styling and JavaScript:**
+
+   - Install the required npm packages:
+
+     ```
+     npm install
+     ```
+
+   - For development, run:
+
+     ```
+     npm run dev
+     ```
+
+   - To output minimized CSS and JS bundle files for production, run:
+     ```
+     npm run build
+     ```
+
+### Deployment on Heroku
+
+[Back to Top](#table-of-contents)
+
+To deploy Remote Forge on Heroku, follow these steps:
+
+1. Create a Heroku Account: at [sign up here](https://signup.heroku.com/).
+
+2. Create a New App:
+
+   - Once logged in, click on "Create New App."
+   - Enter a unique app name and select the region closest to your users.
+
+3. Select Buildpacks:
+
+   - Add `nodejs` and `python` as the buildpacks in the "Settings" tab.
+
+4. Configure Environment Variables:
+
+   - In the "Settings" tab, click on "Reveal Config Vars."
+   - Input all the required hidden variables - [variables template](#environment-variables-template)
+
+5. Connect to GitHub and Deploy:
+   - In the "Deploy" tab, select "GitHub" as the deployment method.
+   - Connect your GitHub account and find the desired repository.
+   - Enable automatic deploys and select the main branch.
+   - click "Deploy Branch."
+
+Your app should now be deployed and accessible on Heroku.
+
+### Page Performance
+
+I tested the website's page performance using Google PageSpeed Insights. While the desktop scores are satisfactory, I am not fully happy with the mobile scores and recognize that there is room for improvement.
+
+#### Google PageSpeed Insights
+
+- **Desktop Scores:** The desktop performance scores are satisfactory, indicating good loading times and efficient resource usage.
+- **Mobile Scores:** The mobile performance scores are lower than expected and need improvement to ensure a better user experience on mobile devices.
+
+I will continue to optimize the mobile performance to enhance loading times and overall user experience for mobile users.
 
 ## Manual testing
 
@@ -726,7 +994,27 @@ Test Setup for Responsiveness
 
 </details>
 
-### Google Page Insights Tests:
+### Google PageSpeed Insights Tests
+
+I tested the website's page performance using Google PageSpeed Insights. While the desktop scores are satisfactory, I am not fully happy with the mobile scores and recognize that there is room for improvement.
+
+- Desktop Scores: The desktop performance scores are satisfactory, indicating good loading times and efficient resource usage.
+- Mobile Scores: The mobile performance scores are lower than expected and need improvement to ensure a better user experience on mobile devices.
+
+| Page | Desktop | Mobile |
+| --- | --- | --- |
+| [Home](https://pagespeed.web.dev/analysis/https-remote-forge-a1aedba3d120-herokuapp-com/usq5ool38z?form_factor=desktop) | 98,100,100,100 | 77,100,100,100 |
+| [About](https://pagespeed.web.dev/analysis/https-remote-forge-a1aedba3d120-herokuapp-com-about/6cj9952sej?form_factor=desktop) | 99,100,100,100 | 85,100,100,100 |
+| [Jobs](https://pagespeed.web.dev/analysis/https-remote-forge-a1aedba3d120-herokuapp-com-job-list/zeh06brkrv?form_factor=desktop) | 90,98,100,100 | 76,98,100,100 |
+| [Single Job](https://pagespeed.web.dev/analysis/https-remote-forge-a1aedba3d120-herokuapp-com-job-8d83b12b-0e13-4a6b-92c1-26a3d7bf92f3/u9g5u82m3z?form_factor=desktop) | 97,100,100,100 | 81,100,100,100 |
+| [Talents](https://pagespeed.web.dev/analysis/https-remote-forge-a1aedba3d120-herokuapp-com-talents/0sijvvjy6x?form_factor=desktop) | 98,98,100,100 | 73,98,100,100 |
+| [Single Talent](https://pagespeed.web.dev/analysis/https-remote-forge-a1aedba3d120-herokuapp-com-talent-f40faef6-33f8-4a69-89d2-cf6e173e64c9/7vuxt0q04s?form_factor=desktop) | 99,95,100,100 | 81,95,100,100 |
+| [Employers](https://pagespeed.web.dev/analysis/https-remote-forge-a1aedba3d120-herokuapp-com-employers/md81bmzr59?form_factor=mobile) | 98,98,100,100 | 77,98,100,100 |
+| [Single Employer](https://pagespeed.web.dev/analysis/https-remote-forge-a1aedba3d120-herokuapp-com-employer-a25eac3e-4b95-41b2-af8d-10f7923f7c20/sc8fnnome1?form_factor=desktop) | 98,100,100,100 | 81,100,100,100 |
+| [Contact](https://pagespeed.web.dev/analysis/https-remote-forge-a1aedba3d120-herokuapp-com-contact/tc5wi5yqrk?form_factor=desktop) | 99,100,100,100 | 87,100,100,100 |
+| [Contact Success]() | 86,100,100,100 | 82,100,100,100 |
+| [Privacy Policy](https://pagespeed.web.dev/analysis/https-remote-forge-a1aedba3d120-herokuapp-com-privacy-policy/6x8wd2p882?form_factor=desktop) | 98,100,100,100 | 79,100,100,100 |
+| [Terms and Conditions](https://pagespeed.web.dev/analysis/https-remote-forge-a1aedba3d120-herokuapp-com-terms-conditions/1xjnwyc4zp?form_factor=desktop) | 98,100,100,100 | 79,100,100,100 |
 
 ### HTML Validation and Accessibility Testing
 
@@ -776,7 +1064,7 @@ Tools used:
 
 For "Remote Forge," I use pytest, a powerful testing framework for Python, to ensure the reliability and efficiency of my code. Pytest simplifies and enhances the testing process through its use of simple, scalable test cases and a suite of advanced features.
 
-#### Running Tests
+### Running Tests
 
 To run the tests with pytest, you can use the following command in your terminal. This command will discover and run all the test cases in your project:
 
@@ -786,8 +1074,43 @@ For a more detailed report, run:
 
 `pytest --cov --cov-report=html`
 
-## Further Improvements
+## Issues
+
+- Git History - While working on project, I encountered an issue when attempting to remove a file from the Git history. I ran a command to remove the file, but it unexpectedly created duplicate commits that I couldn't clear or fix. Despite attempts to resolve the duplicates, the issue persisted.
+
+### User Stories
+
+- [Improve Website Performance](https://github.com/patrickhladun/remote-forge/issues/78)
+- [Infinite Scroll or Pagination](https://github.com/patrickhladun/remote-forge/issues/63)
+- [Application Functionality](https://github.com/patrickhladun/remote-forge/issues/57)
+
+### Bugs
+
+- [Notification Close Button](https://github.com/patrickhladun/remote-forge/issues/66)
+- [Social Media Fields Validation](https://github.com/patrickhladun/remote-forge/issues/67)
+- [Job Edit Page - Details Section Validation](https://github.com/patrickhladun/remote-forge/issues/68)
 
 ## Credits
+
+- Profile Images: [User Profile | Avatar - Figma Plugin](https://janisrozenfelds.com/user-profile-plugin)
+- Icons: [Iconmonstr](https://iconmonstr.com/)
+- Unsplash Images:
+
+  - [https://unsplash.com/photos/a-young...](https://unsplash.com/photos/a-young-man-wearing-a-hat-and-a-t-shirt-MZf0mI14RI0)
+  - [https://unsplash.com/photos/selective...](https://unsplash.com/photos/selective-focus-photography-of-gray-cat-peeking-at-the-table-bsSIk3LV_NE)
+  - [https://unsplash.com/photos/black-do...](https://unsplash.com/photos/black-dog-wearing-blue-denim-collar-K4mSJ7kc0As)
+  - [https://unsplash.com/photos/closeup...](https://unsplash.com/photos/closeup-photography-of-woman-smiling-mEZ3PoFGs_k)
+  - [https://unsplash.com/photos/man-tak...](https://unsplash.com/photos/man-taking-selfie-outdoors-Qk8o8S_PMTY)
+  - [Unsplash - Dublin](https://unsplash.com/photos/city-skyline-during-night-time-jLi7xbYnYro)
+  - [Unsplash - Warsaw](https://unsplash.com/photos/high-rise-buildings-during-night-time-xcPw1-5OHTk)
+  - [Unsplash - Stockholm](https://unsplash.com/photos/white-boat-on-water-near-city-buildings-during-daytime-uF4PfwZPOR8)
+  - [Unsplash - Rome](https://unsplash.com/photos/brown-dome-concrete-building-near-bridge-at-daytime-7ybKmhDTcz0)
+  - [Unsplash - Berlin](https://unsplash.com/photos/city-buildings-near-body-of-water-during-daytime-1uWanmgkd5g)
+  - [Unsplash - London](https://unsplash.com/photos/aerial-photography-of-london-skyline-during-daytime-Oja2ty_9ZLM)
+
+- Articles:
+  - [Python docstrings](https://www.programiz.com/python-programming/docstrings#:~:text=Standard%20conventions%20to%20write%20single%2Dline%20docstrings%3A&text=The%20closing%20quotes%20are%20on,structure%20ending%20with%20a%20period)
+  - [Docstrings in Python](https://www.datacamp.com/tutorial/docstrings-python)
+  - [Django user authentication with case insensitive username](https://stackoverflow.com/questions/70713647/django-user-authentication-with-case-insensitive-username)
 
 ## Acknowledgments
