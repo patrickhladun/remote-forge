@@ -449,57 +449,176 @@ For Remote Forge, I used a combination of custom-designed icons and icons downlo
 
 ## Pages and Features
 
-### Front end pages
+### Front End Pages
 
-#### Website Header Design
+<details><summary>Website Header Design</summary>
+</details>
 
-#### Website Footer Design
+<details><summary>Home Page</summary>
 
-#### Home Page
+One of the main features of the site is the search box. Used on the home page, it will redirect to the Job List page with the search criteria. Users can search jobs by keyword and also narrow the search by typing the location city. If there are no results, users are presented with the message: "No jobs found matching your criteria. Please try a different keyword or location."
 
-#### About Page
+![Jobs Search Home](./docs/page-home-search.webp)
 
-#### Contact Page
+Cities is another cool feature on the home page that allows users to quickly filter all jobs by a city.
 
-#### Jobs List Page
+![City Quick Filters](./docs/page-home-cities.webp)
 
-#### Job Single Page
+Recent talent section shows the latest 6 talent items.
 
-#### Talent List Page
+![Recent Talent](./docs/page-home-talent.webp)
 
-#### Talent Single Page
+</details>
 
-#### Talent Signup Page
+<details><summary>About Page</summary>
 
-#### Employer Signup Page
+A simple informational page including the recent talent section.
 
-#### Thank you pages
+![Page About](./docs/page-about.webp)
 
-#### 404 Page
+</details>
 
-#### Legal Pages
+<details><summary>Contact Page</summary>
+
+The contact page includes contact details, social media links, and a contact form.
+
+![Contact Page](./docs/page-contact.webp)
+
+When the form is submitted, users are redirected to the success page.
+
+![Contact Form Success](./docs/page-contact-success.webp)
+
+An email is also sent with a confirmation and the user's email message.
+
+![Email Confirmation](./docs/page-contact-email-confirmation.webp)
+
+</details>
+
+<details><summary>Jobs List Page</summary>
+
+This page lists all jobs and allows users to use the search box to narrow the job results.
+
+![Jobs Page](./docs/page-jobs.webp)
+
+</details>
+
+<details><summary>Single Job Page</summary>
+
+This is a single job page. The top section of the page includes a header section with the job post date, location, schedule, and salary. Default text will display if these fields are not set.
+
+The page also lists other roles posted by this company.
+
+![Single Job Page](./docs/page-single-job.webp)
+
+</details>
+
+<details><summary>Talents Page</summary>
+
+The talents page is a simple list page of all site talents.
+
+![Talents List Page](./docs/page-talents.webp)
+
+</details>
+
+<details><summary>Talent Single Page</summary>
+
+The single talent page is a Talent Profile Page. Profile pages allow logged-in employers to download the talent's CV as a PDF file.
+
+![Single Talent Page](./docs/page-single-talent.webp)
+
+</details>
+
+<details><summary>Talent Sign Up Page</summary>
+
+![Talent Sign Up Page](./docs/page-signup-talent.webp)
+
+</details>
+
+<details><summary>Employer Sign Up Page</summary>
+
+![Employer Sign Up Page](./docs/page-signup-employer.webp)
+
+</details>
+
+<details><summary>Login Page</summary>
+
+![Login Page](./docs/page-login.webp)
+
+</details>
+
+<details><summary>404 Error Page</summary>
+
+![404 Error Page](./docs/page-error-404.webp)
+
+</details>
+
+<details><summary>500 Error Page</summary>
+
+![500 Error Page](./docs/page-error-500.webp)
+
+</details>
+
+<details><summary>Legal Pages</summary>
+
+Privacy Policy
+![Privacy Policy](./docs/page-privacy.webp)
+
+Terms and Conditions
+![Terms of Service](./docs/page-terms.webp)
+
+</details>
 
 ### Backend (admin) Pages
 
-#### Talent Dashboard Page
+<details><summary>Profile Page</summary>
 
-#### Talent Account Page
+There is one profile page for editing the user profile. The view manages which form to display, depending on whether it is for the Employer or Talent Profile.
 
-#### Talent Profile Edit Page
+Talent: ![Talent Profile](./docs/page-profile-talent.webp)
 
-#### Employer Dashboard Page
+Employer: ![Employer Profile](./docs/page-profile-employer.webp)
 
-#### Employer Account Page
+</details>
 
-#### Employer Profile Edit Page
+<details><summary>Employer Jobs List Page</summary>
 
-#### Employer Add Job Page
+A list of jobs created by the employer. On this page, employers can add, edit, or delete jobs.
 
-#### Employer Edit Job Page
+![Jobs List](./docs/page-employer-jobs-list.webp)
 
-#### Employer Jobs List Page
+</details>
 
-#### Employer Applicants List Page
+<details><summary>Employer Job Add Page</summary>
+
+Add job page.
+
+![Add Job](./docs/page-employer-job-add.webp)
+
+</details>
+
+<details><summary>Employer Job Edit Page</summary>
+
+Job edit page.
+
+![Edit Job](./docs/page-employer-job-edit.webp)
+
+</details>
+
+<details><summary>Employer Job Delete Page</summary>
+
+Delete Job modal popup.
+
+![Delete Job](./docs/page-employer-job-delete.webp)
+
+</details>
+
+<details><summary>Account Page</summary>
+
+Account page where users can update their email, username, and password.
+
+![Account](./docs/page-about.webp)
+
+</details>
 
 ## Technology used
 
