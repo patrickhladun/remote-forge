@@ -826,7 +826,21 @@ For a more detailed report, run:
 
 `pytest --cov --cov-report=html`
 
-## Further Improvements
+## Issues
+
+- Git History - While working on project, I encountered an issue when attempting to remove a file from the Git history. I ran a command to remove the file, but it unexpectedly created duplicate commits that I couldn't clear or fix. Despite attempts to resolve the duplicates, the issue persisted.
+
+### User Stories
+
+- [Improve Website Performance](https://github.com/patrickhladun/remote-forge/issues/78)
+- [Infinite Scroll or Pagination](https://github.com/patrickhladun/remote-forge/issues/63)
+- [Application Functionality](https://github.com/patrickhladun/remote-forge/issues/57)
+
+### Bugs
+
+- [Notification Close Button](https://github.com/patrickhladun/remote-forge/issues/66)
+- [Social Media Fields Validation](https://github.com/patrickhladun/remote-forge/issues/67)
+- [Job Edit Page - Details Section Validation](https://github.com/patrickhladun/remote-forge/issues/68)
 
 ## Credits
 
