@@ -830,4 +830,25 @@ For a more detailed report, run:
 
 ## Credits
 
+- Profile Images: [User Profile | Avatar - Figma Plugin](https://janisrozenfelds.com/user-profile-plugin)
+- Icons: [Iconmonstr](https://iconmonstr.com/)
+- Unsplash Images:
+
+  - [https://unsplash.com/photos/a-young...](https://unsplash.com/photos/a-young-man-wearing-a-hat-and-a-t-shirt-MZf0mI14RI0)
+  - [https://unsplash.com/photos/selective...](https://unsplash.com/photos/selective-focus-photography-of-gray-cat-peeking-at-the-table-bsSIk3LV_NE)
+  - [https://unsplash.com/photos/black-do...](https://unsplash.com/photos/black-dog-wearing-blue-denim-collar-K4mSJ7kc0As)
+  - [https://unsplash.com/photos/closeup...](https://unsplash.com/photos/closeup-photography-of-woman-smiling-mEZ3PoFGs_k)
+  - [https://unsplash.com/photos/man-tak...](https://unsplash.com/photos/man-taking-selfie-outdoors-Qk8o8S_PMTY)
+  - [Unsplash - Dublin](https://unsplash.com/photos/city-skyline-during-night-time-jLi7xbYnYro)
+  - [Unsplash - Warsaw](https://unsplash.com/photos/high-rise-buildings-during-night-time-xcPw1-5OHTk)
+  - [Unsplash - Stockholm](https://unsplash.com/photos/white-boat-on-water-near-city-buildings-during-daytime-uF4PfwZPOR8)
+  - [Unsplash - Rome](https://unsplash.com/photos/brown-dome-concrete-building-near-bridge-at-daytime-7ybKmhDTcz0)
+  - [Unsplash - Berlin](https://unsplash.com/photos/city-buildings-near-body-of-water-during-daytime-1uWanmgkd5g)
+  - [Unsplash - London](https://unsplash.com/photos/aerial-photography-of-london-skyline-during-daytime-Oja2ty_9ZLM)
+
+- Articles:
+  - [Python docstrings](https://www.programiz.com/python-programming/docstrings#:~:text=Standard%20conventions%20to%20write%20single%2Dline%20docstrings%3A&text=The%20closing%20quotes%20are%20on,structure%20ending%20with%20a%20period)
+  - [Docstrings in Python](https://www.datacamp.com/tutorial/docstrings-python)
+  - [Django user authentication with case insensitive username](https://stackoverflow.com/questions/70713647/django-user-authentication-with-case-insensitive-username)
+
 ## Acknowledgments
