@@ -23,54 +23,43 @@ Welcome to Remote Forge, my creation and your gateway to the world of remote wor
 - [Database Design](#database-design)
 - [Colours Scheme](#colours-scheme)
 - [Fonts](#fonts)
-- [Visuals](#visuals)
 - [Logo](#logo)
 - [Images](#images)
+  - [Profile Images](#profile-images)
 - [Icons](#icons)
 - [Pages and Features](#pages-and-features)
-  - [Front end pages](#front-end-pages)
-    - [Website Header Design](#website-header-design)
-    - [Website Footer Design](#website-footer-design)
-    - [Home Page](#home-page)
-    - [About Page](#about-page)
-    - [Contact Page](#contact-page)
-    - [Jobs List Page](#jobs-list-page)
-    - [Job Single Page](#job-single-page)
-    - [Talent List Page](#talent-list-page)
-    - [Talent Single Page](#talent-single-page)
-    - [Talent Signup Page](#talent-signup-page)
-    - [Employer Signup Page](#employer-signup-page)
-    - [Thank you pages](#thank-you-pages)
-    - [404 Page](#404-page)
-    - [Legal Pages](#legal-pages)
+  - [Front End Pages](#front-end-pages)
   - [Backend (admin) Pages](#backend-admin-pages)
-    - [Talent Dashboard Page](#talent-dashboard-page)
-    - [Talent Account Page](#talent-account-page)
-    - [Talent Profile Edit Page](#talent-profile-edit-page)
-    - [Employer Dashboard Page](#employer-dashboard-page)
-    - [Employer Account Page](#employer-account-page)
-    - [Employer Profile Edit Page](#employer-profile-edit-page)
-    - [Employer Add Job Page](#employer-add-job-page)
-    - [Employer Edit Job Page](#employer-edit-job-page)
-    - [Employer Jobs List Page](#employer-jobs-list-page)
-    - [Employer Applicants List Page](#employer-applicants-list-page)
 - [Technology used](#technology-used)
+  - [Languages and Libraries](#languages-and-libraries)
+  - [Version Control and Collaboration](#version-control-and-collaboration)
+  - [Tooling](#tooling)
+  - [Design Tools](#design-tools)
+  - [Other](#other)
 - [Development and Deployment](#development-and-deployment)
-- [Issues](#issues)
-- [Unresolved Issues](#unresolved-issues)
-- [Resolved Issues](#resolved-issues)
+  - [Cloning the project](#cloning-the-project)
+  - [Environment Settings](#environment-settings)
+    - [Development](#development)
+    - [Staging and Production](#staging-and-production)
+    - [Environment Variables Template](#environment-variables-template)
+  - [Local Development](#local-development)
+  - [Deployment on Heroku](#deployment-on-heroku)
+  - [Page Performance](#page-performance)
+    - [Google PageSpeed Insights](#google-pagespeed-insights)
 - [Manual testing](#manual-testing)
   - [Website Header and Navigation](#website-header-and-navigation)
   - [Responsive Design Tests](#responsive-design-tests)
   - [Functionality tests](#functionality-tests)
     - [Admin Pages](#admin-pages)
-  - [Google Page Insights Tests:](#google-page-insights-tests)
+  - [Google PageSpeed Insights Tests](#google-pagespeed-insights-tests)
   - [HTML Validation and Accessibility Testing](#html-validation-and-accessibility-testing)
   - [Testing User Pages](#testing-user-pages)
   - [CSS Validation](#css-validation)
 - [Automated testing with Pytest](#automated-testing-with-pytest)
-    - [Running Tests](#running-tests)
-- [Further Improvements](#further-improvements)
+  - [Running Tests](#running-tests)
+- [Issues](#issues)
+  - [User Stories](#user-stories)
+  - [Bugs](#bugs)
 - [Credits](#credits)
 - [Acknowledgments](#acknowledgments)
 
@@ -1005,7 +994,7 @@ Test Setup for Responsiveness
 
 </details>
 
-### Google PageSpeed Insights Tests:
+### Google PageSpeed Insights Tests
 
 I tested the website's page performance using Google PageSpeed Insights. While the desktop scores are satisfactory, I am not fully happy with the mobile scores and recognize that there is room for improvement.
 
@@ -1022,7 +1011,7 @@ I tested the website's page performance using Google PageSpeed Insights. While t
 | [Single Talent](https://pagespeed.web.dev/analysis/https-remote-forge-a1aedba3d120-herokuapp-com-talent-f40faef6-33f8-4a69-89d2-cf6e173e64c9/7vuxt0q04s?form_factor=desktop) | 99,95,100,100 | 81,95,100,100 |
 | [Employers](https://pagespeed.web.dev/analysis/https-remote-forge-a1aedba3d120-herokuapp-com-employers/md81bmzr59?form_factor=mobile) | 98,98,100,100 | 77,98,100,100 |
 | [Single Employer](https://pagespeed.web.dev/analysis/https-remote-forge-a1aedba3d120-herokuapp-com-employer-a25eac3e-4b95-41b2-af8d-10f7923f7c20/sc8fnnome1?form_factor=desktop) | 98,100,100,100 | 81,100,100,100 |
-| [Contact](https://pagespeed.web.dev/analysis/https-remote-forge-a1aedba3d120-herokuapp-com-contact/fpqiwo2x0g?form_factor=desktop) | 98,100,100,100 | 87,100,100,100 |
+| [Contact](https://pagespeed.web.dev/analysis/https-remote-forge-a1aedba3d120-herokuapp-com-contact/tc5wi5yqrk?form_factor=desktop) | 99,100,100,100 | 87,100,100,100 |
 | [Contact Success]() | 86,100,100,100 | 82,100,100,100 |
 | [Privacy Policy](https://pagespeed.web.dev/analysis/https-remote-forge-a1aedba3d120-herokuapp-com-privacy-policy/6x8wd2p882?form_factor=desktop) | 98,100,100,100 | 79,100,100,100 |
 | [Terms and Conditions](https://pagespeed.web.dev/analysis/https-remote-forge-a1aedba3d120-herokuapp-com-terms-conditions/1xjnwyc4zp?form_factor=desktop) | 98,100,100,100 | 79,100,100,100 |
@@ -1075,7 +1064,7 @@ Tools used:
 
 For "Remote Forge," I use pytest, a powerful testing framework for Python, to ensure the reliability and efficiency of my code. Pytest simplifies and enhances the testing process through its use of simple, scalable test cases and a suite of advanced features.
 
-#### Running Tests
+### Running Tests
 
 To run the tests with pytest, you can use the following command in your terminal. This command will discover and run all the test cases in your project:
 
