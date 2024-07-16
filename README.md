@@ -392,6 +392,11 @@ Employers have the capability to create job listings, forming the core interacti
 
 ![Database Design](./docs/db-design.webp)
 
+During the development of Remote Forge, the database structure underwent several changes to the fields used in the models. Here is the updated version:
+
+![Database Update](./docs/db-design-update.webp)
+
+
 ## Colours Scheme
 
 For my job board website, I chose a green colour scheme. Using green can make the website more inviting and trustworthy, contributing to a positive user experience.
