@@ -30,7 +30,7 @@
       "website": "https://www.emeraldtech.ie",
       "city": "Dublin",
       "country": "Ireland",
-      "social": [{ "site": "Twitter", "url": "https://twitter.com" }],
+      "social": [{ "site": "twitter", "url": "https://twitter.com" }],
       "created_at": "2023-07-20T00:00:00Z",
       "updated_at": "2023-07-20T00:00:00Z",
       "is_published": true
@@ -68,7 +68,7 @@
       "website": "https://www.pixelforgegames.ie",
       "city": "Dublin",
       "country": "Ireland",
-      "social": [{ "site": "Twitter", "url": "https://twitter.com" }],
+      "social": [{ "site": "twitter", "url": "https://twitter.com" }],
       "created_at": "2023-07-20T00:00:00Z",
       "updated_at": "2023-07-20T00:00:00Z",
       "is_published": true
@@ -106,7 +106,7 @@
       "website": "https://www.nordiccomms.fi",
       "city": "Helsinki",
       "country": "Finland",
-      "social": [{ "site": "Twitter", "url": "https://twitter.com" }],
+      "social": [{ "site": "twitter", "url": "https://twitter.com" }],
       "created_at": "2023-07-20T00:00:00Z",
       "updated_at": "2023-07-20T00:00:00Z",
       "is_published": true
@@ -144,7 +144,7 @@
       "website": "https://www.techgmbh.de",
       "city": "Berlin",
       "country": "Germany",
-      "social": [{ "site": "Twitter", "url": "https://twitter.com" }],
+      "social": [{ "site": "twitter", "url": "https://twitter.com" }],
       "created_at": "2023-07-20T00:00:00Z",
       "updated_at": "2023-07-20T00:00:00Z",
       "is_published": true
@@ -183,7 +183,7 @@
       "city": "Dublin",
       "country": "Ireland",
       "social": [
-        { "site": "Twitter", "url": "https://twitter.com/leprechaunstechbrew" }
+        { "site": "twitter", "url": "https://twitter.com/leprechaunstechbrew" }
       ],
       "created_at": "2023-07-20T00:00:00Z",
       "updated_at": "2023-07-20T00:00:00Z",
@@ -223,7 +223,7 @@
       "city": "Galway",
       "country": "Ireland",
       "social": [
-        { "site": "LinkedIn", "url": "https://linkedin.com/company/bookingpro" }
+        { "site": "linkedin", "url": "https://linkedin.com/company/bookingpro" }
       ],
       "created_at": "2023-07-20T00:00:00Z",
       "updated_at": "2023-07-20T00:00:00Z",
@@ -263,7 +263,7 @@
       "city": "Krakow",
       "country": "Poland",
       "social": [
-        { "site": "LinkedIn", "url": "https://linkedin.com/company/fittech" }
+        { "site": "linkedin", "url": "https://linkedin.com/company/fittech" }
       ],
       "created_at": "2023-07-21T00:00:00Z",
       "updated_at": "2023-07-21T00:00:00Z",
@@ -304,7 +304,7 @@
       "country": "United Arab Emirates",
       "social": [
         {
-          "site": "LinkedIn",
+          "site": "linkedin",
           "url": "https://linkedin.com/company/gulfproperty"
         }
       ],
@@ -346,7 +346,7 @@
       "city": "London",
       "country": "United Kingdom",
       "social": [
-        { "site": "LinkedIn", "url": "https://linkedin.com/company/audiotech" }
+        { "site": "linkedin", "url": "https://linkedin.com/company/audiotech" }
       ],
       "created_at": "2023-07-23T00:00:00Z",
       "updated_at": "2023-07-23T00:00:00Z",
@@ -387,7 +387,7 @@
       "country": "Poland",
       "social": [
         {
-          "site": "LinkedIn",
+          "site": "linkedin",
           "url": "https://linkedin.com/company/sportwearpolska"
         }
       ],
@@ -429,7 +429,7 @@
       "city": "Rome",
       "country": "Italy",
       "social": [
-        { "site": "LinkedIn", "url": "https://linkedin.com/company/romatravel" }
+        { "site": "linkedin", "url": "https://linkedin.com/company/romatravel" }
       ],
       "created_at": "2023-07-20T00:00:00Z",
       "updated_at": "2023-07-20T00:00:00Z",
@@ -469,7 +469,7 @@
       "city": "Stockholm",
       "country": "Sweden",
       "social": [
-        { "site": "LinkedIn", "url": "https://linkedin.com/company/taskmaster" }
+        { "site": "linkedin", "url": "https://linkedin.com/company/taskmaster" }
       ],
       "created_at": "2023-07-20T00:00:00Z",
       "updated_at": "2023-07-20T00:00:00Z",
