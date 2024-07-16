@@ -8,14 +8,7 @@ heroku_settings(locals(), staticfiles=False)
 DEBUG = False
 ALLOWED_HOSTS = ["remote-forge-a1aedba3d120.herokuapp.com"]
 DATABASES = {
-     'default': {
-         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-         'NAME': os.getenv("DB_NAME"),
-         'USER': os.getenv("DB_USER"),
-         'PASSWORD': os.getenv("DB_PASSWORD"),
-         'HOST': os.getenv("DB_HOST"),
-         'PORT': os.getenv("DB_PORT"),
-     }
+    "default": dj_database_url.parse(os.environ.get("DATABASE_URL")),
 }
 SECRET_KEY = os.getenv("SECRET_KEY", "")
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
