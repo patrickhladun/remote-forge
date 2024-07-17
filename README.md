@@ -203,17 +203,35 @@ Remote Forge offers Eoin a specialized platform to reach a broad pool of candida
 
 In developing Remote Forge, I've embraced agile methodology to ensure flexibility, continuous improvement, and responsiveness to user feedback. This approach allows me to quickly adapt to changes and prioritize tasks effectively, focusing on delivering value at every stage of development.
 
-To manage the project efficiently, I utilize GitHub Issues and Projects alongside a Kanban board. This setup is crucial for organizing my workflow and keeping track of progress.
+To manage the project efficiently, I utilize GitHub Issues and Projects alongside a Kanban board. This setup is crucial for organizing my workflow and keeping track of progress. Additionally, I use GitHub Milestones to structure Sprints, helping me stay on track with deadlines and deliverables.
 
-My Approach Using GitHub: Epics and User Stories: I break down the development into Epics and User Stories, making the project manageable and ensuring each feature closely aligns with user needs, such as enabling talents to discover remote jobs and employers to manage job listings.
+<details><summary>Sprints using Milestones</summary>
+
+![Sprints](./docs/agile-sprints.webp)
+
+</details><br>
 
 Kanban Board: My Kanban board features columns for Backlog, In Progress, Paused/on Hold, Verification/Testing and Done, offering a clear visual guide to the project's status and allowing me to efficiently manage tasks from conception to completion.
 
-Collaboration and Transparency: Even as a solo developer, GitHub fosters a transparent approach to project management, making it easier to track progress and adjustments needed throughout the development process.
+[Kanban View](https://github.com/users/patrickhladun/projects/5/views/1)
 
-Feedback Loop: Leveraging agile principles, I incorporate user feedback directly into the development cycle, using GitHub to track and address feedback related to specific User Stories or Epics, ensuring Remote Forge evolves in response to real user needs.
+<details><summary>Kanban View</summary>
 
-By adopting agile methodology and utilizing GitHub's robust project management tools, I navigate the development of Remote Forge with agility, keeping the project aligned with its core mission of connecting the remote work community.
+![Kanban View](./docs/agile-kanban.webp)
+
+</details><br>
+
+I also use GitHub's Table view to organize and visualize tasks, providing a clear and structured overview of the project's progress and priorities.
+
+[Table View](<[./docs/](https://github.com/users/patrickhladun/projects/5/views/3)>)
+
+<details><summary>Table View</summary>
+
+![Table View](./docs/agile-table.webp)
+
+</details><br>
+
+Epics and User Stories: I break down the development into Epics and User Stories, making the project manageable and ensuring each feature closely aligns with user needs.
 
 [Github Remote Forge Project](https://github.com/users/patrickhladun/projects/5)
 
@@ -223,6 +241,8 @@ By adopting agile methodology and utilizing GitHub's robust project management t
 - [Epic 2: Design and assets development](https://github.com/patrickhladun/remote-forge/issues/19)
 - [Epic 3: Frontend and backend development for 'Remote Forge' MVP](https://github.com/patrickhladun/remote-forge/issues/3)
 - [Epic 4: Testing deployment and documentation](https://github.com/patrickhladun/remote-forge/issues/9)
+
+By adopting agile methodology and utilizing GitHub's robust project management tools, I navigate the development of Remote Forge with agility, keeping the project aligned with its core mission of connecting the remote work community.
 
 ## Five Planes of UX
 
