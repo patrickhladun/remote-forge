@@ -583,11 +583,8 @@ The single talent page is a Talent Profile Page. Profile pages allow logged-in e
 
 <details><summary>Legal Pages</summary>
 
-Privacy Policy
 ![Privacy Policy](./docs/page-privacy.webp)
-
-Terms and Conditions
-![Terms of Service](./docs/page-terms.webp)
+![Terms and Conditions](./docs/page-terms.webp)
 
 </details>
 
