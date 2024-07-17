@@ -166,3 +166,5 @@ cython_debug/
 *.map
 
 /staticfiles
+
+/.database_backups

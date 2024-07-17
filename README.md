@@ -2,6 +2,8 @@
 
 Welcome to Remote Forge, my creation and your gateway to the world of remote work opportunities. This platform is a result of my vision to connect talented professionals with the freedom and flexibility that remote jobs offer. Remote Forge stands as a testament to my belief that great work isn't confined to an office—it can happen anywhere.
 
+![Remote Forge](./docs/remote-forge-presentation.webp)
+
 ![GitHub contributors](https://img.shields.io/github/issues/patrickhladun/remote-forge?style=flat) ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/patrickhladun/remote-forge/main?style=flat) ![GitHub language count](https://img.shields.io/github/languages/count/patrickhladun/remote-forge?style=flat) ![GitHub top language](https://img.shields.io/github/languages/top/patrickhladun/remote-forge?style=flat)
 
 ## Table of Contents<!-- omit from toc -->
@@ -29,12 +31,17 @@ Welcome to Remote Forge, my creation and your gateway to the world of remote wor
 - [Icons](#icons)
 - [Pages and Features](#pages-and-features)
   - [Front End Pages](#front-end-pages)
-  - [Backend (admin) Pages](#backend-admin-pages)
+  - [User and Content Management Pages](#user-and-content-management-pages)
+    - [Profile Management for Talent and Employers](#profile-management-for-talent-and-employers)
+    - [Account Management](#account-management)
+  - [Job Management for Employers](#job-management-for-employers)
+  - [Django Administration](#django-administration)
 - [Technology used](#technology-used)
   - [Languages and Libraries](#languages-and-libraries)
   - [Version Control and Collaboration](#version-control-and-collaboration)
   - [Tooling](#tooling)
   - [Design Tools](#design-tools)
+  - [Testing and Validation](#testing-and-validation)
   - [Other](#other)
 - [Development and Deployment](#development-and-deployment)
   - [Cloning the project](#cloning-the-project)
@@ -44,8 +51,9 @@ Welcome to Remote Forge, my creation and your gateway to the world of remote wor
     - [Environment Variables Template](#environment-variables-template)
   - [Local Development](#local-development)
   - [Deployment on Heroku](#deployment-on-heroku)
-  - [Page Performance](#page-performance)
-    - [Google PageSpeed Insights](#google-pagespeed-insights)
+  - [Load Example Content](#load-example-content)
+    - [Load Fixtures Locally](#load-fixtures-locally)
+    - [Load Example Content for Staging Site](#load-example-content-for-staging-site)
 - [Manual testing](#manual-testing)
   - [Website Header and Navigation](#website-header-and-navigation)
   - [Responsive Design Tests](#responsive-design-tests)
@@ -195,17 +203,35 @@ Remote Forge offers Eoin a specialized platform to reach a broad pool of candida
 
 In developing Remote Forge, I've embraced agile methodology to ensure flexibility, continuous improvement, and responsiveness to user feedback. This approach allows me to quickly adapt to changes and prioritize tasks effectively, focusing on delivering value at every stage of development.
 
-To manage the project efficiently, I utilize GitHub Issues and Projects alongside a Kanban board. This setup is crucial for organizing my workflow and keeping track of progress.
+To manage the project efficiently, I utilize GitHub Issues and Projects alongside a Kanban board. This setup is crucial for organizing my workflow and keeping track of progress. Additionally, I use GitHub Milestones to structure Sprints, helping me stay on track with deadlines and deliverables.
 
-My Approach Using GitHub: Epics and User Stories: I break down the development into Epics and User Stories, making the project manageable and ensuring each feature closely aligns with user needs, such as enabling talents to discover remote jobs and employers to manage job listings.
+<details><summary>Sprints using Milestones</summary>
+
+![Sprints](./docs/agile-sprints.webp)
+
+</details><br>
 
 Kanban Board: My Kanban board features columns for Backlog, In Progress, Paused/on Hold, Verification/Testing and Done, offering a clear visual guide to the project's status and allowing me to efficiently manage tasks from conception to completion.
 
-Collaboration and Transparency: Even as a solo developer, GitHub fosters a transparent approach to project management, making it easier to track progress and adjustments needed throughout the development process.
+[Kanban View](https://github.com/users/patrickhladun/projects/5/views/1)
 
-Feedback Loop: Leveraging agile principles, I incorporate user feedback directly into the development cycle, using GitHub to track and address feedback related to specific User Stories or Epics, ensuring Remote Forge evolves in response to real user needs.
+<details><summary>Kanban View</summary>
 
-By adopting agile methodology and utilizing GitHub's robust project management tools, I navigate the development of Remote Forge with agility, keeping the project aligned with its core mission of connecting the remote work community.
+![Kanban View](./docs/agile-kanban.webp)
+
+</details><br>
+
+I also use GitHub's Table view to organize and visualize tasks, providing a clear and structured overview of the project's progress and priorities.
+
+[Table View](<[./docs/](https://github.com/users/patrickhladun/projects/5/views/3)>)
+
+<details><summary>Table View</summary>
+
+![Table View](./docs/agile-table.webp)
+
+</details><br>
+
+Epics and User Stories: I break down the development into Epics and User Stories, making the project manageable and ensuring each feature closely aligns with user needs.
 
 [Github Remote Forge Project](https://github.com/users/patrickhladun/projects/5)
 
@@ -215,6 +241,8 @@ By adopting agile methodology and utilizing GitHub's robust project management t
 - [Epic 2: Design and assets development](https://github.com/patrickhladun/remote-forge/issues/19)
 - [Epic 3: Frontend and backend development for 'Remote Forge' MVP](https://github.com/patrickhladun/remote-forge/issues/3)
 - [Epic 4: Testing deployment and documentation](https://github.com/patrickhladun/remote-forge/issues/9)
+
+By adopting agile methodology and utilizing GitHub's robust project management tools, I navigate the development of Remote Forge with agility, keeping the project aligned with its core mission of connecting the remote work community.
 
 ## Five Planes of UX
 
@@ -396,7 +424,6 @@ During the development of Remote Forge, the database structure underwent several
 
 ![Database Update](./docs/db-design-update.webp)
 
-
 ## Colours Scheme
 
 For my job board website, I chose a green colour scheme. Using green can make the website more inviting and trustworthy, contributing to a positive user experience.
@@ -420,6 +447,8 @@ For "Remote Forge," I have carefully selected fonts that align with the aestheti
 These font choices are integral to the overall user experience, contributing not only to the visual impact of the site but also to its functionality and accessibility. By pairing Nunito Sans with Josefin Sans, I aim to create a cohesive and engaging environment that enhances both the aesthetic appeal and the usability of "Remote Forge."
 
 ## Logo
+
+The logo for Remote Forge draws inspiration from The Armorer character in the Mandalorian movie. It reflects a blend of craftsmanship and strength, symbolizing the platform's mission to forge connections in the remote work landscape. The design incorporates elements that convey professionalism and innovation, aligning with the brand's identity.
 
 ![Logo and Favicon](./docs/logo.webp)
 
@@ -554,33 +583,51 @@ The single talent page is a Talent Profile Page. Profile pages allow logged-in e
 
 <details><summary>Legal Pages</summary>
 
-Privacy Policy
-![Privacy Policy](./docs/page-privacy.webp)
-
-Terms and Conditions
-![Terms of Service](./docs/page-terms.webp)
+![Privacy Policy](./docs/page-privacy.webp) ![Terms and Conditions](./docs/page-terms.webp)
 
 </details>
 
-### Backend (admin) Pages
+### User and Content Management Pages
+
+To provide a seamless experience for managing profiles and content, Remote Forge includes comprehensive backend pages for both Talents and Employers. Here’s an overview of the key functionalities:
+
+#### Profile Management for Talent and Employers
+
+- Update Profile: Talents and Employers can easily update their profile page with new information, ensuring their details are always current.
+- Clear Profile: Talents and Employers have the option to clear their profile page. This action does not delete the profile but rather clears all fields and unpublishes the page, allowing for a fresh start without losing their account. To clear profile user need to confirm the action.
 
 <details><summary>Profile Page</summary>
 
-There is one profile page for editing the user profile. The view manages which form to display, depending on whether it is for the Employer or Talent Profile.
+Talent:<br> ![Talent Profile](./docs/page-profile-talent.webp)
 
-Talent: ![Talent Profile](./docs/page-profile-talent.webp)
-
-Employer: ![Employer Profile](./docs/page-profile-employer.webp)
+Employer:<br> ![Employer Profile](./docs/page-profile-employer.webp)
 
 </details>
 
-<details><summary>Employer Jobs List Page</summary>
+#### Account Management
 
-A list of jobs created by the employer. On this page, employers can add, edit, or delete jobs.
+On an account page both Talents and Employers can:
 
-![Jobs List](./docs/page-employer-jobs-list.webp)
+- Update Email or Username
+- Navigate to Password Update Page
+
+<details><summary>Account Page</summary>
+
+Account page where users can update their email, username, and password.
+
+![Account](./docs/page-account.webp)
 
 </details>
+
+### Job Management for Employers
+
+Full CRUD Operations: Employers have full control over job listings with the ability to:
+
+- Add Jobs: Create new job listings to attract potential Talents.
+- View Jobs: Access a list of all their job listings.
+- Update Jobs: Make changes to existing job listings.
+- Delete Jobs: Remove job listings that are no longer relevant or needed.
+- Restricted Access: Employers can only manage their own job listings. Other employers cannot update or delete jobs posted by others, ensuring data integrity and security.
 
 <details><summary>Employer Job Add Page</summary>
 
@@ -606,13 +653,45 @@ Delete Job modal popup.
 
 </details>
 
-<details><summary>Account Page</summary>
+<details><summary>Employer Jobs List Page</summary>
 
-Account page where users can update their email, username, and password.
+A list of jobs created by the employer. On this page, employers can add, edit, or delete jobs.
 
-![Account](./docs/page-about.webp)
+![Jobs List](./docs/page-employer-jobs-list.webp)
 
 </details>
+
+### Django Administration
+
+Website admins have access to manage jobs, users, and profiles for both talents and employers.
+
+<details><summary>Jobs Section</summary>
+
+![Jobs Section](./docs/backend-jobs.webp)
+
+</details>
+
+<details><summary>Employers Section</summary>
+
+![Employers Section](./docs/backend-employers.webp)
+
+</details>
+
+<details><summary>Talents Section</summary>
+
+![Talents Section](./docs/backend-talents.webp)
+
+</details>
+
+<details><summary>Users Section</summary>
+
+![Users Section](./docs/backend-users.webp)
+
+</details><br>
+
+When a user registers, their profile is automatically created as either a Talent or Employer, depending on their role. Since admins have permissions to delete any entity in the backend, a button has been added to the user profile page to recreate a user profile if necessary.
+
+Users themselves do not have the option to delete their profile, but they can unpublish it, which removes it from the frontend listings. Additionally, a clear button allows users to clear all fields of their profile. This action also unpublishes the profile. Users must confirm this destructive action in a popup to proceed.
 
 ## Technology used
 
@@ -627,7 +706,7 @@ Account page where users can update their email, username, and password.
 
 ### Version Control and Collaboration
 
-- GitHub, Git, Git Flow, and GitKraken - used for managing source code and collaboration
+- Git, Git Flow, GitHub, and GitKraken - used for managing source code and collaboration
 - AWS Bucket - used for storing static and media files
 - VSCode - for code editing and development
 
@@ -642,6 +721,13 @@ Account page where users can update their email, username, and password.
 - User Profile | Avatar - used for profile images
 - Adobe Illustrator - used for designing logos and icons
 - DB Diagram - used for database design
+
+### Testing and Validation
+
+- W3C HTML Validator - For validating the HTML structure of each page.
+- W3C CSS Validator - For validating the CSS.
+- Web Accessibility Evaluation tool WAVE - For detecting and fixing accessibility issues.
+- Google PageSpeed - For perfomance testing
 
 ### Other
 
@@ -663,6 +749,8 @@ Account page where users can update their email, username, and password.
 ### Environment Settings
 
 Remote Forge uses three environments: Development, Staging, and Production.
+
+For this project, I have split the settings into three separate files. However, this approach does not resonate with me, and for the next project, I will not use this method. After learning more, I feel there are no significant benefits to this approach at this stage, as it only creates duplication for staging and production environments. I have created a User Story to switch back to a single settings.py file and use if statements and environment variables to create environment-specific settings.
 
 #### Development
 
@@ -755,16 +843,47 @@ To deploy Remote Forge on Heroku, follow these steps:
 
 Your app should now be deployed and accessible on Heroku.
 
-### Page Performance
+### Load Example Content
 
-I tested the website's page performance using Google PageSpeed Insights. While the desktop scores are satisfactory, I am not fully happy with the mobile scores and recognize that there is room for improvement.
+To start developing the site with example content, you can load predefined Jobs, Users, Talent, and Employer Profiles. Follow these steps to set up your database and load the example content.
 
-#### Google PageSpeed Insights
+#### Load Fixtures Locally
 
-- **Desktop Scores:** The desktop performance scores are satisfactory, indicating good loading times and efficient resource usage.
-- **Mobile Scores:** The mobile performance scores are lower than expected and need improvement to ensure a better user experience on mobile devices.
+1. Ensure the database is created:<br> Run the following commands to create and set up the database:
 
-I will continue to optimize the mobile performance to enhance loading times and overall user experience for mobile users.
+```
+python manage.py makemigrations
+python manage.py migrate
+```
+
+2. Load example content:<br> Run these commands in order to load the example content:
+
+```
+python manage.py loaddata user.talent.json
+python manage.py loaddata user.employer.json
+python manage.py loaddata job.listing.json
+```
+
+These commands will create the example content.
+
+#### Load Example Content for Staging Site
+
+1. Ensure the database is created:<br> Run the following commands to create and set up the database for the staging environment:
+
+```
+DJANGO_SETTINGS_MODULE=config.settings.staging python manage.py makemigrations
+DJANGO_SETTINGS_MODULE=config.settings.staging python manage.py migrate
+```
+
+2. Load example content:<br> Run these commands in order to load the example content:
+
+```
+DJANGO_SETTINGS_MODULE=config.settings.staging python manage.py loaddata user.talent.json
+DJANGO_SETTINGS_MODULE=config.settings.staging python manage.py loaddata user.employer.json
+DJANGO_SETTINGS_MODULE=config.settings.staging python manage.py loaddata job.listing.json
+```
+
+Each user uses the same password for testing purposes. You can change the password if you like in the fixtures file and load the fixtures again.
 
 ## Manual testing
 
@@ -1025,45 +1144,43 @@ I tested the website's page performance using Google PageSpeed Insights. While t
 
 I conducted comprehensive HTML validation tests using the W3C validator to ensure that all pages adhere to HTML standards. Additionally, I performed accessibility checks to identify and resolve any errors and contrast issues. All pages have successfully passed these tests, ensuring they meet web standards and are accessible to users with disabilities.
 
-Tools used:
-
-- W3C HTML Validator: For validating the HTML structure of each page.
-- Web Accessibility Evaluation tool WAVE: For detecting and fixing accessibility issues.
-
-|Tested Page|Accesibility (WAVE)|Contrast (WAVE)|W3C HTML |Comments|
-|---|---|---|---|---|
-|[Home](https://remote-forge-a1aedba3d120.herokuapp.com/)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-a1aedba3d120.herokuapp.com%2F)||
-|[About](https://remote-forge-a1aedba3d120.herokuapp.com/about/)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-a1aedba3d120.herokuapp.com%2Fabout%2F)||
-|[Contact](https://remote-forge-a1aedba3d120.herokuapp.com/contact/)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-a1aedba3d120.herokuapp.com%2Fcontact%2F)||
-|[Contact Success](https://remote-forge-a1aedba3d120.herokuapp.com/contact/success/)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-a1aedba3d120.herokuapp.com%2Fcontact%2Fsuccess%2F)||
-|[Privacy Policy](https://remote-forge-a1aedba3d120.herokuapp.com/privacy-policy/)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-a1aedba3d120.herokuapp.com%2Fprivacy-policy%2F)||
-|[Terms and Conditions](https://remote-forge-a1aedba3d120.herokuapp.com/terms-conditions/)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-a1aedba3d120.herokuapp.com%2Fterms-conditions%2F)||
-|[Jobs](https://remote-forge-a1aedba3d120.herokuapp.com/job-list/)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-a1aedba3d120.herokuapp.com%2Fjob-list%2F)||
-|[Single Job](https://remote-forge-a1aedba3d120.herokuapp.com/job/8d83b12b-0e13-4a6b-92c1-26a3d7bf92f3)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-a1aedba3d120.herokuapp.com%2Fjob%2F8d83b12b-0e13-4a6b-92c1-26a3d7bf92f3)||
-|[Talents](https://remote-forge-a1aedba3d120.herokuapp.com/talents/)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-a1aedba3d120.herokuapp.com%2Ftalents%2F)||
-|[Single Talent](https://remote-forge-a1aedba3d120.herokuapp.com/talent/f40faef6-33f8-4a69-89d2-cf6e173e64c9)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-a1aedba3d120.herokuapp.com%2Ftalent%2Ff40faef6-33f8-4a69-89d2-cf6e173e64c9)||
-|[Employers](https://remote-forge-a1aedba3d120.herokuapp.com/employers/)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-a1aedba3d120.herokuapp.com%2Femployers%2F)||
-|[Single Employer](https://remote-forge-a1aedba3d120.herokuapp.com/employer/fd4351d1-3ad3-42c1-9379-1d09733e02ae)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-a1aedba3d120.herokuapp.com%2Femployer%2Ffd4351d1-3ad3-42c1-9379-1d09733e02ae)||
-|[Log In](https://remote-forge-a1aedba3d120.herokuapp.com/accounts/login/)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-a1aedba3d120.herokuapp.com%2Faccounts%2Flogin%2F)||
-|[Sign Up Talent](https://remote-forge-a1aedba3d120.herokuapp.com/accounts/signup/talent/)|No Errors|No Contrast Errors|[With Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-a1aedba3d120.herokuapp.com%2Faccounts%2Fsignup%2Ftalent%2F)|I am unable to validate Sign Up Talent template as the errors comes from Allauth App Code|
-|[Sign Up Employer](https://remote-forge-a1aedba3d120.herokuapp.com/accounts/signup/employer/)|No Errors|No Contrast Errors|[With Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-a1aedba3d120.herokuapp.com%2Faccounts%2Fsignup%2Femployer%2F)|I am unable to validate Sign Up Employer template as the errors comes from Allauth App Code|
-|[Password Reset](https://remote-forge-a1aedba3d120.herokuapp.com/accounts/password/reset/)|No Errors|No Contrast Errors|[No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-a1aedba3d120.herokuapp.com%2Faccounts%2Fpassword%2Freset%2F)||
-|403 Error|No Errors|No Contrast Errors|No Errors - W3C validated by Direct Input||
-|[404 Error](https://remote-forge-a1aedba3d120.herokuapp.com/not-found)|No Errors|No Contrast Errors|No Errors - W3C validated by Direct Input||
-|500 Error|No Errors|No Contrast Errors|No Errors - W3C validated by Direct Input||
+| Tested Page | Accesibility (WAVE) | Contrast (WAVE) | W3C HTML | Comments |
+| --- | --- | --- | --- | --- |
+| [Home](https://remote-forge-a1aedba3d120.herokuapp.com/) | No Errors | No Contrast Errors | [No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-a1aedba3d120.herokuapp.com%2F) |  |
+| [About](https://remote-forge-a1aedba3d120.herokuapp.com/about/) | No Errors | No Contrast Errors | [No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-a1aedba3d120.herokuapp.com%2Fabout%2F) |  |
+| [Contact](https://remote-forge-a1aedba3d120.herokuapp.com/contact/) | No Errors | No Contrast Errors | [No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-a1aedba3d120.herokuapp.com%2Fcontact%2F) |  |
+| [Contact Success](https://remote-forge-a1aedba3d120.herokuapp.com/contact/success/) | No Errors | No Contrast Errors | [No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-a1aedba3d120.herokuapp.com%2Fcontact%2Fsuccess%2F) |  |
+| [Privacy Policy](https://remote-forge-a1aedba3d120.herokuapp.com/privacy-policy/) | No Errors | No Contrast Errors | [No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-a1aedba3d120.herokuapp.com%2Fprivacy-policy%2F) |  |
+| [Terms and Conditions](https://remote-forge-a1aedba3d120.herokuapp.com/terms-conditions/) | No Errors | No Contrast Errors | [No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-a1aedba3d120.herokuapp.com%2Fterms-conditions%2F) |  |
+| [Jobs](https://remote-forge-a1aedba3d120.herokuapp.com/job-list/) | No Errors | No Contrast Errors | [No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-a1aedba3d120.herokuapp.com%2Fjob-list%2F) |  |
+| [Single Job](https://remote-forge-a1aedba3d120.herokuapp.com/job/8d83b12b-0e13-4a6b-92c1-26a3d7bf92f3) | No Errors | No Contrast Errors | [No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-a1aedba3d120.herokuapp.com%2Fjob%2F8d83b12b-0e13-4a6b-92c1-26a3d7bf92f3) |  |
+| [Talents](https://remote-forge-a1aedba3d120.herokuapp.com/talents/) | No Errors | No Contrast Errors | [No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-a1aedba3d120.herokuapp.com%2Ftalents%2F) |  |
+| [Single Talent](https://remote-forge-a1aedba3d120.herokuapp.com/talent/f40faef6-33f8-4a69-89d2-cf6e173e64c9) | No Errors | No Contrast Errors | [No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-a1aedba3d120.herokuapp.com%2Ftalent%2Ff40faef6-33f8-4a69-89d2-cf6e173e64c9) |  |
+| [Employers](https://remote-forge-a1aedba3d120.herokuapp.com/employers/) | No Errors | No Contrast Errors | [No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-a1aedba3d120.herokuapp.com%2Femployers%2F) |  |
+| [Single Employer](https://remote-forge-a1aedba3d120.herokuapp.com/employer/fd4351d1-3ad3-42c1-9379-1d09733e02ae) | No Errors | No Contrast Errors | [No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-a1aedba3d120.herokuapp.com%2Femployer%2Ffd4351d1-3ad3-42c1-9379-1d09733e02ae) |  |
+| [Log In](https://remote-forge-a1aedba3d120.herokuapp.com/accounts/login/) | No Errors | No Contrast Errors | [No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-a1aedba3d120.herokuapp.com%2Faccounts%2Flogin%2F) |  |
+| [Sign Up Talent](https://remote-forge-a1aedba3d120.herokuapp.com/accounts/signup/talent/) | No Errors | No Contrast Errors | [With Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-a1aedba3d120.herokuapp.com%2Faccounts%2Fsignup%2Ftalent%2F) | I am unable to validate Sign Up Talent template as the errors comes from Allauth App Code |
+| [Sign Up Employer](https://remote-forge-a1aedba3d120.herokuapp.com/accounts/signup/employer/) | No Errors | No Contrast Errors | [With Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-a1aedba3d120.herokuapp.com%2Faccounts%2Fsignup%2Femployer%2F) | I am unable to validate Sign Up Employer template as the errors comes from Allauth App Code |
+| [Password Reset](https://remote-forge-a1aedba3d120.herokuapp.com/accounts/password/reset/) | No Errors | No Contrast Errors | [No Errors](https://validator.w3.org/nu/?doc=https%3A%2F%2Fremote-forge-a1aedba3d120.herokuapp.com%2Faccounts%2Fpassword%2Freset%2F) |  |
+| 403 Error | No Errors | No Contrast Errors | No Errors - W3C validated by Direct Input |  |
+| [404 Error](https://remote-forge-a1aedba3d120.herokuapp.com/not-found) | No Errors | No Contrast Errors | No Errors - W3C validated by Direct Input |  |
+| 500 Error | No Errors | No Contrast Errors | No Errors - W3C validated by Direct Input |  |
 
 ### Testing User Pages
 
-|Tested Page|Accesibility (WAVE)|Contrast (WAVE)|W3C HTML |Comments|
-|---|---|---|---|---|
-|[Account](https://remote-forge-a1aedba3d120.herokuapp.com/account/)|No Errors|No Contrast Errors|No Errors - W3C validated by Direct Input||
-|[Profile](https://remote-forge-a1aedba3d120.herokuapp.com/profile/)|With Errors|No Contrast Errors|No Errors - W3C validated by Direct Input|I can't fix the accessibility errors because they're caused by the django-jsonform app output|
-|[My Jobs](https://remote-forge-a1aedba3d120.herokuapp.com/user-job-list/)|No Errors|No Contrast Errors|No Errors - W3C validated by Direct Input||
-|Edit Job|With Errors|No Contrast Errors|No Errors - W3C validated by Direct Input|I can't fix the accessibility errors because they're caused by the django-jsonform app output|
-|[Log out](https://remote-forge-a1aedba3d120.herokuapp.com/accounts/logout/)|No Errors|No Contrast Errors|No Errors - W3C validated by Direct Input||
-
+| Tested Page | Accesibility (WAVE) | Contrast (WAVE) | W3C HTML | Comments |
+| --- | --- | --- | --- | --- |
+| [Account](https://remote-forge-a1aedba3d120.herokuapp.com/account/) | No Errors | No Contrast Errors | No Errors - W3C validated by Direct Input |  |
+| [Profile](https://remote-forge-a1aedba3d120.herokuapp.com/profile/) | With Errors | No Contrast Errors | No Errors - W3C validated by Direct Input | I can't fix the accessibility errors because they're caused by the django-jsonform app output |
+| [My Jobs](https://remote-forge-a1aedba3d120.herokuapp.com/user-job-list/) | No Errors | No Contrast Errors | No Errors - W3C validated by Direct Input |  |
+| Edit Job | With Errors | No Contrast Errors | No Errors - W3C validated by Direct Input | I can't fix the accessibility errors because they're caused by the django-jsonform app output |
+| [Log out](https://remote-forge-a1aedba3d120.herokuapp.com/accounts/logout/) | No Errors | No Contrast Errors | No Errors - W3C validated by Direct Input |  |
 
 ### CSS Validation
+
+[W3C CSS Validator results - No Errors Found](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fremote-forge-a1aedba3d120.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+
+![W3C CSS Validator results - No Errors Found](./docs/testing-css-validation.webp)
 
 ## Automated testing with Pytest
 
@@ -1088,12 +1205,18 @@ For a more detailed report, run:
 - [Improve Website Performance](https://github.com/patrickhladun/remote-forge/issues/78)
 - [Infinite Scroll or Pagination](https://github.com/patrickhladun/remote-forge/issues/63)
 - [Application Functionality](https://github.com/patrickhladun/remote-forge/issues/57)
+- [Account Deletion Feature](https://github.com/patrickhladun/remote-forge/issues/80)
+- [Simplify Django Environment Settings](https://github.com/patrickhladun/remote-forge/issues/79)
 
 ### Bugs
 
 - [Notification Close Button](https://github.com/patrickhladun/remote-forge/issues/66)
 - [Social Media Fields Validation](https://github.com/patrickhladun/remote-forge/issues/67)
+- [Employer Profile Email Field Validation Notice](https://github.com/patrickhladun/remote-forge/issues/69)
+- [Employer Profile Phone Field Validation](https://github.com/patrickhladun/remote-forge/issues/70)
 - [Job Edit Page - Details Section Validation](https://github.com/patrickhladun/remote-forge/issues/68)
+- [Job Edit Page - Title Validation](https://github.com/patrickhladun/remote-forge/issues/65)
+- [Fixing Form Updates on File Upload and Clear](https://github.com/patrickhladun/remote-forge/issues/81)
 
 ## Credits
 
@@ -1113,9 +1236,17 @@ For a more detailed report, run:
   - [Unsplash - Berlin](https://unsplash.com/photos/city-buildings-near-body-of-water-during-daytime-1uWanmgkd5g)
   - [Unsplash - London](https://unsplash.com/photos/aerial-photography-of-london-skyline-during-daytime-Oja2ty_9ZLM)
 
-- Articles:
+- Articles and Videos:
   - [Python docstrings](https://www.programiz.com/python-programming/docstrings#:~:text=Standard%20conventions%20to%20write%20single%2Dline%20docstrings%3A&text=The%20closing%20quotes%20are%20on,structure%20ending%20with%20a%20period)
   - [Docstrings in Python](https://www.datacamp.com/tutorial/docstrings-python)
   - [Django user authentication with case insensitive username](https://stackoverflow.com/questions/70713647/django-user-authentication-with-case-insensitive-username)
+  - [How to use multiple settings py files in django](https://medium.com/@morganhezekiah111/how-to-use-multiple-settings-py-files-in-django-97f6ead55aa7)
+  - [Django project apps structure and folders](https://joeymasip.medium.com/django-project-apps-structure-and-folders-b9436cc22b98)
+  - [Django Recipe Sharing Tutorial](https://www.youtube.com/watch?v=sBjbty691eI&list=PLXuTq6OsqZjbCSfiLNb2f1FOs8viArjWy)
+  - [Python Django 7 Hour Course](https://www.youtube.com/watch?v=PtQiiknWUcI)
 
 ## Acknowledgments
+
+- [**Jaimie Hemmings**](https://github.com/JaimieHemmings) - For thoroughly reviewing the project and providing valuable feedback.
+- [**Greame Taylor**](https://github.com/G-Taylor) - My project mentor, for offering insightful tips on outbound calls and overall guidance.
+- [**Laura Mayock**](https://www.linkedin.com/in/laura-mayock/) - For being a fantastic facilitator, running amazing weekly stand-ups, and providing excellent content and support.
