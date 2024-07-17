@@ -10,7 +10,7 @@
         {% if request.user.is_authenticated %}
           <li class="nav-item bg-red-100 dropdown align-items-center justify-content-center">
             <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-label="avatar">
-              <span class="profile-menu">
+              <span class="profile-menu bg-white">
                 {% if profile.image %}
                   <img src="{{ MEDIA_URL }}{{ profile.image }}" alt="User Avatar Image" />
                 {% else %}
@@ -19,22 +19,26 @@
               </span>
             </a>
             <ul class="dropdown-menu dropdown-menu-end">
+              {% if request.user.is_staff %}
               <li>
-                <a class="dropdown-item" aria-label="Link to Profile Page" href="{% url 'profile' %}">Profile</a>
+                  <a class="dropdown-item" aria-label="Link to Admin Page" href="{% url 'admin:index' %}">Admin</a>
               </li>
+              {% endif %}
+              {% if request.user.user_type in 'employer,talent' %}
+              <li>
+                  <a class="dropdown-item{% if request.path == '/profile/' %} active{% endif %}" aria-label="Link to Profile Page" href="{% url 'profile' %}">Profile</a>
+              </li>
+              {% endif %}
               {% if request.user.user_type == 'employer' %}
                 <li>
-                  <a class="dropdown-item" aria-label="Link to My Jobs Page" href="{% url 'user-job-list' %}">My Jobs</a>
+                  <a class="dropdown-item{% if request.path == '/user-job-list/' %} active{% endif %}" aria-label="Link to My Jobs Page" href="{% url 'user-job-list' %}">My Jobs</a>
                 </li>
               {% endif %}
               <li>
-                <a class="dropdown-item" aria-label="Link to Account Page" href="{% url 'account' %}">Account</a>
+                <a class="dropdown-item{% if request.path == '/account/' %} active{% endif %}" aria-label="Link to Account Page" href="{% url 'account' %}">Account</a>
               </li>
               <li>
-                <hr class="dropdown-divider" />
-              </li>
-              <li>
-                <a class="dropdown-item" aria-label="Link to Logout Page" href="{% url 'account_logout' %}">Logout</a>
+                <a class="dropdown-item{% if request.path == '/accounts/logout/' %} active{% endif %}" aria-label="Link to Logout Page" href="{% url 'account_logout' %}">Logout</a>
               </li>
             </ul>
           </li>
