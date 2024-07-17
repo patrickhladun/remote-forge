@@ -114,8 +114,8 @@ class EmployerAdmin(admin.ModelAdmin):
 
     list_display = (
         "image_display",
+        "employer",
         "user",
-        "company",
         "is_published",
         "created_at",
     )
@@ -154,7 +154,8 @@ class EmployerAdmin(admin.ModelAdmin):
             "admin:%s_%s_change" % (obj._meta.app_label, obj._meta.model_name),
             args=[obj.id],
         )
-        return mark_safe('<a href="{}">{}</a>'.format(url, obj.title))
+        text = obj.company if obj.company else "Employer Profile"
+        return mark_safe('<a href="{}">{}</a>'.format(url, text))
 
 
 admin.site.register(User, UserAdmin)
