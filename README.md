@@ -662,6 +662,38 @@ A list of jobs created by the employer. On this page, employers can add, edit, o
 
 </details>
 
+### Django Administration
+
+Website admins have access to manage jobs, users, and profiles for both talents and employers.
+
+<details><summary>Jobs Section</summary>
+
+![Jobs Section](./docs/backend-jobs.webp)
+
+</details>
+
+<details><summary>Employers Section</summary>
+
+![Employers Section](./docs/backend-employers.webp)
+
+</details>
+
+<details><summary>Talents Section</summary>
+
+![Talents Section](./docs/backend-talents.webp)
+
+</details>
+
+<details><summary>Users Section</summary>
+
+![Users Section](./docs/backend-users.webp)
+
+</details><br>
+
+When a user registers, their profile is automatically created as either a Talent or Employer, depending on their role. Since admins have permissions to delete any entity in the backend, a button has been added to the user profile page to recreate a user profile if necessary.
+
+Users themselves do not have the option to delete their profile, but they can unpublish it, which removes it from the frontend listings. Additionally, a clear button allows users to clear all fields of their profile. This action also unpublishes the profile. Users must confirm this destructive action in a popup to proceed.
+
 ## Technology used
 
 ### Languages and Libraries
