@@ -424,7 +424,6 @@ During the development of Remote Forge, the database structure underwent several
 
 ![Database Update](./docs/db-design-update.webp)
 
-
 ## Colours Scheme
 
 For my job board website, I chose a green colour scheme. Using green can make the website more inviting and trustworthy, contributing to a positive user experience.
@@ -448,6 +447,8 @@ For "Remote Forge," I have carefully selected fonts that align with the aestheti
 These font choices are integral to the overall user experience, contributing not only to the visual impact of the site but also to its functionality and accessibility. By pairing Nunito Sans with Josefin Sans, I aim to create a cohesive and engaging environment that enhances both the aesthetic appeal and the usability of "Remote Forge."
 
 ## Logo
+
+The logo for Remote Forge draws inspiration from The Armorer character in the Mandalorian movie. It reflects a blend of craftsmanship and strength, symbolizing the platform's mission to forge connections in the remote work landscape. The design incorporates elements that convey professionalism and innovation, aligning with the brand's identity.
 
 ![Logo and Favicon](./docs/logo.webp)
 
