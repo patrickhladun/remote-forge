@@ -1,36 +1,40 @@
-{% extends 'index.html' %}
+{% extends 'index.html' %} {% block content %}
+<main class="main">
+  <section class="bg-brand-100">
+    <div class="container py-5">
+      <h1 class="text-center">Profile</h1>
+    </div>
+  </section>
 
-{% block content %}
-  <main class="main">
-    <section class="bg-brand-100">
-      <div class="container py-5">
-        <h1 class="text-center">Profile</h1>
-      </div>
-    </section>
-
-
-    <section class="bg-brand-50 py-5">
-      <div class="container-sm">
-        <div class="row">
-          {% if profile_exists %}
-            <div class="d-flex justify-content-between align-items-center py-2">
-              <p class="m-0">Update your profile information</p>
-              {% if user.is_authenticated and profile.is_published %}
-                  <a href="{% url user.user_type profile.id %}" class="btn btn-primary">View Profile</a>
-              {% else %}
-                  <button class="btn btn-primary" aria-disabled="true" disabled>Publish to View</button>
-              {% endif %}
-            </div>
-            {% include 'partials/forms/profile_form.html' %}
+  <section class="bg-brand-50 py-5">
+    <div class="container-sm">
+      <div class="row">
+        {% if profile_exists %}
+        <div class="d-flex justify-content-between align-items-center py-2">
+          <p class="m-0">Update your profile information</p>
+          {% if user.is_authenticated and profile.is_published %}
+          <a href="{% url user.user_type profile.id %}" class="btn btn-primary"
+            >View Profile</a
+          >
           {% else %}
-            <!-- Create profile button -->
-            <form method="post">
-              {% csrf_token %}
-              <button type="submit" class="btn btn-primary">Create Profile</button>
-          </form>
+          <button class="btn btn-primary" aria-disabled="true" disabled>
+            Publish to View
+          </button>
           {% endif %}
         </div>
+        {% include 'partials/forms/profile_form.html' %} {% else %}
+        <!-- Create profile button -->
+
+        <form method="post" class="d-flex justify-content-center">
+          {% csrf_token %}
+          <button type="submit" class="btn btn-primary">
+            Create your Profile
+          </button>
+        </form>
+
+        {% endif %}
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
+</main>
 {% endblock %}
