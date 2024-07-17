@@ -1187,6 +1187,10 @@ Tools used:
 
 ### CSS Validation
 
+[W3C CSS Validator results - No Errors Found](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fremote-forge-a1aedba3d120.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+
+![W3C CSS Validator results - No Errors Found](./docs/testing-css-validation.webp)
+
 ## Automated testing with Pytest
 
 For "Remote Forge," I use pytest, a powerful testing framework for Python, to ensure the reliability and efficiency of my code. Pytest simplifies and enhances the testing process through its use of simple, scalable test cases and a suite of advanced features.
