@@ -1214,12 +1214,18 @@ For a more detailed report, run:
 - [Improve Website Performance](https://github.com/patrickhladun/remote-forge/issues/78)
 - [Infinite Scroll or Pagination](https://github.com/patrickhladun/remote-forge/issues/63)
 - [Application Functionality](https://github.com/patrickhladun/remote-forge/issues/57)
+- [Account Deletion Feature](https://github.com/patrickhladun/remote-forge/issues/80)
+- [Simplify Django Environment Settings](https://github.com/patrickhladun/remote-forge/issues/79)
 
 ### Bugs
 
 - [Notification Close Button](https://github.com/patrickhladun/remote-forge/issues/66)
 - [Social Media Fields Validation](https://github.com/patrickhladun/remote-forge/issues/67)
+- [Employer Profile Email Field Validation Notice](https://github.com/patrickhladun/remote-forge/issues/69)
+- [Employer Profile Phone Field Validation](https://github.com/patrickhladun/remote-forge/issues/70)
 - [Job Edit Page - Details Section Validation](https://github.com/patrickhladun/remote-forge/issues/68)
+- [Job Edit Page - Title Validation](https://github.com/patrickhladun/remote-forge/issues/65)
+- [Fixing Form Updates on File Upload and Clear](https://github.com/patrickhladun/remote-forge/issues/81)
 
 ## Credits
 
