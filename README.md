@@ -751,6 +751,8 @@ Users themselves do not have the option to delete their profile, but they can un
 
 Remote Forge uses three environments: Development, Staging, and Production.
 
+For this project, I have split the settings into three separate files. However, this approach does not resonate with me, and for the next project, I will not use this method. After learning more, I feel there are no significant benefits to this approach at this stage, as it only creates duplication for staging and production environments. I have created a User Story to switch back to a single settings.py file and use if statements and environment variables to create environment-specific settings.
+
 #### Development
 
 For local development, Django uses SQLite3 for simplicity and ease of setup. The development settings are optimized for debugging and rapid iteration.
@@ -842,16 +844,49 @@ To deploy Remote Forge on Heroku, follow these steps:
 
 Your app should now be deployed and accessible on Heroku.
 
-### Page Performance
+### Load Example Content
 
-I tested the website's page performance using Google PageSpeed Insights. While the desktop scores are satisfactory, I am not fully happy with the mobile scores and recognize that there is room for improvement.
+To start developing the site with example content, you can load predefined Jobs, Users, Talent, and Employer Profiles. Follow these steps to set up your database and load the example content.
 
-#### Google PageSpeed Insights
+#### Load Fixtures Locally
 
-- **Desktop Scores:** The desktop performance scores are satisfactory, indicating good loading times and efficient resource usage.
-- **Mobile Scores:** The mobile performance scores are lower than expected and need improvement to ensure a better user experience on mobile devices.
+1. Ensure the database is created:<br>
+   Run the following commands to create and set up the database:
 
-I will continue to optimize the mobile performance to enhance loading times and overall user experience for mobile users.
+```
+python manage.py makemigrations
+python manage.py migrate
+```
+2. Load example content:<br>
+Run these commands in order to load the example content:
+
+```
+python manage.py loaddata user.talent.json
+python manage.py loaddata user.employer.json
+python manage.py loaddata job.listing.json
+```
+
+These commands will create the example content.
+
+#### Load Example Content for Staging Site
+1. Ensure the database is created:<br>
+Run the following commands to create and set up the database for the staging environment:
+
+```
+DJANGO_SETTINGS_MODULE=config.settings.staging python manage.py makemigrations
+DJANGO_SETTINGS_MODULE=config.settings.staging python manage.py migrate
+```
+
+2. Load example content:<br>
+Run these commands in order to load the example content:
+
+```
+DJANGO_SETTINGS_MODULE=config.settings.staging python manage.py loaddata user.talent.json
+DJANGO_SETTINGS_MODULE=config.settings.staging python manage.py loaddata user.employer.json
+DJANGO_SETTINGS_MODULE=config.settings.staging python manage.py loaddata job.listing.json
+```
+
+Each user uses the same password for testing purposes. You can change the password if you like in the fixtures file and load the fixtures again.
 
 ## Manual testing
 
