@@ -1245,3 +1245,7 @@ For a more detailed report, run:
   - [Django user authentication with case insensitive username](https://stackoverflow.com/questions/70713647/django-user-authentication-with-case-insensitive-username)
 
 ## Acknowledgments
+
+- [**Jaimie Hemmings**](https://github.com/JaimieHemmings) - For thoroughly reviewing the project and providing valuable feedback.
+- [**Greame Taylor**](https://github.com/G-Taylor) - My project mentor, for offering insightful tips on outbound calls and overall guidance.
+- [**Laura Mayock**](https://www.linkedin.com/in/laura-mayock/) - For being a fantastic facilitator, running amazing weekly stand-ups, and providing excellent content and support.
