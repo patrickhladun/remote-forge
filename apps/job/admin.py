@@ -12,7 +12,7 @@ class JobAdmin(admin.ModelAdmin):
         list view.
     """
 
-    list_display = ("user", "title", "city", "is_published", "created_at")
+    list_display = ("title", "user", "city", "is_published", "created_at")
 
 
 admin.site.register(Job, JobAdmin)
