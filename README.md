@@ -1239,10 +1239,14 @@ For a more detailed report, run:
   - [Unsplash - Berlin](https://unsplash.com/photos/city-buildings-near-body-of-water-during-daytime-1uWanmgkd5g)
   - [Unsplash - London](https://unsplash.com/photos/aerial-photography-of-london-skyline-during-daytime-Oja2ty_9ZLM)
 
-- Articles:
+- Articles and Videos:
   - [Python docstrings](https://www.programiz.com/python-programming/docstrings#:~:text=Standard%20conventions%20to%20write%20single%2Dline%20docstrings%3A&text=The%20closing%20quotes%20are%20on,structure%20ending%20with%20a%20period)
   - [Docstrings in Python](https://www.datacamp.com/tutorial/docstrings-python)
   - [Django user authentication with case insensitive username](https://stackoverflow.com/questions/70713647/django-user-authentication-with-case-insensitive-username)
+  - [How to use multiple settings py files in django](https://medium.com/@morganhezekiah111/how-to-use-multiple-settings-py-files-in-django-97f6ead55aa7)
+  - [Django project apps structure and folders](https://joeymasip.medium.com/django-project-apps-structure-and-folders-b9436cc22b98)
+  - [Django Recipe Sharing Tutorial](https://www.youtube.com/watch?v=sBjbty691eI&list=PLXuTq6OsqZjbCSfiLNb2f1FOs8viArjWy)
+  - [Python Django 7 Hour Course](https://www.youtube.com/watch?v=PtQiiknWUcI)
 
 ## Acknowledgments
 
