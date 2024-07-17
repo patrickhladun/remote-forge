@@ -588,25 +588,47 @@ The single talent page is a Talent Profile Page. Profile pages allow logged-in e
 
 </details>
 
-### Backend (admin) Pages
+### User and Content Management Pages
+
+To provide a seamless experience for managing profiles and content, Remote Forge includes comprehensive backend pages for both Talents and Employers. Here’s an overview of the key functionalities:
+
+#### Profile Management for Talent and Employers
+
+- Update Profile: Talents and Employers can easily update their profile page with new information, ensuring their details are always current.
+- Clear Profile: Talents and Employers have the option to clear their profile page. This action does not delete the profile but rather clears all fields and unpublishes the page, allowing for a fresh start without losing their account. To clear profile user need to confirm the action.
 
 <details><summary>Profile Page</summary>
 
-There is one profile page for editing the user profile. The view manages which form to display, depending on whether it is for the Employer or Talent Profile.
+Talent:<br> ![Talent Profile](./docs/page-profile-talent.webp)
 
-Talent: ![Talent Profile](./docs/page-profile-talent.webp)
-
-Employer: ![Employer Profile](./docs/page-profile-employer.webp)
+Employer:<br> ![Employer Profile](./docs/page-profile-employer.webp)
 
 </details>
 
-<details><summary>Employer Jobs List Page</summary>
+#### Account Management
 
-A list of jobs created by the employer. On this page, employers can add, edit, or delete jobs.
+On an account page both Talents and Employers can:
 
-![Jobs List](./docs/page-employer-jobs-list.webp)
+- Update Email or Username
+- Navigate to Password Update Page
+
+<details><summary>Account Page</summary>
+
+Account page where users can update their email, username, and password.
+
+![Account](./docs/page-account.webp)
 
 </details>
+
+### Job Management for Employers
+
+Full CRUD Operations: Employers have full control over job listings with the ability to:
+
+- Add Jobs: Create new job listings to attract potential Talents.
+- View Jobs: Access a list of all their job listings.
+- Update Jobs: Make changes to existing job listings.
+- Delete Jobs: Remove job listings that are no longer relevant or needed.
+- Restricted Access: Employers can only manage their own job listings. Other employers cannot update or delete jobs posted by others, ensuring data integrity and security.
 
 <details><summary>Employer Job Add Page</summary>
 
@@ -632,11 +654,11 @@ Delete Job modal popup.
 
 </details>
 
-<details><summary>Account Page</summary>
+<details><summary>Employer Jobs List Page</summary>
 
-Account page where users can update their email, username, and password.
+A list of jobs created by the employer. On this page, employers can add, edit, or delete jobs.
 
-![Account](./docs/page-about.webp)
+![Jobs List](./docs/page-employer-jobs-list.webp)
 
 </details>
 
