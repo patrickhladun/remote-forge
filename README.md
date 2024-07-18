@@ -69,6 +69,7 @@ Welcome to Remote Forge, my creation and your gateway to the world of remote wor
 - [Issues](#issues)
   - [User Stories](#user-stories)
   - [Bugs](#bugs)
+- [Further Improvements](#further-improvements)
 - [Credits](#credits)
 - [Acknowledgments](#acknowledgments)
 
@@ -1248,6 +1249,13 @@ For a more detailed report, run:
 - [Job Edit Page - Details Section Validation](https://github.com/patrickhladun/remote-forge/issues/68)
 - [Job Edit Page - Title Validation](https://github.com/patrickhladun/remote-forge/issues/65)
 - [Fixing Form Updates on File Upload and Clear](https://github.com/patrickhladun/remote-forge/issues/81)
+
+
+## Further Improvements
+
+[Back to Top](#table-of-contents)
+
+In future improvements, I would first focus on refactoring the code and enhancing website performance, particularly for mobile devices. Key areas of development include adding pagination to the lists of jobs, talents, and employers, implementing application functionality to allow users to apply for jobs, and more. I have created [User Stories](#user-stories) for some of these future improvements.
 
 ## Credits
 
