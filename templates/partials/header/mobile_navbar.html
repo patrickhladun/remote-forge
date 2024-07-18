@@ -4,21 +4,11 @@
   <div class="container-fluid">
     {% include './brand.html' %}
     <button class="navbar-toggler profile-menu" type="button" data-bs-toggle="offcanvas" data-bs-target="#off-canvas-menu" aria-controls="off-canvas-menu" aria-label="Menu Toggle">
-      {% if request.user.is_authenticated %}
-        <span class="profile-menu">
-          {% if profile.image %}
-            <img src="{{ MEDIA_URL }}{{ profile.image }}" alt="User Avatar Image" />
-          {% else %}
-            <img class="no-headshot" src="{% static 'assets/images/avatar.png' %}" alt="User Avatar Image" />
-          {% endif %}
-        </span>
-      {% else %}
-        <span class="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
-        </span>
-      {% endif %}
+      <span class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
     </button>
     <div class="offcanvas offcanvas-end" tabindex="-1" id="off-canvas-menu" aria-labelledby="off-canvas-menu-label">
       <div class="offcanvas-header">
@@ -27,15 +17,34 @@
       </div>
       <div class="offcanvas-body">
         {% if request.user.is_authenticated %}
+          <span class="profile-menu bg-light mb-4">
+            {% if profile.image %}
+              <img src="{{ MEDIA_URL }}{{ profile.image }}" alt="User Avatar Image" />
+            {% else %}
+              <img class="no-headshot" src="{% static 'assets/images/avatar.png' %}" alt="User Avatar Image" />
+            {% endif %}
+          </span>
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <li class="nav-item">
-              <a class="nav-link active" aria-label="Link to Profile Page" href="{% url 'profile' %}">Profile</a>
+            {% if request.user.user_type == 'employer' %}
+            <li class="nav-item{% if request.path == '/user-job-list/' %} active{% endif %}">
+              <a class="nav-link" aria-label="Link to My Jobs Page" href="{% url 'user-job-list' %}">My Jobs</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-label="Link to Account Page" href="{% url 'account' %}">Account</a>
+            {% endif %}
+            {% if request.user.is_staff %}
+              <li class="nav-item">
+                <a class="nav-link active" aria-label="Link to Admin Page" href="{% url 'admin:index' %}">Admin</a>
+              </li>
+            {% endif %}
+            {% if request.user.user_type in 'employer,talent' %}
+            <li class="nav-item{% if request.path == '/profile/' %} active{% endif %}">
+              <a class="nav-link" aria-label="Link to Profile Page" href="{% url 'profile' %}">Profile</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-label="Link to Logout Page" href="{% url 'account_logout' %}">Logout</a>
+            {% endif %}
+            <li class="nav-item{% if request.path == '/account/' %} active{% endif %}">
+              <a class="nav-link" aria-label="Link to Account Page" href="{% url 'account' %}">Account</a>
+            </li>
+            <li class="nav-item{% if request.path == '/accounts/logout/' %} active{% endif %}">
+              <a class="nav-link" aria-label="Link to Logout Page" href="{% url 'account_logout' %}">Logout</a>
             </li>
           </ul>
         {% else %}

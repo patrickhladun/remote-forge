@@ -5,7 +5,7 @@ from .common import *
 
 heroku_settings(locals(), staticfiles=False)
 
-DEBUG = True
+DEBUG = False
 ALLOWED_HOSTS = [
     "0.0.0.0",
     "localhost",
