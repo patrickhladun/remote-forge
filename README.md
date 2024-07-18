@@ -441,11 +441,9 @@ For the project, I use Bootstrap and override Bootstrap's primary and danger but
 
 [Back to Top](#table-of-contents)
 
-For "Remote Forge," I have carefully selected fonts that align with the aesthetic and functional needs of the platform. Understanding the importance of readability and design harmony, I chose two specific fonts to enhance the user interface.
+For "Remote Forge," I have carefully selected fonts that align with the aesthetic and functional needs of the platform. Understanding the importance of readability and design harmony, I initially chose Nunito Sans for the body text but later decided to use the default Bootstrap font for its simplicity and compatibility with the overall design. To ensure inclusivity and accessibility, I use the browser's default root font-size (typically 16px).
 
-- **Nunito Sans:** This font is utilized for the body text and paragraphs across the site. Nunito Sans is known for its readability and friendly appearance, making it an excellent choice for ensuring that the content is approachable and easy to digest. Its clean and balanced structure helps maintain clarity and ease of reading in longer texts, which is crucial for the detailed descriptions and information presented on the platform.
-
-![Nunito Sans](./docs/font-nunito.webp)
+- **Default Bootstrap Font:** I now use the default Bootstrap font for the body text and paragraphs across the site. This font provides a clean and professional look that ensures readability and complements the site's overall design. Its simplicity helps maintain clarity and ease of reading, which is crucial for the detailed descriptions and information presented on the platform. The use of the browser's default root font-size ensures a more inclusive and accessible type scale.
 
 - **Josefin Sans:** I selected Josefin Sans for all headings to add a touch of elegance and distinctiveness to the page layouts. Josefin Sans, with its vintage geometry and modern sensibility, provides a stylish contrast to the more rounded forms of Nunito Sans. This font is particularly effective in making headings stand out and capturing users' attention, thereby structuring content in a visually appealing and organized manner.
 
