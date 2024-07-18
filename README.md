@@ -63,6 +63,7 @@ Welcome to Remote Forge, my creation and your gateway to the world of remote wor
   - [HTML Validation and Accessibility Testing](#html-validation-and-accessibility-testing)
   - [Testing User Pages](#testing-user-pages)
   - [CSS Validation](#css-validation)
+  - [JavaScript](#javascript)
 - [Automated testing with Pytest](#automated-testing-with-pytest)
   - [Running Tests](#running-tests)
 - [Issues](#issues)
@@ -985,6 +986,8 @@ Test Setup for Responsiveness
 2. Launch the Toggle Device Toolbar.
 3. Select each device preset listed and test the responsiveness of the elements.
 
+![Responsiveness](./docs/testing-responsivenes.webp)
+
 <details><summary>Responsive Design Test Cases</summary>
 
 | Test Scenario | Steps to Reproduce | Expected Results | Actual Results |
@@ -1182,9 +1185,19 @@ I conducted comprehensive HTML validation tests using the W3C validator to ensur
 
 ![W3C CSS Validator results - No Errors Found](./docs/testing-css-validation.webp)
 
+### JavaScript
+
+I have ensured that there are no JavaScript errors on the Remote Forge platform. The JavaScript scripts primarily come from Bootstrap. I have performed thorough checks on all pages, and there are no JavaScript errors showing in the console.
+
+![No Errors in Console](./docs/testing-no-js-errors.webp)
+
 ## Automated testing with Pytest
 
 For "Remote Forge," I use pytest, a powerful testing framework for Python, to ensure the reliability and efficiency of my code. Pytest simplifies and enhances the testing process through its use of simple, scalable test cases and a suite of advanced features.
+
+78 tests passed
+
+![Pytest Results](./docs/testing-pytest.webp)
 
 ### Running Tests
 
