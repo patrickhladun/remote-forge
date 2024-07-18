@@ -415,6 +415,8 @@ Building on the foundational wireframes, I progressed to designing detailed mock
 
 ## Database Design
 
+[Back to Top](#table-of-contents)
+
 In the development of Remote Forge, I have meticulously crafted the database architecture to support a dynamic and scalable user model. To accommodate various user roles, I introduced a user_type field in the user model. This flexibility allows me to define distinct profiles and functionalities for different user types, initially implementing two primary roles: Talent and Employer.
 
 Employers have the capability to create job listings, forming the core interaction of the platform. Each listing is directly linked to an employer, facilitating a streamlined management process. On the other side, Talents, equipped with comprehensive profile features including resumes and social links, can present a detailed professional persona.
@@ -427,6 +429,8 @@ During the development of Remote Forge, the database structure underwent several
 
 ## Colours Scheme
 
+[Back to Top](#table-of-contents)
+
 For my job board website, I chose a green colour scheme. Using green can make the website more inviting and trustworthy, contributing to a positive user experience.
 
 For the project, I use Bootstrap and override Bootstrap's primary and danger buttons with my custom green and red.
@@ -434,6 +438,8 @@ For the project, I use Bootstrap and override Bootstrap's primary and danger but
 ![Colour Scheme](./docs/colour-scheme.webp)
 
 ## Fonts
+
+[Back to Top](#table-of-contents)
 
 For "Remote Forge," I have carefully selected fonts that align with the aesthetic and functional needs of the platform. Understanding the importance of readability and design harmony, I chose two specific fonts to enhance the user interface.
 
@@ -449,11 +455,15 @@ These font choices are integral to the overall user experience, contributing not
 
 ## Logo
 
+[Back to Top](#table-of-contents)
+
 The logo for Remote Forge draws inspiration from The Armorer character in the Mandalorian movie. It reflects a blend of craftsmanship and strength, symbolizing the platform's mission to forge connections in the remote work landscape. The design incorporates elements that convey professionalism and innovation, aligning with the brand's identity.
 
 ![Logo and Favicon](./docs/logo.webp)
 
 ## Images
+
+[Back to Top](#table-of-contents)
 
 ### Profile Images
 
@@ -472,6 +482,8 @@ For Remote Forge, I used a combination of custom-designed icons and icons downlo
 ![Icons](./docs/icons.webp)
 
 ## Pages and Features
+
+[Back to Top](#table-of-contents)
 
 ### Front End Pages
 
@@ -696,6 +708,8 @@ Users themselves do not have the option to delete their profile, but they can un
 
 ## Technology used
 
+[Back to Top](#table-of-contents)
+
 ### Languages and Libraries
 
 - HTML
@@ -887,6 +901,8 @@ DJANGO_SETTINGS_MODULE=config.settings.staging python manage.py loaddata job.lis
 Each user uses the same password for testing purposes. You can change the password if you like in the fixtures file and load the fixtures again.
 
 ## Manual testing
+
+[Back to Top](#table-of-contents)
 
 ### Website Header and Navigation
 
@@ -1193,6 +1209,8 @@ I have ensured that there are no JavaScript errors on the Remote Forge platform.
 
 ## Automated testing with Pytest
 
+[Back to Top](#table-of-contents)
+
 For "Remote Forge," I use pytest, a powerful testing framework for Python, to ensure the reliability and efficiency of my code. Pytest simplifies and enhances the testing process through its use of simple, scalable test cases and a suite of advanced features.
 
 78 tests passed
@@ -1210,6 +1228,8 @@ For a more detailed report, run:
 `pytest --cov --cov-report=html`
 
 ## Issues
+
+[Back to Top](#table-of-contents)
 
 - Git History - While working on project, I encountered an issue when attempting to remove a file from the Git history. I ran a command to remove the file, but it unexpectedly created duplicate commits that I couldn't clear or fix. Despite attempts to resolve the duplicates, the issue persisted.
 
@@ -1232,6 +1252,8 @@ For a more detailed report, run:
 - [Fixing Form Updates on File Upload and Clear](https://github.com/patrickhladun/remote-forge/issues/81)
 
 ## Credits
+
+[Back to Top](#table-of-contents)
 
 - Profile Images: [User Profile | Avatar - Figma Plugin](https://janisrozenfelds.com/user-profile-plugin)
 - Icons: [Iconmonstr](https://iconmonstr.com/)
@@ -1259,6 +1281,8 @@ For a more detailed report, run:
   - [Python Django 7 Hour Course](https://www.youtube.com/watch?v=PtQiiknWUcI)
 
 ## Acknowledgments
+
+[Back to Top](#table-of-contents)
 
 - [**Jaimie Hemmings**](https://github.com/JaimieHemmings) - For thoroughly reviewing the project and providing valuable feedback.
 - [**Greame Taylor**](https://github.com/G-Taylor) - My project mentor, for offering insightful tips on outbound calls and overall guidance.
